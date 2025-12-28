@@ -1,1 +1,0 @@
-# faytech-notes-
