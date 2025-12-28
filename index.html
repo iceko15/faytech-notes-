@@ -24,7 +24,6 @@
             color: var(--text-dark);
         }
 
-        /* Clean Navigation Bar */
         nav {
             background-color: var(--white);
             border-bottom: 3px solid var(--primary-blue);
@@ -43,16 +42,13 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--primary-blue);
-        }
+        nav a:hover { color: var(--primary-blue); }
 
         .active-tab {
             color: var(--primary-blue);
             border-bottom: 2px solid var(--primary-blue);
         }
 
-        /* Dashboard Container */
         .container {
             max-width: 850px;
             margin: 40px auto;
@@ -62,7 +58,6 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         }
 
-        /* Intro & Recommendation Section */
         .welcome-section {
             display: flex;
             gap: 20px;
@@ -89,10 +84,7 @@
             justify-content: center;
         }
 
-        .welcome-section h2, .welcome-section h3 {
-            margin-top: 0;
-            color: var(--dark-blue);
-        }
+        .welcome-section h2, .welcome-section h3 { margin-top: 0; color: var(--dark-blue); }
 
         .welcome-section p {
             margin: 0;
@@ -101,11 +93,7 @@
             color: #444;
         }
 
-        .nb-link {
-            color: var(--tip-border);
-            font-weight: bold;
-            text-decoration: underline;
-        }
+        .nb-link { color: var(--tip-border); font-weight: bold; text-decoration: underline; }
 
         h1 {
             font-size: 1.8em;
@@ -115,12 +103,7 @@
             padding-top: 30px;
         }
 
-        /* Course List Styling */
-        .course-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+        .course-list { display: flex; flex-direction: column; gap: 12px; }
 
         .course-card {
             display: flex;
@@ -136,27 +119,35 @@
             transition: all 0.2s ease-in-out;
         }
 
-        .course-card span {
-            color: #555;
-            font-weight: 400;
-        }
-
+        .course-card span { color: #555; font-weight: 400; }
         .course-card:hover {
             background-color: #f0f7ff;
             border-color: var(--primary-blue);
             transform: translateX(5px);
         }
 
+        /* Updated Footer Styling for your request */
         footer {
             text-align: center;
-            margin: 40px 0;
-            color: #888;
-            font-size: 0.85em;
+            margin: 50px 0;
+            padding-top: 20px;
+            color: #666;
+            font-style: italic;
         }
 
-        @media (max-width: 768px) {
-            .welcome-section { flex-direction: column; }
+        .semester-badge {
+            display: inline-block;
+            background: #eee;
+            color: #555;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-style: normal;
         }
+
+        @media (max-width: 768px) { .welcome-section { flex-direction: column; } }
     </style>
 </head>
 <body>
@@ -192,17 +183,14 @@
                 <div>1. MAT-172: <span>Precalculus Trig</span></div>
                 <div class="arrow">→</div>
             </a>
-
             <a href="chm151.html" class="course-card">
                 <div>2. CHM-151: <span>General Chemistry I</span></div>
                 <div class="arrow">→</div>
             </a>
-
             <a href="com231.html" class="course-card">
                 <div>3. COM-231: <span>Public Speaking</span></div>
                 <div class="arrow">→</div>
             </a>
-
             <a href="eng112.html" class="course-card">
                 <div>4. ENG-112: <span>Writing/Research</span></div>
                 <div class="arrow">→</div>
@@ -210,7 +198,10 @@
         </div>
     </div>
 
-    <footer>Fayetteville Technical Community College</footer>
+    <footer>
+        <div class="semester-badge">SPRING 2026</div><br>
+        This workspace is dedicated to the 4 classes I am taking this semester. I created this to bridge the gap between lecture notes and exam success for my classmates and myself.
+    </footer>
 
 </body>
 </html>
