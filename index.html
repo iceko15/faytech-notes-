@@ -1,33 +1,122 @@
-# faytech-notes-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris Martinez - Spring 2026 Course Portal</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
-        
-        /* Navigation Bar */
-        nav { background-color: #ffffff; border-bottom: 3px solid #0056b3; padding: 15px 0; display: flex; justify-content: center; gap: 30px; position: sticky; top: 0; z-index: 1000; }
-        nav a { text-decoration: none; color: #444; font-weight: bold; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: #0056b3; }
-        .active-tab { color: #0056b3; border-bottom: 2px solid #0056b3; }
+        :root {
+            --primary-blue: #0056b3;
+            --dark-blue: #003366;
+            --bg-gray: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
 
-        /* Layout Container */
-        .container { display: flex; justify-content: center; max-width: 850px; margin: 80px auto; padding: 0 20px; }
-        
-        /* Main Course List */
-        .course-list { flex: 1; background: white; padding: 45px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-        .course-list h1 { font-size: 34px; margin-top: 0; color: #222; border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 35px; }
-        .course-item { display: flex; align-items: center; margin-bottom: 28px; font-size: 22px; text-decoration: none; color: #0056b3; font-weight: 500; }
-        .course-item span { color: #aaa; margin: 0 15px; flex-grow: 1; border-bottom: 1px dotted #ccc; height: 16px; }
-        .course-item:hover { color: #003d7a; transform: translateX(8px); transition: 0.2s; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+        }
+
+        /* Clean Navigation Bar */
+        nav {
+            background-color: var(--white);
+            border-bottom: 3px solid var(--primary-blue);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .active-tab {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        /* Dashboard Container */
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: var(--dark-blue);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        /* Course List Styling */
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .course-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .course-card span {
+            color: #555;
+            font-weight: 400;
+        }
+
+        .course-card:hover {
+            background-color: #f0f7ff;
+            border-color: var(--primary-blue);
+            transform: translateX(5px);
+        }
+
+        .arrow {
+            color: var(--primary-blue);
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="active-tab">Dashboard</a>
+        <a href="index.html" class="active-tab">DASHBOARD</a>
         <a href="mat172.html">MAT-172</a>
         <a href="chm151.html">CHM-151</a>
         <a href="com231.html">COM-231</a>
@@ -35,14 +124,32 @@
     </nav>
 
     <div class="container">
+        <h1>Spring 2026 Courses:</h1>
+
         <div class="course-list">
-            <h1>Spring 2026 Courses:</h1>
-            <a href="mat172.html" class="course-item">1. MAT-172: Precalculus Trig <span></span> →</a>
-            <a href="chm151.html" class="course-item">2. CHM-151: General Chemistry I <span></span> →</a>
-            <a href="com231.html" class="course-item">3. COM-231: Public Speaking <span></span> →</a>
-            <a href="eng112.html" class="course-item">4. ENG-112: Writing/Research <span></span> →</a>
+            <a href="mat172.html" class="course-card">
+                <div>1. MAT-172: <span>Precalculus Trig</span></div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="chm151.html" class="course-card">
+                <div>2. CHM-151: <span>General Chemistry I</span></div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="com231.html" class="course-card">
+                <div>3. COM-231: <span>Public Speaking</span></div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="eng112.html" class="course-card">
+                <div>4. ENG-112: <span>Writing/Research</span></div>
+                <div class="arrow">→</div>
+            </a>
         </div>
     </div>
+
+    <footer>Fayetteville Technical Community College</footer>
 
 </body>
 </html>
