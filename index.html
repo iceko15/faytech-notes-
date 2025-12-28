@@ -8,32 +8,20 @@
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
         
         /* Navigation Bar */
-        nav { background-color: #ffffff; border-bottom: 3px solid #0056b3; padding: 15px 0; display: flex; justify-content: center; gap: 25px; position: sticky; top: 0; z-index: 1000; }
-        nav a { text-decoration: none; color: #444; font-weight: bold; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+        nav { background-color: #ffffff; border-bottom: 3px solid #0056b3; padding: 15px 0; display: flex; justify-content: center; gap: 30px; position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: #444; font-weight: bold; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: #0056b3; }
         .active-tab { color: #0056b3; border-bottom: 2px solid #0056b3; }
 
         /* Layout Container */
-        .container { display: flex; max-width: 1200px; margin: 40px auto; padding: 0 20px; gap: 50px; }
+        .container { display: flex; justify-content: center; max-width: 850px; margin: 80px auto; padding: 0 20px; }
         
         /* Main Course List */
-        .course-list { flex: 2; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .course-list h1 { font-size: 32px; margin-top: 0; color: #222; border-bottom: 2px solid #eee; padding-bottom: 15px; }
-        .course-item { display: flex; align-items: center; margin-bottom: 20px; font-size: 20px; text-decoration: none; color: #0056b3; font-weight: 500; }
-        .course-item span { color: #aaa; margin: 0 15px; flex-grow: 1; border-bottom: 1px dotted #ccc; height: 14px; }
-        .course-item:hover { color: #003d7a; }
-
-        /* Resource Sidebar */
-        .sidebar { flex: 1; background: white; border: 2px solid #222; border-radius: 12px; padding: 25px; text-align: center; height: fit-content; }
-        .sidebar h2 { font-size: 28px; margin-top: 0; color: #222; text-transform: uppercase; letter-spacing: 1px; }
-        .sidebar-list { list-style: none; padding: 0; text-align: left; margin: 20px 0; }
-        .sidebar-list li { font-size: 18px; margin-bottom: 12px; font-weight: 600; padding-left: 20px; position: relative; }
-        .sidebar-list li::before { content: "•"; position: absolute; left: 0; color: #0056b3; }
-        
-        /* Math Graphic Placeholder */
-        .graphic-box { margin: 25px 0; border: 1px solid #eee; padding: 15px; background: #fff; }
-        .btn-action { background-color: #2da44e; color: white; padding: 12px 40px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold; border: 2px solid #1a7f37; transition: 0.2s; }
-        .btn-action:hover { background-color: #2c974b; transform: translateY(-2px); }
+        .course-list { flex: 1; background: white; padding: 45px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .course-list h1 { font-size: 34px; margin-top: 0; color: #222; border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 35px; }
+        .course-item { display: flex; align-items: center; margin-bottom: 28px; font-size: 22px; text-decoration: none; color: #0056b3; font-weight: 500; }
+        .course-item span { color: #aaa; margin: 0 15px; flex-grow: 1; border-bottom: 1px dotted #ccc; height: 16px; }
+        .course-item:hover { color: #003d7a; transform: translateX(8px); transition: 0.2s; }
     </style>
 </head>
 <body>
@@ -44,7 +32,6 @@
         <a href="#">CHM-151</a>
         <a href="#">COM-231</a>
         <a href="#">ENG-112</a>
-        <a href="#">Python Tools</a>
     </nav>
 
     <div class="container">
@@ -54,30 +41,6 @@
             <a href="#" class="course-item">2. CHM-151: General Chemistry I <span></span> →</a>
             <a href="#" class="course-item">3. COM-231: Public Speaking <span></span> →</a>
             <a href="#" class="course-item">4. ENG-112: Writing/Research <span></span> →</a>
-            <a href="#" class="course-item" style="color: #c62828;">5. TI-Nspire CAS Resources <span></span> →</a>
-            <a href="#" class="course-item" style="color: #2e7d32;">6. Army Unit AI Projects <span></span> →</a>
-        </div>
-
-        <div class="sidebar">
-            <h2>Resources</h2>
-            <ul class="sidebar-list">
-                <li>Math Formula Sheets</li>
-                <li>Chemistry Lab Schedule</li>
-                <li>Speech Outlines</li>
-                <li>Python AI Scripts</li>
-            </ul>
-            
-            <div class="graphic-box">
-                <svg width="160" height="120" viewBox="0 0 160 120">
-                    <path d="M 20,100 L 140,100 L 140,20 Z" fill="none" stroke="#0056b3" stroke-width="3"/>
-                    <text x="75" y="115" font-size="14" fill="#c62828" font-weight="bold">a</text>
-                    <text x="145" y="65" font-size="14" fill="#c62828" font-weight="bold">b</text>
-                    <text x="70" y="55" font-size="14" fill="#c62828" font-weight="bold">c</text>
-                    <rect x="130" y="90" width="10" height="10" fill="none" stroke="#000" stroke-width="1"/>
-                </svg>
-            </div>
-            
-            <a href="https://github.com/iceko15" class="btn-action">View My GitHub</a>
         </div>
     </div>
 
