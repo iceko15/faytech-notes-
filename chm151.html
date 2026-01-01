@@ -2,34 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CHM-151: General Chemistry I Notes</title>
+    <title>CHM-151: General Chemistry I</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
-        /* Professional Blue Theme */
-        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; font-weight: bold; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 40px; color: #333; background-color: #f9f9f9; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        .back-link { display: inline-block; margin-bottom: 30px; text-decoration: none; color: #666; font-weight: bold; }
         .back-link:hover { color: #0056b3; }
-        .unit-box { border-left: 5px solid #0056b3; background: #f0f7ff; padding: 15px; margin-top: 20px; }
-        .note-link { color: #0056b3; text-decoration: none; font-weight: 500; border: 1px solid #0056b3; padding: 5px 10px; border-radius: 4px; transition: 0.3s; }
-        .note-link:hover { background: #0056b3; color: white; }
+
+        h1 { color: #0056b3; font-size: 2.2em; margin-bottom: 10px; }
+        p.subtitle { color: #555; margin-bottom: 30px; font-size: 1.1em; }
+
+        /* Match the Math Page Button Grid */
+        .button-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        
+        .note-btn { 
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #0056b3;
+            background: white;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .note-btn:hover {
+            background-color: #0056b3;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,86,179,0.2);
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <a href="index.html" class="back-link">← Back to Dashboard</a>
-        <div class="card">
-            <h1>CHM-151: General Chemistry I</h1>
-            <p><strong>Lecture:</strong> Tuesday/Thursday 1:00–2:15 PM</p>
-            <p><strong>Lab:</strong> Wednesday 1:00–3:50 PM</p>
+        
+        <h1>CHM-151: General Chemistry I</h1>
+        <p class="subtitle">Select a date to view lab reports and study guides:</p>
+
+        <div class="button-grid">
+            <a href="chm151-notes/jan01.html" class="note-btn">January 1: Lab Practice Reps</a>
             
-            <div class="unit-box">
-                <h3>January Lab Sessions</h3>
-                <p>Status: Practicing "n-level" navigation.</p>
-                <a href="chm151-notes/jan01.html" class="note-link">January 1st: Lab Practice Reps →</a>
-            </div>
+            <a href="#" class="note-btn" style="opacity: 0.5; cursor: not-allowed;">January 14: Lab 1 (Coming Soon)</a>
         </div>
     </div>
+
 </body>
 </html>
