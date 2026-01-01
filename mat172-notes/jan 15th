@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Guide - Anatomy & Physiology Review</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        
+        /* Button Styling */
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; transition: background 0.3s; }
+        .print-btn:hover { background: #004494; }
+        
+        /* Updated Blue Back Button */
+        .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: background 0.3s; }
+        .back-btn:hover { background: #004494; }
+
+        .fraction { display: inline-block; vertical-align: middle; text-align: center; font-size: 0.9em; }
+        .fraction > span { display: block; padding: 0.1em; }
+        .fraction span.numerator { border-bottom: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #d9534f; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Math Home</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+
+    <h1>Comprehensive Anatomy & Physiology Review</h1>
+
+    <h2>Section 1: BIG IDEA</h2>
+    <p>
+        This review focuses on the fundamental biological mechanisms that maintain life, ranging from cellular reproduction and metabolism to the regulation of the body's internal environment through <strong>homeostasis</strong>. The instructor emphasizes that understanding the relationship between structure (anatomy) and function (physiology) across different systems—nervous, skeletal, and integumentary—is critical for mastering the upcoming examination.
+    </p>
+
+    <h2>Section 2: KEY TERMS/CONCEPTS</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Term</th>
+                <th>Definition/Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Homeostasis</strong></td>
+                <td>The body's ability to maintain a stable internal environment despite external changes.</td>
+            </tr>
+            <tr>
+                <td><strong>Anabolic</strong></td>
+                <td>Metabolic pathways that build or synthesize larger molecules from smaller ones.</td>
+            </tr>
+            <tr>
+                <td><strong>Catabolic</strong></td>
+                <td>Metabolic pathways that break down larger molecules into smaller ones, releasing energy.</td>
+            </tr>
+            <tr>
+                <td><strong>Mitosis</strong></td>
+                <td>Cell division resulting in two identical daughter cells with 46 chromosomes each.</td>
+            </tr>
+            <tr>
+                <td><strong>Meiosis</strong></td>
+                <td>Specialized cell division for sex cells resulting in 23 chromosomes.</td>
+            </tr>
+            <tr>
+                <td><strong>Osteoclast</strong></td>
+                <td>A cell that breaks down bone tissue.</td>
+            </tr>
+            <tr>
+                <td><strong>Osteoblast</strong></td>
+                <td>A cell that builds new bone tissue.</td>
+            </tr>
+            <tr>
+                <td><strong>Meninges</strong></td>
+                <td>Protective layers of the brain/spinal cord; the <strong>Dura Mater</strong> is the "tough" outer layer.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Section 3: STEPS/PROCESS</h2>
+    <p><strong>Cellular Respiration Flow:</strong></p>
+    <ol>
+        <li><span class="key-step">Glycolysis:</span> Glucose is broken down into two pyruvate molecules.</li>
+        <li><span class="key-step">Pyruvate Oxidation:</span> Pyruvate is converted into Acetyl CoA.</li>
+        <li><span class="key-step">Krebs Cycle:</span> A series of reactions that generate high-energy electron carriers.</li>
+        <li><span class="key-step">Electron Transport Chain (ETC):</span> Uses ATP Synthase to produce the bulk of the cell's ATP (energy).</li>
+    </ol>
+
+    <h2>Section 4: RULES/IMPORTANT NOTES</h2>
+    <ul>
+        <li><strong>Transcription vs. Translation:</strong> Transcription occurs first (in the nucleus), followed by Translation (in the cytoplasm).</li>
+        <li><strong>Negative Feedback:</strong> The most common feedback mechanism; it works to bring the body back toward a "set point" (e.g., temperature regulation).</li>
+        <li><strong>Positive Feedback:</strong> Makes a reaction greater/amplifies it (e.g., childbirth/contractions).</li>
+        <li><strong>pH Relationships:</strong> 
+            <ul>
+                <li>High H<sup>+</sup> concentration = Acidic = Low pH number (0–6).</li>
+                <li>High OH<sup>-</sup> concentration = Basic = High pH number (8–14).</li>
+            </ul>
+        </li>
+        <li><strong>Serous Membranes:</strong> The <em>Visceral</em> layer touches the organ; the <em>Parietal</em> layer lines the cavity.</li>
+    </ul>
+
+    <h2>Section 5: EXAMPLE/DEMONSTRATION</h2>
+    <div class="example-box">
+        <strong>Example 1: The pH Scale and Ions</strong><br>
+        If a solution has a pH of 2 (like stomach acid), it is considered highly acidic. This means it has a high concentration of Hydrogen ions (H<sup>+</sup>) and a low concentration of Hydroxide ions (OH<sup>-</sup>). 
+    </div>
+
+    <div class="example-box">
+        <strong>Example 2: Set Points in Homeostasis</strong><br>
+        The human body "set point" for temperature is 98.6°F. While a normal range exists (e.g., 97.5°F to 100°F), once the temperature fluctuates outside this range, the body triggers negative feedback loops to sweat or shiver to return to the set point.
+    </div>
+
+    <div class="example-box">
+        <strong>Example 3: Hierarchical Organization</strong><br>
+        The body is organized from simplest to most complex: Chemicals &rarr; Cells &rarr; Tissues &rarr; Organs &rarr; Organ Systems &rarr; Organism.
+    </div>
+
+    <h2>Section 6: PRACTICE PROBLEMS</h2>
+    <ol>
+        <li>If a cell undergoes <strong>mitosis</strong>, how many chromosomes will the new daughter cell have? (Answer: 46)</li>
+        <li>Which division of the nervous system is responsible for the "fight or flight" response when being chased by a bear? (Answer: Sympathetic)</li>
+        <li>What is the function of the <strong>Mitochondria</strong>? (Answer: Powerhouse of the cell; produces ATP)</li>
+        <li>In the skeletal system, which cell type is responsible for <em>maintaining</em> bone matrix? (Answer: Osteocyte)</li>
+    </ol>
+
+    <h2>Section 7: SUMMARY</h2>
+    <p>
+        The study guide covers the essential bridge between cellular biology and systemic physiology. Key focuses for the exam include the distinction between anabolic and catabolic metabolism, the stages of cellular respiration (specifically the role of ATP Synthase), the mechanics of pH and ion concentration, and the layers of the integumentary and nervous systems. Remember: <strong>Metabolism</strong> is the sum of all anabolic and catabolic reactions in the body.
+    </p>
+</body>
+</html>
