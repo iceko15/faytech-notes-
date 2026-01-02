@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Aqueous Solutions & pH Scale</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head><body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Aqueous Solutions & the pH Scale</h1>
+
+        <h2>BIG IDEA</h2>
+        <p>A solution's acidity or alkalinity is determined by the concentration of specific ions within the solvent. The pH scale is <strong>logarithmic and inverse</strong>: a high concentration of \(H^+\) ions results in a <em>low</em> pH value.</p>
+
+        
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td><strong>Solute</strong></td>
+                <td>The substance being dissolved (e.g., the acid or base added to the flask).</td>
+            </tr>
+            <tr>
+                <td><strong>Solvent</strong></td>
+                <td>The dissolving medium (in aqueous solutions, this is water).</td>
+            </tr>
+            <tr>
+                <td><strong>Hydronium (\(H^+\))</strong></td>
+                <td>The ion responsible for acidic properties.</td>
+            </tr>
+            <tr>
+                <td><strong>Hydroxide (\(OH^-\))</strong></td>
+                <td>The ion responsible for basic (alkaline) properties.</td>
+            </tr>
+        </table>
+
+        <h2>STEPS/PROCESS: TITRATION COMPONENTS</h2>
+        <ol>
+            <li><span class="key-step">The Setup:</span> Identify the solvent (lining the flask) and the solute (the functional substance).</li>
+            <li><span class="key-step">Ion Check:</span> Determine if the solution is dominated by \(H^+\) or \(OH^-\).</li>
+            <li><span class="key-step">Molarity Calculation:</span> Determine the concentration (moles/liter) to find the weight of the concentration.</li>
+            <li><span class="key-step">pH Mapping:</span> Translate the ion concentration to the 0–14 scale.</li>
+        </ol>
+
+        <h2>RULES: THE pH QUADRANTS</h2>
+        <ul>
+            <li><strong>Acidic Solutions:</strong> High \(H^+\) concentration = Low pH (0–6). <em>Example: Stomach acid is roughly 2.</em></li>
+            <li><strong>Neutral Solutions:</strong> Equal amounts of \(H^+\) and \(OH^-\) = pH of 7.</li>
+            <li><strong>Basic Solutions:</strong> High \(OH^-\) concentration = High pH (8–14).</li>
+            <li><strong>Concentration Paradox:</strong> "High on the tail" means basic; don't confuse "ton of ions" with a "high number" on the scale for acids.</li>
+        </ul>
+
+        <h2>EXAMPLE/DEMONSTRATION</h2>
+        <div class="example-box">
+            <p class="key-step">1. The Beaker Quadrants</p>
+            Imagine a beaker during a titration:
+            <ul>
+                <li><strong>Solvent:</strong> The water volume filling the flask.</li>
+                <li><strong>Solute:</strong> The concentrated acid drops touching the liquid.</li>
+            </ul>
+        </div>
+        <div class="example-box">
+            <p class="key-step">2. Logarithmic Logic</p>
+            If solution A has a pH of 2 and solution B has a pH of 3, solution A is <strong>10 times</strong> more acidic than solution B because it has a higher concentration of \(H^+\).
+        </div>
+        <div class="example-box">
+            <p class="key-step">3. Identifying a Base</p>
+            If a solution contains a high amount of \(OH^-\) (Hydroxide), it will be found on the high end of the scale (e.g., pH 12 or 13).
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ol>
+            <li>If a solution is "low on the pH tail" (e.g., pH 1), is it acidic or basic? (Answer: Acidic)</li>
+            <li>Which ion is present in high concentrations in a basic solution? (Answer: \(OH^-\))</li>
+            <li>What is the pH of a neutral solution where \(H^+\) and \(OH^-\) are equal? (Answer: 7)</li>
+        </ol>
+
+        <h2>SUMMARY</h2>
+        <p>In the lab, always distinguish between the <strong>solute</strong> and the <strong>solvent</strong>. When measuring acidity, remember the inverse rule: a high density of <strong>Hydrogen ions (\(H^+\))</strong> correlates to a low pH number, while <strong>Hydroxide ions (\(OH^-\))</strong> dominate the high, basic end of the scale.</p>
+    </div></body></html>
