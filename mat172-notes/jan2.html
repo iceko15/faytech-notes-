@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Trigonometry Foundations & Periodicity</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        .fraction { display: inline-block; vertical-align: middle; text-align: center; font-size: 0.9em; }
+        .fraction > span { display: block; padding: 0.1em; }
+        .fraction span.numerator { border-bottom: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>January 2, 2026: Trigonometry Foundations & Periodicity</h1>
+
+        <h2>Section 1: BIG IDEA</h2>
+        <p>This session explores the structural relationships within the unit circle and the oscillatory nature of trigonometric functions. We examine how periodic activity, specifically within the sine and tangent layers, creates predictable patterns like frequency and amplitude. Furthermore, the concept of homeostatic periodicity is introduced, illustrating how mathematical systems (and biological ones) use feedback loops to return to a set point of 360° or 2π.</p>
+
+        <h2>Section 2: KEY TERMS</h2>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td><strong>Unit Circle</strong></td>
+                <td>A circle with a radius of 1, used to define trigonometric ratios via coordinates like (<div class="fraction"><span class="numerator">1</span><span>2</span></div>, <div class="fraction"><span class="numerator">&radic;3</span><span>2</span></div>).</td>
+            </tr>
+            <tr>
+                <td><strong>Phase Shift</strong></td>
+                <td>A horizontal translation of a periodic function (C before D in the transformation order).</td>
+            </tr>
+            <tr>
+                <td><strong>Periodicity</strong></td>
+                <td>The quality of a function repeating its values in regular intervals or cycles.</td>
+            </tr>
+            <tr>
+                <td><strong>Oblique Triangle</strong></td>
+                <td>A triangle that does not contain a right angle; solved using Law of Sines or Law of Cosines.</td>
+            </tr>
+            <tr>
+                <td><strong>Arc-functions</strong></td>
+                <td>Inverse functions (like arcsine) used to link a ratio system back to an angle system.</td>
+            </tr>
+        </table>
+
+        <h2>Section 3: STEPS/PROCESS</h2>
+        <ol>
+            <li><span class="key-step">Identify the Layer:</span> Determine if the oscillation is occurring in the sine layer (periodic activity) or the tangent layer (asymptotic activity).</li>
+            <li><span class="key-step">Apply Transformations:</span> Execute horizontal translations (phase shifts) first, followed by vertical translations.</li>
+            <li><span class="key-step">Determine Periodicity:</span> Calculate the frequency molecules derived from the energy of the period to establish harmonic motion.</li>
+            <li><span class="key-step">Evaluate the Range:</span> Use the central value system for inverse functions to determine the valid domain and range cells.</li>
+        </ol>
+
+        <h2>Section 4: RULES/IMPORTANT NOTES</h2>
+        <ul>
+            <li><strong>SOHCAHTOA:</strong> A primary mnemonic for right triangle ratios (Sine=Opp/Hyp, Cosine=Adj/Hyp, Tangent=Opp/Adj).</li>
+            <li><strong>The "Bear Rule":</strong> Sine and Cosine exist "under the house" (within the primary structure), while Secant and Cosecant are reciprocals.</li>
+            <li><strong>Set Points:</strong> The standard set point for a full rotation is 360°, with a normal functional range typically between 359.5° and 361°.</li>
+            <li><strong>Negative Phase:</strong> Acts as a corrective force to bring a system back to its normal range when amplitude becomes "out of whack."</li>
+        </ul>
+
+        <h2>Section 5: EXAMPLE/DEMONSTRATION</h2>
+        <div class="example-box">
+            <span class="key-step">Example 1: Coordinate Verification</span><br>
+            Check if the point (<div class="fraction"><span class="numerator">1</span><span>2</span></div>, y) fits the unit circle. Since x<sup>2</sup> + y<sup>2</sup> = 1, then (<div class="fraction"><span class="numerator">1</span><span>2</span></div>)<sup>2</sup> + y<sup>2</sup> = 1, leading to y = <div class="fraction"><span class="numerator">&radic;3</span><span>2</span></div>.
+        </div>
+        <div class="example-box">
+            <span class="key-step">Example 2: Phase Translation Order</span><br>
+            When looking at the formula f(x) = A sin(B(x - C)) + D, the horizontal shift (C) must be identified before the vertical shift (D).
+        </div>
+        <div class="example-box">
+            <span class="key-step">Example 3: pH and Logarithmic Scales</span><br>
+            A solution with high H<sup>+</sup> concentration is acidic and sits <strong>low</strong> on the pH scale (e.g., pH 2), while high OH<sup>-</sup> indicates a basic solution <strong>high</strong> on the scale.
+        </div>
+
+        <h2>Section 6: PRACTICE PROBLEMS</h2>
+        <ol>
+            <li>If a terminal side rotates 375°, is it within the "normal range" of the 360° set point? (No, it exceeds the 370° worry threshold).</li>
+            <li>What is the reciprocal of the Sine function? (Cosecant).</li>
+            <li>Which law would you use for a Side-Angle-Side (SAS) oblique triangle? (Law of Cosines).</li>
+        </ol>
+
+        <h2>Section 7: SUMMARY</h2>
+        <p>Success in this module requires mastering the connection between the ratio system and the angle system. Focus on the unit circle coordinates, the specific order of transformations (horizontal before vertical), and the concept of negative feedback in periodicity. Review the concept map for the Velocity Transfer Chain (VTC) and angular velocity to prepare for Monday's assessment.</p>
+    </div>
+</body>
+</html>
