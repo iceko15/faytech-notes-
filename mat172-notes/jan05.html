@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Trigonometry Foundations & Periodicity</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Trigonometry Foundations & Periodicity</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Understanding the interplay between the unit circle, trigonometric identities, and the concept of periodicity. This session emphasizes how circular motion translates into oscillating waves and the importance of maintaining a "normal range" or set point within periodic functions.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td>Unit Circle</td>
+                <td>A circle with a radius of \( r = 1 \), used to define trigonometric functions.</td>
+            </tr>
+            <tr>
+                <td>Asymptotes</td>
+                <td>Lines that a graph approaches but never touches, specifically noted in the tangent layer.</td>
+            </tr>
+            <tr>
+                <td>Coterminal Angles</td>
+                <td>Angles that share the same terminal side but differ by an integer number of full rotations.</td>
+            </tr>
+            <tr>
+                <td>Phase Shift</td>
+                <td>The horizontal translation of a periodic function, represented by the variable \( C \).</td>
+            </tr>
+            <tr>
+                <td>Periodicity</td>
+                <td>The quality of a function repeating its values in regular intervals or cycles.</td>
+            </tr>
+        </table>
+
+        <h2>STEPS/PROCESS</h2>
+        <ol>
+            <li><span class="key-step">Identify the Terminal Side:</span> Rotate the angle \( \theta \) from the standard position and slide to the reference triangle model.</li>
+            <li><span class="key-step">Apply SOHCAHTOA:</span> Use the relationship of sides (\( \sin = \frac{opp}{hyp} \), \( \cos = \frac{adj}{hyp} \), \( \tan = \frac{opp}{adj} \)) to find ratios.</li>
+            <li><span class="key-step">Convert to Radians:</span> Use the direct conversion factor \( \pi = 180^\circ \).</li>
+            <li><span class="key-step">Analyze Wave Layers:</span> Determine the amplitude and crest/trough values for sine and cosine oscillations.</li>
+            <li><span class="key-step">Solve Oblique Triangles:</span> Select the appropriate law (Law of Sines or Law of Cosines) based on given parts (\( SAS, ASA, SSS \)).</li>
+        </ol>
+
+        <h2>RULES</h2>
+        <ul>
+            <li><strong>The Pythagorean Identity:</strong> Always holds that \( \sin^2(\theta) + \cos^2(\theta) = 1 \).</li>
+            <li><strong>Horizontal First:</strong> In transformations, address the phase shift (horizontal) before vertical translations.</li>
+            <li><strong>Periodicity Normal Range:</strong> A full circle set point is \( 360^\circ \). Variations within \( 359.5^\circ \) to \( 361^\circ \) are considered a "normal range."</li>
+            <li><strong>Phase Reactions:</strong> 
+                <ul>
+                    <li>Positive Phase: Increases the magnitude of the reaction.</li>
+                    <li>Negative Phase: Lessens the reaction to bring the system back to periodicity.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>EXAMPLE/DEMONSTRATION</h2>
+        <div class="example-box">
+            <span class="key-step">Example 1: Unit Circle Coordinates</span><br>
+            If a point lies on the unit circle at \( 60^\circ \), the coordinates are \( (\frac{1}{2}, \frac{\sqrt{3}}{2}) \). Here, \( \cos(60^\circ) = \frac{1}{2} \) and \( \sin(60^\circ) = \frac{\sqrt{3}}{2} \).
+        </div>
+        <div class="example-box">
+            <span class="key-step">Example 2: Frequency Breakdown</span><br>
+            The period \( T \) of harmonic motion can be broken down into frequency molecules. The relationship is defined as \( f = \frac{1}{T} \).
+        </div>
+        <div class="example-box">
+            <span class="key-step">Example 3: pH Scale Comparison</span><br>
+            Trig periodicity is compared to pH: Acidic solutions (high \( H^+ \)) have a low pH value (e.g., \( 0-2 \)), while Basic solutions (high \( OH^- \)) have high pH values.
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Convert \( 180^\circ \) to radians. (\( \pi \))</li>
+            <li>Find the coterminal angle of \( 370^\circ \) within the standard \( 360^\circ \) cycle. (\( 10^\circ \))</li>
+            <li>Identify the reciprocal of the secant function. (\( \cos(\theta) \))</li>
+            <li>In the velocity transfer chain (VTC), what type of velocity is produced at the end? (Angular velocity)</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>This review covered the essential layers of trigonometry, from the superficial layers of right triangles and SOHCAHTOA to the deeper "tangent layers" involving asymptotes. Remember that identities serve to create exact duplicates or copies of functions. Focus on the concept map for harmonic motion and the relationship between period and frequency for the upcoming Monday test.</p>
+    </div>
+</body>
+</html>
