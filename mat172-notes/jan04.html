@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course: MAT-172 - Trigonometry Foundations & Oscillations</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Unit Circle, Identities, and Oscillations</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The mastery of trigonometry involves understanding the <strong>Unit Circle</strong> as a coordinate system, the <strong>periodic nature</strong> of trigonometric functions as waves, and the algebraic manipulation of <strong>identities</strong> to simplify complex periodic reactions.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Unit Circle</strong></td>
+                    <td>A circle with a radius of \( r = 1 \), centered at the origin, used to define trigonometric ratios for all angles.</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase Shift</strong></td>
+                    <td>A horizontal translation of a periodic function, represented by the variable \( C \).</td>
+                </tr>
+                <tr>
+                    <td><strong>Periodicity</strong></td>
+                    <td>The quality of a function repeating its values in regular intervals or cycles (e.g., \( 360^\circ \) or \( 2\pi \) radians).</td>
+                </tr>
+                <tr>
+                    <td><strong>Oblique Triangle</strong></td>
+                    <td>Any triangle that does not contain a right angle; solved using Law of Sines or Law of Cosines.</td>
+                </tr>
+                <tr>
+                    <td><strong>Asymptote</strong></td>
+                    <td>A line that a graph approaches but never touches, frequently found in tangent and reciprocal functions.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>STEPS/PROCESS</h2>
+        <ol>
+            <li><span class="key-step">Convert Degrees to Radians:</span> Use the direct conversion factor where \( 180^\circ = \pi \) radians.</li>
+            <li><span class="key-step">Apply SOHCAHTOA:</span> Utilize the reference triangle model to determine sine, cosine, and tangent based on the opposite, adjacent, and hypotenuse sides.</li>
+            <li><span class="key-step">Identify Transformations:</span> Apply horizontal transformations (phase shifts) first, followed by vertical translations.</li>
+            <li><span class="key-step">Determine Periodicity:</span> Calculate the frequency and period of harmonic motion to understand how waves oscillate over time.</li>
+        </ol>
+
+        <h2>RULES & IDENTITIES</h2>
+        <ul>
+            <li><strong>Pythagorean Identity:</strong> \[ \sin^2(\theta) + \cos^2(\theta) = 1 \]</li>
+            <li><strong>Reciprocal System:</strong> Sine corresponds with Cosecant, and Cosine corresponds with Secant.</li>
+            <li><strong>Normal Range:</strong> A full circle set point is \( 360^\circ \). Variations up to \( \pm 10^\circ \) (e.g., \( 350^\circ \) to \( 370^\circ \)) are often considered within a "normal" range before systemic adjustments are needed.</li>
+            <li><strong>Phase Reactions:</strong> 
+                <ul>
+                    <li><strong>Negative Phase:</strong> Acts to bring a system back to its normal periodic range (homeostasis).</li>
+                    <li><strong>Positive Phase:</strong> Amplifies a reaction, making it greater and moving it further from the set point.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>EXAMPLE/DEMONSTRATION</h2>
+                <div class="example-box">
+            <p class="key-step">1. Coordinate Extraction</p>
+            <p>On the unit circle, the coordinates are defined as \( (x, y) = (\cos \theta, \sin \theta) \). For an angle of \( 60^\circ \), the coordinate is \( (\frac{1}{2}, \frac{\sqrt{3}}{2}) \).</p>
+        </div>
+        <div class="example-box">
+            <p class="key-step">2. Law of Sines Application</p>
+            <p>Used for oblique triangles when given AAS or ASA. The ratio is defined as: \[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \]</p>
+        </div>
+        <div class="example-box">
+            <p class="key-step">3. pH Scale Relationship</p>
+            <p>While often used in chemistry, the logarithmic nature of pH follows mathematical periodic modeling. High \( H^+ \) concentration = Low pH (Acidic); High \( OH^- \) concentration = High pH (Basic).</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>If \( \sin(\theta) = \frac{1}{2} \) and the terminal side is in Quadrant II, what is \( \cos(\theta) \)? (Answer: \( -\frac{\sqrt{3}}{2} \))</li>
+            <li>Identify the transformation order for \( y = \sin(x - C) + D \). (Answer: Horizontal phase shift \( C \) first, then vertical translation \( D \))</li>
+            <li>What is the reciprocal of the Sine function? (Answer: Cosecant / \( \csc \))</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Trigonometry is the study of how angles, circles, and waves interact. By using the unit circle as a set point, we can model everything from simple triangles to complex harmonic motion and pH oscillations. Mastery of identities like the Pythagorean theorem and reciprocal ratios is essential for solving these periodic systems.</p>
+    </div>
+</body>
+</html>
