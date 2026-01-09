@@ -79,9 +79,7 @@
             padding: 25px;
             border-radius: 8px;
             border: 1px dashed var(--tip-border);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            display: flex; flex-direction: column; justify-content: center;
         }
 
         .welcome-section h2, .welcome-section h3 { margin-top: 0; color: var(--dark-blue); }
@@ -126,13 +124,13 @@
             transform: translateX(5px);
         }
 
-        /* Updated Footer Styling for your request */
         footer {
             text-align: center;
             margin: 50px 0;
-            padding-top: 20px;
+            padding: 20px;
             color: #666;
             font-style: italic;
+            font-size: 0.9em;
         }
 
         .semester-badge {
@@ -143,8 +141,18 @@
             border-radius: 20px;
             font-size: 0.8em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-style: normal;
+        }
+
+        .visitor-counter {
+            margin-top: 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .visitor-counter:hover {
+            opacity: 1;
         }
 
         @media (max-width: 768px) { .welcome-section { flex-direction: column; } }
@@ -200,7 +208,10 @@
 
     <footer>
         <div class="semester-badge">SPRING 2026</div><br>
-        This workspace is dedicated to the 4 classes I am taking this semester. I created this to bridge the gap between lecture notes and exam success for my classmates and myself.
+        This workspace is dedicated to the 4 classes I am taking this semester. I created this to bridge the gap between lecture notes and exam success for my classmates and myself.<br>
+        <div class="visitor-counter">
+            <img src="https://hitscounter.dev/count/tag.svg?url=https%3A%2F%2Ficeko15.github.io%2Ffaytech-notes-&badge_color=%230056b3&title_color=%23555555&title=Library+Views" alt="Visitor Count">
+        </div>
     </footer>
 
 </body>
