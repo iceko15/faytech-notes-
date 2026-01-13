@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Course Intro & Trigonometry Overview</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        .alert-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>MAT-172: Course Intro & Trigonometry Overview</h1>
+        <p><strong>Date:</strong> January 13, 2026<br>
+        <strong>Instructor:</strong> Dr. Mendoor (Jean)</p>
+
+        <h2>BIG IDEA</h2>
+        <p>MAT-172 (Pre-Calculus Trigonometry) builds upon MAT-171 foundations to explore the relationships between angles and triangles, circular functions, and analytic trigonometry. Success in this STEM-track course requires rigorous organization, handwritten verification of digital work, and mastery of the unit circle.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>\(\theta, \alpha, \beta\)</td>
+                    <td>Greek letters commonly used as variables to represent angle measures.</td>
+                </tr>
+                <tr>
+                    <td>Radian</td>
+                    <td>A unit of angle measure based on the radius of a circle; alternative to degrees.</td>
+                </tr>
+                <tr>
+                    <td>Unit Circle</td>
+                    <td>A circle with radius \(r = 1\) used to define trigonometric functions.</td>
+                </tr>
+                <tr>
+                    <td>Oblique Triangle</td>
+                    <td>A triangle that does not contain a right (\(90^\circ\)) angle.</td>
+                </tr>
+                <tr>
+                    <td>Hypotenuse</td>
+                    <td>The side opposite the right angle in a right triangle; represented as \(c\).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>COURSE POLICIES & LOGISTICS</h2>
+        <ul>
+            <li><strong>The Notebook Project:</strong> Students must maintain a handwritten notebook showing all calculations for MyMathLab (MML) homework and quizzes. This is used to verify learning and prevent over-reliance on AI/Google.</li>
+            <li><strong>Calculators:</strong> A physical graphing calculator (e.g., TI-83/84) is required for exams. Mobile phone calculators are not permitted during testing.</li>
+            <li><strong>Attendance:</strong> Students must complete the "Course Entry Quiz" to unlock modules. Weekly check-ins (due Sundays/Monday 8:00 AM) are mandatory for participation.</li>
+            <li><strong>Final Exam:</strong> Proctored and non-negotiable. Failure to take the final results in a grade of "F" regardless of previous standing.</li>
+        </ul>
+
+        <h2>TRIGONOMETRIC FOUNDATIONS</h2>
+        <div class="alert-box">
+            <strong>The Pythagorean Theorem:</strong> Applicable <em>only</em> to right triangles: 
+            \[a^2 + b^2 = c^2\]
+        </div>
+        
+        <p>In trigonometry, we label sides relative to a specific acute angle \(\theta\):</p>
+        <ol>
+            <li><span class="key-step">Hypotenuse:</span> Always the longest side, opposite the \(90^\circ\) angle.</li>
+            <li><span class="key-step">Opposite:</span> The side directly across from angle \(\theta\).</li>
+            <li><span class="key-step">Adjacent:</span> The side "beside" or touching angle \(\theta\) (that is not the hypotenuse).</li>
+        </ol>
+
+        <h2>EXAMPLE: SOH-CAH-TOA DEFINITIONS</h2>
+        <div class="example-box">
+            <strong>1. Primary Functions:</strong>
+            <ul>
+                <li>\(\sin(\theta) = \frac{\text{Opposite}}{\text{Hypotenuse}}\)</li>
+                <li>\(\cos(\theta) = \frac{\text{Adjacent}}{\text{Hypotenuse}}\)</li>
+                <li>\(\tan(\theta) = \frac{\text{Opposite}}{\text{Adjacent}}\)</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <strong>2. Reciprocal Functions:</strong>
+            <ul>
+                <li>\(\csc(\theta) = \frac{1}{\sin(\theta)}\)</li>
+                <li>\(\sec(\theta) = \frac{1}{\cos(\theta)}\)</li>
+                <li>\(\cot(\theta) = \frac{1}{\tan(\theta)}\)</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <strong>3. Key Conversion:</strong>
+            <p>The relationship between degrees and radians is anchored by the straight angle:</p>
+            \[180^\circ = \pi \text{ radians}\]
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ol>
+            <li>If a right triangle has legs \(a = 3\) and \(b = 4\), find the hypotenuse \(c\). (<strong>Answer: 5</strong>)</li>
+            <li>Convert \(90^\circ\) to radians using the ratio \(\frac{\pi}{180^\circ}\). (<strong>Answer: \(\frac{\pi}{2}\)</strong>)</li>
+            <li>Identify the reciprocal of \(\cos(\theta)\). (<strong>Answer: \(\sec(\theta)\)</strong>)</li>
+        </ol>
+
+        <h2>SUMMARY</h2>
+        <p>The first week focuses on "getting situated." Students must link their Pearson/MML accounts, complete the orientation quiz, and begin reviewing basic geometry and radical skills. Chapter 4 will introduce the Unit Circle—mastery of the first quadrant is the primary goal for the upcoming sessions.</p>
+    </div>
+</body>
+</html>
