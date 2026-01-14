@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Lab Safety & Unit Conversions</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head><body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Lab Orientation: Safety, ALEKS, & Dimensional Analysis</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Success in chemistry requires a rigorous adherence to safety protocols to prevent injury and a mastery of unit conversions (dimensional analysis) to ensure mathematical accuracy in experimental data.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>ACS Format</strong></td>
+                    <td>The standard citation and formatting style used by the American Chemical Society for formal lab reports.</td>
+                </tr>
+                <tr>
+                    <td><strong>ALEKS</strong></td>
+                    <td>An adaptive learning platform used for chemistry homework and knowledge mastery tracking.</td>
+                </tr>
+                <tr>
+                    <td><strong>Dimensional Analysis</strong></td>
+                    <td>A mathematical method using conversion factors to move from one unit of measurement to another.</td>
+                </tr>
+                <tr>
+                    <td><strong>Fume Hood</strong></td>
+                    <td>Ventilated enclosures used to safely work with chemicals that produce toxic or unpleasant vapors.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+        <h2>STEPS: THE LAB WEEKLY CYCLE</h2>
+        <ol>
+            <li><span class="key-step">Entrance Quiz:</span> Every lab begins with a quiz covering the safety and procedures of the <em>previous</em> week’s experiment.</li>
+            <li><span class="key-step">Lab Report Submission:</span> Completed lab packets (data, analysis, and post-lab questions) are due exactly one week after the experiment is performed.</li>
+            <li><span class="key-step">Procedure & Execution:</span> Procedures are provided as handouts; students must wear goggles before any glassware is touched.</li>
+            <li><span class="key-step">Cleanup:</span> Glassware must be washed with detergent, rinsed with tap water, and finally rinsed three times with \(H_2O_{distilled}\).</li>
+        </ol>
+
+        <h2>SAFETY RULES & PROTOCOLS</h2>
+        <ul>
+            <li><strong>Required Attire:</strong>
+                <ul>
+                    <li>Torso: Fully covered (no crop tops).</li>
+                    <li>Legs: Covered to the ankles (no large holes in jeans).</li>
+                    <li>Feet: Fully closed shoes (no Crocs, slippers, or open toes).</li>
+                </ul>
+            </li>
+            <li><strong>Emergency Response:</strong>
+                <ul>
+                    <li><em>Chemical in Eyes:</em> Flush at the eyewash station for \(20\) minutes. Remove contacts immediately.</li>
+                    <li><em>Large Chemical Spill:</em> Use the safety shower for \(20\) minutes; clothing must be removed.</li>
+                    <li><em>Fire:</em> Use the "PASS" method for extinguishers (Pull pin, Aim, Squeeze, Sweep) or the fire blanket.</li>
+                </ul>
+            </li>
+            <li><strong>Food & Drink:</strong> Strictly prohibited in the lab. All items must be sealed inside a backpack.</li>
+        </ul>
+
+        <h2>DIMENSIONAL ANALYSIS EXAMPLES</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Microliters to Milliliters</strong><br>
+            Convert \(567 \text{ } \mu L\) to \(mL\).<br><br>
+            Relationship: \(1 \text{ mL} = 1000 \text{ } \mu L\) or \(1 \text{ } \mu L = 10^{-3} \text{ mL}\).<br>
+            \[ 567 \text{ } \mu L \times \left( \frac{10^{-3} \text{ mL}}{1 \text{ } \mu L} \right) = 0.567 \text{ mL} \]
+        </div>
+
+        <div class="example-box">
+            <strong>Example 2: Complex Velocity Conversion</strong><br>
+            Convert the speed of Nitrogen (\(515 \text{ m/s}\)) to miles per hour (\(mi/hr\)).<br>
+            Given: \(1 \text{ mile} = 1.6093 \text{ km}\).<br><br>
+            \[ \frac{515 \text{ m}}{1 \text{ s}} \times \frac{1 \text{ km}}{1000 \text{ m}} \times \frac{1 \text{ mi}}{1.6093 \text{ km}} \times \frac{3600 \text{ s}}{1 \text{ hr}} \approx 1152 \text{ mi/hr} \]
+        </div>
+
+        <div class="example-box">
+            <strong>Example 3: Derived Units (Volume)</strong><br>
+            Find the volume of a cube where each side \(s = 2 \text{ cm}\).<br><br>
+            Formula: \(V = s^3\)<br>
+            \[ V = (2 \text{ cm}) \times (2 \text{ cm}) \times (2 \text{ cm}) = 8 \text{ cm}^3 \]
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Convert \(1.25 \text{ kilometers}\) to \(meters\). (\(1250 \text{ m}\))</li>
+            <li>If a solution has a volume of \(0.045 \text{ L}\), what is the volume in \(microliters\)? (\(45,000 \text{ } \mu L\))</li>
+            <li>A substance travels at \(10 \text{ meters per second}\). Convert this to \(kilometers per hour\). (\(36 \text{ km/hr}\))</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Lab readiness involves both physical preparation (safety gear) and mental preparation (understanding the ALEKS adaptive system and dimensional analysis). Always ensure units cancel out diagonally in conversion factors to arrive at the correct final unit.</p>
+    </div>
+</body></html>
