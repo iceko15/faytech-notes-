@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Unit Circle & Radian Conversions</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head><body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Unit Circle & Radian Conversions</h1>
+        <p><em>Date: January 15, 2026</em></p>
+
+        <h2>BIG IDEA</h2>
+        <p>Transitioning from degree-based geometry to radian-based trigonometry by understanding the Unit Circle as a set of patterns and mastering the dimensional analysis required to convert between units of angular measure.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td>Radian</td>
+                <td>The measure of a central angle that intercepts an arc equal in length to the radius of the circle. \(1 \text{ radian} \approx 57.3^\circ\).</td>
+            </tr>
+            <tr>
+                <td>Arc Length (\(s\))</td>
+                <td>The distance traveled along the edge of a circle, calculated as \(s = r\theta\).</td>
+            </tr>
+            <tr>
+                <td>Co-terminal Angles</td>
+                <td>Two angles that share the same terminal (ending) side but differ by full rotations (\(2\pi\) or \(360^\circ\)).</td>
+            </tr>
+            <tr>
+                <td>Hypotenuse</td>
+                <td>The side specifically opposite the right angle in a right triangle.</td>
+            </tr>
+        </table>
+
+        <h2>STEPS: CONVERTING UNITS</h2>
+        <ol>
+            <li><span class="key-step">Identify the starting unit:</span> Determine if you are starting with degrees or radians.</li>
+            <li><span class="key-step">Apply the Conversion Factor:</span> 
+                <ul>
+                    <li>To Degrees: Multiply by \(\frac{180^\circ}{\pi}\).</li>
+                    <li>To Radians: Multiply by \(\frac{\pi}{180^\circ}\).</li>
+                </ul>
+            </li>
+            <li><span class="key-step">Simplify the Fraction:</span> Reduce numbers and cancel units (dimensional analysis). Keep \(\pi\) in the final answer for "Exact Value."</li>
+        </ol>
+
+        <h2>RULES FOR RADIAN MEASURE</h2>
+        <ul>
+            <li>A full rotation (\(360^\circ\)) is exactly \(2\pi\) radians.</li>
+            <li>A half rotation (\(180^\circ\)) is exactly \(\pi\) radians.</li>
+            <li>If no unit is written for an angle, it is assumed to be in <strong>radians</strong>.</li>
+            <li><strong>Exact Value</strong> means no decimals; leave the answer as a simplified fraction containing \(\pi\).</li>
+        </ul>
+
+        <h2>EXAMPLE/DEMONSTRATION</h2>
+        
+        <div class="example-box">
+            <h3>1. Finding Theta from Arc Length</h3>
+            <p><strong>Scenario:</strong> Radius (\(r\)) = 12 ft, Arc Length (\(s\)) = 42 ft. Find \(\theta\).</p>
+            <p>\[ \theta = \frac{s}{r} = \frac{42 \text{ ft}}{12 \text{ ft}} \]</p>
+            <p>The units (feet) cancel out, leaving: 
+            \[ \theta = 3.5 \text{ radians} \text{ (or } \frac{7}{2} \text{)} \]</p>
+        </div>
+
+        <div class="example-box">
+            <h3>2. Degree to Radian (Exact)</h3>
+            <p><strong>Scenario:</strong> Convert \(60^\circ\) to Radians.</p>
+            <p>\[ 60^\circ \times \frac{\pi}{180^\circ} = \frac{60\pi}{180} \]</p>
+            <p>Simplify by dividing both by 60: 
+            \[ \text{Exact Value: } \frac{\pi}{3} \]</p>
+        </div>
+
+        <div class="example-box">
+            <h3>3. Calculator Strategy for Fractions</h3>
+            <p>If the calculator gives a decimal like \(1.047\), pull the \(\pi\) away:
+            \[ \frac{60}{180} = 0.333... \xrightarrow{\text{MATH > FRAC}} \frac{1}{3} \]</p>
+            <p>Then "tack" the \(\pi\) back on top to get \(\frac{\pi}{3}\).</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Convert \(45^\circ\) to Radians. (\(\frac{\pi}{4}\))</li>
+            <li>Convert \(\frac{3\pi}{2}\) to Degrees. (\(270^\circ\))</li>
+            <li>Find the arc length (\(s\)) if \(r = 10\) and \(\theta = 2\) radians. (\(20\))</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>The Unit Circle is built on patterns—specifically segments of \(\pi/4\) and \(\pi/6\). When working with these values, precision is vital; "Exact Values" require fraction form with \(\pi\), whereas decimal approximations are only used when requested for rounding. Always remember that the orientation of a triangle doesn't change the definitions of opposite, adjacent, or hypotenuse; those are determined by the angle of interest (\(\alpha\)).</p>
+    </div>
+</body></html>
