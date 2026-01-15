@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Sig Figs & Atomic Structure</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        .warning-box { background: #fff3cd; padding: 15px; border-radius: 5px; border: 1px solid #ffeeba; margin-bottom: 20px; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head><body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Significant Figures and the Atomic Model</h1>
+        <p><strong>Date:</strong> January 15, 2026<br>
+        <strong>Topics:</strong> Precision in Measurement, Sig Fig Calculations, Subatomic Particles, Isotopes, and Ions.</p>
+
+        <h2>BIG IDEA</h2>
+        <p>Scientific measurements are never perfect; they always contain a degree of error. Significant figures allow us to communicate the <strong>precision</strong> of our tools. This precision must be maintained through calculations. Furthermore, we transition into Chapter 2 to define the atom not just as a unit, but as a collection of protons, neutrons, and electrons that determine identity, mass, and charge.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Precision</strong></td>
+                    <td>The amount of information/detail in a measurement based on the equipment used.</td>
+                </tr>
+                <tr>
+                    <td><strong>Significant Figures</strong></td>
+                    <td>Digits in a measurement that carry meaning contributing to its measurement resolution.</td>
+                </tr>
+                <tr>
+                    <td><strong>Nucleus</strong></td>
+                    <td>The small, dense center of an atom containing protons and neutrons.</td>
+                </tr>
+                <tr>
+                    <td><strong>Isotope</strong></td>
+                    <td>Atoms of the same element with the same number of protons but different numbers of neutrons.</td>
+                </tr>
+                <tr>
+                    <td><strong>Ion</strong></td>
+                    <td>A charged particle formed when an atom gains or loses electrons.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>RULES FOR SIGNIFICANT FIGURES</h2>
+        <ul>
+            <li><strong>Non-Zero Digits:</strong> Always significant (e.g., \( 1-9 \)).</li>
+            <li><strong>Sandwiched Zeros:</strong> Zeros between non-zero digits are always significant (e.g., \( 101 \) has 3 sig figs).</li>
+            <li><strong>Leading Zeros:</strong> Never significant; they are just placeholders (e.g., \( 0.001 \) has 1 sig fig).</li>
+            <li><strong>Trailing Zeros:</strong>
+                <ul>
+                    <li>Significant <strong>ONLY IF</strong> there is a decimal point (e.g., \( 1.00 \) has 3 sig figs).</li>
+                    <li>Not significant if there is no decimal (e.g., \( 100 \) has 1 sig fig).</li>
+                    <li><em>Pro-tip:</em> To make \( 100 \) significant, write it as \( 100. \) (with the dot).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>CALCULATION RULES</h2>
+        <div class="key-step">1. Addition & Subtraction:</div>
+        <p>Focus on the <strong>fewest number of decimal places</strong>.</p>
+        <div class="key-step">2. Multiplication & Division:</div>
+        <p>Focus on the <strong>fewest number of total significant figures</strong>.</p>
+        <div class="warning-box">
+            <strong>Intermediate Steps:</strong> When performing mixed operations, track your sig figs by underlining the last significant digit, but <strong>do not round</strong> until the very final answer to avoid rounding errors.
+        </div>
+
+        <h2>EXAMPLE / DEMONSTRATION</h2>
+        <div class="example-box">
+            <strong>Example 1: Mixed Operation</strong><br>
+            Perform: \( \frac{3.66}{7.26 - 6.33} \)<br>
+            1. Subtraction: \( 7.26 - 6.33 = 0.93 \) (Two decimal places, so \( 0.93 \) has 2 sig figs).<br>
+            2. Division: \( 3.66 (3 \text{ sig figs}) \div 0.93 (2 \text{ sig figs}) = 3.9354... \)<br>
+            3. Final Answer: Round to 2 sig figs &rarr; <strong>\( 3.9 \)</strong>
+        </div>
+
+        <div class="example-box">
+            <strong>Example 2: Isotope Shorthand</strong><br>
+            Consider \( ^{23}_{11}\text{Na}^{+} \):<br>
+            - <strong>Atomic Number (\( Z \)):</strong> \( 11 \) (Protons)<br>
+            - <strong>Mass Number (\( A \)):</strong> \( 23 \) (Protons + Neutrons)<br>
+            - <strong>Neutrons:</strong> \( 23 - 11 = 12 \)<br>
+            - <strong>Electrons:</strong> \( 11 - 1 = 10 \) (The \( +1 \) charge means 1 less electron).
+        </div>
+
+        <h2>ATOMIC STRUCTURE SUMMARY</h2>
+                <table>
+            <tr>
+                <th>Particle</th>
+                <th>Symbol</th>
+                <th>Charge</th>
+                <th>Mass Relative to Others</th>
+            </tr>
+            <tr>
+                <td>Proton</td>
+                <td>\( p^{+} \)</td>
+                <td>\( +1 \)</td>
+                <td>Large (~1.67 \times 10^{-24} \text{ g}\))</td>
+            </tr>
+            <tr>
+                <td>Neutron</td>
+                <td>\( n^{0} \)</td>
+                <td>\( 0 \)</td>
+                <td>Large (Similar to proton)</td>
+            </tr>
+            <tr>
+                <td>Electron</td>
+                <td>\( e^{-} \)</td>
+                <td>\( -1 \)</td>
+                <td>Negligible (Significantly smaller)</td>
+            </tr>
+        </table>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ol>
+            <li>How many sig figs in \( 0.00003140 \)? (4)</li>
+            <li>How many sig figs in \( 296,000 \)? (3)</li>
+            <li>Solve with correct sig figs: \( 24.09 - 12.9 \) (11.2)</li>
+            <li>An atom has 6 protons and 7 neutrons. What is its mass number and identity? (Mass: 13, Identity: Carbon)</li>
+            <li>An ion has 11 protons and 10 electrons. What is its net charge? (\( 1+ \))</li>
+        </ol>
+
+        <h2>SUMMARY</h2>
+        <p>Precision is communicated through the number of significant figures recorded. In calculations, your result is only as strong as your "weakest link" (the least precise measurement). In the atom, the identity is dictated solely by the proton count (Atomic Number). Mass is the sum of protons and neutrons, while charge is the balance between protons and electrons.</p>
+    </div>
+</body></html>
