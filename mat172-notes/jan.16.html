@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Unit Circle & Trigonometric Functions</title>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Unit Circle & Trigonometric Functions</h1>
+        <p><strong>Date:</strong> January 16, 2026</p>
+
+        <h2>BIG IDEA</h2>
+        <p>Mastering the first quadrant of the unit circle allows for the derivation of all trigonometric values across the Cartesian plane through reflections and reference angles. Understanding the relationship between arc length, radians, and the six trigonometric ratios is fundamental to pre-calculus.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Unit Circle</strong></td>
+                    <td>A circle with a radius of $r = 1$ centered at the origin $(0,0)$.</td>
+                </tr>
+                <tr>
+                    <td><strong>Co-terminal Angles</strong></td>
+                    <td>Two angles that share the same terminal side but differ by integer multiples of $360^\circ$ or $2\pi$ radians.</td>
+                </tr>
+                <tr>
+                    <td><strong>Reference Angle</strong></td>
+                    <td>The acute angle formed between the terminal side of an angle and the x-axis.</td>
+                </tr>
+                <tr>
+                    <td><strong>Radian</strong></td>
+                    <td>The angle formed when the arc length of a circle is equal to its radius (approx. $57^\circ$).</td>
+                </tr>
+                <tr>
+                    <td><strong>SOH-CAH-TOA</strong></td>
+                    <td>Mnemonic for the ratios: $\sin = \text{opp/hyp}$, $\cos = \text{adj/hyp}$, $\tan = \text{opp/adj}$.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>RULES & CALCULATIONS</h2>
+        <ul>
+            <li><strong>Standard Position:</strong> Angles are measured starting from the positive x-axis, rotating counterclockwise for positive values.</li>
+            <li><strong>Arc Length Formula:</strong> $s = r\theta$, where $\theta$ <strong>must</strong> be in radians.</li>
+            <li><strong>Degree to Radian Conversion:</strong> Multiply by $\frac{\pi}{180^\circ}$.</li>
+            <li><strong>Trigonometric Reciprocals:</strong>
+                <ul>
+                    <li>$\csc(\theta) = \frac{1}{\sin(\theta)}$</li>
+                    <li>$\sec(\theta) = \frac{1}{\cos(\theta)}$</li>
+                    <li>$\cot(\theta) = \frac{1}{\tan(\theta)}$</li>
+                </ul>
+            </li>
+            <li><strong>Tangent Identity:</strong> $\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}$</li>
+        </ul>
+
+        <h2>PROCESS: FINDING CO-TERMINAL ANGLES</h2>
+        <ol>
+            <li><span class="key-step">Identify Rotation:</span> Determine if the angle is greater than $2\pi$ (or $360^\circ$) or less than $0$.</li>
+            <li><span class="key-step">Convert to Mixed Number:</span> For radians, convert improper fractions (e.g., $\frac{17\pi}{3}$) to mixed numbers ($5\frac{2}{3}\pi$) to visualize revolutions.</li>
+            <li><span class="key-step">Add/Subtract Revolutions:</span> Subtract $2\pi$ (or $360^\circ$) repeatedly until the angle falls within the interval $[0, 2\pi)$.</li>
+            <li><span class="key-step">Final Check:</span> Ensure the final name is in the required format (fraction vs. decimal).</li>
+        </ol>
+
+        
+        <h2>EXAMPLE / DEMONSTRATION</h2>
+        
+        <div class="example-box">
+            <strong>1. Finding Co-terminal for $\frac{16\pi}{3}$</strong><br>
+            Convert to mixed number: $16 \div 3 = 5\frac{1}{3}\pi$.<br>
+            This represents two full rotations ($2\pi + 2\pi = 4\pi$) plus $1\frac{1}{3}\pi$.<br>
+            $1\frac{1}{3}\pi = \frac{4\pi}{3}$.<br>
+            <strong>Location:</strong> Quadrant III.
+        </div>
+
+        <div class="example-box">
+            <strong>2. Arc Length Calculation</strong><br>
+            Find arc length $s$ for $r = 6$ inches and $\theta = 45^\circ$.<br>
+            <span class="key-step">Step 1:</span> Convert $45^\circ$ to radians $\rightarrow 45 \cdot \frac{\pi}{180} = \frac{\pi}{4}$.<br>
+            <span class="key-step">Step 2:</span> Apply formula $s = r\theta \rightarrow s = 6 \cdot \frac{\pi}{4} = \frac{3\pi}{2}$ inches.<br>
+            <strong>Approximate Value:</strong> $\approx 4.71$ inches.
+        </div>
+
+        <div class="example-box">
+            <strong>3. SOH-CAH-TOA in Quadrant I</strong><br>
+            Given a point $(\frac{\sqrt{3}}{2}, \frac{1}{2})$ on the unit circle ($r=1$):<br>
+            $\sin(t) = \text{vertical} = \frac{1}{2}$<br>
+            $\cos(t) = \text{horizontal} = \frac{\sqrt{3}}{2}$<br>
+            $\tan(t) = \frac{1/2}{\sqrt{3}/2} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Find a positive co-terminal angle for $-\frac{\pi}{15}$ between $0$ and $2\pi$. ($\frac{29\pi}{15}$)</li>
+            <li>If the radius of a circle is $10$ cm, what is the arc length intercepted by a $60^\circ$ angle? ($\frac{10\pi}{3} \approx 10.47$ cm)</li>
+            <li>Find the co-terminal angle for $400^\circ$ within one rotation. ($40^\circ$)</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>The unit circle simplifies trigonometry by setting the hypotenuse to $1$, making $\sin(\theta) = y$ and $\cos(\theta) = x$. When dealing with real-world circles where $r \neq 1$, we use $s = r\theta$ and general ratios. Always ensure your calculator is in the correct mode (Degrees vs. Radians) and remember that $\pi$ is a numerical value ($\approx 3.14159$), not just a label for an angle.</p>
+    </div>
+</body></html>
