@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Trig Functions & Speed</title>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Trigonometric Functions & Circular Motion</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Connecting circular motion (linear and angular speed) to the geometric foundations of trigonometry, specifically focusing on the unit circle, SOH-CAH-TOA, and the reciprocal identities.</p>
+
+        <h2>KEY TERMS</h2>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition/Formula</th>
+            </tr>
+            <tr>
+                <td>Linear Speed ($v$)</td>
+                <td>Distance traveled per unit of time ($v = \frac{s}{t}$). Units like in/min or mph.</td>
+            </tr>
+            <tr>
+                <td>Angular Speed ($\omega$)</td>
+                <td>Rate of change of the angle ($\omega = \frac{\theta}{t}$). Units like rad/min or rpm.</td>
+            </tr>
+            <tr>
+                <td>Reference Angle</td>
+                <td>The acute angle formed between the terminal side and the x-axis.</td>
+            </tr>
+            <tr>
+                <td>Periodic Property</td>
+                <td>The repetition of trig values after a full revolution ($2\pi$ for sine/cosine).</td>
+            </tr>
+        </table>
+
+        <h2>STEPS/PROCESS</h2>
+        <ol>
+            <li><span class="key-step">Dimensional Analysis for Speed:</span> Instead of complex formulas, treat speed problems as unit conversions. Start with revolutions, convert to radians ($1\text{ rev} = 2\pi\text{ rad}$), then to distance using the circumference ($C = 2\pi r$).</li>
+            <li><span class="key-step">The Hand Trick for Quadrant I:</span> Use your fingers to memorize the unit circle.
+                <ul>
+                    <li>Pinky = $0^\circ$, Thumb = $90^\circ$.</li>
+                    <li>Middle fingers = $30^\circ, 45^\circ, 60^\circ$.</li>
+                    <li>Fold a finger: $\frac{\sqrt{\text{fingers below}}}{2}$ for Sine, $\frac{\sqrt{\text{fingers above}}}{2}$ for Cosine.</li>
+                </ul>
+            </li>
+            <li><span class="key-step">Pythagorean Identity Substitution:</span> Use $\sin^2(t) + \cos^2(t) = 1$ to find a missing trig value when you know the quadrant.</li>
+        </ol>
+
+        <h2>RULES & PROPERTIES</h2>
+        <ul>
+            <li><strong>Arc Length Formula:</strong> $s = r\theta$, where $\theta$ MUST be in radians.</li>
+            <li><strong>Even/Odd Identities:</strong> 
+                <ul>
+                    <li>Cosine and Secant are Even: $\cos(-t) = \cos(t)$</li>
+                    <li>Sine, Cosecant, Tangent, Cotangent are Odd: $\sin(-t) = -\sin(t)$</li>
+                </ul>
+            </li>
+            <li><strong>Quadrant Signs:</strong> 
+                <ul>
+                    <li>QI: All positive.</li>
+                    <li>QII: Sine/Cosecant positive.</li>
+                    <li>QIII: Tangent/Cotangent positive.</li>
+                    <li>QIV: Cosine/Secant positive.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>EXAMPLE/DEMONSTRATION</h2>
+        <div class="example-box">
+            <strong>1. Linear Speed Calculation:</strong><br>
+            A record spins at $45\text{ rpm}$ with a needle $1.5\text{ inches}$ from the center. Find linear speed in in/min.<br>
+            $$v = \frac{45\text{ rev}}{1\text{ min}} \times \frac{2\pi(1.5)\text{ in}}{1\text{ rev}} = 135\pi \approx 424\text{ in/min}$$
+        </div>
+
+        <div class="example-box">
+            <strong>2. Finding Secant from Negative Radian:</strong><br>
+            Find $\sec(-\frac{\pi}{4})$.<br>
+            1. Graph $-\frac{\pi}{4}$ (Quadrant IV).<br>
+            2. Adjacent = $\frac{\sqrt{2}}{2}$, Hypotenuse = $1$.<br>
+            3. $\cos(-\frac{\pi}{4}) = \frac{\sqrt{2}}{2}$.<br>
+            4. $\sec(-\frac{\pi}{4}) = \frac{1}{\cos} = \frac{2}{\sqrt{2}} = \sqrt{2}$.
+        </div>
+
+        <div class="example-box">
+            <strong>3. Calculator Check (Mode Matters):</strong><br>
+            Calculate $\csc(1.5)$.<br>
+            1. Ensure calculator is in <strong>RADIAN</strong> mode.<br>
+            2. Use the reciprocal identity: $\frac{1}{\sin(1.5)}$.<br>
+            3. Result: $\approx 1.0025$.
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Find the exact value of $\tan(-\frac{5\pi}{3})$. ($\sqrt{3}$)</li>
+            <li>Given $\sin(t) = \frac{1}{2}$ in Quadrant I, find $\cos(t)$. ($\frac{\sqrt{3}}{2}$)</li>
+            <li>Convert $75\text{ rpm}$ to angular speed in radians per second. ($2.5\pi\text{ rad/sec}$)</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Success in trigonometry relies on three pillars: drawing the triangle to determine the quadrant/sign, mastering the "Hand Trick" for common values, and ensuring the calculator mode matches the input (Degrees vs. Radians). "Garbage in, garbage out"—always check if your numerical output makes sense relative to the triangle's proportions.</p>
+    </div>
+</body></html>
