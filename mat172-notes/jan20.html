@@ -1,10 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
-    <title>MAT-172: Trig Functions & Speed</title>
+    <title>MAT-172: Linear/Angular Speed & Right Triangle Trig</title>
     <script>
-        window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
-        };
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -19,6 +17,7 @@
         th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
         th { background-color: #0056b3; color: white; }
         .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
         .key-step { font-weight: bold; color: #0056b3; }
         @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
     </style>
@@ -29,99 +28,110 @@
         <button class="print-btn" onclick="window.print()">Save as PDF</button>
     </div>
     <div class="content-card">
-        <h1>Trigonometric Functions & Circular Motion</h1>
+        <h1>Linear Speed, Angular Speed, and Trig Foundations</h1>
         
         <h2>BIG IDEA</h2>
-        <p>Connecting circular motion (linear and angular speed) to the geometric foundations of trigonometry, specifically focusing on the unit circle, SOH-CAH-TOA, and the reciprocal identities.</p>
+        <p>The transition from Section 4.1 into 4.4 involves moving from basic rotational concepts (arc length, radians) into the mechanical application of Trigonometric functions. The core objective is to master the relationship between linear motion and angular rotation, while building a geometric intuition for the six trigonometric functions through the Unit Circle and Right Triangle trigonometry.</p>
+
+        <div class="prof-tip">
+            "Garbage In, Garbage Out": Always evaluate your numbers. If you calculate an arc length of 270 inches for a 6-inch radius circle at 45 degrees, something is wrong. Stop trusting the calculator blindly and use your "gut check" to see if the value is in the realm of reality.
+        </div>
 
         <h2>KEY TERMS</h2>
-        <table>
-            <tr>
-                <th>Term</th>
-                <th>Definition/Formula</th>
-            </tr>
-            <tr>
-                <td>Linear Speed ($v$)</td>
-                <td>Distance traveled per unit of time ($v = \frac{s}{t}$). Units like in/min or mph.</td>
-            </tr>
-            <tr>
-                <td>Angular Speed ($\omega$)</td>
-                <td>Rate of change of the angle ($\omega = \frac{\theta}{t}$). Units like rad/min or rpm.</td>
-            </tr>
-            <tr>
-                <td>Reference Angle</td>
-                <td>The acute angle formed between the terminal side and the x-axis.</td>
-            </tr>
-            <tr>
-                <td>Periodic Property</td>
-                <td>The repetition of trig values after a full revolution ($2\pi$ for sine/cosine).</td>
-            </tr>
-        </table>
-
-        <h2>STEPS/PROCESS</h2>
-        <ol>
-            <li><span class="key-step">Dimensional Analysis for Speed:</span> Instead of complex formulas, treat speed problems as unit conversions. Start with revolutions, convert to radians ($1\text{ rev} = 2\pi\text{ rad}$), then to distance using the circumference ($C = 2\pi r$).</li>
-            <li><span class="key-step">The Hand Trick for Quadrant I:</span> Use your fingers to memorize the unit circle.
-                <ul>
-                    <li>Pinky = $0^\circ$, Thumb = $90^\circ$.</li>
-                    <li>Middle fingers = $30^\circ, 45^\circ, 60^\circ$.</li>
-                    <li>Fold a finger: $\frac{\sqrt{\text{fingers below}}}{2}$ for Sine, $\frac{\sqrt{\text{fingers above}}}{2}$ for Cosine.</li>
-                </ul>
-            </li>
-            <li><span class="key-step">Pythagorean Identity Substitution:</span> Use $\sin^2(t) + \cos^2(t) = 1$ to find a missing trig value when you know the quadrant.</li>
-        </ol>
-
-        <h2>RULES & PROPERTIES</h2>
         <ul>
-            <li><strong>Arc Length Formula:</strong> $s = r\theta$, where $\theta$ MUST be in radians.</li>
-            <li><strong>Even/Odd Identities:</strong> 
-                <ul>
-                    <li>Cosine and Secant are Even: $\cos(-t) = \cos(t)$</li>
-                    <li>Sine, Cosecant, Tangent, Cotangent are Odd: $\sin(-t) = -\sin(t)$</li>
-                </ul>
-            </li>
-            <li><strong>Quadrant Signs:</strong> 
-                <ul>
-                    <li>QI: All positive.</li>
-                    <li>QII: Sine/Cosecant positive.</li>
-                    <li>QIII: Tangent/Cotangent positive.</li>
-                    <li>QIV: Cosine/Secant positive.</li>
-                </ul>
-            </li>
+            <li><span class="key-step">Linear Speed ($v$):</span> Distance per unit of time (e.g., miles per hour, inches per minute). Defined as $v = \frac{s}{t}$ where $s$ is arc length.</li>
+            <li><span class="key-step">Angular Speed ($\omega$ - Omega):</span> How fast the angle changes, regardless of the circle's size. Defined as $\omega = \frac{\theta}{t}$ where $\theta$ is in radians.</li>
+            <li><span class="key-step">Co-terminal Angles:</span> Two angles that stop at the same place on a rotation. Calculated by adding or subtracting full revolutions ($2\pi$ or $360^{\circ}$).</li>
+            <li><span class="key-step">Reference Angle:</span> The acute angle formed by the terminal side and the x-axis.</li>
         </ul>
 
-        <h2>EXAMPLE/DEMONSTRATION</h2>
-        <div class="example-box">
-            <strong>1. Linear Speed Calculation:</strong><br>
-            A record spins at $45\text{ rpm}$ with a needle $1.5\text{ inches}$ from the center. Find linear speed in in/min.<br>
-            $$v = \frac{45\text{ rev}}{1\text{ min}} \times \frac{2\pi(1.5)\text{ in}}{1\text{ rev}} = 135\pi \approx 424\text{ in/min}$$
-        </div>
-
-        <div class="example-box">
-            <strong>2. Finding Secant from Negative Radian:</strong><br>
-            Find $\sec(-\frac{\pi}{4})$.<br>
-            1. Graph $-\frac{\pi}{4}$ (Quadrant IV).<br>
-            2. Adjacent = $\frac{\sqrt{2}}{2}$, Hypotenuse = $1$.<br>
-            3. $\cos(-\frac{\pi}{4}) = \frac{\sqrt{2}}{2}$.<br>
-            4. $\sec(-\frac{\pi}{4}) = \frac{1}{\cos} = \frac{2}{\sqrt{2}} = \sqrt{2}$.
-        </div>
-
-        <div class="example-box">
-            <strong>3. Calculator Check (Mode Matters):</strong><br>
-            Calculate $\csc(1.5)$.<br>
-            1. Ensure calculator is in <strong>RADIAN</strong> mode.<br>
-            2. Use the reciprocal identity: $\frac{1}{\sin(1.5)}$.<br>
-            3. Result: $\approx 1.0025$.
-        </div>
-
-        <h2>PRACTICE PROBLEMS</h2>
+        <h2>FORMULAS & IDENTITIES</h2>
+        <h3>The "Big Three" Reciprocals</h3>
         <ul>
-            <li>Find the exact value of $\tan(-\frac{5\pi}{3})$. ($\sqrt{3}$)</li>
-            <li>Given $\sin(t) = \frac{1}{2}$ in Quadrant I, find $\cos(t)$. ($\frac{\sqrt{3}}{2}$)</li>
-            <li>Convert $75\text{ rpm}$ to angular speed in radians per second. ($2.5\pi\text{ rad/sec}$)</li>
+            <li>$\csc(\theta) = \frac{1}{\sin(\theta)} = \frac{\text{hypotenuse}}{\text{opposite}}$</li>
+            <li>$\sec(\theta) = \frac{1}{\cos(\theta)} = \frac{\text{hypotenuse}}{\text{adjacent}}$</li>
+            <li>$\cot(\theta) = \frac{1}{\tan(\theta)} = \frac{\text{adjacent}}{\text{opposite}}$</li>
+        </ul>
+
+        <h3>Quotient Identity</h3>
+        <p>$$\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}$$</p>
+
+        <h3>Pythagorean Identity</h3>
+        <p>$$\sin^2(\theta) + \cos^2(\theta) = 1$$</p>
+
+        <div class="prof-tip">
+            "I don't follow the formula specifically because I think it's more complicated... it uses wonky symbols." Use <strong>Dimensional Analysis</strong> (Unit Conversion) instead. Make the units cancel out, and the math will follow.
+        </div>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Unit Circle Hand Trick (Quadrant I)</h3>
+        <ol>
+            <li>Hold out your left hand, palm facing you.</li>
+            <li>Pinky is $0^{\circ}$ ($0$ rad), Thumb is $90^{\circ}$ ($\pi/2$ rad).</li>
+            <li>Fingers in between represent $30^{\circ}, 45^{\circ}, 60^{\circ}$.</li>
+            <li>To find $\sin$ and $\cos$ of $60^{\circ}$ ($\pi/3$): Fold down your index finger.
+                <ul>
+                    <li>Fingers to the <strong>left</strong> (above) = 1. Numerator for $x$ ($\cos$) is $\sqrt{1}$.</li>
+                    <li>Fingers to the <strong>right</strong> (below) = 3. Numerator for $y$ ($\sin$) is $\sqrt{3}$.</li>
+                    <li>Denominator is always 2. Result: $(\frac{1}{2}, \frac{\sqrt{3}}{2})$.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Calculating Linear Speed via Dimensional Analysis</h3>
+        <ol>
+            <li>Start with the angular speed (usually in Revolutions per Minute).</li>
+            <li>Write it as a vertical fraction: $\frac{45 \text{ rev}}{1 \text{ min}}$.</li>
+            <li>Convert Revolutions to Distance: One revolution is the circumference ($2\pi r$).</li>
+            <li>Multiply: $(\frac{\text{rev}}{\text{min}}) \times (\frac{2\pi r \text{ inches}}{1 \text{ rev}})$.</li>
+            <li>Cancel units and simplify.</li>
+        </ol>
+
+        <h2>EXAMPLE 1: The Vinyl Record</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> A record spins at 45 RPM. The needle is 1.5 inches from the center. Find the linear speed in inches per minute.
+            <br><br>
+            <strong>Setup:</strong>
+            $$\frac{45 \text{ rev}}{1 \text{ min}} \times \frac{2\pi(1.5) \text{ inches}}{1 \text{ rev}}$$
+            <br>
+            <strong>Calculation:</strong>
+            $45 \times 3\pi = 135\pi \text{ inches/min}$
+            <br>
+            <strong>Decimal Approximation:</strong> $\approx 424 \text{ inches/min}$
+        </div>
+
+        <h2>EXAMPLE 2: Exact Value with Quadrant Check</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Find $\sec(-\frac{9\pi}{4})$.
+            <br><br>
+            <strong>Step 1: Simplify Angle (Periodic Property).</strong> 
+            $-\frac{9\pi}{4}$ is $-2\frac{1}{4}\pi$. Adding $2\pi$ (one revolution) gives $-\frac{\pi}{4}$.
+            <br>
+            <strong>Step 2: Locate Quadrant.</strong> $-\frac{\pi}{4}$ is in Quadrant IV. 
+            In QIV: $x$ (adjacent) is positive, $y$ (opposite) is negative.
+            <br>
+            <strong>Step 3: Identify Coordinates.</strong> At $\frac{\pi}{4}$ reference, values are $(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2})$.
+            <br>
+            <strong>Step 4: Reciprocal function.</strong> $\sec = \frac{1}{\cos}$.
+            $$\sec(-\frac{\pi}{4}) = \frac{1}{\frac{\sqrt{2}}{2}} = \frac{2}{\sqrt{2}}$$
+            <strong>Step 5: Rationalize.</strong> $\frac{2\sqrt{2}}{2} = \sqrt{2}$.
+        </div>
+
+        <h2>PRACTICE PROBLEMS & CALCULATOR TIPS</h2>
+        <div class="prof-tip">
+            <strong>Calculator Mode Warning:</strong> If you are entering $\pi/10$, you MUST be in Radian mode. If you are entering $45^{\circ}$, you MUST be in Degree mode. The calculator will not auto-correct this for you. Check the top of the screen on newer models.
+        </div>
+        <ul>
+            <li><strong>To find $\csc(1.5)$:</strong> There is no $\csc$ button. Enter $1 / \sin(1.5)$ in Radian mode.</li>
+            <li><strong>Mixed Numbers on TI-84:</strong> Use <code>Alpha + Y=</code> to convert improper fractions to mixed numbers (helpful for finding rotations).</li>
+            <li><strong>Standard Radius:</strong> Unless specified otherwise, assume the radius ($r$) is 1 (The Unit Circle).</li>
         </ul>
 
         <h2>SUMMARY</h2>
-        <p>Success in trigonometry relies on three pillars: drawing the triangle to determine the quadrant/sign, mastering the "Hand Trick" for common values, and ensuring the calculator mode matches the input (Degrees vs. Radians). "Garbage in, garbage out"—always check if your numerical output makes sense relative to the triangle's proportions.</p>
+        <p>Success in this content hinge on three things: 
+            1. Knowing Quadrant I of the Unit Circle by heart (use the hand trick).
+            2. Forgetting your fear of fractions (use the calculator's fraction bars).
+            3. Drawing the triangle. If the leg is longer than the hypotenuse, the triangle is impossible—don't waste time calculating a lie.
+        </p>
     </div>
 </body></html>
