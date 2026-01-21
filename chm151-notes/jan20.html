@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Atomic Structure & The Periodic Table</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Atomic Structure, Periodic Table Layout, and Formulas</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> The periodic table provided in class has equations on the back. This is exactly what you will receive on the test. Use the paper copy provided today to take notes, but remember you will be given a <strong>blank copy</strong> for the actual exam. You must know what equations are provided and what must be memorized.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Elements are defined by their number of protons (Atomic Number). The Periodic Table organizes these elements so that those with similar chemical and physical properties fall into the same columns (Groups). Understanding the difference between individual isotope mass numbers and the weighted average atomic weight is crucial for chemical calculations.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Atomic Number ($Z$):</strong> The number of protons in the nucleus; the identifying factor of an element.</li>
+            <li><strong>Mass Number ($A$):</strong> The sum of protons + neutrons in a specific isotope.</li>
+            <li><strong>Isotope:</strong> Atoms of the same element (same protons) with different numbers of neutrons.</li>
+            <li><strong>Ion:</strong> An atom with an imbalance of protons and electrons, resulting in a net charge.
+                <ul>
+                    <li><strong>Cation:</strong> Positively charged ion (metals).</li>
+                    <li><strong>Anion:</strong> Negatively charged ion (non-metals).</li>
+                </ul>
+            </li>
+            <li><strong>Periods:</strong> Horizontal rows (1-7).</li>
+            <li><strong>Groups:</strong> Vertical columns (1-18). Elements in a group share similar properties.</li>
+            <li><strong>Atomic Mass Unit (AMU):</strong> $1 \text{ AMU} = 1.6 \times 10^{-24} \text{ grams}$.</li>
+            <li><strong>Atomic Weight:</strong> The weighted average of all naturally occurring isotopes of an element.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS: Writing Chemical Symbols</h2>
+        <p>When writing an isotopic symbol for an ion, use the following placement:</p>
+        <div class="example-box">
+            $$_Z^A \text{X}^{\text{charge}}$$
+            <ol>
+                <li><strong>$\text{X}$:</strong> Element Symbol (Determined by protons).</li>
+                <li><strong>$A$:</strong> Mass Number (Protons + Neutrons) - Top Left.</li>
+                <li><strong>$Z$:</strong> Atomic Number (Protons) - Bottom Left.</li>
+                <li><strong>Charge:</strong> (Protons - Electrons) - Top Right. If neutral, leave blank.</li>
+            </ol>
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>1. The "Must-Know" Elements</h3>
+        <p>You must know the name and symbol link for the first <strong>36 elements</strong>, plus these extras:</p>
+        <ul>
+            <li>Silver (Ag), Gold (Au), Mercury (Hg), Lead (Pb), and Iodine (I).</li>
+        </ul>
+
+        <h3>2. Classification of Elements</h3>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Properties</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td><strong>Metals</strong></td>
+                <td>Shiny, conduct heat/electricity, solid at room temp (except Mercury/Hg).</td>
+                <td>Left of the zigzag line.</td>
+            </tr>
+            <tr>
+                <td><strong>Non-metals</strong></td>
+                <td>Dull, poor conductors (insulators), vary in phase (solid, gas, one liquid: Bromine/Br).</td>
+                <td>Right of the zigzag line.</td>
+            </tr>
+            <tr>
+                <td><strong>Metalloids</strong></td>
+                <td>Semi-conductors; have properties of both metals and non-metals.</td>
+                <td>Touching the zigzag line.</td>
+            </tr>
+        </table>
+        <div class="prof-tip">
+            <strong>Exception:</strong> Hydrogen (H) is the "weird" exception. It is on the left side but behaves mostly as a non-metal. It can behave as both.
+        </div>
+
+        <h3>3. Named Groups</h3>
+        <ul>
+            <li><strong>Group 1:</strong> Alkali Metals (Very reactive with water; reactivity increases down the group).</li>
+            <li><strong>Group 2:</strong> Alkaline Earth Metals (Used in fireworks to change flame colors).</li>
+            <li><strong>Groups 3-12:</strong> Transition Metals (Variable charges).</li>
+            <li><strong>Group 17:</strong> Halogens (Very reactive; mostly gases except Br).</li>
+            <li><strong>Group 18:</strong> Noble Gases (Inert/Unreactive; glow when electric current is applied).</li>
+        </ul>
+
+        <h3>4. Diatomic Molecules (The "7" Rule)</h3>
+        <p>Seven elements never exist as single atoms in nature; they are <strong>homonuclear diatomic</strong> ($X_2$):</p>
+        <ul>
+            <li>Hydrogen ($H_2$), Nitrogen ($N_2$), Oxygen ($O_2$), Fluorine ($F_2$), Chlorine ($Cl_2$), Bromine ($Br_2$), Iodine ($I_2$).</li>
+            <li><strong>Mnemonic:</strong> "BrINClHOF" or the "Shape of a 7" on the table starting at Nitrogen plus Hydrogen.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Identifying an Ion</h2>
+        <p><strong>Given:</strong> 8 Protons, 9 Neutrons, 9 Electrons.</p>
+        <ol>
+            <li><strong>Element:</strong> 8 Protons = Atomic Number 8 = Oxygen (O).</li>
+            <li><strong>Mass Number:</strong> $8 \text{ protons} + 9 \text{ neutrons} = 17$.</li>
+            <li><strong>Atomic Number:</strong> 8.</li>
+            <li><strong>Charge:</strong> $8(+) + 9(-) = -1$.</li>
+        </ol>
+        <p><span class="key-step">Result:</span> $_{8}^{17}\text{O}^{-}$</p>
+
+        <h2>EXAMPLE 2: Determining Abundance</h2>
+        <p>Boron has two isotopes: Boron-10 ($10.013 \text{ AMU}$) and Boron-11 ($11.009 \text{ AMU}$). The periodic table lists Boron's atomic weight as $10.81$. Which is more abundant?</p>
+        <ul>
+            <li><strong>Logic:</strong> $10.81$ is much closer to $11$ than to $10$. If it were 50/50, the weight would be $10.5$.</li>
+            <li><span class="key-step">Conclusion:</span> Boron-11 is significantly more abundant in nature.</li>
+        </ul>
+
+        <h2>EXAMPLE 3: Empirical vs. Molecular Formulas</h2>
+        <table>
+            <tr>
+                <th>Molecular Formula (Exact)</th>
+                <th>Empirical Formula (Simplified Ratio)</th>
+            </tr>
+            <tr>
+                <td>$C_2H_4$</td>
+                <td>$CH_2$ (Divide by 2)</td>
+            </tr>
+            <tr>
+                <td>$B_2H_6$</td>
+                <td>$BH_3$ (Divide by 2)</td>
+            </tr>
+            <tr>
+                <td>$H_2O$</td>
+                <td>$H_2O$ (Already lowest ratio)</td>
+            </tr>
+            <tr>
+                <td>$C_4H_{14}O_2$</td>
+                <td>$C_2H_7O$ (Divide by 2)</td>
+            </tr>
+        </table>
+
+        <h2>PRACTICE PROBLEMS: Common Ion Charges</h2>
+        <p>Memorize these trends for the next class:</p>
+        <ul>
+            <li><strong>Group 1:</strong> $1+$</li>
+            <li><strong>Group 2:</strong> $2+$</li>
+            <li><strong>Group 13 (Aluminum):</strong> $3+$</li>
+            <li><strong>Group 15:</strong> $3-$</li>
+            <li><strong>Group 16:</strong> $2-$</li>
+            <li><strong>Group 17:</strong> $1-$</li>
+            <li><strong>Zinc (Zn):</strong> Always $2+$</li>
+            <li><strong>Silver (Ag):</strong> Always $1+$</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>Lab Safety Reminder:</strong> Tomorrow is lab. You MUST have full torso coverage, full leg coverage (no holes), and closed-toe shoes that cover the entire foot. If you wear sandals or shorts, you will be asked to leave. There is a quiz on lab safety protocols.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>We use Mass Spectrometry to determine the percentages of isotopes in a sample. This data allows us to calculate the Atomic Weight shown on the Periodic Table. In chemical notation, the <strong>molecular formula</strong> shows the actual number of atoms in a molecule, while the <strong>empirical formula</strong> shows the simplest whole-number ratio. Next class, we will begin naming ionic compounds using the charge trends identified today.</p>
+    </div>
+</body></html>
