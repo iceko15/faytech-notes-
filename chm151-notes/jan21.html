@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHM-151: Sig Figs & Density Post-Lab</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-blue { background-color: #0056b3; }
+        .btn-blue:hover { background-color: #004494; }
+
+        .content-card {
+            background-color: white;
+            width: 100%;
+            max-width: 850px;
+            padding: 40px 60px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #0056b3;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .exam-warning {
+            background-color: #fff4e5;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .section-header {
+            background-color: #f1f3f4;
+            color: #333;
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 22px;
+            border-left: 6px solid #0056b3;
+            margin: 40px 0 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .problem-container {
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+        }
+
+        .problem-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 12px;
+        }
+
+        .math-setup {
+            padding: 15px;
+            background-color: #ffffff;
+            font-size: 1.1em;
+            overflow-x: auto;
+        }
+
+        ul { line-height: 2; list-style-type: none; padding-left: 0; }
+        li { margin-bottom: 10px; border-bottom: 1px solid #f9f9f9; padding-bottom: 5px; }
+        b { color: #0056b3; }
+        .ans { color: #d81b60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="nav-buttons">
+        <a href="#" class="btn btn-blue">← Return to Hub</a>
+        <button class="btn btn-blue">Save as PDF</button>
+    </div>
+
+    <div class="content-card">
+        <h1>Significant Figures and Density Post-Lab</h1>
+
+        <div class="exam-warning">
+            <b>Post lab answers from the packet we received in class today. Due Wed. Jan 28th.</b>
+        </div>
+
+        <div class="section-header">BIG IDEA</div>
+        <p>Scientific measurements are never exact. Significant figures allow us to communicate the precision of our tools. In Chemistry, the <b>limiting term</b> (the least precise measurement) always dictates the precision of the final calculated answer.</p>
+
+        <div class="section-header">1. SIGNIFICANT FIGURE COUNTS</div>
+        <ul>
+            <li>a) 105: <span class="ans">3 Sig Figs</span></li>
+            <li>b) 0.82: <span class="ans">2 Sig Figs</span></li>
+            <li>c) 0.0069: <span class="ans">2 Sig Figs</span></li>
+            <li>d) 1500.: <span class="ans">4 Sig Figs</span></li>
+            <li>e) \(6.022 \times 10^{23}\): <span class="ans">4 Sig Figs</span></li>
+            <li>f) 2.0: <span class="ans">2 Sig Figs</span></li>
+        </ul>
+
+        <div class="section-header">2. ROUNDING (TO 3 SIG FIGS)</div>
+        <ul>
+            <li>a) 0.08206 &rarr; <span class="ans">0.0821</span></li>
+            <li>b) 0.94658 &rarr; <span class="ans">0.947</span></li>
+            <li>c) 6.125 &rarr; <span class="ans">6.13</span></li>
+            <li>d) 7853 &rarr; <span class="ans">7850</span></li>
+            <li>e) 11838.88 &rarr; <span class="ans">11800</span></li>
+            <li>f) 19.998 &rarr; <span class="ans">20.0</span></li>
+        </ul>
+
+        <div class="section-header">3. EVALUATED EXPRESSIONS</div>
+        <div class="math-setup">
+            a) \(75.2 - 68.3 = \mathbf{6.9}\) <br>
+            b) \(0.9043 \times 0.0821 = \mathbf{0.0742}\) <br>
+            c) \(185 \times \frac{26.0}{0.0604} \times \frac{22.4}{10.1} = \mathbf{1.77 \times 10^{5}}\) <br>
+            d) \((2.54 + 9.4) \times \frac{3.142}{4.060} = \mathbf{9.21}\) <br>
+            e) \((1.2095 - 1.0000) \times \frac{2.5400}{25.000} = \mathbf{0.02129}\) <br>
+            f) \(\frac{[(7.82 \times 10^{-2}) + (8 \times 10^{-4})]}{(22.4 + 1.94)} = \mathbf{0.00325}\)
+        </div>
+
+        <div class="section-header">DIMENSIONAL ANALYSIS SET-UPS</div>
+
+        <div class="problem-container">
+            <div class="problem-title">4. Centimeters in 0.94 in</div>
+            <div class="math-setup">
+                \(0.94 \text{ in} \times \left( \frac{2.54 \text{ cm}}{1 \text{ in}} \right) = \mathbf{2.4 \text{ cm}}\)
+            </div>
+        </div>
+
+        <div class="problem-container">
+            <div class="problem-title">5. Convert 75 miles/hour to km/s</div>
+            <div class="math-setup">
+                \(\frac{75 \text{ mi}}{1 \text{ hr}} \times \frac{1.609 \text{ km}}{1 \text{ mi}} \times \frac{1 \text{ hr}}{3600 \text{ s}} = \mathbf{0.034 \text{ km/s}}\)
+            </div>
+        </div>
+
+        <div class="problem-container">
+            <div class="problem-title">9. Convert \(4.56 \times 10^{2} \text{ in}^{2}\) to \(\text{mm}^{2}\)</div>
+            <div class="math-setup">
+                \(4.56 \times 10^{2} \text{ in}^{2} \times \left( \frac{2.54 \text{ cm}}{1 \text{ in}} \right)^{2} \times \left( \frac{10 \text{ mm}}{1 \text{ cm}} \right)^{2} = \mathbf{2.94 \times 10^{5} \text{ mm}^{2}}\)
+            </div>
+        </div>
+
+        <div class="section-header">DENSITY APPLICATIONS</div>
+
+        <div class="problem-container">
+            <div class="problem-title">11. Milliliters of lead in 2.00 lb sample</div>
+            <div class="math-setup">
+                \(2.00 \text{ lb} \times \frac{0.4536 \text{ kg}}{1 \text{ lb}} \times \frac{1000 \text{ g}}{1 \text{ kg}} \times \frac{1 \text{ cm}^{3}}{11.34 \text{ g}} = \mathbf{80.0 \text{ mL}}\)
+            </div>
+        </div>
+
+        <div class="problem-container">
+            <div class="problem-title">12. Mass of 1.00 L of Mercury</div>
+            <div class="math-setup">
+                \(1.00 \text{ L} \times \frac{1000 \text{ mL}}{1 \text{ L}} \times \frac{13.6 \text{ g}}{1 \text{ mL}} = \mathbf{1.36 \times 10^{4} \text{ g}}\)
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
