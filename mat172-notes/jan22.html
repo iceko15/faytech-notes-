@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Co-functions, Reference Angles & Quadrantal Values</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Co-functions, Reference Angles & Quadrantal Values</h1>
+        
+        <div class="prof-tip">
+            <strong>Resource Note:</strong> Check the "Learning Resources" folder in Canvas. I've uploaded "Chapter 4 Examples PDF" containing MyMathLab samples and diagrams. The "Green Packet" (page 14-19) is critical for study guides and unit circle charts.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>While reciprocals flip the ratio of a function, <strong>Co-functions</strong> relate two different functions based on complementary angles (totaling $90^\circ$ or $\pi/2$). Evaluating trig functions of <em>any</em> angle requires mastering reference angles and quadrant-specific signs (ASTC).</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">Reciprocal:</span> A pair of functions where the entire SOH-CAH-TOA ratio is flipped (e.g., $\sin$ and $\csc$). It is <strong>not</strong> the angle that reciprocates.</li>
+            <li><span class="key-step">Co-function:</span> Functions that share values when their angles are complementary.</li>
+            <li><span class="key-step">Complementary Angles:</span> Two positive acute angles that sum to $90^\circ$ or $\pi/2$.</li>
+            <li><span class="key-step">Quadrantal Angle:</span> Angles that terminate on the axes ($0^\circ, 90^\circ, 180^\circ, 270^\circ$).</li>
+            <li><span class="key-step">Reference Angle ($\theta'$):</span> The positive acute angle formed by the terminal side of $\theta$ and the <strong>x-axis</strong>.</li>
+        </ul>
+
+        <h2>RULES & IDENTITIES</h2>
+        
+        <h3>1. Co-function Pairings</h3>
+        <table>
+            <tr><th>Function</th><th>Co-function Pair</th><th>Identity (Radians)</th></tr>
+            <tr><td>Sine ($\sin$)</td><td>Cosine ($\cos$)</td><td>$\sin(\theta) = \cos(\frac{\pi}{2} - \theta)$</td></tr>
+            <tr><td>Secant ($\sec$)</td><td>Cosecant ($\csc$)</td><td>$\sec(\theta) = \csc(\frac{\pi}{2} - \theta)$</td></tr>
+            <tr><td>Tangent ($\tan$)</td><td>Cotangent ($\cot$)</td><td>$\tan(\theta) = \cot(\frac{\pi}{2} - \theta)$</td></tr>
+        </table>
+
+        <h3>2. Quadrant Signs (ASTC)</h3>
+        <p><strong>A</strong>ll <strong>S</strong>tudents <strong>T</strong>ake <strong>C</strong>alculus:</p>
+        <ul>
+            <li><strong>Quadrant I (All):</strong> All functions are positive.</li>
+            <li><strong>Quadrant II (Students):</strong> Only $\sin$ (and $\csc$) are positive.</li>
+            <li><strong>Quadrant III (Take):</strong> Only $\tan$ (and $\cot$) are positive.</li>
+            <li><strong>Quadrant IV (Calculus):</strong> Only $\cos$ (and $\sec$) are positive.</li>
+        </ul>
+
+        <h3>3. Reference Angle Calculations</h3>
+        <ul>
+            <li><strong>Q1:</strong> $\theta' = \theta$</li>
+            <li><strong>Q2:</strong> $\theta' = 180^\circ - \theta$ or $\pi - \theta$</li>
+            <li><strong>Q3:</strong> $\theta' = \theta - 180^\circ$ or $\theta - \pi$</li>
+            <li><strong>Q4:</strong> $\theta' = 360^\circ - \theta$ or $2\pi - \theta$</li>
+        </ul>
+
+        <h2>CO-FUNCTION EXAMPLES</h2>
+        <div class="example-box">
+            <strong>Example 5a:</strong> Convert $\sin(46^\circ)$ to its co-function.
+            <br>Calculation: $\cos(90^\circ - 46^\circ) = \cos(44^\circ)$.
+        </div>
+
+        <div class="example-box">
+            <strong>Example 5b:</strong> Convert $\cot(\frac{\pi}{12})$ to its co-function.
+            <br>Setup: $\tan(\frac{\pi}{2} - \frac{\pi}{12})$.
+            <br>LCD Step: Multiply $\frac{\pi}{2}$ by $\frac{6}{6} \rightarrow \frac{6\pi}{12}$.
+            <br>Arithmetic: $\frac{6\pi}{12} - \frac{\pi}{12} = \frac{5\pi}{12}$.
+            <br>Result: $\tan(\frac{5\pi}{12})$.
+        </div>
+
+        <h2>SOLVING RIGHT TRIANGLES (WORD PROBLEM)</h2>
+        <div class="example-box">
+            <strong>Scenario:</strong> A right triangle with an angle of $24^\circ$ and an adjacent side of 750. Find the opposite side ($a$).
+            <br>1. Identify sides: We have Adjacent (750) and need Opposite ($a$). Use <strong>Tangent</strong>.
+            <br>2. Equation: $\tan(24^\circ) = \frac{a}{750}$.
+            <br>3. Solve: $a = 750 \cdot \tan(24^\circ)$.
+            <br>4. Calculator Check: Ensure mode is in <strong>DEGREES</strong>.
+            <br>5. Result: $a \approx 333.9$.
+        </div>
+
+        <div class="prof-tip">
+            <strong>Sanity Check:</strong> Visually, $24^\circ$ is a shallow angle. The opposite side should be less than the adjacent side (roughly half). If you get a negative number or a massive number like 3339, you either have a mode error (Radians vs. Degrees) or a decimal error.
+        </div>
+
+        <h2>TRIG FUNCTIONS OF ANY ANGLE</h2>
+        <div class="example-box">
+            <strong>Point Value:</strong> Let $P = (1, -3)$. Find the six trig functions.
+            <br>1. $x = 1$ (Adjacent), $y = -3$ (Opposite).
+            <br>2. Find $r$ (Hypotenuse): $r = \sqrt{1^2 + (-3)^2} = \sqrt{10} \approx 3.2$.
+            <br>3. Sine: $\frac{-3}{\sqrt{10}} = \frac{-3\sqrt{10}}{10}$.
+            <br>4. Cosine: $\frac{1}{\sqrt{10}} = \frac{\sqrt{10}}{10}$.
+            <br>5. Tangent: $\frac{-3}{1} = -3$.
+            <br>6. Reciprocals: $\csc = \frac{\sqrt{10}}{-3}$, $\sec = \sqrt{10}$, $\cot = -\frac{1}{3}$.
+        </div>
+
+        <h2>QUADRANTAL ANGLES & UNDEFINED VALUES</h2>
+        <div class="example-box">
+            <strong>Example:</strong> Find $\csc(180^\circ)$.
+            <br>1. On the unit circle, $180^\circ$ is the point $(-1, 0)$.
+            <br>2. $\csc = \frac{1}{\sin} = \frac{\text{Hypotenuse}}{\text{Opposite}}$.
+            <br>3. Here, Opposite ($y$) is $0$.
+            <br>4. Result: $\frac{1}{0} = \mathbf{Undefined}$.
+        </div>
+        <div class="prof-tip">
+            In Calculus, you will deal with division by zero, but for now, "Undefined" (UNDEF) is the only acceptable answer. "No answer" is too vague.
+        </div>
+
+        <h2>REFERENCE ANGLE PRACTICE</h2>
+        <div class="example-box">
+            <ul>
+                <li><strong>$\theta = 210^\circ$:</strong> Q3. Distance to x-axis ($180^\circ$). $210 - 180 = \mathbf{30^\circ}$.</li>
+                <li><strong>$\theta = -240^\circ$:</strong> Terminating in Q2. $|-240| = 240$. $240 - 180 = \mathbf{60^\circ}$.</li>
+                <li><strong>$\theta = 665^\circ$:</strong> Remove one loop ($360^\circ$). $665 - 360 = 305^\circ$ (Q4). $360 - 305 = \mathbf{55^\circ}$.</li>
+                <li><strong>$\theta = -\frac{11\pi}{3}$:</strong> Add two revolutions ($4\pi$ or $\frac{12\pi}{3}$). Result is $\frac{\pi}{3}$, which is in Q1 and serves as its own reference angle.</li>
+            </ul>
+        </div>
+
+        <h2>ADMINISTRATIVE & ATTENDANCE</h2>
+        <ul>
+            <li><strong>Inclement Weather:</strong> Check Canvas announcements if Saturday/Sunday storms occur. If class is missed, a video recording or assignment will be posted to log attendance.</li>
+            <li><strong>Attendance Policy:</strong> Missing more than 20% of class sessions/assignments may lead to administrative withdrawal.</li>
+            <li><strong>Homework:</strong> 4.1 through 4.4 should be "in progress" now as we have finished the instructional material for these sections.</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Reference angles allow us to pull values from the unit circle (the "bow tie" visual) for any rotation. Always identify the quadrant first to determine if your final value should be positive or negative (ASTC). Co-functions are a separate algebraic manipulation tool used mostly for identities and expressions.</p>
+    </div>
+</body></html>
