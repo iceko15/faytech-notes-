@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Graphing Trig Functions & Transformations</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Graphing Trig Functions & Transformations</h1>
+        
+        <div class="prof-tip">
+            <strong>Professor's Warning:</strong> MyMathLab often overdoes the calculations in their "Show Me How" sections. They will have you writing pages of overkill math. We are going to use a much more efficient approach: identifying landmarks (maxes, mins, intercepts) and breaking periods into quarters.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>The core of graphing trigonometric functions is recognizing that they are <strong>periodic</strong>—meaning they repeat a specific "chunk" or cycle infinitely. If you can graph one period correctly using five landmark points, you can simply "copy and paste" the graph to the left and right.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Period:</strong> The smallest horizontal interval over which the function completes one full cycle. For Sine and Cosine, the base period is $2\pi$. For Tangent and Cotangent, it is $\pi$.</li>
+            <li><strong>Amplitude:</strong> Half the distance between the maximum and minimum values. It measures how tall the "lumps or bumps" are from the midline.</li>
+            <li><strong>Midline:</strong> The horizontal line ($y = D$) that the graph oscillates around.</li>
+            <li><strong>Phase Shift:</strong> The horizontal shift (left or right) caused by a value inside the angle structure.</li>
+            <li><strong>Landmark Points:</strong> The five key values in one period: the beginning, the end, the midpoint, and the two quarter-marks.</li>
+        </ul>
+
+        <h2>BASE MODELS (ONE PERIOD)</h2>
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Base Period</th>
+                <th>Domain</th>
+                <th>Range</th>
+                <th>Standard Landmarks</th>
+            </tr>
+            <tr>
+                <td>$y = \sin(x)$</td>
+                <td>$2\pi$</td>
+                <td>$(-\infty, \infty)$</td>
+                <td>$[-1, 1]$</td>
+                <td>Starts at $(0,0)$, Max at $\pi/2$, Crosses at $\pi$, Min at $3\pi/2$, Ends at $2\pi$.</td>
+            </tr>
+            <tr>
+                <td>$y = \cos(x)$</td>
+                <td>$2\pi$</td>
+                <td>$(-\infty, \infty)$</td>
+                <td>$[-1, 1]$</td>
+                <td>Starts at $(0,1)$, Crosses at $\pi/2$, Min at $\pi$, Crosses at $3\pi/2$, Ends at $(2\pi, 1)$.</td>
+            </tr>
+            <tr>
+                <td>$y = \tan(x)$</td>
+                <td>$\pi$</td>
+                <td>$x \neq \frac{\pi}{2} + n\pi$</td>
+                <td>$(-\infty, \infty)$</td>
+                <td>Asymptotes at $-\pi/2$ and $\pi/2$; Crosses $(0,0)$.</td>
+            </tr>
+        </table>
+
+        <h2>THE TRANSFORMATION TEMPLATE (ABCD)</h2>
+        <p>We approach every equation using the template: $$y = A \cdot \text{trig}(B(x - C)) + D$$</p>
+        
+        <ul>
+            <li><span class="key-step">A (Amplitude/Reflection):</span> 
+                <ul>
+                    <li>If negative: Reflection about the x-axis.</li>
+                    <li>Value: Vertical stretch ($|A| > 1$) or shrink ($0 < |A| < 1$).</li>
+                </ul>
+            </li>
+            <li><span class="key-step">B (Period Modifier):</span> 
+                <ul>
+                    <li>Horizontal stretch or shrink.</li>
+                    <li><strong>Formula for Period:</strong> $P = \frac{\text{Base Period}}{B}$.</li>
+                </ul>
+            </li>
+            <li><span class="key-step">C (Phase Shift):</span> 
+                <ul>
+                    <li>Horizontal shift. <strong>Pro-tip:</strong> To find the exact shift with signs included, take the entire chunk in parentheses and solve for $x = 0$.</li>
+                    <li>Minus $C$ moves Right; Plus $C$ moves Left (it feels backwards).</li>
+                </ul>
+            </li>
+            <li><span class="key-step">D (Vertical Shift):</span> 
+                <ul>
+                    <li>Moves the graph up or down. This shift is always the <strong>very last</strong> action you take.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>ORDER OF OPERATIONS FOR GRAPHING</h2>
+        <ol>
+            <li>Identify the <strong>Phase Shift</strong> (Left/Right) first.</li>
+            <li>Apply <strong>Stretching/Shrinking</strong> (Horizontal and Vertical).</li>
+            <li>Apply <strong>Reflections</strong> (x or y axis).</li>
+            <li>Apply <strong>Vertical Shifting</strong> (Up/Down) last.</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Scaling Your Paper:</strong> Don't just draw random squiggles. For the horizontal axis, I recommend using <strong>multiples of four boxes</strong> for one period. Since we break everything into quarters, this makes plotting the landmark points simple.
+        </div>
+
+        <h2>EXAMPLE: $y = 2\sin(\frac{1}{2}x)$</h2>
+        <div class="example-box">
+            <p><strong>Step 1: Identify Transformations</strong></p>
+            <ul>
+                <li>$A = 2$: The Amplitude is 2. The graph will reach 2 and -2.</li>
+                <li>$B = 1/2$: This is a horizontal stretch.</li>
+            </ul>
+            
+            <p><strong>Step 2: Calculate Period</strong></p>
+            $$P = \frac{2\pi}{1/2} = 2\pi \cdot \frac{2}{1} = 4\pi$$
+            
+            <p><strong>Step 3: Determine Landmark Points (Quarter Marks)</strong></p>
+            <p>Divide the $4\pi$ period into 4 equal chunks: $4\pi / 4 = \pi$.</p>
+            <ul>
+                <li>$0$: Start (Intercept) $\rightarrow (0,0)$</li>
+                <li>$\pi$: First Quarter (Max) $\rightarrow (\pi, 2)$</li>
+                <li>$2\pi$: Middle (Intercept) $\rightarrow (2\pi, 0)$</li>
+                <li>$3\pi$: Third Quarter (Min) $\rightarrow (3\pi, -2)$</li>
+                <li>$4\pi$: End (Intercept) $\rightarrow (4\pi, 0)$</li>
+            </ul>
+        </div>
+
+        <h2>SUMMARY FOR MYMATHLAB</h2>
+        <ul>
+            <li>The software is multiple choice for most graphs, but it requires you to click transformations in the correct chronological order to get credit.</li>
+            <li>Don't fixate on 12,000 calculations; focus on the <strong>midline, intercepts, and max/min points</strong>.</li>
+            <li>Tangent and Cotangent have asymptotes wherever the denominator (of the $\frac{\sin}{\cos}$ or $\frac{\cos}{\sin}$ ratio) equals zero.</li>
+        </ul>
+    </div>
+</body>
+</html>

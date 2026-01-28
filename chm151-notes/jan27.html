@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Chemical Quantities & Reactions</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chemical Reactions & Quantities</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Chemistry is about calculating quantities of substances based on chemical analysis. To determine how much product we can make or how much reactant we need, we must first understand how to write and balance chemical reactions, following the <strong>Law of Conservation of Mass</strong>. Matter is neither created nor destroyed; it is simply rearranged like Legos.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Reactants:</strong> Substances you start with (found on the left side of the arrow).</li>
+            <li><strong>Products:</strong> Substances produced by the reaction (found on the right side of the arrow).</li>
+            <li><strong>Yield Arrow ($\rightarrow$):</strong> The dividing line between reactants and products.</li>
+            <li><strong>Plus Sign ($+$):</strong> Used to separate multiple compounds on the same side of the equation.</li>
+            <li><strong>Phases:</strong>
+                <ul>
+                    <li>(g): Gas</li>
+                    <li>(l): Liquid</li>
+                    <li>(s): Solid</li>
+                    <li>(aq): Aqueous (dissolved in water)</li>
+                </ul>
+            </li>
+            <li><strong>$\Delta$ (Triangle over arrow):</strong> Indicates that heat was added to the reaction as an energy source.</li>
+            <li><strong>Subscripts:</strong> Small numbers within a formula ($H_2O$) that define the compound. <strong>Never change these</strong> when balancing.</li>
+            <li><strong>Coefficients:</strong> Large numbers in front of a compound ($2H_2O$) that tell you how many moles/molecules of that substance exist.</li>
+        </ul>
+
+        <div class="prof-tip">
+            Common Mistake Alert: Students often try to change subscripts to balance an equation. This is wrong because it changes the identity of the compound. Only change the coefficients!
+        </div>
+
+        <h2>STEPS/PROCESS: BALANCING EQUATIONS</h2>
+        <p class="key-step">The Goal: Have the same number of each type of atom on both sides of the arrow.</p>
+        <ol>
+            <li>List the elements present on both the reactant and product sides.</li>
+            <li>Count the initial atoms of each element.</li>
+            <li><strong>Prof's Strategy:</strong> 
+                <ul>
+                    <li>Leave Oxygen until the very last.</li>
+                    <li>Leave Hydrogen for second to last.</li>
+                    <li>Start with anything else (Carbon, Nitrogen, metals, etc.).</li>
+                </ul>
+            </li>
+            <li>Change coefficients one at a time and <strong>update your count for every element affected</strong> by that change immediately.</li>
+            <li>Ensure the final coefficients are in the lowest possible whole-number ratio.</li>
+        </ol>
+
+        <h2>THE MOLE & AVOGADRO'S NUMBER</h2>
+        <p>Atoms are too small to count individually. We use the <strong>Mole (mol)</strong> to represent a collection of particles.</p>
+        <ul>
+            <li><strong>Avogadro's Number:</strong> $6.022 \times 10^{23}$ particles.</li>
+            <li>One mole of any substance contains exactly $6.022 \times 10^{23}$ atoms, molecules, or ions.</li>
+            <li>A large sip of water contains roughly one mole ($18$ mL) of water molecules.</li>
+        </ul>
+
+        <h2>MOLAR MASS (FORMULA WEIGHT)</h2>
+        <p>Molar mass is the mass of one mole of a substance, expressed in <strong>grams per mole (g/mol)</strong>. On the periodic table, the atomic mass listed for each element is its molar mass.</p>
+        <p class="key-step">Calculating Molar Mass for Compounds:</p>
+        <ol>
+            <li>Identify each element in the formula.</li>
+            <li>Multiply the element's atomic mass by its subscript.</li>
+            <li>Add the totals together.</li>
+        </ol>
+
+        <div class="example-box">
+            <h3>EXAMPLE 1: Balancing Hydrocarbon Combustion</h3>
+            <strong>Equation:</strong> $C_5H_{12} + O_2 \rightarrow CO_2 + H_2O$
+            <ol>
+                <li><strong>Carbon:</strong> 5 on left, 1 on right. Place a 5 in front of $CO_2$.
+                    <br><em>New Oxygen count:</em> $(5 \times 2) + 1 = 11$.</li>
+                <li><strong>Hydrogen:</strong> 12 on left, 2 on right. Place a 6 in front of $H_2O$.
+                    <br><em>New Oxygen count:</em> $(5 \times 2) + 6 = 16$.</li>
+                <li><strong>Oxygen:</strong> 16 on right, 2 on left. Place an 8 in front of $O_2$.</li>
+            </ol>
+            <strong>Balanced:</strong> $1 C_5H_{12} + 8 O_2 \rightarrow 5 CO_2 + 6 H_2O$
+        </div>
+
+        <div class="example-box">
+            <h3>EXAMPLE 2: Molar Mass of Glucose ($C_6H_{12}O_6$)</h3>
+            <ul>
+                <li>Carbon: $6 \times 12.01 = 72.06$</li>
+                <li>Hydrogen: $12 \times 1.008 = 12.096$</li>
+                <li>Oxygen: $6 \times 16.00 = 96.00$</li>
+            </ul>
+            <strong>Total Molar Mass:</strong> $180.16 \text{ g/mol}$
+        </div>
+
+        <h2>PERCENT COMPOSITION</h2>
+        <p>Determines what percentage of a compound's total mass comes from a specific element.</p>
+        $$\text{Mass } \% = \left( \frac{\text{Total mass of the specific element}}{\text{Molar mass of the whole compound}} \right) \times 100$$
+
+        <div class="example-box">
+            <h3>EXAMPLE 3: % Carbon in Glucose</h3>
+            $$\% C = \left( \frac{6 \times 12.01}{180.16} \right) \times 100 = 39.998\% \approx 40\%$$
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <p><strong>1. Counting Atoms:</strong> How many atoms are in $3 \text{ Mg}(OH)_2$?</p>
+        <ul>
+            <li>Mg: $3$</li>
+            <li>O: $2 \times 3 = 6$</li>
+            <li>H: $2 \times 3 = 6$</li>
+        </ul>
+        <p><strong>2. Mole-to-Gram Conversion:</strong> How many moles are in $16 \text{ g}$ of Ethylene ($C_2H_4$)?</p>
+        <ul>
+            <li>Molar Mass of $C_2H_4$: $(2 \times 12.01) + (4 \times 1.008) = 28.052 \text{ g/mol}$</li>
+            <li>Calculation: $16 \text{ g} / 28.052 \text{ g/mol} = 0.57 \text{ moles}$</li>
+        </ul>
+
+        <div class="prof-tip">
+            Exam Prep: The first test is in a week and a half. Ensure you have Chapter 2 finished in ALEKS. Chapter 3 problems are longer and require a properly balanced reaction as a starting point; if the balance is wrong, the whole calculation will be wrong.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>This session covered the fundamental mechanics of chemical equations, the transition from microscopic atoms to macroscopic moles using Avogadro's number, and the calculation of molar mass and percent composition. Mastery of balancing equations is required for all upcoming stoichiometry problems.</p>
+    </div>
+</body></html>
