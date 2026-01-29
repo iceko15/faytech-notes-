@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Empirical Formulas & Stoichiometry</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chemical Composition & Stoichiometry</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> The test is scheduled for one week from today. It is 50% multiple choice and 50% open response (calculations). You MUST bring a calculator and a pencil (no pens on Scantrons). You will be provided with a periodic table and an equation sheet. If there is a snow delay on Tuesday, check Canvas for videos and instructions.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>The transition from understanding the "what" (formulas and percent composition) to the "how much" (stoichiometry). We use mass percentages to find empirical formulas, and then use balanced chemical equations as "recipes" to predict the amounts of products formed in a reaction.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Mass Percent Composition:</strong> The percentage by mass of each element in a compound.</li>
+            <li><strong>Empirical Formula:</strong> The simplest, lowest whole-number ratio of moles of each element in a compound.</li>
+            <li><strong>Molecular Formula:</strong> The actual, exact number of atoms of each element in a molecule.</li>
+            <li><strong>Combustion Analysis:</strong> A laboratory technique used to determine the elemental composition of an unknown hydrocarbon by burning it in excess oxygen and measuring the $CO_2$ and $H_2O$ produced.</li>
+            <li><strong>Stoichiometry:</strong> The numerical relationship between quantities of reactants and products in a balanced chemical reaction.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>Finding Empirical Formula from Percent Composition</h3>
+        <p class="key-step">1. Assume a 100g sample:</p>
+        <p>This allows you to treat the percentages directly as grams (e.g., 61.31% becomes 61.31g).</p>
+        <p class="key-step">2. Convert grams to moles:</p>
+        <p>Divide the mass of each element by its specific molar mass from the periodic table.</p>
+        <p class="key-step">3. Divide by the smallest mole value:</p>
+        <p>Divide all mole values by the smallest number obtained in Step 2 to find the ratio.</p>
+        <p class="key-step">4. Round to whole numbers:</p>
+        <p>These whole numbers become the subscripts in your empirical formula.</p>
+
+        <h3>Finding Molecular Formula from Empirical Formula</h3>
+        <p class="key-step">1. Calculate Empirical Mass:</p>
+        <p>Find the molar mass of the empirical formula unit.</p>
+        <p class="key-step">2. Find the Multiplier ($n$):</p>
+        <p>$$n = \frac{\text{Molar Mass of Compound}}{\text{Empirical Mass}}$$</p>
+        <p class="key-step">3. Multiply Subscripts:</p>
+        <p>Multiply every subscript in the empirical formula by $n$.</p>
+
+        <h3>The Stoichiometry "Road Map"</h3>
+        <p>Every stoichiometry problem follows the same three steps:</p>
+        <ol>
+            <li><strong>Grams to Moles:</strong> Use the molar mass of the starting substance.</li>
+            <li><strong>Moles to Moles:</strong> Use the coefficients from the <em>balanced</em> chemical equation.</li>
+            <li><strong>Moles to Grams:</strong> Use the molar mass of the substance you are trying to find.</li>
+        </ol>
+
+        <h2>EXAMPLE 1: Percent Composition of Oxalic Acid ($H_2C_2O_4$)</h2>
+        <div class="example-box">
+            <p><strong>Step 1: Calculate Molar Mass</strong></p>
+            <p>$(2 \times 1.008) + (2 \times 12.01) + (4 \times 16.00) = 90.036 \text{ g/mol}$</p>
+            <p><strong>Step 2: Calculate Percentages</strong></p>
+            <ul>
+                <li>$\text{H: } \frac{2.016}{90.036} \times 100 = 2.239\%$</li>
+                <li>$\text{C: } \frac{24.02}{90.036} \times 100 = 26.68\%$</li>
+                <li>$\text{O: } 100\% - 2.239\% - 26.68\% = 71.08\%$</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Combustion Analysis of PABA</h2>
+        <div class="example-box">
+            <p><strong>Data:</strong> 61.31% C, 5.14% H, 10.21% N, 23.33% O.</p>
+            <ol>
+                <li><strong>C:</strong> $61.31 \text{g} \div 12.01 = 5.1049 \text{ mol}$</li>
+                <li><strong>H:</strong> $5.14 \text{g} \div 1.008 = 5.09 \text{ mol}$</li>
+                <li><strong>N:</strong> $10.21 \text{g} \div 14.01 = 0.728 \text{ mol}$</li>
+                <li><strong>O:</strong> $23.33 \text{g} \div 16.00 = 1.45 \text{ mol}$</li>
+            </ol>
+            <p><strong>Divide by smallest (0.728):</strong></p>
+            <p>C: 7 | H: 7 | N: 1 | O: 2</p>
+            <p><strong>Empirical Formula:</strong> $C_7H_7NO_2$</p>
+        </div>
+
+        <div class="prof-tip">
+            In combustion analysis, you cannot measure Oxygen directly because you are pumping oxygen into the machine to burn the sample. Calculate C and H first, then subtract their masses from the original sample mass to find the Oxygen mass.
+        </div>
+
+        <h2>EXAMPLE 3: Stoichiometry of Ammonia Production</h2>
+        <div class="example-box">
+            <p><strong>Reaction:</strong> $N_2 + 3H_2 \rightarrow 2NH_3$</p>
+            <p><strong>Question:</strong> What mass of $NH_3$ is produced from 1.60g of $H_2$?</p>
+            <p><strong>Calculation Path:</strong></p>
+            <p>1. $1.60 \text{ g } H_2 \times (\frac{1 \text{ mol } H_2}{2.016 \text{ g } H_2}) = 0.7936 \text{ mol } H_2$</p>
+            <p>2. $0.7936 \text{ mol } H_2 \times (\frac{2 \text{ mol } NH_3}{3 \text{ mol } H_2}) = 0.5291 \text{ mol } NH_3$</p>
+            <p>3. $0.5291 \text{ mol } NH_3 \times (\frac{17.034 \text{ g } NH_3}{1 \text{ mol } NH_3}) = 9.01 \text{ g } NH_3$</p>
+            <p><strong>Final Answer:</strong> 9.01g</p>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Balanced equations provide the mole-to-mole ratios necessary for all chemical calculations. Whether finding an empirical formula from mass percent or predicting product yields via stoichiometry, the mole is the central unit of conversion. Always ensure you are working with a balanced reaction before starting a calculation ($Rx$ is the abbreviation for reaction).</p>
+    </div>
+</body></html>

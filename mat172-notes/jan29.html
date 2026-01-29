@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT 172: Graphing & Transforming Trig Functions</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        .landmark-list { list-style-type: none; padding-left: 0; }
+        .landmark-list li { margin-bottom: 5px; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Jan 29: Graphing & Transforming Trig Functions</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The goal of Sections 4.5 and 4.6 is to transition from "point-crunching" to recognizing the <strong>transformative behavior</strong> of trigonometric functions. By identifying the specific effects of $A$, $B$, $C$, and $D$ on the base model, we can sketch complex graphs (Sine, Cosine, Tangent, and Secant) using "Landmark Locations" without needing a calculator for every point.</p>
+
+        <div class="prof-tip">
+            <strong>Professor's Warning:</strong> Don't fret over memorizing point tables. It’s overkill. The point of this section is to identify what happens to the shape—is it shifted, stretched, or reflected? Focus on the "one period" flow.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Base Model:</strong> The parent function with no transformations ($y = \sin(x)$, $y = \cos(x)$).</li>
+            <li><strong>Midline:</strong> The horizontal line ($y = D$) that the graph oscillates around. For base models, this is the x-axis ($y = 0$).</li>
+            <li><strong>Amplitude:</strong> The distance from the midline to the peak (maximum) or valley (minimum). Defined as $|A|$. <em>Note: Only Sine and Cosine technically have amplitude; Tangent/Secant are infinitely tall.</em></li>
+            <li><strong>Period:</strong> The horizontal length of one complete cycle. Calculated as $\frac{\text{Base Period}}{B}$.</li>
+            <li><strong>Phase Shift ($C$):</strong> Horizontal translation (left or right).</li>
+            <li><strong>Vertical Shift ($D$):</strong> Vertical translation (up or down).</li>
+            <li><strong>Landmark Locations:</strong> The five key points in a period—Beginning, Middle, End, and the 1/4 and 3/4 marks.</li>
+        </ul>
+
+        <h2>THE "LANDMARK" PROCESS FOR NUMBER LINES</h2>
+        <p>A "bad" number line has unequal spacing or numbers out of order. A "good" number line scales incrementally. Since we use Radians (which feel "wonky"), follow this "Half-Half" method:</p>
+        <ol>
+            <li><strong>Identify the Period:</strong> Mark 0 and the End of the period (the calculated length).</li>
+            <li><strong>Find the Middle:</strong> Take half of the period value.</li>
+            <li><strong>Find the Quarters:</strong> Take half of the middle value (this is the 1/4 mark). Multiply it by 3 for the 3/4 mark.</li>
+            <li><strong>Reduction Check:</strong> If your tick marks are in $1/6$ increments, count them out: $1\pi/6, 2\pi/6, 3\pi/6, 4\pi/6$—then reduce to simplest form.</li>
+        </ol>
+
+        <div class="example-box">
+            <strong>Example Period Calculation (Crap-tastic Numbers):</strong><br>
+            If the Period = $5\pi/6$:
+            <ul>
+                <li>Middle: $\frac{5\pi}{6} \times \frac{1}{2} = \frac{5\pi}{12}$</li>
+                <li>1/4 Mark: $\frac{5\pi}{12} \times \frac{1}{2} = \frac{5\pi}{24}$</li>
+                <li>Pattern: $\frac{5\pi}{24}$ (1st), $\frac{10\pi}{24}$ (Mid), $\frac{15\pi}{24}$ (3rd), $\frac{20\pi}{24}$ (End).</li>
+                <li><em>Prof Tip: The LCD perspective makes the pattern clear (5, 10, 15, 20) even if the reduced fractions look "jarring."</em></li>
+            </ul>
+        </div>
+
+        <h2>TRANSFORMATION RULES</h2>
+        <p>Given $y = A \cdot f(B(x - C)) + D$:</p>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Effect</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>$A$</td>
+                <td>Vertical Stretch/Shrink</td>
+                <td>Affects Amplitude ($|A|$). Negative $A$ causes an x-axis reflection.</td>
+            </tr>
+            <tr>
+                <td>$B$</td>
+                <td>Horizontal Stretch/Shrink</td>
+                <td>$B > 1$ is a <strong>Shrink</strong>; $0 < B < 1$ is a <strong>Stretch</strong>. Period = $2\pi/B$ (or $\pi/B$ for Tangent).</td>
+            </tr>
+            <tr>
+                <td>$C$</td>
+                <td>Phase Shift</td>
+                <td>Shifts left/right. <em>Must be inside parentheses.</em></td>
+            </tr>
+            <tr>
+                <td>$D$</td>
+                <td>Vertical Shift</td>
+                <td>Shifts midline up/down. Not part of the angle.</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>Order of Operations:</strong> In MyMathLab, you must enter transformations in the proper order of operations (usually A, B, C, then D). If you scramble the order, it may mark the graph wrong even if the picture looks correct!
+        </div>
+
+        <h2>EXAMPLE: $y = 2\cos(x) + 1$</h2>
+        <p><strong>Analysis:</strong></p>
+        <ul>
+            <li><strong>$A = 2$:</strong> Amplitude is 2. The graph goes 2 units up/down from the midline.</li>
+            <li><strong>$D = 1$:</strong> Vertical shift up 1 unit. Midline is now $y = 1$.</li>
+            <li><strong>Range:</strong> Since midline is 1 and amplitude is 2, range is $1-2$ to $1+2 \Rightarrow [-1, 3]$.</li>
+            <li><strong>Period:</strong> $B=1$, so Period = $2\pi$. Quarters: $0, \pi/2, \pi, 3\pi/2, 2\pi$.</li>
+        </ul>
+        <p><strong>Landmarks (Cosine "U-Shape"):</strong></p>
+        <ul class="landmark-list">
+            <li>Beginning $(0, 3)$ - Max</li>
+            <li>1/4 Mark $(\pi/2, 1)$ - Midline</li>
+            <li>Middle $(\pi, -1)$ - Min</li>
+            <li>3/4 Mark $(3\pi/2, 1)$ - Midline</li>
+            <li>End $(2\pi, 3)$ - Max</li>
+        </ul>
+
+        <h2>EXAMPLE: $y = 3\tan(2x)$</h2>
+        <ul>
+            <li><strong>$A = 3$:</strong> Vertical stretch (not amplitude). Points at 1/4 and 3/4 marks will be at $\pm 3$.</li>
+            <li><strong>$B = 2$:</strong> Period = $\pi/2$. This is a <strong>Horizontal Shrink</strong>.</li>
+            <li><strong>Asymptotes:</strong> Base tangent asymptotes are at $\pm\pi/2$. For this period, they shrink to $\pm\pi/4$.</li>
+        </ul>
+        <p><strong>Landmarks:</strong></p>
+        <ul class="landmark-list">
+            <li>Asymptote at $x = -\pi/4$</li>
+            <li>1/4 Mark $(-\pi/8, -3)$</li>
+            <li>Center $(0, 0)$</li>
+            <li>3/4 Mark $(\pi/8, 3)$</li>
+            <li>Asymptote at $x = \pi/4$</li>
+        </ul>
+
+        <h2>EXAMPLE: $y = 2\sec(2x)$ (Reciprocal Graphing)</h2>
+        <p>To graph Secant/Cosecant, graph the corresponding Cosine/Sine function first:</p>
+        <ol>
+            <li><strong>Sketch Ghost Graph:</strong> Sketch $y = 2\cos(2x)$.</li>
+            <li><strong>Find Asymptotes:</strong> Everywhere the ghost graph crosses the <strong>midline</strong>, draw a vertical asymptote.</li>
+            <li><strong>Flip the Bumps:</strong> At the Max/Min points of the ghost graph, "swoop out" U-shapes in the opposite direction.</li>
+        </ol>
+        <p><strong>Landmarks for $y = 2\sec(2x)$ on $[0, \pi]$:</strong></p>
+        <ul class="landmark-list">
+            <li>Point $(0, 2)$ - Relative Min</li>
+            <li>Asymptote at $x = \pi/4$</li>
+            <li>Point $(\pi/2, -2)$ - Relative Max</li>
+            <li>Asymptote at $x = 3\pi/4$</li>
+            <li>Point $(\pi, 2)$ - Relative Min</li>
+        </ul>
+
+        <h2>EXAM HINTS & NOTES</h2>
+        <ul>
+            <li><strong>Formula Sheet:</strong> Dr. A will provide base model graphs on the test to prevent "moment of panic" errors (e.g., drawing Sine upside down).</li>
+            <li><strong>Show Your Work:</strong> Even if you use a calculator, jot down how you got the period or phase shift. If you divide when you should multiply, Dr. A can give partial credit if the calculation is visible.</li>
+            <li><strong>Landmark Labels:</strong> Dr. A specifically asks for point values $(x, y)$ on tests because hand-drawn graphs can be messy or "light-handed."</li>
+            <li><strong>Infinite Nature:</strong> Once you draw one period, you can extend the graph indefinitely by copying the pattern.</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Graphing trig functions is a pattern-based skill. Calculate the period, split it into quarters, apply the vertical shifts and stretches, and then plot the 5 landmarks based on the parent shape (Sine S-curve, Cosine U-curve, Tangent uphill-curve). Next class will focus on <strong>Phase Shifts (C)</strong> and more complex combinations.</p>
+    </div>
+</body></html>
