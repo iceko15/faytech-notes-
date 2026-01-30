@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Advanced Trig Transformations & Phase Shifts</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Advanced Trigonometric Transformations & Phase Shifts</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>While basic transformations involve amplitude and period changes, the introduction of the <strong>Phase Shift</strong> (horizontal displacement) requires a more sophisticated approach to grid scaling. By finding a common denominator (LCD) between the period increments and the phase shift, we can accurately plot complex trigonometric functions without "squishing" the graph or losing precision.</p>
+
+        <div class="prof-tip">
+            "I'm presenting the bare minimum I can get away with. There are plenty of other examples for you to try on your own. Feel free to take a picture of your work and send it to me if you get stuck, or hit me up during office hours."
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Amplitude ($A$):</strong> The vertical distance from the midline to the maximum or minimum. It is a vertical stretch/compression.</li>
+            <li><strong>Period ($P$):</strong> The horizontal length of one full cycle. Calculated as $\text{Base Period} / B$.</li>
+            <li><strong>Phase Shift ($C/B$):</strong> The horizontal shift of the graph. If positive, it moves right; if negative, it moves left.</li>
+            <li><strong>Midline:</strong> The horizontal axis that the graph oscillates around.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS: FINDING THE PHASE SHIFT</h2>
+        <p>There are two primary methods to identify the phase shift. The professor recommends Method 1 for its intuitive handling of signs.</p>
+        
+        <p class="key-step">Method 1: The Zero-Equated Solve (Recommended)</p>
+        <ol>
+            <li>Take the entire argument (the "parentheses chunk") of the trig function: $Bx - C$.</li>
+            <li>Set it equal to zero: $Bx - C = 0$.</li>
+            <li>Solve for $x$. The result is your phase shift.</li>
+            <li><strong>Direction:</strong> A positive result means move <strong>Right</strong>. A negative result means move <strong>Left</strong>. (This follows standard number line logic).</li>
+        </ol>
+
+        <p class="key-step">Method 2: The Formulaic Approach</p>
+        <ul>
+            <li>Identify $C$ and $B$.</li>
+            <li>Calculate $C/B$.</li>
+            <li><strong>Warning:</strong> You must recognize that $C$ uses the <strong>opposite sign</strong> of what is seen in the parentheses. A minus sign in the chunk indicates a positive $C$ value.</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        <p>Order of Transformations (MyMathLab & General Practice):</p>
+        <ol>
+            <li><strong>Phase Shift (Horizontal Shift)</strong> - Always do this first if it exists.</li>
+            <li><strong>Stretching and Shrinking</strong> (Amplitude/Period).</li>
+            <li><strong>Reflections</strong> (Across X or Y axes).</li>
+            <li><strong>Vertical Shifts ($D$ value)</strong> - Always do this last.</li>
+        </ol>
+
+        <div class="prof-tip">
+            "If you do these out of order in MyMathLab, it is highly likely it will count it wrong, even if your final picture looks exactly the same as theirs. Stick to the order of actions on page 24."
+        </div>
+
+        <h2>EXAMPLE 1: $y = 3\sin(2x - \pi/3)$</h2>
+        <div class="example-box">
+            <p><strong>Step 1: Identify Constants</strong></p>
+            <ul>
+                <li>$A = 3$ (Amplitude: Height from midline is 3 units up/down).</li>
+                <li>$B = 2$ (Used for period).</li>
+                <li>Period $= 2\pi / 2 = \pi$.</li>
+            </ul>
+
+            <p><strong>Step 2: Calculate Phase Shift</strong></p>
+            <p>Set $2x - \pi/3 = 0$</p>
+            <p>$2x = \pi/3$</p>
+            <p>$x = \pi/6$ (Shift <strong>Right</strong> because result is positive).</p>
+
+            <p><strong>Step 3: Grid Planning (The LCD Issue)</strong></p>
+            <p>We need a grid that accommodates both the <strong>quarters of the period</strong> ($\pi/4$) and the <strong>phase shift</strong> ($\pi/6$).</p>
+            <ul>
+                <li>Period $= \pi$. Standard quarters would be $\pi/4$.</li>
+                <li>Phase Shift $= \pi/6$.</li>
+                <li>LCD of 4 and 6 is <strong>12</strong>.</li>
+                <li>Recommendation: Let 1 box $= \pi/12$.</li>
+            </ul>
+
+            <p><strong>Step 4: Mapping the Graph (12 boxes = $\pi$)</strong></p>
+            <ul>
+                <li>Initial Period (no shift): 0 to $\pi$ (12 boxes).</li>
+                <li>Shifted Period: Start at $\pi/6$ (which is 2 boxes right). End at $7\pi/6$ (14 boxes from origin).</li>
+                <li>Critical Points (Quarters of 12 boxes $= 3$ boxes apart):
+                    <ul>
+                        <li>Start: $\pi/6$ (at midline)</li>
+                        <li>1st Quarter: $\pi/6 + 3$ boxes $= 5\pi/12$ (Max at 3)</li>
+                        <li>Middle: $5\pi/12 + 3$ boxes $= 8\pi/12 = 2\pi/3$ (at midline)</li>
+                        <li>3rd Quarter: $8\pi/12 + 3$ boxes $= 11\pi/12$ (Min at -3)</li>
+                        <li>End: $11\pi/12 + 3$ boxes $= 14\pi/12 = 7\pi/6$ (at midline)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: MyMathLab Tool Usage</h2>
+        <div class="example-box">
+            <p><strong>Function:</strong> $y = 4\cos(x - 2\pi)$</p>
+            <ul>
+                <li><strong>Amplitude:</strong> 4.</li>
+                <li><strong>Period:</strong> $2\pi$ (since $B=1$).</li>
+                <li><strong>Phase Shift:</strong> Solve $x - 2\pi = 0 \rightarrow x = 2\pi$.</li>
+            </ul>
+            <p class="key-step">MyMathLab UI Tips:</p>
+            <ul>
+                <li>Select the specific tool (Sine vs. Cosine).</li>
+                <li>Click anywhere on the graph; it will "plop" a base model.</li>
+                <li>Use the pop-up menu to input values: Phase shift = 2pi, Amplitude = 4.</li>
+                <li><strong>Pro-Tip:</strong> If you don't have a $\pi$ button, type "P-I" and the software should convert it to the symbol.</li>
+            </ul>
+        </div>
+
+        <h2>PRACTICE PROBLEMS / WARNINGS</h2>
+        <div class="prof-tip">
+            "Some problems in the homework don't use $\pi$ in the grid. The grid might be 1, 2, 3, 4, 5 and the period might be 5. Don't treat these any differently! The logic remains the same regardless of the units."
+        </div>
+        <ul>
+            <li><strong>Grammar Warning:</strong> In MyMathLab, if asked for the phase shift number, put "$\pi/6$". If it's a multiple choice asking about direction, select "Right $\pi/6$". Don't say "Left $-\pi/6$"; that's a double negative and bad grammar.</li>
+            <li><strong>Tangent/Cotangent:</strong> The "squiggle" is oriented around the origin. If you can transform a Sine wave, you can transform these; the notion of shifting the "center" part is the same.</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Success in graphing complex trig functions relies on <strong>paper sketching</strong> before using digital tools. Identify $A, B, C$. Calculate the Phase Shift by solving the inner chunk for zero. Choose a grid scale based on the LCD of your quarter-period and your phase shift to ensure all critical points land on clean grid lines. Always perform the phase shift first and the vertical shift last.</p>
+    </div>
+</body></html>
