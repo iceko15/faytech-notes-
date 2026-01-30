@@ -12,6 +12,7 @@
         .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
         h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        h3 { color: #0056b3; border-bottom: 1px solid #ddd; }
         .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
         .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
         .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
@@ -21,7 +22,7 @@
         .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
         .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
         .key-step { font-weight: bold; color: #0056b3; }
-        .obs-text { color: #555; font-style: italic; }
+        .lecture-section { background: #fdfdfd; border: 1px solid #eee; padding: 20px; margin-top: 40px; border-radius: 8px; border-top: 3px solid #0056b3; }
         @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
     </style>
 </head>
@@ -86,11 +87,10 @@
         </table>
 
         <div class="prof-tip">
-            Note on D.3: Mixing aluminum nitrate and potassium iodide resulted in <strong>no reaction</strong>. Always check solubility rules; if all potential products are aqueous, no chemical change has occurred.
+            Note on D.3: Mixing aluminum nitrate and potassium iodide resulted in no reaction. Always check solubility rules; if all potential products are aqueous, no chemical change has occurred.
         </div>
 
         <h2>POST-LAB QUESTIONS: IDENTIFICATION</h2>
-        <p>Based on the observations recorded during the lab procedures:</p>
         <ul>
             <li><span class="key-step">A. Colorless liquid (procedure B.1):</span> $H_2O(l)$ (Water)</li>
             <li><span class="key-step">B. Flame-extinguishing gas (procedure B.2):</span> $CO_2(g)$ (Carbon dioxide)</li>
@@ -101,7 +101,7 @@
             <li><span class="key-step">G. White precipitate (procedure D.6):</span> $AlPO_4(s)$ (Aluminum phosphate)</li>
         </ul>
 
-        <h2>BALANCING & CLASSIFICATION</h2>
+        <h2>BALANCING & CLASSIFICATION (LAB REPORT ANSWERS)</h2>
         
         <div class="example-box">
             <strong>A. Burning Copper (Formation of Oxide)</strong><br>
@@ -145,16 +145,81 @@
             <strong>Reaction type:</strong> Decomposition (Dehydration)
         </div>
 
-        <h2>RULES/IDENTITIES</h2>
-        <h3>Precipitation Rules (Ref: Section D)</h3>
-        <ul>
-            <li><strong>Silver Nitrate ($AgNO_3$):</strong> Often forms precipitates with halides ($AgI$ - Yellow) and phosphates ($Ag_3PO_4$ - Yellow).</li>
-            <li><strong>Mercury (II) Nitrate ($Hg(NO_3)_2$):</strong> Reacts with Iodide to form a distinct orange $HgI_2$ precipitate.</li>
-            <li><strong>Aluminum Nitrate ($Al(NO_3)_3$):</strong> Reacts with Sodium Phosphate to form white $AlPO_4$.</li>
-        </ul>
+        <div class="lecture-section">
+            <h2>LECTURE NOTES: Chemical Reaction Classifications (Jan 28)</h2>
+            
+            <h3>Section 1: BIG IDEA</h3>
+            <p>Understanding the categorization of chemical reactions allows chemists to predict products and balance equations accurately. This lab focuses on identifying reactions through observable evidence—such as color changes, gas production, and heat—and translating word descriptions into balanced symbolic equations.</p>
+            
+            <div class="prof-tip">
+                Instructor Emphasis: Always identify the reactants' nature (e.g., hydrocarbons, acids, bases) to determine the reaction type before balancing.
+            </div>
 
-        <h2>SUMMARY</h2>
-        <p>This lab demonstrates the five primary types of chemical reactions: <strong>Combination</strong> (elements merging), <strong>Decomposition</strong> (compounds breaking down), <strong>Single Replacement</strong> (one element displacing another in a compound), <strong>Double Replacement</strong> (exchange of ions between two compounds), and <strong>Neutralization</strong> (acid + base reacting to form salt and water).</p>
+            <h3>Section 2: KEY TERMS / CONCEPTS</h3>
+            <table>
+                <tr>
+                    <th>Reaction Type</th>
+                    <th>Description / Identifying Features</th>
+                </tr>
+                <tr>
+                    <td>Combustion</td>
+                    <td>A hydrocarbon fuel reacts with Oxygen ($O_2$) to produce Carbon Dioxide ($CO_2$) and Water ($H_2O$).</td>
+                </tr>
+                <tr>
+                    <td>Acid-Base Neutralization</td>
+                    <td>An acid reacts with a base (often containing OH) to produce Water ($H_2O$) and a Salt (ionic compound).</td>
+                </tr>
+                <tr>
+                    <td>Decomposition</td>
+                    <td>A single reactant breaks down into two or more products, often requiring heat (e.g., heating hydrates).</td>
+                </tr>
+                <tr>
+                    <td>Combination (Synthesis)</td>
+                    <td>Two or more substances combine to form a single new compound (e.g., burning Magnesium).</td>
+                </tr>
+                <tr>
+                    <td>Single Replacement</td>
+                    <td>One element replaces another in a compound (e.g., Magnesium reacting with an acid).</td>
+                </tr>
+                <tr>
+                    <td>Double Replacement</td>
+                    <td>The ions of two compounds exchange places in an aqueous solution to form two new compounds.</td>
+                </tr>
+            </table>
+
+            <h3>Section 3: STEPS / PROCESS</h3>
+            <ol>
+                <li><strong>Observe:</strong> Note physical changes such as bubbling (gas), precipitation (solid), or temperature changes.</li>
+                <li><strong>Identify Reactants:</strong> Determine if you have a hydrocarbon, an acid/base pair, or a single metal element.</li>
+                <li><strong>Translate:</strong> Convert the names of chemicals into chemical symbols and formulas (e.g., Magnesium Oxide becomes $MgO$).</li>
+                <li><strong>Balance:</strong> Adjust coefficients to ensure the number of atoms for each element is equal on both sides of the equation.</li>
+            </ol>
+
+            <h3>Section 4: RULES / IMPORTANT NOTES</h3>
+            <ul>
+                <li><strong>Hydrocarbon Rule:</strong> Any fuel made of only Hydrogen and Carbon (like methane or octane) is a hydrocarbon.</li>
+                <li><strong>Definition of a Salt:</strong> In chemistry, a "salt" refers to any ionic compound formed from an acid-base reaction, not just table salt ($NaCl$).</li>
+                <li><strong>Incomplete Combustion:</strong> Burning fuels in enclosed spaces can produce Carbon Monoxide ($CO$) due to limited oxygen.</li>
+                <li><strong>Acid Identification:</strong> Look for compounds that produce $H^+$ ions; Bases often contain Hydroxide ($OH$) groups.</li>
+            </ul>
+
+            <h3>Section 6: PRACTICE PROBLEMS (LECTURE)</h3>
+            <div class="example-box">
+                <strong>1. Octane Combustion</strong><br>
+                $$2C_{8}H_{18} + 25O_{2} \rightarrow 16CO_{2} + 18H_{2}O$$
+                <strong>Type:</strong> Combustion
+            </div>
+            <div class="example-box">
+                <strong>2. Sodium Bicarbonate Decomposition</strong><br>
+                $$2NaHCO_{3} \xrightarrow{\Delta} Na_{2}CO_{3} + H_{2}O + CO_{2}$$
+                <strong>Type:</strong> Decomposition
+            </div>
+            <div class="example-box">
+                <strong>3. Magnesium + HCl</strong><br>
+                $$Mg + 2HCl \rightarrow MgCl_{2} + H_{2}$$
+                <strong>Type:</strong> Single Replacement
+            </div>
+        </div>
     </div>
 </body>
 </html>
