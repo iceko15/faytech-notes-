@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHM 151 Practice Test 1</title>
+    <style>
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #3498db;
+            --bg-gray: #f4f7f6;
+            --card-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--primary-blue);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid var(--accent-blue);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            background: var(--card-white);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .question-card {
+            background: var(--card-white);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: var(--accent-blue);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .options-list li {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .btn-print {
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        @media print {
+            .btn-print { display: none; }
+            body { background-color: white; padding: 0; }
+            .question-card { box-shadow: none; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CHM 151: Chapters 1-3</h1>
+            <p>Mirrored Practice Test 1 - Conceptual Clone</p>
+        </div>
+
+        <button class="btn-print" onclick="window.print()">Print to PDF (Save for Offline)</button>
+
+        <div class="question-card">
+            <span class="question-number">1.</span>
+            What is the physical state in which matter has a specific shape and a specific volume?
+            <ul class="options-list">
+                <li>A. gas</li>
+                <li>B. solid</li>
+                <li>C. liquid</li>
+                <li>D. plasma</li>
+                <li>E. aqueous</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">2.</span>
+            A mixture of oil, vinegar, and herbs (like Italian dressing) is an example of a:
+            <ul class="options-list">
+                <li>A. homogeneous mixture</li>
+                <li>B. heterogeneous mixture</li>
+                <li>C. compound</li>
+                <li>D. pure substance</li>
+                <li>E. element</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">3.</span>
+            Which of the following element names and symbols are correctly matched?
+            <ul class="options-list">
+                <li>A. K, krypton</li>
+                <li>B. Ag, gold</li>
+                <li>C. Pb, lead</li>
+                <li>D. Mg, manganese</li>
+                <li>E. Cu, cobalt</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">4.</span>
+            In the following list, only ________ is an example of a physical change.
+            <ul class="options-list">
+                <li>A. the boiling of rubbing alcohol</li>
+                <li>B. the souring of milk</li>
+                <li>C. the tarnishing of silver</li>
+                <li>D. the explosion of nitroglycerin</li>
+                <li>E. the digestion of food</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">5.</span>
+            How many significant figures should be retained in the result of the following calculation?<br>
+            (14.0030 * 0.9963) + (15.0001 * 0.0037)
+            <ul class="options-list">
+                <li>A. 2</li>
+                <li>B. 3</li>
+                <li>C. 4</li>
+                <li>D. 5</li>
+                <li>E. 6</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">6.</span>
+            The name of NF<sub>3</sub> is:
+            <ul class="options-list">
+                <li>A. nitrogen fluoride</li>
+                <li>B. nitrogen trifluoride</li>
+                <li>C. mononitrogen fluoride</li>
+                <li>D. nitrogen(III) fluoride</li>
+                <li>E. trifluoro nitrogen</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">7.</span>
+            Isotopes of a given element always have the same:
+            <ul class="options-list">
+                <li>A. number of neutrons</li>
+                <li>B. mass number</li>
+                <li>C. atomic number</li>
+                <li>D. sum of protons and neutrons</li>
+                <li>E. atomic mass</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">8.</span>
+            Which of the following statements about scientific notation is TRUE?
+            <ul class="options-list">
+                <li>A. It makes the number more precise.</li>
+                <li>B. It eliminates placeholders to clarify significant figures.</li>
+                <li>C. It always increases the number of significant digits.</li>
+                <li>D. It changes the actual value of the measurement.</li>
+                <li>E. None of the above.</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">9.</span>
+            When the following equation is balanced, the coefficients are:<br>
+            _C<sub>3</sub>H<sub>8</sub> + _O<sub>2</sub> &rarr; _CO<sub>2</sub> + _H<sub>2</sub>O
+            <ul class="options-list">
+                <li>A. 1, 5, 3, 4</li>
+                <li>B. 2, 10, 6, 8</li>
+                <li>C. 1, 3, 3, 4</li>
+                <li>D. 1, 7, 3, 4</li>
+                <li>E. 2, 5, 6, 4</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">10.</span>
+            Which subatomic particle has the smallest mass?
+            <ul class="options-list">
+                <li>A. Proton</li>
+                <li>B. Neutron</li>
+                <li>C. Electron</li>
+                <li>D. Nucleus</li>
+                <li>E. Alpha particle</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">11.</span>
+            There are ____ electrons, ____ protons, and ____ neutrons in an atom of <sup>84</sup><sub>36</sub>Kr.
+            <ul class="options-list">
+                <li>A. 36, 36, 84</li>
+                <li>B. 36, 36, 48</li>
+                <li>C. 48, 48, 36</li>
+                <li>D. 84, 84, 36</li>
+                <li>E. 36, 48, 36</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">12.</span>
+            Atoms with the same atomic number but different mass numbers are called:
+            <ul class="options-list">
+                <li>A. Ions</li>
+                <li>B. Isomers</li>
+                <li>C. Isotopes</li>
+                <li>D. Isobars</li>
+                <li>E. Allotropes</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">13.</span>
+            What is the formula weight (in g/mol) of calcium nitrate, Ca(NO<sub>3</sub>)<sub>2</sub>, rounded to the nearest integer?
+            <ul class="options-list">
+                <li>A. 102</li>
+                <li>B. 150</li>
+                <li>C. 164</li>
+                <li>D. 204</li>
+                <li>E. 136</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">14.</span>
+            Elements in the modern periodic table are arranged by:
+            <ul class="options-list">
+                <li>A. Increasing atomic mass</li>
+                <li>B. Alphabetical name</li>
+                <li>C. Increasing atomic number</li>
+                <li>D. Discovery date</li>
+                <li>E. Number of neutrons</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">15.</span>
+            Which of the following molecular formulas is also an empirical formula?
+            <ul class="options-list">
+                <li>A. C<sub>2</sub>H<sub>4</sub></li>
+                <li>B. C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></li>
+                <li>C. CH<sub>4</sub>O</li>
+                <li>D. H<sub>2</sub>O<sub>2</sub></li>
+                <li>E. N<sub>2</sub>O<sub>4</sub></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">16.</span>
+            Which formula/name pair is INCORRECT?
+            <ul class="options-list">
+                <li>A. CuSO<sub>4</sub> copper(II) sulfate</li>
+                <li>B. MgCl<sub>2</sub> magnesium dichloride</li>
+                <li>C. Na<sub>2</sub>O sodium oxide</li>
+                <li>D. AlBr<sub>3</sub> aluminum bromide</li>
+                <li>E. KNO<sub>3</sub> potassium nitrate</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">17.</span>
+            How many molecules of CO<sub>2</sub> are in 88.0 g of this compound?
+            <ul class="options-list">
+                <li>A. 1.20 x 10<sup>24</sup></li>
+                <li>B. 6.02 x 10<sup>23</sup></li>
+                <li>C. 3.01 x 10<sup>23</sup></li>
+                <li>D. 2.00</li>
+                <li>E. 4.40 x 10<sup>25</sup></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">18.</span>
+            Which of the following exists as a diatomic molecule in its elemental state?
+            <ul class="options-list">
+                <li>A. Sulfur</li>
+                <li>B. Neon</li>
+                <li>C. Nitrogen</li>
+                <li>D. Carbon</li>
+                <li>E. Lithium</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">19.</span>
+            The Rutherford gold foil experiment suggested that:
+            <ul class="options-list">
+                <li>A. Electrons are embedded in a positive sphere.</li>
+                <li>B. Atoms are mostly empty space with a dense nucleus.</li>
+                <li>C. Neutrons are located in the orbitals.</li>
+                <li>D. Gold is the only element with a nucleus.</li>
+                <li>E. Atoms cannot be divided.</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">20.</span>
+            Mercury has a density of 13.6 g/cm<sup>3</sup>. What volume (in cm<sup>3</sup>) is occupied by a 45.0 g sample?
+            <ul class="options-list">
+                <li>A. 612</li>
+                <li>B. 3.31</li>
+                <li>C. 0.302</li>
+                <li>D. 0.022</li>
+                <li>E. 58.6</li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">21.</span>
+            A marathon is 26.2 miles long. If a runner averages a speed of 4.50 meters per second (m/s), how many hours will it take to finish the race? (1 mile = 1.609 km)
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">22.</span>
+            What is the empirical formula of a compound that is 40.0% C, 6.7% H, and 53.3% O by mass?
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">23.</span>
+            The reaction of methane (CH<sub>4</sub>) with oxygen yields CO<sub>2</sub> and H<sub>2</sub>O. How many grams of water are produced by the combustion of 32.0 g of methane?<br>
+            CH<sub>4</sub>(g) + 2 O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2 H<sub>2</sub>O(g)
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">24.</span>
+            Calcium carbonate decomposes into calcium oxide and carbon dioxide. If you start with 5.00 g of CaCO<sub>3</sub> and the reaction has an 85.0% yield, how many grams of CaO are actually produced?<br>
+            CaCO<sub>3</sub>(s) &rarr; CaO(s) + CO<sub>2</sub>(g)
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">25.</span>
+            How many moles of aluminum chloride are produced by the reaction of 5.40 g of aluminum metal with 21.3 g of chlorine gas?<br>
+            2 Al + 3 Cl<sub>2</sub> &rarr; 2 AlCl<sub>3</sub>
+        </div>
+
+    </div>
+</body>
+</html>

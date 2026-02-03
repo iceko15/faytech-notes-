@@ -5,25 +5,59 @@
     <title>CHM-151: General Chemistry I</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
-        .container { max-width: 900px; margin: 50px auto; padding: 20px; }
+        .container { max-width: 1100px; margin: 50px auto; padding: 20px; }
         .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
         h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; font-weight: bold; }
         
-        /* The Date Buttons Grid - 3 Columns */
+        /* New Two-Column Layout */
+        .main-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* Left Side: Class Notes */
+        .notes-section {
+            flex: 2;
+        }
+
+        /* Right Side: Test Practice Sidebar */
+        .test-section {
+            flex: 1;
+            background: #fcfcfc;
+            border-left: 2px solid #eee;
+            padding: 0 0 20px 25px;
+        }
+
+        .test-section h3 {
+            color: #0056b3;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Date Buttons Grid - Adjusted to 2 columns to fit sidebar */
         .date-grid { 
             display: grid; 
-            grid-template-columns: repeat(3, 1fr); /* Forces 3 columns per row */
+            grid-template-columns: repeat(2, 1fr); 
             gap: 15px; 
             margin-top: 20px; 
         }
 
-        /* Note Button Styling */
+        /* Test and Answer Key Rows */
+        .test-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Universal Button Styling */
         .note-btn { 
             background: #ffffff; 
             border: 2px solid #0056b3; 
             color: #0056b3; 
-            padding: 15px; 
+            padding: 12px; 
             border-radius: 8px; 
             text-decoration: none; 
             text-align: center; 
@@ -32,13 +66,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 60px;
+            min-height: 50px;
+            font-size: 0.95em;
         }
 
         .note-btn:hover { 
             background: #0056b3; 
             color: white; 
             transform: translateY(-2px);
+        }
+
+        /* Specific Answer Key Styling */
+        .key-btn {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+            font-size: 0.85em;
+        }
+
+        .key-btn:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+        /* Mobile Responsive Stacking */
+        @media (max-width: 850px) {
+            .main-layout { flex-direction: column; }
+            .test-section { border-left: none; border-top: 2px solid #eee; padding: 20px 0 0 0; width: 100%; }
+            .date-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -47,21 +102,51 @@
         <a href="index.html" class="back-link">← Back to Dashboard</a>
         <div class="card">
             <h1>CHM-151: General Chemistry I</h1>
-            <p>Select a date to view lab reports and study guides:</p>
-            
-            <div class="date-grid">
-                <a href="chm151-notes/jan13.html" class="note-btn">Jan 13: Intro to Matter & Measurements</a>
-                <a href="chm151-notes/jan14.html" class="note-btn">Jan 14: Lab Safety & Unit Conversions</a>
-                <a href="chm151-notes/jan15.html" class="note-btn">Jan 15: Sig Figs & Atomic Structure</a>
-                <a href="chm151-notes/jan20.html" class="note-btn">Jan 20: Atomic Structure, Periodic Table Layout, and Formulas</a>
-                <a href="chm151-notes/jan21.html" class="note-btn">Jan 21: Post lab worksheet</a>
-                <a href="chm151-notes/jan22.html" class="note-btn">Jan 22: Ionic & Molecular Nomenclature</a>
-                <a href="chm151-notes/jan27.html" class="note-btn">Jan 27: Chemical Reactions, The Mole, & Molar Mass</a>
-                <a href="chm151-notes/jan28.html" class="note-btn">Jan 28: Chemical Reactions Lab & Post-Lab Analysis</a>
-                <a href="chm151-notes/jan29.html" class="note-btn">Jan 29: Empirical Formulas & Stoichiometry</a>
-
-
+            <div class="main-layout">
+                <div class="notes-section">
+                    <p>Select a date to view lab reports and study guides:</p>
+                    <div class="date-grid">
+                        <a href="chm151-notes/jan13.html" class="note-btn">Jan 13: Intro to Matter & Measurements</a>
+                        <a href="chm151-notes/jan14.html" class="note-btn">Jan 14: Lab Safety & Unit Conversions</a>
+                        <a href="chm151-notes/jan15.html" class="note-btn">Jan 15: Sig Figs & Atomic Structure</a>
+                        <a href="chm151-notes/jan20.html" class="note-btn">Jan 20: Atomic Structure, Periodic Table</a>
+                        <a href="chm151-notes/jan21.html" class="note-btn">Jan 21: Post lab worksheet</a>
+                        <a href="chm151-notes/jan22.html" class="note-btn">Jan 22: Ionic & Molecular Nomenclature</a>
+                        <a href="chm151-notes/jan27.html" class="note-btn">Jan 27: Chemical Reactions & Mole</a>
+                        <a href="chm151-notes/jan28.html" class="note-btn">Jan 28: Lab & Post-Lab Analysis</a>
+                        <a href="chm151-notes/jan29.html" class="note-btn">Jan 29: Empirical Formulas & Stoich</a>
+                    </div>
                 </div>
+
+                <div class="test-section">
+                    <h3>Test Reviews</h3>
+                    
+                    <div class="test-row">
+                        <a href="chem151-test/test1-practice.html" class="note-btn" style="flex: 1.5;">Test 1 Practice</a>
+                        <a href="chem151-test/test1-key.html" class="note-btn key-btn" style="flex: 1;">Key</a>
+                    </div>
+
+                    <div class="test-row">
+                        <a href="chem151-test/test2-practice.html" class="note-btn" style="flex: 1.5;">Test 2 Practice</a>
+                        <a href="chem151-test/test2-key.html" class="note-btn key-btn" style="flex: 1;">Key</a>
+                    </div>
+
+                    <div class="test-row">
+                        <a href="chem151-test/test3-practice.html" class="note-btn" style="flex: 1.5;">Test 3 Practice</a>
+                        <a href="chem151-test/test3-key.html" class="note-btn key-btn" style="flex: 1;">Key</a>
+                    </div>
+
+                    <div class="test-row">
+                        <a href="chem151-test/test4-practice.html" class="note-btn" style="flex: 1.5;">Test 4 Practice</a>
+                        <a href="chem151-test/test4-key.html" class="note-btn key-btn" style="flex: 1;">Key</a>
+                    </div>
+
+                    <div class="test-row">
+                        <a href="chem151-test/test5-practice.html" class="note-btn" style="flex: 1.5;">Test 5 Practice</a>
+                        <a href="chem151-test/test5-key.html" class="note-btn key-btn" style="flex: 1;">Key</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
