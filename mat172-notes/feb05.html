@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Chapter 4 Review & Test Logistics</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chapter 4 Review & Test Logistics</h1>
+        
+        <div class="prof-tip">
+            <strong>MAJOR UPDATE:</strong> The Chapter 4 Test will NOT be in class. It will be an online exam in MyMathLab.
+            <ul>
+                <li><strong>Format:</strong> 2-hour window, taken at home.</li>
+                <li><strong>Security:</strong> Uses Lockdown Browser (built into MyMathLab).</li>
+                <li><strong>Resources:</strong> Open Note / Open Book. No "Open Neighbor" or Internet searches.</li>
+                <li><strong>Timing:</strong> Opens around Feb 11/12, due by the end of next week.</li>
+            </ul>
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>We are wrapping up Chapter 4 by reviewing graphing mechanics, defining the strict domain/range restrictions for Inverse Trig Functions (4.7), and applying trigonometry to real-world scenarios like Bearings and Harmonic Motion (4.8).</p>
+
+        <h2>SECTION 4.5/4.6: GRAPHING REVIEW</h2>
+        <p>When graphing $y = A \sin(Bx - C) + D$, calculation errors usually happen in the Phase Shift or the Calculator Window settings.</p>
+
+        <h3>1. The Phase Shift Trap</h3>
+        <p>Many students look at $Bx - C$ and assume the shift is just $C$. This is incorrect if $B \neq 1$.</p>
+        <p class="key-step">Correct Method:</p>
+        <p>Set the argument equal to zero and solve for $x$: $$Bx - C = 0 \Rightarrow x = \frac{C}{B}$$</p>
+        
+        <h3>2. Calculator Strategy (Window Settings)</h3>
+        <p>The default calculator window ($-10$ to $10$) is useless for trig. You must manually configure the <strong>Window</strong> to match your specific function.</p>
+        <ul>
+            <li><strong>X-Min / X-Max:</strong> Set this to cover at least one full period (e.g., $-\pi$ to $3\pi$).</li>
+            <li><strong>X-Scale:</strong> This is the most important setting. Set it to your <strong>Quarter Point</strong> increment ($\text{Period} / 4$). This forces the tick marks to align with your max, min, and intercepts.</li>
+            <li><strong>Table Set (2nd + Window):</strong> Match your $\Delta Tbl$ to your X-Scale so the table values aren't random decimals.</li>
+        </ul>
+
+        <h2>SECTION 4.7: INVERSE TRIG FUNCTIONS</h2>
+        <p>Inverse functions ($f^{-1}$) swap inputs and outputs. For trig, the input is a ratio (side lengths), and the output is an angle.</p>
+        <p><strong>The "Monkey Wrench":</strong> To make inverses functions, we must restrict their ranges. The calculator will only give answers in specific quadrants.</p>
+
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Notation</th>
+                <th>Restricted Range (Output Quadrants)</th>
+            </tr>
+            <tr>
+                <td>Inverse Sine</td>
+                <td>$\sin^{-1}(x)$ or $\arcsin(x)$</td>
+                <td><strong>Q1 & Q4</strong> $[-\frac{\pi}{2}, \frac{\pi}{2}]$</td>
+            </tr>
+            <tr>
+                <td>Inverse Tangent</td>
+                <td>$\tan^{-1}(x)$ or $\arctan(x)$</td>
+                <td><strong>Q1 & Q4</strong> $(-\frac{\pi}{2}, \frac{\pi}{2})$</td>
+            </tr>
+            <tr>
+                <td>Inverse Cosine</td>
+                <td>$\cos^{-1}(x)$ or $\arccos(x)$</td>
+                <td><strong>Q1 & Q2</strong> $[0, \pi]$</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>Critical Warning:</strong> If you are solving for $\sin^{-1}$ and the ratio is negative, the calculator gives a negative angle (Q4). Do NOT use the Q3 angle (like $7\pi/4$) even if it has the same sine value, because it is outside the restricted range.
+        </div>
+
+        <h2>SECTION 4.8: APPLICATIONS & MODELS</h2>
+        
+        <h3>1. Solving Right Triangles</h3>
+        <p>Standard SOH-CAH-TOA problems. If looking for a side, use algebra. If looking for an angle, use the inverse function.</p>
+        <p><strong>Angle of Elevation/Depression:</strong> Always measured from the <strong>Horizontal</strong>. Elevation is looking up; Depression is looking down.</p>
+
+        <h3>2. Navigational Bearings</h3>
+        <p>In math (unlike some boy scout methods), bearings are given in a 3-part format: <strong>N/S [Angle] E/W</strong>.</p>
+        <ul>
+            <li><strong>Start:</strong> North or South line (y-axis).</li>
+            <li><strong>Turn:</strong> The specified number of degrees towards East or West.</li>
+            <li><strong>Example:</strong> $S 31^\circ W$ means start pointing South, then turn $31^\circ$ towards the West.</li>
+        </ul>
+        <div class="example-box">
+            <strong>Example:</strong> A ship travels 2.3 miles at $S 31^\circ W$, then turns $90^\circ$ right and travels 3.5 miles. Find the bearing from the start.<br>
+            <em>Strategy:</em> Draw the diagram. The turn creates a right triangle. Use $\tan(\theta) = \frac{\text{opp}}{\text{adj}}$ to find the angle inside the triangle, then add/subtract from the original bearing to find the final direction.
+        </div>
+
+        <h3>3. Simple Harmonic Motion</h3>
+        <p>Used for springs, pendulums, or anything bouncing up and down.
+        $$d = a \cos(\omega t) \quad \text{or} \quad d = a \sin(\omega t)$$</p>
+        <ul>
+            <li><strong>$d$:</strong> Displacement from rest.</li>
+            <li><strong>$a$:</strong> Maximum Displacement (Amplitude).</li>
+            <li><strong>$\omega$ (Omega):</strong> Angular frequency (replaces $B$).</li>
+            <li><strong>Period:</strong> Time for one cycle $= \frac{2\pi}{\omega}$.</li>
+            <li><strong>Frequency:</strong> Cycles per unit of time $= \frac{\omega}{2\pi}$ (Reciprocal of Period).</li>
+        </ul>
+
+        <div class="example-box">
+            <strong>Example:</strong> An object moves with motion $d = 12 \cos(\frac{\pi}{4}t)$.
+            <ul>
+                <li><strong>Max Displacement:</strong> $12$ (Amplitude).</li>
+                <li><strong>Period:</strong> $\frac{2\pi}{\pi/4} = 2\pi \cdot \frac{4}{\pi} = 8$ seconds.</li>
+                <li><strong>Frequency:</strong> $\frac{1}{8}$ oscillation per second.</li>
+            </ul>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>For the test, ensure you can manually graph trig functions by finding the period and quarter-points. Memorize the range restrictions for inverse functions (especially that Sine/Tangent use negative Q4 angles, not positive 300-degree angles). For word problems, draw the picture—bearings start from the vertical axis, and elevation starts from the horizontal.</p>
+    </div>
+</body></html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Composite Inverse Trig & Test Prep</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Composite Inverse Trig Functions & Test Prep</h1>
+        
+        <div class="prof-tip">
+            <strong>Test Announcement:</strong> The Chapter 4 Test is next week in MyMathLab. It will use the Lockdown Browser but is <strong>Open Note</strong>. You can submit your notebook work on Canvas immediately or wait until the following week for the full notebook check.
+            <br><br>
+            <strong>Inclement Weather Makeup:</strong> There is a makeup assignment in Canvas (not MyMathLab) for the missed snow day. It is a simple "Click True" assignment to verify attendance/participation.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>We often assume that inverse functions simply "cancel" each other out (e.g., $f^{-1}(f(x)) = x$). In Trigonometry, this is <strong>NOT</strong> always true due to domain restrictions. We must evaluate composite functions from the inside out, paying close attention to which quadrant the angle lands in versus which quadrant the inverse function is allowed to output.</p>
+
+        <h2>KEY TERMS & RESTRICTIONS</h2>
+        <ul>
+            <li><strong>Composite Function:</strong> A function inside another function, denoted as $f(g(x))$ or $(f \circ g)(x)$.</li>
+            <li><strong>Inverse Sine ($\sin^{-1}$):</strong> Restricted to Quadrants I and IV $[-\frac{\pi}{2}, \frac{\pi}{2}]$.</li>
+            <li><strong>Inverse Cosine ($\cos^{-1}$):</strong> Restricted to Quadrants I and II $[0, \pi]$.</li>
+            <li><strong>Inverse Tangent ($\tan^{-1}$):</strong> Restricted to Quadrants I and IV $(-\frac{\pi}{2}, \frac{\pi}{2})$.</li>
+        </ul>
+
+        <h2>SCENARIO 1: SAME FUNCTION COMPOSITION</h2>
+        <p>Does $\cos^{-1}(\cos(x)) = x$? Only if $x$ is in Quadrant I or II.</p>
+        
+        <div class="example-box">
+            <h3>Example A: The "Easy" Case</h3>
+            <p><strong>Evaluate:</strong> $\cos^{-1}(0.7)$</p>
+            <p>Think of $0.7$ as $\frac{7}{10}$. This represents $\frac{\text{Adjacent}}{\text{Hypotenuse}}$. Since it is positive, we are in Quadrant I. The inverse exists and is valid.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example B: The "Trap" Case</h3>
+            <p><strong>Evaluate:</strong> $\sin^{-1}(\sin(\frac{5\pi}{6}))$</p>
+            <p><strong>1. Inside First:</strong> What is $\sin(\frac{5\pi}{6})$?</p>
+            <ul>
+                <li>Reference angle is $\frac{\pi}{6}$.</li>
+                <li>Quadrant II (Sine is positive).</li>
+                <li>Value: $\frac{1}{2}$.</li>
+            </ul>
+            <p><strong>2. Outside Second:</strong> Evaluate $\sin^{-1}(\frac{1}{2})$.</p>
+            <ul>
+                <li>We need an angle where sine is $\frac{1}{2}$, but it <strong>MUST</strong> be in the restricted range (Q1 or Q4).</li>
+                <li>Since $\frac{1}{2}$ is positive, we choose Q1.</li>
+            </ul>
+            <p><strong>Final Answer:</strong> $\frac{\pi}{6}$ (Note: It did <em>not</em> equal the original $\frac{5\pi}{6}$).</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example C: The Impossible Case</h3>
+            <p><strong>Evaluate:</strong> $\cos^{-1}(-1.2)$</p>
+            <p>Convert to a fraction: $-1.2 = -\frac{12}{10} = -\frac{6}{5}$.</p>
+            <p>This implies $\frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{6}{5}$.</p>
+            <p><strong>Logic Check:</strong> The Hypotenuse (5) cannot be smaller than the Adjacent side (6). This triangle cannot exist.</p>
+            <p><strong>Final Answer:</strong> Undefined / Not Possible.</p>
+        </div>
+
+        <h2>SCENARIO 2: MIXED FUNCTION COMPOSITION</h2>
+        <p>When the functions don't match (e.g., Sine of Inverse Tangent), we must draw a triangle.</p>
+
+        <div class="example-box">
+            <h3>Example D: Numerical Input</h3>
+            <p><strong>Evaluate:</strong> $\sin(\tan^{-1}(\frac{3}{4}))$</p>
+            <p><strong>1. Inside (Setup Triangle):</strong> $\tan^{-1}(\frac{3}{4})$ implies a triangle in Q1 where:</p>
+            <ul>
+                <li>Opposite = 3</li>
+                <li>Adjacent = 4</li>
+            </ul>
+            <p><strong>2. Find Missing Side:</strong> Pythagorean Theorem ($3^2 + 4^2 = c^2$).</p>
+            <ul>
+                <li>$9 + 16 = 25 \rightarrow c = 5$ (Hypotenuse).</li>
+            </ul>
+            <p><strong>3. Outside (Evaluate):</strong> Find $\sin(\theta)$ for this triangle.</p>
+            <ul>
+                <li>$\sin = \frac{\text{Opposite}}{\text{Hypotenuse}}$</li>
+            </ul>
+            <p><strong>Final Answer:</strong> $\frac{3}{5}$ (or 0.6).</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example E: Algebraic Input (Variable)</h3>
+            <p><strong>Evaluate:</strong> $\sec(\tan^{-1}(x))$ where $x > 0$.</p>
+            <p><strong>1. Inside (Setup Triangle):</strong> $\tan^{-1}(x)$ can be written as $\tan^{-1}(\frac{x}{1})$.</p>
+            <ul>
+                <li>Opposite = $x$</li>
+                <li>Adjacent = 1</li>
+            </ul>
+            <p><strong>2. Find Missing Side:</strong> Pythagorean Theorem.</p>
+            <ul>
+                <li>$a^2 + b^2 = c^2 \rightarrow 1^2 + x^2 = c^2$</li>
+                <li>Hypotenuse = $\sqrt{x^2 + 1}$</li>
+            </ul>
+            <p><strong>3. Outside (Evaluate):</strong> Find $\sec(\theta)$.</p>
+            <ul>
+                <li>$\sec = \frac{\text{Hypotenuse}}{\text{Adjacent}}$</li>
+                <li>$\sec = \frac{\sqrt{x^2 + 1}}{1}$</li>
+            </ul>
+            <p><strong>Final Answer:</strong> $\sqrt{x^2 + 1}$</p>
+        </div>
+
+        <h2>TEST PREP STRATEGY</h2>
+        <ul>
+            <li><strong>Question Codes:</strong> In MyMathLab, look at the top of homework questions (e.g., 4.3.37). You can find similar problems in the "Study Plan" area by searching for that code.</li>
+            <li><strong>Practice Test:</strong> There is a practice test available in MyMathLab. It is not for a grade, but it mirrors the actual test format.</li>
+            <li><strong>Word Problems:</strong> The test has about 25 questions. Word problems will be similar to homework but might have slightly different scenarios. They are usually multi-part questions that "stair-step" you to the answer.</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>When dealing with inverse trigonometric functions, never assume they cancel. Always check the quadrant. If the input is a value (like 0.7 or 3/4), draw the triangle and solve for the missing side. If the input is a variable (like x), perform the same steps algebraically. For the upcoming test, utilize the Study Plan to practice specific question types you struggled with in the homework.</p>
+    </div>
+</body></html>
