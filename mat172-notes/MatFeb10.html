@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Course: MAT-172, Topic: Inverse Trig Functions & Review</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../HUB_LINK_HERE" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>MAT-172: Inverse Trig Functions & Review</h1>
+        <div class="prof-tip">
+            Test has been moved to this weekend. This is the first time I've used a lockdown browser in My Math Lab. If for some reason it causes any catastrophes, we'll deal with it as we go. So just chill and hang out and do what you can.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Inverse trigonometric functions are used to find <b>angles</b>. They take a ratio as input and return an angle as output. The crucial concept is that their ranges (outputs) are restricted to specific quadrants to ensure there is only one unique answer. This is different from solving a standard trig equation like $\sin(x) = 1/2$, which has infinite solutions. We can use these inverse functions, along with right-triangle trigonometry (SOH CAH TOA) and the Pythagorean theorem, to solve for unknown angles and sides in both abstract problems and real-world scenarios.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><b>Inverse Function:</b> A function that "reverses" another function. For trig, if $\sin(	heta) = x$, then $\sin^{-1}(x) = 	heta$.</li>
+            <li><b>Range:</b> The set of all possible output values of a function. For inverse trig functions, this is a restricted set of angles.</li>
+            <li><b>Domain:</b> The set of all possible input values. For inverse trig functions, this is a ratio, typically between -1 and 1.</li>
+            <li><b>Reference Angle:</b> The acute angle formed by the terminal side of an angle and the x-axis.</li>
+            <li><b>Phase Shift:</b> A horizontal shift of a periodic function.</li>
+            <li><b>Bearing:</b> A direction measured from North or South. E.g., S 20° W means 20 degrees west of South.</li>
+        </ul>
+
+        <div class="prof-tip">
+            A note on notation: $\sin^{-1}(x)$ is the inverse function. It is NOT a reciprocal: $\sin^{-1}(x) 
+eq \frac{1}{\sin(x)}$. That's why your calculator has separate $x^{-1}$ and $\sin^{-1}$ buttons.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Inverse Function Ranges (Output Quadrants)</h3>
+        <table>
+            <tr><th>Function</th><th>Range</th><th>Quadrants</th></tr>
+            <tr><td>$y = \sin^{-1}(x)$</td><td>$[-\pi/2, \pi/2]$</td><td>I and IV</td></tr>
+            <tr><td>$y = \cos^{-1}(x)$</td><td>$[0, \pi]$</td><td>I and II</td></tr>
+            <tr><td>$y = 	an^{-1}(x)$</td><td>$(-\pi/2, \pi/2)$</td><td>I and IV (endpoints not included)</td></tr>
+        </table>
+        <h3>Core Formulas</h3>
+        <ul>
+            <li><b>Pythagorean Theorem:</b> $a^2 + b^2 = c^2$ (or $x^2 + y^2 = r^2$)</li>
+            <li><b>Reciprocal Identity for Secant:</b> $ \sec(	heta) = \frac{1}{\cos(	heta)} $</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Matching a Tangent Graph</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> Match the graph of a tangent function that has been shifted. The period is $\pi$ (from 0 to $\pi$), and it passes through $(\pi/2, 0)$.</p>
+            <p><b>Analysis:</b></p>
+            <ol>
+                <li><b>Period:</b> The period is $\pi$, so the $b$ value is 1. No period change.</li>
+                <li><b>Vertical Shift:</b> The graph's center point is on the x-axis, so there is no vertical shift ($d=0$).</li>
+                <li><b>Phase Shift:</b> The standard tangent graph passes through the origin $(0,0)$. This graph's center point has been shifted to $(\pi/2, 0)$. This indicates a phase shift of $\pi/2$ to the right. The formula for this shift is $(x - \pi/2)$.</li>
+                <li>However, trig functions are periodic. A shift right by $\pi/2$ can sometimes be equivalent to a shift left by $\pi/2$. The equation could be $y = 	an(x - \pi/2)$ or $y = 	an(x + \pi/2)$. In this case, the provided option was $y = 	an(x + \pi/2)$, which represents a shift to the left by $\pi/2$. Both graph to the same picture.</li>
+            </ol>
+            <p><b>Conclusion:</b> There can be multiple correct equations for the same periodic graph. The given answer was $$y = 	an(x + \pi/2)$$</p>
+        </div>
+
+        <h2>EXAMPLE 2: Composite Inverse Function (Unit Circle Value)</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> Find the exact value of $\sin^{-1}(\sin(5\pi/4))$.</p>
+            <p><b>Analysis:</b></p>
+            <ol>
+                <li>Start from the inside: Find $\sin(5\pi/4)$. The angle $5\pi/4$ is in Quadrant III, where sine is negative. The reference angle is $\pi/4$. So, $\sin(5\pi/4) = -\frac{\sqrt{2}}{2}$.</li>
+                <li>Now the problem is $\sin^{-1}(-\frac{\sqrt{2}}{2})$.</li>
+                <li>The range of $\sin^{-1}(x)$ is Quadrants I and IV. Since the input is negative, the answer must be in Quadrant IV.</li>
+                <li>The angle in Quadrant IV that has a sine of $-\frac{\sqrt{2}}{2}$ is $-\frac{\pi}{4}$.</li>
+            </ol>
+            <p><b>Answer:</b> $$-\frac{\pi}{4}$$</p>
+            <div class="prof-tip">The $\sin^{-1}$ and $\sin$ don't simply cancel out unless the original angle is within the restricted range (Quadrants I or IV). The calculator will always give you the correct answer in the proper range. If you typed this in, it would give you the decimal for $-\pi/4$.</div>
+        </div>
+        
+        <h2>EXAMPLE 3: Composite Inverse Function (Sketching a Triangle)</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> Find the exact value of $\cos(\sin^{-1}(6/10))$.</p>
+            <p><b>Analysis:</b></p>
+            <ol>
+                <li><b>Inner function:</b> $	heta = \sin^{-1}(6/10)$. This means $\sin(	heta) = 6/10$. Since the ratio is positive, $	heta$ is in Quadrant I.</li>
+                <li>$\sin(	heta) = \frac{	ext{opposite}}{	ext{hypotenuse}} = \frac{6}{10}$.</li>
+                <li><b>Sketch a triangle</b> in Q1 with opposite side = 6 and hypotenuse = 10.</li>
+                <li><b>Find the adjacent side</b> using Pythagoras: $a^2 + 6^2 = 10^2 \implies a^2 + 36 = 100 \implies a^2 = 64 \implies a = 8$.</li>
+                <li><b>Outer function:</b> The question is now "What is $\cos(	heta)$?".</li>
+                <li>Using the triangle: $\cos(	heta) = \frac{	ext{adjacent}}{	ext{hypotenuse}} = \frac{8}{10}$.</li>
+            </ol>
+            <p><b>Answer:</b> $$\frac{8}{10} = \frac{4}{5}$$</p>
+        </div>
+
+        <h2>EXAMPLE 4: Bearing Word Problem</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> A ranger at R1 sees a fire due south. A second ranger at R2, 6 miles east of R1, sights the same fire at a bearing of S 20° W. How far is the first ranger from the fire?</p>
+            <p><b>Analysis:</b></p>
+            <ol>
+                <li>Draw the setup. R1 is at some point. The Fire (F) is directly below it. R2 is 6 miles to the east, forming a right angle at R1.</li>
+                <li>The bearing from R2 is S 20° W. This angle is between the south line from R2 and the line of sight to the fire.</li>
+                <li>Inside the right triangle, the angle at R2 is the complement of the bearing angle: $90^\circ - 20^\circ = 70^\circ$.</li>
+                <li>Let $d$ be the distance from R1 to F (the side opposite the $70^\circ$ angle). The adjacent side is the distance between rangers, 6 miles.</li>
+                <li>Use tangent: $	an(70^\circ) = \frac{	ext{opposite}}{	ext{adjacent}} = \frac{d}{6}$.</li>
+                <li>Solve for $d$: $d = 6 	imes 	an(70^\circ)$.</li>
+            </ol>
+            <p><b>Answer:</b> $$d \approx 16.5 	ext{ miles}$$</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Evaluate: $\sec(\sin^{-1}(-3/8))$</li>
+            <li>Evaluate: $\sin^{-1}(\sin(6\pi/5))$</li>
+            <li>Solve the triangle: Given side b, side c, find all missing sides and angles.</li>
+            <li>Harmonic motion problem: Find max displacement, frequency, and period.</li>
+            <li>Graph one period of $y = 2\sin(\pi x + 1) - 2$ and identify landmarks.</li>
+        </ul>
+        
+        <h2>SUMMARY</h2>
+        <p>This session focused on the core principles of inverse trigonometric functions, emphasizing their restricted ranges and application in solving for angles. Key skills include evaluating composite inverse functions by sketching triangles, analyzing and graphing transformations of trig functions, and applying these concepts to solve practical word problems involving bearings and right triangles. Mastery of the unit circle, quadrant rules, and SOH CAH TOA remains essential.</p>
+        <div class="prof-tip">When you're stuck on a My Math Lab question, check the PDF copy of the homeworks I posted in Canvas. Look at the answer. Is it a formatting issue? Did they want a fraction instead of a decimal? This can help you course-correct without the frustration.</div>
+    </div>
+</body></html>
