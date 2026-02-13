@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Chapter 4 Review & Inverse Trigonometry</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chapter 4 Review & Inverse Trigonometry</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>This session serves as the final review for the Chapter 4 Exam, emphasizing the mechanics of inverse functions, the constraints of ranges (quadrant restrictions), and the application of transformations to trigonometric graphs. Success on the exam requires distinguishing between reciprocal functions and inverse functions, and understanding that periodic functions require specific domain restrictions to be invertible.</p>
+
+        <div class="prof-tip">
+            <strong>Exam Logistics Warning:</strong> The test has been moved to this weekend in MyMathLab. This is the first time using Lockdown Browser in this software. If catastrophes occur, we will deal with them as they come. Do not stress—just do what you can. Note: There is a 5% per day late penalty (half a letter grade per day).
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>$\sin^{-1}$ (Inverse Sine):</strong> Not a power! This is function notation representing the angle whose sine is $x$.</li>
+            <li><strong>Phase Shift:</strong> The horizontal shift of a trigonometric graph, calculated by setting the argument of the function equal to zero.</li>
+            <li><strong>Periodic Nature:</strong> Because trig functions repeat, multiple equations can represent the same graph (e.g., shifting $\pi/2$ left vs. $\pi/2$ right for tangent).</li>
+            <li><strong>Domain Restriction:</strong> The specific interval where a trig function is "one-to-one" so that its inverse can exist.</li>
+        </ul>
+
+        <h2>INVERSE RANGE RESTRICTIONS</h2>
+        <p>The calculator is "trained" to only provide answers within these specific ranges. If your manual calculation falls outside these, it is likely a quadrant error.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Interval (Range)</th>
+                    <th>Quadrants Involved</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$\sin^{-1}(x)$</td>
+                    <td>$[-\pi/2, \pi/2]$</td>
+                    <td>I and IV (Negative IV)</td>
+                </tr>
+                <tr>
+                    <td>$\cos^{-1}(x)$</td>
+                    <td>$[0, \pi]$</td>
+                    <td>I and II</td>
+                </tr>
+                <tr>
+                    <td>$\tan^{-1}(x)$</td>
+                    <td>$(-\pi/2, \pi/2)$</td>
+                    <td>I and IV (Endpoints excluded)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>STEPS/PROCESS: Matching Equations to Graphs</h2>
+        <ol>
+            <li><span class="key-step">Identify General Shape:</span> Positive tangent goes "uphill"; negative tangent (or cotangent) goes "downhill."</li>
+            <li><span class="key-step">Find the Period:</span> For tangent, the period is $\pi/b$. Look for the distance between asymptotes or the distance for one full cycle.</li>
+            <li><span class="key-step">Check for Vertical Shift ($d$):</span> Does the center of the swoop pass through the x-axis? If not, $d \neq 0$.</li>
+            <li><span class="key-step">Calculate Phase Shift:</span> Identify where the "origin point" of the base graph has moved. Solve the inner parenthesis for zero to verify.</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>MyMathLab Typo Tip:</strong> If you are struggling with a homework problem, check the provided PDF answer keys in Canvas. Compare your answer format. Maybe they want a fraction instead of a decimal, or a reduced fraction, or a coordinate point instead of a single value. Use the answer key to "course correct" your formatting.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>Inverse vs. Reciprocal:</strong> $x^{-1} = \frac{1}{x}$ (Reciprocal), but $\sin^{-1}(x) \neq \frac{1}{\sin(x)}$. $\frac{1}{\sin(x)}$ is $\csc(x)$.</li>
+            <li><strong>Pythagorean Theorem for Missing Sides:</strong> $a^2 + b^2 = c^2$. Remember that the hypotenuse ($c$) is <em>always</em> positive in trig sketches.</li>
+            <li><strong>Rationalizing Denominators:</strong> Simplify radicals before rationalizing to avoid oversized numbers. Example: $\sqrt{48} = 4\sqrt{3}$.</li>
+        </ul>
+
+        <h2>EXAMPLE: Composite Inverse Functions</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Find the exact value of $\sin^{-1}(\sin(\frac{5\pi}{6}))$.
+            <br><br>
+            <strong>Step 1: Work from the inside out.</strong>
+            $\sin(\frac{5\pi}{6})$ is in Quadrant II. The reference angle is $\pi/6$. In QII, sine is positive.
+            $\sin(\frac{5\pi}{6}) = \frac{1}{2}$.
+            <br><br>
+            <strong>Step 2: Apply the inverse.</strong>
+            Now we need $\sin^{-1}(\frac{1}{2})$.
+            <br>
+            The range for $\sin^{-1}$ is restricted to Quadrants I and IV ($[-\pi/2, \pi/2]$).
+            Sine is positive $1/2$ in Quadrant I at $\pi/6$.
+            <br><br>
+            <strong>Final Answer:</strong> $\pi/6$.
+            <br>
+            <em>Note: The functions do NOT simply "cancel out" because the original angle ($5\pi}{6}$) was outside the restricted range of the inverse function.</em>
+        </div>
+
+        <h2>EXAMPLE: Non-Unit Circle Inverse</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Evaluate $\sec(\sin^{-1}(-\frac{3}{8}))$.
+            <br><br>
+            <strong>Step 1: Sketch the Triangle.</strong>
+            Since the input to $\sin^{-1}$ is negative, we draw the triangle in Quadrant IV (the restricted range for sine).
+            Opposite = $-3$, Hypotenuse = $8$.
+            <br><br>
+            <strong>Step 2: Find the Adjacent Side.</strong>
+            $adj^2 + (-3)^2 = 8^2 \Rightarrow adj^2 + 9 = 64 \Rightarrow adj = \sqrt{55}$.
+            <br><br>
+            <strong>Step 3: Find Secant.</strong>
+            Secant is $\frac{hypotenuse}{adjacent}$.
+            $\sec = \frac{8}{\sqrt{55}}$.
+            <br><br>
+            <strong>Step 4: Rationalize.</strong>
+            $\frac{8\sqrt{55}}{55}$.
+        </div>
+
+        <h2>EXAMPLE: Navigational Bearing Word Problem</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Ranger 1 sites a fire directly South. Ranger 2 is 6 miles East of Ranger 1 and sites the same fire at a bearing of South 20° West. How far is Ranger 1 from the fire?
+            <br><br>
+            <strong>Setup:</strong>
+            - Ranger 1 (R1) and Fire (F) form a vertical line.
+            - R1 and Ranger 2 (R2) form a horizontal line of 6 miles.
+            - This creates a right triangle at R1.
+            - The bearing at R2 is S 20° W. The interior angle of the triangle at R2 is $90^\circ - 20^\circ = 70^\circ$.
+            <br><br>
+            <strong>Calculation:</strong>
+            Using the $70^\circ$ angle at R2:
+            Opposite = distance from R1 to fire ($x$).
+            Adjacent = 6 miles.
+            $\tan(70^\circ) = \frac{x}{6}$
+            $x = 6 \cdot \tan(70^\circ) \approx 16.5$ miles.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li>Check your calculator <strong>MODE</strong> (Radians vs. Degrees) every time you touch a trig button.</li>
+            <li>For inverse functions, if the input is not between -1 and 1 (for sine/cosine), the result is "Undefined" or "Domain Error."</li>
+            <li>Always identify the quadrant first when drawing triangles for word problems or inverse composites.</li>
+            <li>Solving a triangle means finding <strong>all six parts</strong> (3 sides, 3 angles).</li>
+        </ul>
+    </div>
+</body></html>

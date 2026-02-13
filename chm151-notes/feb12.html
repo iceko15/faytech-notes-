@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Acids, Bases, Redox & Molarity</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Acids, Bases, Oxidation-Reduction & Molarity</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>This session transitions from the behavior of electrolytes in solution to the specific chemistry of acid-base neutralizations and the electron transfer dynamics of Redox reactions, concluding with the quantitative measurement of concentration via Molarity.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Acid:</strong> A proton ($H^+$) donor.</li>
+            <li><strong>Base:</strong> A proton ($H^+$) acceptor.</li>
+            <li><strong>Salt:</strong> An ionic compound formed from the cation of a base and the anion of an acid during neutralization.</li>
+            <li><strong>Oxidation:</strong> The loss of electrons (increase in oxidation number).</li>
+            <li><strong>Reduction:</strong> The gain of electrons (decrease in oxidation number).</li>
+            <li><strong>Oxidizing Agent:</strong> The species that is reduced (it causes something else to be oxidized).</li>
+            <li><strong>Reducing Agent:</strong> The species that is oxidized (it causes something else to be reduced).</li>
+            <li><strong>Molarity ($M$):</strong> A unit of concentration defined as moles of solute per liter of solution.</li>
+        </ul>
+
+        <div class="prof-tip">
+            Memorize the seven strong acids. It is the only way to distinguish a strong acid from a weak one. If it's not one of those seven, it's weak. For bases, the rule is simpler: any soluble hydroxide is a strong base.
+        </div>
+
+        <h2>RULES FOR OXIDATION NUMBERS (Hierarchy)</h2>
+        <p>Assign numbers from the top down. If rules conflict, the higher rule takes precedence.</p>
+        <table>
+            <tr>
+                <th>Priority</th>
+                <th>Species</th>
+                <th>Oxidation Number</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Fluorine ($F$)</td>
+                <td>$-1$</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Group 1 Metals / Group 2 Metals</td>
+                <td>$+1$ / $+2$</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hydrogen ($H$)</td>
+                <td>$+1$</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Oxygen ($O$)</td>
+                <td>$-2$</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Group 17 (other than $F$)</td>
+                <td>$-1$</td>
+            </tr>
+        </table>
+        <p><strong>General Rules:</strong> 
+            1. Elemental form (e.g., $Zn$, $O_2$, $N_2$) = $0$. 
+            2. Monatomic ions = their charge. 
+            3. The sum of numbers must equal the overall charge of the molecule or polyatomic ion.
+        </p>
+
+        <h2>STEPS: NEUTRALIZATION REACTIONS</h2>
+        <div class="example-box">
+            <p class="key-step">Process: Acid + Base $\rightarrow$ Water + Salt</p>
+            <p>Example: Reaction of Lithium Hydroxide and Sulfuric Acid</p>
+            <ol>
+                <li><strong>Molecular Equation:</strong> $2LiOH(aq) + H_2SO_4(aq) \rightarrow 2H_2O(l) + Li_2SO_4(aq)$</li>
+                <li><strong>Total Ionic:</strong> Split all aqueous species into ions. $2Li^+ + 2OH^- + 2H^+ + SO_4^{2-} \rightarrow 2H_2O(l) + 2Li^+ + SO_4^{2-}$</li>
+                <li><strong>Net Ionic:</strong> Remove spectator ions ($Li^+$ and $SO_4^{2-}$). $H^+(aq) + OH^-(aq) \rightarrow H_2O(l)$</li>
+            </ol>
+            <p><strong>Note:</strong> The net ionic equation for <em>any</em> strong acid-strong base neutralization is always the formation of water.</p>
+        </div>
+
+        <h2>EXAMPLE 1: Assigning Oxidation Numbers</h2>
+        <div class="example-box">
+            <p><strong>Compound: $H_2O_2$ (Hydrogen Peroxide)</strong></p>
+            <ul>
+                <li>Rule 3 (Hydrogen) takes precedence over Rule 4 (Oxygen).</li>
+                <li>$H = +1$. Total from Hydrogen = $+2$.</li>
+                <li>To sum to $0$, total from Oxygen must be $-2$.</li>
+                <li>Therefore, each Oxygen = $-1$.</li>
+            </ul>
+            <p><strong>Ion: $NO_3^-$ (Nitrate)</strong></p>
+            <ul>
+                <li>Oxygen Rule: $O = -2$. Total Oxygen ($3 \times -2$) = $-6$.</li>
+                <li>The sum must be $-1$.</li>
+                <li>Nitrogen ($N$) must be $+5$ ($+5 - 6 = -1$).</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Identifying Agents in Redox</h2>
+        <div class="example-box">
+            <p>Reaction: $Cu(s) + 2AgNO_3(aq) \rightarrow Cu(NO_3)_2(aq) + 2Ag(s)$</p>
+            <ul>
+                <li>$Cu$ goes from $0$ to $+2$ (Oxidized). It is the <strong>Reducing Agent</strong>.</li>
+                <li>$Ag$ goes from $+1$ to $0$ (Reduced). $AgNO_3$ is the <strong>Oxidizing Agent</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="prof-tip">
+            Remember "OIL RIG": Oxidation Is Loss, Reduction Is Gain. When you gain an electron (which is negative), your charge is "reduced," hence the name.
+        </div>
+
+        <h2>EXAMPLE 3: Molarity Calculation</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> 2.51g of $NaF$ dissolved to make 200mL solution.</p>
+            <p class="key-step">Step 1: Convert grams to moles.</p>
+            <p>$2.51\text{g } NaF \div 42.0\text{g/mol} = 0.0598\text{ mol}$</p>
+            <p class="key-step">Step 2: Convert mL to L.</p>
+            <p>$200\text{mL} = 0.200\text{L}$</p>
+            <p class="key-step">Step 3: Divide.</p>
+            <p>$M = 0.0598\text{ mol} / 0.200\text{L} = 0.299\text{ M}$</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <div class="example-box">
+            <p><strong>Find Molarity:</strong> 4.22g of Lithium Sulfate ($Li_2SO_4$) in 500mL water.</p>
+            <ul>
+                <li>Molar Mass $Li_2SO_4 \approx 109.94\text{ g/mol}$</li>
+                <li>Moles: $4.22\text{g} \div 109.94\text{g/mol} = 0.03838\text{ mol}$</li>
+                <li>Volume: $0.500\text{L}$</li>
+                <li>Molarity: $0.03838 \div 0.5 = 0.0768\text{ M}$</li>
+            </ul>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Neutralization relies on the transfer of $H^+$ ions to form water and salt. Redox involves the transfer of electrons, tracked via oxidation numbers assigned by hierarchy. Molarity quantifies these substances in solution, and it's vital to recognize that when ionic compounds dissolve, the concentration of individual ions may be multiples of the compound's molarity (e.g., $1M \text{ } Li_2SO_4$ contains $2M \text{ } Li^+$).</p>
+    </div>
+</body></html>
