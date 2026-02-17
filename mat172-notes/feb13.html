@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Trigonometric Graphs & Chapter 4 Test Review</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Feb 13: Trigonometric Graphs & Chapter 4 Test Review</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Success in Chapter 4 requires a synthesis of right-triangle trigonometry (SOH-CAH-TOA), understanding trigonometric transformations (amplitude, period, and phase shifts), and the ability to verify manual sketches against calculator outputs. Key focus is placed on "letting the numbers prove the quadrant" rather than relying on potentially inaccurate hand-drawn diagrams.</p>
+
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> I tend to overwrite my answer keys so that you can see exactly where every number comes from. These are not magic numbers; they are derived from specific information we have covered. Pay attention to coterminal angles in both degrees and radians—sometimes one helps you spot-check the other.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">SOH-CAH-TOA:</span> The foundational tool for solving right triangles and practicing trigonometric ratios.</li>
+            <li><span class="key-step">Quadrantal:</span> When a calculation falls on the border between two quadrants; trust the numerical result over a visual sketch.</li>
+            <li><span class="key-step">Reciprocal Functions:</span> Cosecant ($\csc$), Secant ($\sec$), and Cotangent ($\cot$). These are graphed in calculators using the $1/\text{function}$ relationship.</li>
+            <li><span class="key-step">Reference Angle:</span> The acute angle formed with the x-axis, used to identify the values in Quadrant 1 and then adjusted for the terminal side's actual quadrant.</li>
+            <li><span class="key-step">Phase Shift:</span> The horizontal shift of a trigonometric graph.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Graphing Cosecant ($\csc$) and Secant ($\sec$)</h3>
+        <ol>
+            <li><strong>Identify the Reciprocal:</strong> For $y = 2\csc(x + \pi/4)$, first identify the corresponding sine function: $y = 2\sin(x + \pi/4)$.</li>
+            <li><strong>Map Landmarks:</strong> Determine where the original (transformed) sine function equals zero. These locations become the <strong>vertical asymptotes</strong> for the cosecant graph.</li>
+            <li><strong>Identify Max/Min:</strong> The relative maximums of the sine curve become the relative minimums of the cosecant curves, and vice versa.</li>
+            <li><strong>Calculator Verification:</strong> Since most calculators lack a $\csc$ button, input the function as:
+                $$y = \frac{2}{\sin(x + \pi/4)}$$
+                Note: The coefficient (2) stays in the numerator; only the trig portion is reciprocated.</li>
+            <li><strong>Window Settings:</strong> To check your work on a calculator, manually set the window to match your graph paper scale (e.g., $X\text{min} = -\pi$, $X\text{max} = 2\pi$, $X\text{scl} = \pi/4$).</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Instructor Insight:</strong> Don't forcibly convert everything to degrees. You need a working knowledge of radians. If you are stuck, you can check your work in degrees, but you must be comfortable with values like $7\pi/6$.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>Asymptote Notation:</strong> Use the "equals" sign to denote the location of an asymptote (e.g., $x = -\pi/4$), but understand it represents where $x$ <em>cannot</em> be.</li>
+            <li><strong>Nth Version of Asymptotes:</strong> Asymptotes repeat. You can start with the first positive asymptote or a negative one; they represent the same set of values. Some textbooks prefer starting with the first positive one for "better grammar."</li>
+            <li><strong>Reference Angle Rule:</strong> Determine the quadrant where the angle terminates to decide if the value is positive or negative. Use the Quadrant 1 reference angle to find the numerical value.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: The Isosceles Shortcut</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Solving for a missing side in a triangle (Number 47).
+            <br><br>
+            <strong>The "Long" Way:</strong> Using standard SOH-CAH-TOA procedures without noticing triangle properties.
+            <br>
+            <strong>The "Safe" Way:</strong> If a triangle is not isosceles, you must use the full trigonometric method to find the value.
+            <br>
+            <strong>The Efficiency Tip:</strong> As pointed out by Reese in class, if you notice the triangle is <strong>isosceles</strong>, the value might be determined in essentially one step. However, always be prepared to use the "fluid" trigonometric method if the triangle is scalene.
+        </div>
+
+        <h2>EXAMPLE 2: Navigational Bearings & Quadrant Proof</h2>
+        <div class="example-box">
+            <strong>Scenario:</strong> A diagram suggests a bearing might be in Quadrant 4, but calculations result in an angle of $87^\circ$ from the North-South line.
+            <br><br>
+            <strong>Logic:</strong> 
+            <ul>
+                <li>If the angle is $87^\circ$, it is still within the $90^\circ$ limit of <strong>Quadrant 1</strong>.</li>
+                <li>If the calculation had exceeded $90^\circ$, it would have "trickled down" into Quadrant 4, requiring a change in notation to "South and East."</li>
+                <li><strong>Moral:</strong> Don't fixate on your picture if it isn't perfectly to scale. Let the numbers prove the quadrant.</li>
+            </ul>
+        </div>
+
+        <h2>PRACTICE PROBLEMS & ASSIGNMENTS</h2>
+        <ul>
+            <li><strong>MyMathLab Chapter 4:</strong> Homework should be wrapped up before the test.</li>
+            <li><strong>Chapter 4 Test:</strong> 
+                <ul>
+                    <li>Timed: 2 hours.</li>
+                    <li>Browser: Runs within the Pearson browser/MyMathLab environment (Respondus).</li>
+                    <li>Note: No lockdown browser download should be required; it should work within the Pearson interface.</li>
+                </ul>
+            </li>
+            <li><strong>Notebook Check:</strong> Ensure you show your work for the Chapter test and include it in your folder for Tuesday.</li>
+            <li><strong>Conversion Practice:</strong> Review Problems 2 and 3 on the handout regarding direct conversion from degrees to radians and vice versa.</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>Resource Note:</strong> I've posted the practice test and the key (Pink handout). I also provided "lucky trinkets" (dinosaurs, ducks, unicorns) in the office—never underestimate the power of a good placebo effect during a test!
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Review the Chapter 4 resources in Canvas, specifically the examples from yesterday's session. Focus on the relationship between sine/cosine and their reciprocal counterparts for graphing. Trust your calculations over your sketches when determining quadrants, and ensure you are comfortable using the calculator to spot-check exact values, even if the calculator cannot "spit out" notation like $-2\pi/7$ directly.</p>
+        
+        <div class="prof-tip">
+            <strong>Administrative Update:</strong> The scholarship application cycle runs from Feb 15 to March 31. Apply early, as funds are first-come, first-served. Fayetteville Tech is <strong>OPEN</strong> on Monday (Presidents' Day), even though county/federal offices are closed.
+        </div>
+    </div>
+</body></html>

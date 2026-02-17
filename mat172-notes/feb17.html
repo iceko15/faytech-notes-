@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Verifying Trigonometric Identities</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        h3 { color: #004494; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Verifying Trigonometric Identities</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Verifying an identity is an algebraic proof where you manipulate one side of an equation until it mathematically transforms into the other side. Unlike solving equations, we are not moving terms across the equals sign; we are rewriting equivalent expressions to show <i>why</i> a statement is true.</p>
+
+        <div class="prof-tip">
+            <strong>Professor's Warning:</strong> The work IS the answer. On a test, simply writing "True" will get zero credit. You must show the logical flow of every substitution and algebraic step.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">LHS / RHS:</span> Left-hand side and Right-hand side of the identity.</li>
+            <li><span class="key-step">Verification:</span> The process of using established identities to prove a new statement.</li>
+            <li><span class="key-step">Conjugate:</span> Multiplying a numerator or denominator by its opposite sign (e.g., $1 - \sin x$ has the conjugate $1 + \sin x$) to force a Pythagorean identity.</li>
+            <li><span class="key-step">LCD:</span> Lowest Common Denominator, required for adding or subtracting trigonometric fractions.</li>
+        </ul>
+
+        <h2>CORE RULES & IDENTITIES</h2>
+        <h3>Fundamental Toolbox (Chapter 4 Review)</h3>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Identities</th>
+            </tr>
+            <tr>
+                <td>Reciprocal</td>
+                <td>$\csc x = \frac{1}{\sin x}$, $\sec x = \frac{1}{\cos x}$, $\cot x = \frac{1}{\tan x}$</td>
+            </tr>
+            <tr>
+                <td>Quotient</td>
+                <td>$\tan x = \frac{\sin x}{\cos x}$, $\cot x = \frac{\cos x}{\sin x}$</td>
+            </tr>
+            <tr>
+                <td>Pythagorean</td>
+                <td>$\sin^2 x + \cos^2 x = 1$<br>$\tan^2 x + 1 = \sec^2 x$<br>$1 + \cot^2 x = \csc^2 x$</td>
+            </tr>
+            <tr>
+                <td>Even/Odd</td>
+                <td>$\sin(-x) = -\sin x$<br>$\cos(-x) = \cos x$<br>$\tan(-x) = -\tan x$</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>Algebraic Reminder:</strong> Pythagorean identities are often rearranged. For example, if you see $1 - \sin^2 x$, you can immediately substitute $\cos^2 x$. If you see $1 - \cos^2 x$, you can substitute $\sin^2 x$.
+        </div>
+
+        <h2>STEPS/PROCESS FOR VERIFICATION</h2>
+        <ol>
+            <li><strong>Start with the more complicated side:</strong> It is generally easier to "tear down" a complex expression into a simpler one.</li>
+            <li><strong>Convert to Sines and Cosines:</strong> If you are stuck, rewrite all functions (secant, cosecant, tangent, cotangent) in terms of $\sin x$ and $\cos x$.</li>
+            <li><strong>Perform Algebraic Operations:</strong>
+                <ul>
+                    <li>Factor out a GCF (Greatest Common Factor).</li>
+                    <li>Add/Subtract fractions by finding an LCD.</li>
+                    <li>Multiply by a version of "1" (the conjugate).</li>
+                    <li>Foil/Distribute binomials.</li>
+                </ul>
+            </li>
+            <li><strong>Keep the Goal in Mind:</strong> Constantly look at the "other" side to see if your manipulations are getting you closer to that target.</li>
+        </ol>
+
+        <h2>EXAMPLE 1: Simple Substitution</h2>
+        <div class="example-box">
+            <strong>Verify:</strong> $\csc x \tan x = \sec x$
+            <p><span class="key-step">1. Start with LHS:</span> $\csc x \tan x$</p>
+            <p><span class="key-step">2. Rewrite in terms of sine/cosine:</span> 
+                $$\left(\frac{1}{\sin x}\right) \left(\frac{\sin x}{\cos x}\right)$$
+            </p>
+            <p><span class="key-step">3. Simplify:</span> The $\sin x$ in the numerator and denominator cancel out.
+                $$\frac{1}{\cos x}$$
+            </p>
+            <p><span class="key-step">4. Apply Reciprocal Identity:</span>
+                $$\sec x$$
+            </p>
+            <p><strong>Result:</strong> LHS = RHS. Proof complete.</p>
+        </div>
+
+        <h2>EXAMPLE 2: Using the LCD and Pythagorean Substitution</h2>
+        <div class="example-box">
+            <strong>Verify:</strong> $\csc \theta - \sin \theta = \cot \theta \cos \theta$
+            <p><span class="key-step">1. Start with LHS:</span> $\frac{1}{\sin \theta} - \sin \theta$</p>
+            <p><span class="key-step">2. Find LCD:</span> Put $\sin \theta$ over 1 and multiply by $\frac{\sin \theta}{\sin \theta}$.
+                $$\frac{1}{\sin \theta} - \frac{\sin^2 \theta}{\sin \theta} = \frac{1 - \sin^2 \theta}{\sin \theta}$$
+            </p>
+            <p><span class="key-step">3. Pythagorean Substitution:</span> $1 - \sin^2 \theta = \cos^2 \theta$.
+                $$\frac{\cos^2 \theta}{\sin \theta}$$
+            </p>
+            <p><span class="key-step">4. Split for Logic:</span> $\cos^2 \theta = \cos \theta \cdot \cos \theta$.
+                $$\left(\frac{\cos \theta}{\sin \theta}\right) \cdot \cos \theta$$
+            </p>
+            <p><span class="key-step">5. Result:</span> $\cot \theta \cos \theta = \text{RHS}$.</p>
+        </div>
+
+        <h2>EXAMPLE 3: GCF and Factoring</h2>
+        <div class="example-box">
+            <strong>Verify:</strong> $\sec x - \sec x \sin^2 x = \cos x$
+            <p><span class="key-step">1. Factor GCF:</span> Pull out $\sec x$.
+                $$\sec x (1 - \sin^2 x)$$
+            </p>
+            <p><span class="key-step">2. Substitution:</span> $1 - \sin^2 x = \cos^2 x$.
+                $$\sec x \cdot \cos^2 x$$
+            </p>
+            <p><span class="key-step">3. Reciprocal Identity:</span> $\sec x = \frac{1}{\cos x}$.
+                $$\left(\frac{1}{\cos x}\right) \cdot \cos^2 x = \frac{\cos \cdot \cos}{\cos}$$
+            </p>
+            <p><span class="key-step">4. Simplify:</span> $\cos x = \text{RHS}$.</p>
+        </div>
+
+        <h2>COMPLEX EXAMPLE: Labor Intensive Verification</h2>
+        <div class="example-box">
+            <strong>Verify:</strong> $\frac{\cos x}{1 - \sin x} + \frac{1 - \sin x}{\cos x} = 2 \sec x$
+            <p><span class="key-step">1. Find LCD:</span> $(1 - \sin x)(\cos x)$.
+                $$\frac{\cos^2 x + (1 - \sin x)^2}{(1 - \sin x)(\cos x)}$$
+            </p>
+            <p><span class="key-step">2. FOIL Numerator:</span> $(1 - \sin x)(1 - \sin x) = 1 - 2\sin x + \sin^2 x$.
+                $$\frac{\cos^2 x + 1 - 2\sin x + \sin^2 x}{(1 - \sin x)(\cos x)}$$
+            </p>
+            <p><span class="key-step">3. Identify Pythagorean Pair:</span> $\cos^2 x + \sin^2 x = 1$.
+                $$\frac{(1) + 1 - 2\sin x}{(1 - \sin x)(\cos x)} = \frac{2 - 2\sin x}{(1 - \sin x)(\cos x)}$$
+            </p>
+            <p><span class="key-step">4. Factor Numerator:</span>
+                $$\frac{2(1 - \sin x)}{(1 - \sin x)(\cos x)}$$
+            </p>
+            <p><span class="key-step">5. Cancel and Finalize:</span> The $(1 - \sin x)$ terms cancel.
+                $$\frac{2}{\cos x} = 2 \sec x$$
+            </p>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Study Tip:</strong> Don't try to memorize specific problems. Focus on the <i>strategies</i>: "When did I factor? When did I find an LCD? When did I use a Pythagorean identity?" 
+        </div>
+
+        <h2>MYMATHLAB HURDLES</h2>
+        <ul>
+            <li><strong>Strict Variables:</strong> If the problem uses $\theta$, do not use $x$. If it uses $t$, do not use $T$.</li>
+            <li><strong>Auto-Format:</strong> When you type <code>cos</code> or <code>tan</code>, the software will bold the text to show it recognizes the function.</li>
+            <li><strong>Step-by-Step Flow:</strong> In "Fill in the Box" problems, you must follow the software's specific logic path, even if you would have solved it differently on paper.</li>
+            <li><strong>Instructions:</strong> Pay attention to "Do not simplify" vs. "Simplify as much as possible."</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Verification is an exercise in seeing algebra through the "fog" of trigonometry. Success requires fluency in the three core Pythagorean identities and basic algebraic skills like factoring and fraction addition. Always keep one eye on the target side to guide your next move.</p>
+    </div>
+</body>
+</html>

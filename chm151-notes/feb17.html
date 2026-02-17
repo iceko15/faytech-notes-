@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Molarity and Dilution Calculations</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Molarity, Ion Concentration & Dilution</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam/Quiz Alert:</strong> The quiz tomorrow is technically on the Copper Cycle lab (due tomorrow), but there is massive overlap with Chapter 4. You must be able to:
+            <ul>
+                <li>Write and balance chemical reactions.</li>
+                <li>Apply solubility rules to determine if a substance is aqueous ($aq$) or solid ($s$).</li>
+                <li>Write Net Ionic Equations and Acid-Base Neutralization reactions.</li>
+                <li>Calculate Molarity and Solution Stoichiometry.</li>
+            </ul>
+            Note: Tests will be returned at the end of class today. Do not lose them; the final exam is cumulative.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Concentration (Molarity) can be calculated for an entire compound or for specific individual ions within that compound. Furthermore, concentrated "Stock Solutions" can be diluted to lower concentrations by adding solvent, a process governed by the conservation of moles.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Molarity ($M$):</strong> Defined as moles of solute per liter of solution ($M = \frac{mol}{L}$).</li>
+            <li><strong>Stock Solution:</strong> A concentrated form of a solution kept in stock to be diluted for later use.</li>
+            <li><strong>Dilution:</strong> The process of adding more solvent (usually water) to decrease the concentration without changing the total moles of solute.</li>
+            <li><strong>Volumetric Flask:</strong> A specialized piece of glassware with a precise calibration line used to prepare solutions of a specific volume (e.g., 50 mL, 25 mL).</li>
+        </ul>
+
+        <h2>CALCULATING ION CONCENTRATION</h2>
+        <p>When an ionic compound dissolves, it may release multiple ions per formula unit. We use subscripts to determine the mole ratio of ions to the total compound.</p>
+        
+        <div class="example-box">
+            <p><strong>Example: Potassium Sulfate ($K_2SO_4$)</strong></p>
+            <p>When $K_2SO_4$ dissolves: $K_2SO_4(aq) \rightarrow 2K^+(aq) + SO_4^{2-}(aq)$</p>
+            <ul>
+                <li>There are twice as many Potassium ions ($K^+$) as there are Sulfate ions ($SO_4^{2-}$).</li>
+                <li>If the concentration of the compound is $1.0 M$, the concentration of $K^+$ is $2.0 M$.</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 1: Sodium Phosphate Ion Concentration</h2>
+        <p><strong>Problem:</strong> Calculate the molar concentration of Sodium ions ($Na^+$) formed from 0.50 moles of Sodium Phosphate ($Na_3PO_4$) dissolved in enough water to make 1.0 Liter of solution.</p>
+        
+        <p><span class="key-step">Step 1: Determine the Formula.</span> Sodium is $Na^+$ (Group 1). Phosphate is $PO_4^{3-}$. The formula is $Na_3PO_4$.</p>
+        <p><span class="key-step">Step 2: Find the Mole Ratio.</span> For every 1 mole of $Na_3PO_4$, there are 3 moles of $Na^+$.</p>
+        <p><span class="key-step">Step 3: Convert Moles of Compound to Moles of Ion.</span></p>
+        $$0.50 \text{ mol } Na_3PO_4 \times \frac{3 \text{ mol } Na^+}{1 \text{ mol } Na_3PO_4} = 1.50 \text{ mol } Na^+$$
+        <p><span class="key-step">Step 4: Calculate Molarity.</span></p>
+        $$M = \frac{1.50 \text{ mol } Na^+}{1.0 \text{ L}} = 1.50 M \text{ of } Na^+$$
+
+        <h2>THE DILUTION EQUATION</h2>
+        <p>Since the number of moles of solute does not change during dilution (you are only adding water), the initial moles must equal the final moles.</p>
+        <div class="example-box">
+            <h3>$$M_1V_1 = M_2V_2$$</h3>
+            <ul>
+                <li>$M_1$: Initial Molarity (Stock)</li>
+                <li>$V_1$: Initial Volume (How much stock you need to pull)</li>
+                <li>$M_2$: Final Molarity (Desired)</li>
+                <li>$V_2$: Final Volume (Total volume after adding water)</li>
+            </ul>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Critical Distinction:</strong> 
+            Use $M_1V_1 = M_2V_2$ <strong>only</strong> for dilution (taking the same substance and making it weaker). 
+            If a <strong>chemical reaction</strong> is occurring (e.g., reacting $HCl$ with $NaOH$), you <strong>cannot</strong> use this equation; you must use Stoichiometry.
+        </div>
+
+        <h2>EXAMPLE 2: Dilution with Ion Concentration</h2>
+        <p><strong>Problem:</strong> Calculate the volume (mL) of $4.0 M$ $K_2SO_4$ needed to prepare $600$ mL of $0.040 M$ $K^+$ solution.</p>
+        
+        <p><span class="key-step">Step 1: Normalize the Units.</span> The stock solution is given in terms of the compound ($K_2SO_4$), but the goal is in terms of the ion ($K^+$). We must find the initial concentration of $K^+$.</p>
+        <p>Because there are 2 $K$ per $K_2SO_4$, the stock concentration of $K^+$ is: $$4.0 M \times 2 = 8.0 M \text{ (This is our } M_1)$$</p>
+        
+        <p><span class="key-step">Step 2: Identify Variables.</span></p>
+        <ul>
+            <li>$M_1 = 8.0 M$</li>
+            <li>$V_1 = ?$</li>
+            <li>$M_2 = 0.040 M$</li>
+            <li>$V_2 = 600 \text{ mL}$</li>
+        </ul>
+
+        <p><span class="key-step">Step 3: Solve for $V_1$.</span></p>
+        $$V_1 = \frac{M_2 \times V_2}{M_1}$$
+        $$V_1 = \frac{0.040 M \times 600 \text{ mL}}{8.0 M} = 3.00 \text{ mL}$$
+        <p><em>Meaning: You take 3 mL of stock and add 597 mL of water to reach the 600 mL mark.</em></p>
+
+        <h2>PRACTICE PROBLEM</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> Calculate the volume of $5.0 M$ $K_2SO_4$ needed to prepare $800$ mL of a $0.120 M$ solution of $K_2SO_4$.</p>
+            <p><strong>Solution:</strong> Since both concentrations are for the same compound ($K_2SO_4$), no ion-ratio adjustment is needed.</p>
+            $$M_1 = 5.0 M, M_2 = 0.120 M, V_2 = 800 \text{ mL}$$
+            $$V_1 = \frac{0.120 M \times 800 \text{ mL}}{5.0 M} = 19.2 \text{ mL}$$
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li>Concentration depends on the species defined (compound vs. individual ions).</li>
+            <li>Preparing a solution involves weighing solute, placing it in a volumetric flask, and filling to the volume line.</li>
+            <li>Adding water increases volume and decreases concentration but leaves total moles unchanged.</li>
+            <li>Chapter 5 (Thermochemistry) begins Thursday/Friday.</li>
+        </ul>
+    </div>
+</body></html>
