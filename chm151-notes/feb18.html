@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Limiting Reactant Lab Analysis</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Limiting Reactant Lab: Data & Calculations</h1>
+        
+        <h2>REPORT FORM CALCULATIONS</h2>
+
+        <div class="example-box">
+            <p><strong>1. Mass of $Na_2CO_3$ used:</strong></p>
+            <p class="key-step">Calculation:</p>
+            <ul>
+                <li>Mass of beaker + sample: $112.2041\text{ g}$</li>
+                <li>Mass of empty beaker: $111.4658\text{ g}$</li>
+                <li>$\text{Difference} = 112.2041\text{ g} - 111.4658\text{ g} = \mathbf{0.7383\text{ g}}$</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>2. Mass of $CaCO_3$ collected:</strong></p>
+            <p class="key-step">Calculation:</p>
+            <ul>
+                <li>Mass of filter paper + $CaCO_3$ + watch glass: $46.6461\text{ g}$</li>
+                <li>Mass of filter paper ($0.2365\text{ g}$) + watch glass ($45.8419\text{ g}$): $46.0784\text{ g}$</li>
+                <li>$\text{Difference} = 46.6461\text{ g} - 46.0784\text{ g} = \mathbf{0.5677\text{ g}}$</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>3. Balance the reaction:</strong></p>
+            <p>$$1Na_2CO_3(aq) + 1CaCl_2(aq) \rightarrow 1CaCO_3(s) + 2NaCl(aq)$$</p>
+        </div>
+
+        <div class="example-box">
+            <p><strong>4. Calculate the theoretical yield of $CaCO_3$:</strong></p>
+            <p class="key-step">Step 1: Determine moles of $Na_2CO_3$</p>
+            <ul>
+                <li>Molar Mass $Na_2CO_3 \approx 105.99\text{ g/mol}$</li>
+                <li>$n = 0.7383\text{ g} / 105.99\text{ g/mol} = \mathbf{0.006965\text{ mol}}$</li>
+            </ul>
+            <p class="key-step">Step 2: Determine moles of $CaCl_2$</p>
+            <ul>
+                <li>Volume $= 30.0\text{ mL} = 0.0300\text{ L}$ (using the volume specified in the procedure)</li>
+                <li>$Molarity = 0.20\text{ M}$</li>
+                <li>$n = M \times V = 0.20\text{ mol/L} \times 0.0300\text{ L} = \mathbf{0.0060\text{ mol}}$</li>
+            </ul>
+            <p class="key-step">Step 3: Identify Limiting Reactant</p>
+            <ul>
+                <li>The ratio is $1:1$. Since $0.0060\text{ mol}$ ($CaCl_2$) < $0.006965\text{ mol}$ ($Na_2CO_3$), <strong>$CaCl_2$ is the limiting reactant.</strong></li>
+            </ul>
+            <p class="key-step">Step 4: Calculate Theoretical Mass</p>
+            <ul>
+                <li>Theoretical moles of $CaCO_3 = 0.0060\text{ mol}$</li>
+                <li>Molar Mass $CaCO_3 \approx 100.09\text{ g/mol}$</li>
+                <li>$\text{Mass} = 0.0060\text{ mol} \times 100.09\text{ g/mol} = \mathbf{0.6005\text{ g}}$</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>5. Calculate the % yield of $CaCO_3$:</strong></p>
+            <p>$$\text{Percent Yield} = \left( \frac{\text{Actual Yield}}{\text{Theoretical Yield}} \right) \times 100$$</p>
+            <p>$$\text{Percent Yield} = \left( \frac{0.5677\text{ g}}{0.6005\text{ g}} \right) \times 100 = \mathbf{94.54\%}$$</p>
+        </div>
+
+        <h2>POST-LAB QUESTIONS</h2>
+
+        <div class="example-box">
+            <p><strong>1. Describe two ways you could improve your percent yield if you completed this experiment a second time.</strong></p>
+            <ul>
+                <li>Ensure the precipitate is completely dry before weighing, as residual water increases "actual yield" incorrectly.</li>
+                <li>Use more DI water to rinse the beaker to ensure 100% of the precipitate is transferred to the filter funnel.</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>2. A student obtained a percent yield greater than 100%. What could have caused this error? What could be done to prevent this kind of error?</strong></p>
+            <ul>
+                <li><strong>Cause:</strong> The precipitate was likely still wet. Water adds mass that isn't $CaCO_3$.</li>
+                <li><strong>Prevention:</strong> Allow more time for vacuum filtration or use a drying oven/heat lamp to ensure all solvent (water/acetone) has evaporated.</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>3. A $115\text{ g}$ sample of silver nitrate is mixed with $125\text{ mL}$ of $6.0\text{ M}$ hydrochloric acid.</strong></p>
+            <p><strong>a. Write a balanced chemical reaction:</strong></p>
+            <p>$$AgNO_3(aq) + HCl(aq) \rightarrow AgCl(s) + HNO_3(aq)$$</p>
+            <p><strong>b. What is the theoretical yield of the precipitate?</strong></p>
+            <ul>
+                <li>Moles $AgNO_3 = 115\text{ g} / 169.87\text{ g/mol} = 0.677\text{ mol}$</li>
+                <li>Moles $HCl = 0.125\text{ L} \times 6.0\text{ mol/L} = 0.750\text{ mol}$</li>
+                <li>Limiting Reactant: $AgNO_3$ (since $0.677 < 0.750$)</li>
+                <li>Theoretical Mass $AgCl = 0.677\text{ mol} \times 143.32\text{ g/mol} = \mathbf{97.0\text{ g}}$</li>
+            </ul>
+            <p><strong>c. If the actual yield for silver chloride is $90.9\text{ g}$, what is the % yield?</strong></p>
+            <p>$$\text{Percent Yield} = (90.9 / 97.0) \times 100 = \mathbf{93.7\%}$$</p>
+        </div>
+
+        <div class="example-box">
+            <p><strong>4. A $0.238\text{ g}$ sample of magnesium chloride reacts with $25.0\text{ mL}$ of $0.100\text{ M}$ potassium hydroxide.</strong></p>
+            <p><strong>a. Write a balanced chemical reaction:</strong></p>
+            <p>$$MgCl_2(aq) + 2KOH(aq) \rightarrow Mg(OH)_2(s) + 2KCl(aq)$$</p>
+            <p><strong>b. What is the theoretical yield of the precipitate?</strong></p>
+            <ul>
+                <li>Moles $MgCl_2 = 0.238\text{ g} / 95.21\text{ g/mol} = 0.00250\text{ mol}$</li>
+                <li>Moles $KOH = 0.0250\text{ L} \times 0.100\text{ mol/L} = 0.00250\text{ mol}$</li>
+                <li>Stoichiometry check: $0.00250\text{ mol } MgCl_2$ needs $0.00500\text{ mol } KOH$. We only have $0.00250$.</li>
+                <li>Limiting Reactant: $KOH$</li>
+                <li>Yield: $0.00250\text{ mol KOH} \times (1\text{ mol } Mg(OH)_2 / 2\text{ mol } KOH) = 0.00125\text{ mol } Mg(OH)_2$</li>
+                <li>Mass: $0.00125\text{ mol} \times 58.32\text{ g/mol} = \mathbf{0.0729\text{ g}}$</li>
+            </ul>
+            <p><strong>c. If actual yield is $0.0500\text{ g}$, what is the % yield?</strong></p>
+            <p>$$\text{Percent Yield} = (0.0500 / 0.0729) \times 100 = \mathbf{68.6\%}$$</p>
+        </div>
+
+        <div class="example-box">
+            <p><strong>5. A $1.97\text{ g}$ sample of barium hydroxide octahydrate reacts with $25.0\text{ mL}$ of $0.100\text{ M}$ phosphoric acid. What is the % yield if actual yield is $0.700\text{ g}$?</strong></p>
+            <p>$$3Ba(OH)_2\cdot8H_2O(s) + 2H_3PO_4(aq) \rightarrow Ba_3(PO_4)_2(s) + 30H_2O(l)$$</p>
+            <ul>
+                <li>Moles $Ba(OH)_2\cdot8H_2O = 1.97\text{ g} / 315.46\text{ g/mol} = 0.006245\text{ mol}$</li>
+                <li>Moles $H_3PO_4 = 0.0250\text{ L} \times 0.100\text{ mol/L} = 0.00250\text{ mol}$</li>
+                <li>Check Limiting: $(0.006245 / 3) = 0.00208$ vs $(0.00250 / 2) = 0.00125$.</li>
+                <li>Limiting Reactant: $H_3PO_4$</li>
+                <li>Theoretical Yield: $(0.00250\text{ mol } H_3PO_4 / 2) \times 1 = 0.00125\text{ mol } Ba_3(PO_4)_2$</li>
+                <li>Mass: $0.00125\text{ mol} \times 601.93\text{ g/mol} = 0.7524\text{ g}$</li>
+                <li>% Yield: $(0.700 / 0.7524) \times 100 = \mathbf{93.0\%}$$</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>6. Silver nitrate ($0.425\text{ g}$) reacts with $25.0\text{ mL}$ of $0.100\text{ M}$ potassium phosphate. $87.3\%$ yield. How many grams isolated?</strong></p>
+            <ul>
+                <li>Reaction: $3AgNO_3 + K_3PO_4 \rightarrow Ag_3(PO_4) + 3KNO_3$</li>
+                <li>Moles $AgNO_3 = 0.425 / 169.87 = 0.00250\text{ mol}$</li>
+                <li>Moles $K_3PO_4 = 0.025 \times 0.100 = 0.00250\text{ mol}$</li>
+                <li>Limiting: $AgNO_3$. Theoretical moles $Ag_3PO_4 = 0.00250 / 3 = 0.000833\text{ mol}$</li>
+                <li>Theoretical Mass: $0.000833 \times 418.58 = 0.3487\text{ g}$</li>
+                <li>Actual Isolated: $0.3487 \times 0.873 = \mathbf{0.304\text{ g}}$</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>7. $0.469\text{ g}$ Zinc bicarbonate reacts with $25.0\text{ mL}$ of $0.100\text{ M}$ $HCl$. How much $CO_2$?</strong></p>
+            <p>$$Zn(HCO_3)_2 + 2HCl \rightarrow ZnCl_2 + 2CO_2 + 2H_2O$$</p>
+            <ul>
+                <li>Moles $Zn(HCO_3)_2 = 0.469 / 187.42 = 0.00250\text{ mol}$</li>
+                <li>Moles $HCl = 0.025 \times 0.100 = 0.00250\text{ mol}$</li>
+                <li>Limiting: $HCl$. Theoretical moles $CO_2 = 0.00250\text{ mol } HCl \times (2\text{ mol } CO_2 / 2\text{ mol } HCl) = 0.00250\text{ mol}$</li>
+                <li>Mass: $0.00250 \times 44.01 = \mathbf{0.110\text{ g}}$</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <p><strong>8. $0.315\text{ g}$ Sodium sulfite reacts with $25.0\text{ mL}$ of $0.100\text{ M}$ phosphoric acid. Theoretical yield $SO_2$?</strong></p>
+            <p>$$3Na_2SO_3 + 2H_3PO_4 \rightarrow 2Na_3PO_4 + 3SO_2 + 3H_2O$$</p>
+            <ul>
+                <li>Moles $Na_2SO_3 = 0.315 / 126.04 = 0.00250\text{ mol}$</li>
+                <li>Moles $H_3PO_4 = 0.025 \times 0.100 = 0.00250\text{ mol}$</li>
+                <li>Limiting: $Na_2SO_3$. Theoretical moles $SO_2 = 0.00250\text{ mol}$ (since ratio is $3:3$)</li>
+                <li>Mass: $0.00250 \times 64.06 = \mathbf{0.160\text{ g}}$</li>
+            </ul>
+        </div>
+    </div>
+</body></html>

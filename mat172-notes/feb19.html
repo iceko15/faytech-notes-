@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Exact Values & Sum/Difference Identities</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Exact Values & Sum/Difference Identities</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The core objective is to determine the exact values of trigonometric functions for the sum or difference of two angles ($\alpha$ and $\beta$) using established identities. Rather than relying on decimal approximations from a calculator, we use radical and fractional representations derived from reference triangles and the Pythagorean Theorem.</p>
+
+        <div class="prof-tip">
+            Professor's Angle: You could use inverse functions on a calculator to "rediscover" these numbers, which is a great study exercise to prove the logic, but the goal here is to use the identities directly. Don't be "backhanded" with the calculator—learn the mechanics!
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">Exact Value:</span> A value expressed in fractions or radicals, not rounded decimals.</li>
+            <li><span class="key-step">Pythagorean Identity:</span> $\sin^2\theta + \cos^2\theta = 1$. While valid, the professor notes that "baby Pythagorean theorem" ($a^2 + b^2 = c^2$) is often faster when you already have the triangles.</li>
+            <li><span class="key-step">Crap-tastic Numbers:</span> The professor's term for decimals that are too complex for the calculator to convert back into clean fractions.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <ol>
+            <li><strong>Construct Reference Triangles:</strong> Based on the given $\sin(\alpha)$ and $\sin(\beta)$ and their quadrant requirements, draw the triangles to find the missing side (adjacent or opposite).</li>
+            <li><strong>Identify Trig Ratios:</strong> Determine the $\cos$ and $\sin$ values for both $\alpha$ and $\beta$. Pay close attention to signs (positive/negative) based on the quadrant.</li>
+            <li><strong>Select the Identity:</strong> Choose the appropriate sum or difference formula based on the question (e.g., $\cos(\alpha + \beta)$).</li>
+            <li><strong>Substitute and Simplify:</strong> Plug the ratios into the formula. Multiply the fractions first, then combine them under a common denominator.</li>
+        </ol>
+
+        <h2>RULES/IDENTITIES</h2>
+        <p>The primary identity utilized in today's lesson:</p>
+        $$\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta$$
+        
+        <div class="prof-tip">
+            Warning: Notice the sign change in the cosine sum formula! Adding the angles means subtracting the products.
+        </div>
+
+        <h2>EXAMPLE 1</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Find the exact value of $\cos(\alpha + \beta)$ given the triangles from previous sessions.
+            <br><br>
+            <strong>Given Ratios:</strong>
+            <ul>
+                <li>For $\alpha$: $\cos\alpha = \frac{4}{5}$, $\sin\alpha = \frac{3}{5}$</li>
+                <li>For $\beta$: $\cos\beta = -\frac{12}{13}$, $\sin\beta = \frac{5}{13}$</li>
+            </ul>
+            <strong>Calculation:</strong>
+            $$\cos(\alpha + \beta) = (\frac{4}{5})(-\frac{12}{13}) - (\frac{3}{5})(\frac{5}{13})$$
+            $$\cos(\alpha + \beta) = -\frac{48}{65} - \frac{15}{65}$$
+            $$\cos(\alpha + \beta) = -\frac{63}{65}$$
+        </div>
+
+        <h2>CALCULATOR LOGIC & LIMITATIONS</h2>
+        <p>The professor emphasizes why we shouldn't over-rely on calculators for these specific problems:</p>
+        <ul>
+            <li><strong>Fraction Conversion:</strong> Calculators can often turn decimals back into fractions, but if the numbers are "crap-tastic" (too many decimals or irrational), the calculator will refuse to convert them.</li>
+            <li><strong>Exact Values:</strong> If the original triangle contains radicals (e.g., $\sqrt{3}$), the calculator will <em>not</em> provide a fraction with a radical. It will only give the decimal approximation.</li>
+            <li><strong>Memory:</strong> The calculator uses as many decimal places as it has stored in its "memory lane." If you round early in your work, the calculator's final decimal won't match the exact value, and it won't be able to "spot" the correct fraction for you.</li>
+        </ul>
+
+        <div class="prof-tip">
+            Exam Hint: Use the calculator to spot-check your final decimal against your fraction, but do not rely on it to generate the answer. It won't give you $\frac{-\sqrt{something}}{something}$—you have to do that by hand.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Avoid the "long-winded" approach of using the Pythagorean Identity formula if you can simply use the Pythagorean theorem on a triangle. Always verify your signs based on the quadrant of the angle. Exact values require staying in fraction/radical form throughout the entire calculation to ensure the final result is 100% accurate and not a "crap-tastic" decimal.</p>
+    </div>
+</body></html>
