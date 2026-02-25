@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Enthalpy & Calorimetry</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Thermochemistry: Enthalpy & Calorimetry</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> The test is next Thursday covering Chapters 4 and 5. The homework for Chapters 4 and 5 is now due next Wednesday at midnight so you can focus on studying. We will use next Tuesday for a practice test review session.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>In this lecture, we transition from internal energy and work to focusing on <strong>Enthalpy ($\Delta H$)</strong>. At constant pressure—which is the condition for almost all chemistry we do—enthalpy is equivalent to heat ($q$). We explore how to measure this heat through calorimetry and how to calculate it using Hess's Law.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Enthalpy ($\Delta H$):</strong> The heat content of a system at constant pressure.</li>
+            <li><strong>Endothermic:</strong> A process that absorbs heat from the surroundings ($\Delta H > 0$). The system feels cold to the touch because it's taking heat from your hand.</li>
+            <li><strong>Exothermic:</strong> A process that releases heat to the surroundings ($\Delta H < 0$). The system feels hot.</li>
+            <li><strong>Calorimetry:</strong> The experimental measurement of heat flow in a chemical reaction.</li>
+            <li><strong>Specific Heat Capacity ($C_s$):</strong> The amount of heat required to raise the temperature of 1 gram of a substance by 1 degree Celsius (or 1 Kelvin).</li>
+            <li><strong>Molar Heat Capacity:</strong> The heat required to raise 1 mole of a substance by 1 degree.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Coffee Cup Calorimetry</h3>
+        <p>Used for reactions in aqueous solutions at constant pressure ($q_p = \Delta H$).</p>
+        <ol>
+            <li>Measure the initial temperature ($T_i$) of the reactants.</li>
+            <li>Mix the reactants in the insulated calorimeter (the "coffee cup").</li>
+            <li>Measure the maximum or minimum temperature reached ($T_f$).</li>
+            <li>Calculate $\Delta T = T_f - T_i$.</li>
+            <li>Calculate heat of solution: $q_{soln} = m \times C_s \times \Delta T$.</li>
+            <li>Apply the principle of conservation of energy: $q_{rxn} = -q_{soln}$.</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Lab Tip:</strong> For the calorimetry lab tomorrow, your calculations to figure out $q$ will take much longer than the Hess's Law portion. Make sure you have your solubility rules ready to predict precipitation reactions.
+        </div>
+
+        <h3>Bomb Calorimetry</h3>
+        <p>Used for combustion reactions at constant volume. Since volume doesn't change, no work is done, and the heat measured equals the change in internal energy ($\Delta E$).</p>
+        <ul>
+            <li>The "Bomb" is a rigid sealed container where the sample is burned in high-pressure oxygen.</li>
+            <li>Formula: $q_{cal} = C_{cal} \times \Delta T$, where $C_{cal}$ is the heat capacity of the entire calorimeter assembly.</li>
+            <li>Again, $q_{rxn} = -q_{cal}$.</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Thermochemical Equations</h3>
+        <ul>
+            <li>$\Delta H$ is an <strong>extensive property</strong>. If you double the amount of reactants, you double the $\Delta H$.</li>
+            <li>If a reaction is reversed, the sign of $\Delta H$ is flipped.</li>
+            <li>The states of matter (s, l, g, aq) must be specified because $\Delta H$ depends on the state.</li>
+        </ul>
+
+        <h3>Specific Heat Table</h3>
+        <table>
+            <tr>
+                <th>Substance</th>
+                <th>Specific Heat ($J/g \cdot ^\circ C$)</th>
+            </tr>
+            <tr>
+                <td>Water ($H_2O$)</td>
+                <td>$4.184$</td>
+            </tr>
+            <tr>
+                <td>Aluminum</td>
+                <td>$0.90$</td>
+            </tr>
+            <tr>
+                <td>Iron</td>
+                <td>$0.45$</td>
+            </tr>
+        </table>
+
+        <h2>EXAMPLE 1: Calculating Heat</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> How much heat is required to raise the temperature of 250g of water from $22^\circ C$ to $98^\circ C$?</p>
+            <p><span class="key-step">Step 1:</span> Identify variables.</p>
+            <ul>
+                <li>$m = 250g$</li>
+                <li>$C_s = 4.184 J/g \cdot ^\circ C$</li>
+                <li>$\Delta T = 98 - 22 = 76^\circ C$</li>
+            </ul>
+            <p><span class="key-step">Step 2:</span> Plug into formula $q = m C_s \Delta T$.</p>
+            <p>$$q = (250g)(4.184 J/g \cdot ^\circ C)(76^\circ C)$$</p>
+            <p>$$q = 79,496 J = 79.5 kJ$$</p>
+        </div>
+
+        <h2>EXAMPLE 2: Molar Enthalpy</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> If a reaction has a $\Delta H$ of $-800 kJ$ per mole of $A$, and you react 0.5 moles of $A$, what is the heat change?</p>
+            <p><span class="key-step">Analysis:</span> Since enthalpy is extensive, we use stoichiometry.</p>
+            <p>$$0.5 mol \times \frac{-800 kJ}{1 mol} = -400 kJ$$</p>
+        </div>
+
+        <h2>EXAMPLE 3: Bomb Calorimetry Hint</h2>
+        <div class="example-box">
+            <p>The professor mentioned "Dorito Pills." If you use a pellet maker to force a sample (like a crushed Dorito) into a pill and burn it in a bomb calorimeter, you can determine its caloric content.</p>
+            <p><strong>Formula:</strong> $q_{rxn} = -C_{cal} \times \Delta T$</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <p>1. A 50.0g piece of metal at $100^\circ C$ is placed in 100g of water at $25^\circ C$. The final temperature is $28^\circ C$. Calculate the specific heat of the metal.</p>
+        <p>2. If $2H_2(g) + O_2(g) \rightarrow 2H_2O(l)$ has $\Delta H = -572 kJ$, what is the $\Delta H$ for $H_2O(l) \rightarrow H_2(g) + \frac{1}{2}O_2(g)$?</p>
+
+        <h2>SUMMARY</h2>
+        <p>We've established that $\Delta H$ measures heat flow at constant pressure. Through calorimetry, we can experimentally determine the heat of reactions by observing temperature changes in the surroundings. Hess's Law (which we will cover in depth Thursday morning) will allow us to calculate $\Delta H$ for reactions that are difficult to measure directly by combining other known reactions.</p>
+    </div>
+</body></html>

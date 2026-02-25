@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Solving Trig Equations & Inverse Functions</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>MAT-172: Solving Trig Equations & Inverse Functions</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>When solving trigonometric equations, using an inverse function on a calculator will only provide a single output (the principal value). Because trigonometric functions are periodic, they often have an infinite number of solutions. We must interpret the calculator's output as a reference angle or a specific quadrant value and then apply our knowledge of the unit circle and periodic properties to identify all valid solutions within a given interval or for all real numbers.</p>
+
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> We do not have an official midterm exam. However, Chapter 5 happens to fall right before midterm time. If you are not feeling good about the unit circle, you really need to start pounding it in there now because we are coming up toward the end of the term.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Inverse Trig Function:</strong> A function used to find an angle when the trig value is known; however, it only returns one value within a restricted range.</li>
+            <li><strong>Infinite Solutions:</strong> Most trig functions have solutions that repeat every revolution ($2\pi$ or $360^\circ$).</li>
+            <li><strong>Reference Angle:</strong> The acute angle formed with the x-axis, used to find solutions in different quadrants.</li>
+            <li><strong>Radians vs. Degrees:</strong> 1 radian is approximately $57^\circ$. If you are stuck in radians, multiply by $\frac{180}{\pi}$ to check your quadrant.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <div class="example-box">
+            <ol>
+                <li><span class="key-step">Isolate the Trig Function:</span> Get the $\sin$, $\cos$, or $\tan$ term by itself.</li>
+                <li><span class="key-step">Apply Inverse Function:</span> Use the inverse (e.g., $\sin^{-1}$) to get the initial angle.</li>
+                <li><span class="key-step">Identify the Quadrant:</span> Look at the sign of the trig value to determine which quadrants the solutions live in.</li>
+                <li><span class="key-step">Determine All Solutions:</span>
+                    <ul>
+                        <li>For specific intervals (e.g., $[0, 2\pi]$), find all angles in that range.</li>
+                        <li>For "all solutions," add the period multiple: $+\, 2n\pi$ (for sine/cosine) or $+\, n\pi$ (for tangent).</li>
+                    </ul>
+                </li>
+                <li><span class="key-step">Adjust for Multiple Revolutions:</span> If the inverse function gives a value like 1.24 radians, treat it as a reference and tweak based on the desired quadrant.</li>
+            </ol>
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <p>To represent all possible solutions across infinite revolutions:</p>
+        <p>$$\theta = \text{Initial Angle} + 2k\pi$$</p>
+        <p>Where $k$ (or $n$) represents any integer, accounting for every rotation around the unit circle.</p>
+
+        <div class="prof-tip">
+            <strong>Calculator Strategy:</strong> When in doubt, punch the radian value into the calculator and convert to degrees to "eyeball" the location. If you have $1.24$ radians, it is a smidge over $57^\circ$, so it must be in Quadrant I.
+        </div>
+
+        <h2>EXAMPLE 1: Calculator Interpretation</h2>
+        <div class="example-box">
+            <p><strong>Scenario:</strong> You use an inverse function and the calculator outputs a single number, but the problem asks for all solutions in $[0, 2\pi]$.</p>
+            <p><strong>Process:</strong> If the calculator gives $1.24$, and you know the cosine is positive, you must also find the solution in Quadrant IV. You would calculate $2\pi - 1.24$.</p>
+        </div>
+
+        <h2>EXAMPLE 2: Manipulating Outputs</h2>
+        <div class="example-box">
+            <p><strong>Context:</strong> A complex problem where the initial inverse calculation yields $5.0341$ and $1.8925$.</p>
+            <p><strong>Correction:</strong> "This one is bizarre because we really had to manipulate the calculator output. But, if I can plant into your retinas that you treat the inverse answers as a reference angle, and know what quadrant we're in, we can make the tweaks as necessary."</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <p><em>(Based on class discussion for next session)</em></p>
+        <ul>
+            <li>Check solutions by calculator to practice the adjustment process.</li>
+            <li>Identify the quadrant for $1.24$ radians without converting to degrees (Guesstimate: $1 \text{ rad} \approx 57^\circ$).</li>
+            <li>Find "All Solutions" for a basic sine equation by adding period multiples.</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>The inverse trig functions are limited by their range. To solve equations fully, you must:
+            1. Use the calculator value as a starting point.
+            2. Use the unit circle to find the second location where that trig value exists.
+            3. Add $2n\pi$ for general solutions.
+            4. Always double-check your quadrant by converting to degrees if radians feel "fuzzy."
+        </p>
+    </div>
+</body></html>
