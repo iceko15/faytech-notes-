@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Hess's Law and Enthalpy of Formation</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Hess's Law and Enthalpy of Formation</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Enthalpy ($\Delta H$) is a <strong>state function</strong>, meaning the total change in energy depends only on the starting and ending points, not the specific path taken. Because of this, we can determine the enthalpy of a complex reaction by adding together the enthalpies of multiple intermediate steps (Hess's Law) or by using standard Enthalpies of Formation ($\Delta H_f^\circ$).</p>
+
+        <div class="prof-tip">
+            "We don't care how we got there. We can go right from methane and oxygen to make $CO_2$ and water, or this could be multiple reactions that happen to get us there. If the steps add together, then their enthalpy also adds together."
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>State Function:</strong> A property whose value depends only on the current state of the system (start and endpoints), not on how it reached that state.</li>
+            <li><strong>Hess's Law:</strong> If a reaction is carried out in a series of steps, $\Delta H$ for the overall reaction equals the sum of the enthalpy changes for the individual steps.</li>
+            <li><strong>Enthalpy of Formation ($\Delta H_f^\circ$):</strong> The energy associated with forming 1 mole of a compound from its constituent elements in their standard states.</li>
+            <li><strong>Standard State:</strong> Defined as elements in their naturally occurring form at standard conditions (25°C/298K and 1 atm). The $\Delta H_f^\circ$ of any element in its standard state is <strong>0</strong>.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>Using Hess's Law (Adding Reactions)</h3>
+        <ol>
+            <li>Identify the target overall reaction.</li>
+            <li>Look at the provided step reactions and find components that match the target.</li>
+            <li><strong>Manipulate the reactions:</strong>
+                <ul>
+                    <li>If you <strong>flip</strong> a reaction (reverse it), you must <strong>flip the sign</strong> of $\Delta H$.</li>
+                    <li>If you <strong>multiply/divide</strong> the coefficients, you must <strong>multiply/divide</strong> the $\Delta H$ by the same factor.</li>
+                </ul>
+            </li>
+            <li>Align the arrows of the manipulated reactions.</li>
+            <li>Cancel out intermediates: Substances on opposite sides of the arrow subtract; substances on the same side add.</li>
+            <li>Sum the adjusted $\Delta H$ values to find the final enthalpy.</li>
+        </ol>
+
+        <h3>Using Enthalpies of Formation</h3>
+        <p>Instead of manipulating full equations, use the summation formula:</p>
+        $$\Delta H_{rxn}^\circ = \sum n \Delta H_f^\circ(\text{products}) - \sum m \Delta H_f^\circ(\text{reactants})$$
+        <p>Where $n$ and $m$ are the stoichiometric coefficients from the balanced equation.</p>
+
+        <div class="prof-tip">
+            "Remember: Phase matters! $H_2O$ as a gas has a different enthalpy of formation than $H_2O$ as a liquid. Make sure you pull the right value from the table."
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>Forming Bonds:</strong> Releases energy (usually negative $\Delta H$).</li>
+            <li><strong>Breaking Bonds:</strong> Requires energy input (positive $\Delta H$).</li>
+            <li><strong>Elemental Form Rule:</strong> The enthalpy of formation for $O_2$, $Cl_2$, $H_2$, or $C$ (graphite) is always $0$.</li>
+            <li><strong>Exothermic:</strong> $\Delta H < 0$. Energy is released (more energy released in forming products than used in breaking reactants).</li>
+            <li><strong>Endothermic:</strong> $\Delta H > 0$. Energy is absorbed (more energy used to break reactants than released in forming products).</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Hess's Law with Methane (Conceptual)</h2>
+        <div class="example-box">
+            <p><strong>Scenario:</strong> Carbon reacts with oxygen to make $CO_2$ ($\Delta H_1$), then $CO_2$ is used/decomposed ($\Delta H_2$).</p>
+            <ul>
+                <li>Reaction 1: $C + O_2 \rightarrow CO_2$ (Releases energy)</li>
+                <li>Reaction 2: $CO_2$ reacts/decomposes (Absorbs energy)</li>
+                <li><strong>Overall:</strong> The total energy released is the sum of the energy released in step 1 and energy absorbed in step 2.</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Manipulating Coefficients (C2H2 to C6H6)</h2>
+        <div class="example-box">
+            <p><strong>Goal:</strong> Find $\Delta H$ for $3C_2H_2 \rightarrow 1C_6H_6$</p>
+            <p><strong>Given:</strong> A reaction with $2C_2H_2$ on the reactant side.</p>
+            <p class="key-step">Step 1: Adjust for Moles</p>
+            <p>To turn $2$ moles into $3$, multiply the entire reaction by $1.5$. Consequently, multiply $\Delta H$ by $1.5$.</p>
+            <p class="key-step">Step 2: Adjust for Direction</p>
+            <p>If $C_6H_6$ is a reactant in the given step but a product in the target, reverse the reaction and change the sign of $\Delta H$ (positive to negative or vice versa).</p>
+        </div>
+
+        <h2>EXAMPLE 3: Tungsten Oxide Reaction</h2>
+        <div class="example-box">
+            <p><strong>Target:</strong> $2W(s) + 2O_2(g) \rightarrow 2WO_2(s)$</p>
+            <p><strong>Step 1:</strong> $2WO_2(s) + O_2(g) \rightarrow 2WO_3(s) \quad \Delta H = -506 \text{ kJ}$</p>
+            <p><strong>Step 2:</strong> $2W(s) + 3O_2(g) \rightarrow 2WO_3(s) \quad \Delta H = -1686 \text{ kJ}$</p>
+            <hr>
+            <p><strong>Execution:</strong></p>
+            <ul>
+                <li>Flip Reaction 1 to get $2WO_2$ on the product side: $2WO_3 \rightarrow 2WO_2 + O_2$. Change $\Delta H$ to $+506 \text{ kJ}$.</li>
+                <li>Keep Reaction 2 as is: $2W + 3O_2 \rightarrow 2WO_3$. $\Delta H$ remains $-1686 \text{ kJ}$.</li>
+                <li>Add them: $2WO_3$ cancels out. $3O_2$ (reactant) minus $1O_2$ (product) leaves $2O_2$ on the reactant side.</li>
+                <li><strong>Result:</strong> $2W + 2O_2 \rightarrow 2WO_2$</li>
+                <li><strong>Final $\Delta H$:</strong> $506 + (-1686) = -1180 \text{ kJ}$</li>
+            </ul>
+        </div>
+
+        <h2>PRACTICE PROBLEMS: Photosynthesis</h2>
+        <div class="example-box">
+            <p><strong>Equation:</strong> $6CO_2(g) + 6H_2O(g) \rightarrow C_6H_{12}O_6(s) + 6O_2(g)$</p>
+            <p><strong>Values from Table:</strong></p>
+            <ul>
+                <li>$\Delta H_f^\circ [C_6H_{12}O_6(s)] = -1268 \text{ kJ/mol}$</li>
+                <li>$\Delta H_f^\circ [O_2(g)] = 0 \text{ kJ/mol}$</li>
+                <li>$\Delta H_f^\circ [CO_2(g)] = -393 \text{ kJ/mol}$</li>
+                <li>$\Delta H_f^\circ [H_2O(g)] = -242 \text{ kJ/mol}$</li>
+            </ul>
+            <p class="key-step">Calculation:</p>
+            <p>Products: $[1 \times (-1268)] + [6 \times 0] = -1268$</p>
+            <p>Reactants: $[6 \times (-393)] + [6 \times (-242)] = -2358 + (-1452) = -3810$</p>
+            <p>$\Delta H_{rxn} = (\text{Products}) - (\text{Reactants}) = -1268 - (-3810) = +2542 \text{ kJ}$</p>
+            <p><strong>Note:</strong> This is endothermic, which makes sense because plants require sun energy to perform photosynthesis.</p>
+        </div>
+
+        <div class="prof-tip">
+            <strong>The "Lego" Analogy:</strong> Think of chemicals like Legos. We pull the reactants apart into their base blocks (elements) which takes energy. Then we put them back together into new products, which releases energy. Whether the whole thing is endothermic or exothermic depends on which part of that process involves more energy.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Logic</th>
+                <th>Key Requirement</th>
+            </tr>
+            <tr>
+                <td>Hess's Law</td>
+                <td>Summing intermediate reaction steps</td>
+                <td>Aligning components/Signs/Coefficients</td>
+            </tr>
+            <tr>
+                <td>$\Delta H_f^\circ$ Formula</td>
+                <td>Products minus Reactants</td>
+                <td>Correct Phase (Solid/Liquid/Gas) from table</td>
+            </tr>
+            <tr>
+                <td>Calorimetry</td>
+                <td>Measuring temp change in surroundings</td>
+                <td>$q = m c \Delta T$</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>Fun Fact - Nutrition Calories:</strong> In the US, a food "Calorie" (capital C) is actually a kilocalorie (1000 small calories).
+            <ul>
+                <li>Carbs: 4 kcal/g</li>
+                <li>Protein: 4 kcal/g</li>
+                <li>Fat: 9 kcal/g</li>
+            </ul>
+            Example: 1 cup of whole milk (13g Carb, 9g Fat, 9g Protein) $\approx 169$ kcal, rounded to 170 on the label.
+        </div>
+    </div>
+</body>
+</html>

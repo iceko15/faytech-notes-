@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Multiple Angle Equations & Chapter 5 Review</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Multiple Angle Equations & Chapter 5 Review</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam Logistics:</strong> The Chapter 5 test is next Tuesday. This is our first paper-and-pencil test. There are 19 questions. It is generally shorter than the practice test because you aren't forced to do "Verify" questions exactly how the software wants. You will be provided with a formula sheet containing Chapter 4 and 5 material and a blank unit circle to doodle on.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Solving equations with <strong>multiple angles</strong> (e.g., $\tan(3x)$ or $\sin(\frac{2}{3}\theta)$) requires starting with the "all solutions" scenario. Because the period is compressed or stretched, you must find all general solutions first, then divide by the coefficient to find specific solutions within the $[0, 2\pi)$ interval. This often results in a significantly higher number of solutions than standard equations.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Multiple Angle:</strong> An equation where the variable inside the trig function is multiplied by a constant (e.g., $nx$).</li>
+            <li><strong>All Solutions Notation:</strong> Adding $+ 2\pi n$ (for sine/cosine/secant/cosecant) or $+ \pi n$ (for tangent/cotangent) to account for all periodic rotations.</li>
+            <li><strong>Redundancy:</strong> In tangent equations, because the period is $\pi$, solutions in Quadrant III are often covered by the $+ \pi n$ notation added to the Quadrant I solution.</li>
+            <li><strong>LCD:</strong> Lowest Common Denominator, essential for adding fractional pi increments when solving for $x$.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <ol>
+            <li><span class="key-step">Isolate the Trig Part:</span> Use basic algebra to get the trig function by itself.</li>
+            <li><span class="key-step">Identify Unit Circle Values:</span> Determine where the trig function equals the given value within the first revolution, ignoring the multiple angle coefficient for a moment.</li>
+            <li><span class="key-step">Write General Solutions:</span> Tack on $+ 2\pi n$ or $+ \pi n$.</li>
+            <li><span class="key-step">Divide/Multiply:</span> Isolate the variable by dividing everything (including the $n$ term) by the coefficient.</li>
+            <li><span class="key-step">Plug in Chunks (P&C):</span> Substitute $n = 0, 1, 2...$ until your solutions exceed the $2\pi$ (or specified) limit.</li>
+        </ol>
+
+        <h2>EXAMPLE 1: Multiple Angle Tangent</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> Solve $\tan(3x) = \frac{\sqrt{3}}{3}$ for $[0, 2\pi)$.</p>
+            <p>1. Identify the base angle: $\tan$ is $\frac{\sqrt{3}}{3}$ at $\frac{\pi}{6}$ (Quadrant I) and $\frac{7\pi}{6}$ (Quadrant III).</p>
+            <p>2. Set up the equation for all solutions: 
+            $$3x = \frac{\pi}{6} + \pi n$$
+            (Note: $\frac{7\pi}{6}$ is redundant because $\frac{\pi}{6} + \pi = \frac{7\pi}{6}$).</p>
+            <p>3. Solve for $x$ by dividing by 3:
+            $$x = \frac{\pi}{18} + \frac{\pi}{3}n$$</p>
+            <p>4. Plug in $n$ values (LCD is 18, so $\frac{\pi}{3}n = \frac{6\pi}{18}n$):
+            <ul>
+                <li>$n=0: \frac{\pi}{18}$</li>
+                <li>$n=1: \frac{7\pi}{18}$ (pattern: add $6\pi$ to the numerator)</li>
+                <li>$n=2: \frac{13\pi}{18}$</li>
+                <li>$n=3: \frac{19\pi}{18}$</li>
+                <li>$n=4: \frac{25\pi}{18}$</li>
+                <li>$n=5: \frac{31\pi}{18}$</li>
+                <li>$n=6: \frac{37\pi}{18}$ (STOP: This is $> 2\pi$, as $2\pi = \frac{36\pi}{18}$)</li>
+            </ul>
+            <strong>Final Solutions:</strong> $\frac{\pi}{18}, \frac{7\pi}{18}, \frac{13\pi}{18}, \frac{19\pi}{18}, \frac{25\pi}{18}, \frac{31\pi}{18}$.</p>
+        </div>
+
+        <h2>EXAMPLE 2: Fractional Multiple Angle (No Solution)</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> Solve $\sin(\frac{2}{3}\theta) = -1$ for $[0, 2\pi)$.</p>
+            <p>1. Base angle: $\sin$ is $-1$ at $\frac{3\pi}{2}$.</p>
+            <p>2. Set up equation: $\frac{2}{3}\theta = \frac{3\pi}{2} + 2\pi n$.</p>
+            <p>3. Isolate $\theta$ by multiplying by the reciprocal ($\frac{3}{2}$):
+            $$\theta = \frac{9\pi}{4} + 3\pi n$$</p>
+            <p>4. Check interval: $\frac{9\pi}{4}$ is $2.25\pi$, which is already greater than the $2\pi$ limit. Adding or subtracting $3\pi n$ will not bring the value into the $[0, 2\pi)$ range.</p>
+            <strong>Result:</strong> No Solution / Empty Set ($\emptyset$).
+        </div>
+
+        <div class="prof-tip">
+            <strong>Calculator Check Method:</strong> Move everything to one side so the equation equals zero. Graph the function in your calculator. Set your window $Xmin = 0$ and $Xmax = 2\pi$. Look for X-intercepts. To validate exact values, set your $Xscale$ to the common denominator (e.g., $\pi/18$) and count the tick marks, or use the Table set to $\Delta Tbl = \pi/18$.
+        </div>
+
+        <h2>RULES/IDENTITIES FOR REVIEW</h2>
+        <ul>
+            <li><strong>Quadratic Trig Equations:</strong> If an equation looks like $a(\tan^2 x) + b(\tan x) + c = 0$, you must factor it or use the Quadratic Formula: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.</li>
+            <li><strong>Radical Restrictions:</strong> Most textbooks/software allow radicals inside radicals but do <strong>not</strong> allow fractions under radicals or radicals in the denominator.</li>
+            <li><strong>Verifying Identities:</strong> Trust your instincts. If a software says you are wrong but your math is sound, check the decimal approximation in a calculator. If they match, your version is likely just a different algebraic form.</li>
+        </ul>
+
+        <h2>PRACTICE TIPS</h2>
+        <p>1. <strong>Study Plan:</strong> Use the problem codes provided in the Canvas outline (e.g., 5.3.51) to find similar problems in the MyMathLab study plan.</p>
+        <p>2. <strong>Formula Usage:</strong> If a problem specifies "Use the Half-Angle Formula," you must use it. Otherwise, there are often multiple valid paths to the same answer.</p>
+        <p>3. <strong>Trace Tool:</strong> When checking on a calculator, the trace tool helps you see if the graph actually touches the X-axis or just gets close (important for "No Solution" cases).</p>
+
+        <h2>SUMMARY</h2>
+        <p>Success in Chapter 5 involves recognizing unit circle values, mastering the algebraic rearrangement of trig functions, and being meticulous with periodic additions ($2\pi n$ vs $\pi n$) in multiple-angle problems. For the upcoming test, focus on clear scratch work and validating your results against the specified interval $[0, 2\pi)$.</p>
+    </div>
+</body>
+</html>
