@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 6: Quantum Theory & Electronic Structure</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .back-link { text-decoration: none; color: #0056b3; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
+        .topic-card { background: white; padding: 30px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #0056b3; margin-top: 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .equation-box { background: #eef7ff; padding: 15px; border-radius: 5px; border-left: 4px solid #0056b3; margin: 15px 0; }
+        ul { margin-top: 10px; }
+        li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #e0e0e0; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; text-align: center; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .center-text { text-align: center; }
+        .note-btn { 
+            background: #ffffff; 
+            border: 2px solid #0056b3; 
+            color: #0056b3; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .note-btn:hover { 
+            background: #0056b3; 
+            color: white; 
+            transform: translateY(-2px);
+        }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        @media print { 
+            .print-btn, .back-btn, .back-link { display: none; } 
+            body { padding: 0; background: white; } 
+            .content-card { box-shadow: none; padding: 0; border: none; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+    <h1>Chapter 6: Quantum Theory and Electronic Structure</h1>
+
+    <div class="topic-card" style="background-color: #eef7ff; border-left: 5px solid #0056b3;">
+        <h2>Chapter Summary: Key Equations</h2>
+        <ul>
+            <li><strong>Speed of Light:</strong> $c = \lambda\nu$</li>
+            <li><strong>Energy of a Photon:</strong> $E = h\nu$ or $E = \frac{hc}{\lambda}$</li>
+            <li><strong>de Broglie Wavelength:</strong> $\lambda = \frac{h}{mv}$</li>
+            <li><strong>Rydberg Equation:</strong> $\Delta E = R_H \left( \frac{1}{n_i^2} - \frac{1}{n_f^2} \right)$</li>
+        </ul>
+        <p><strong>Constants:</strong></p>
+        <ul>
+            <li>$c = 3.00 \times 10^8 \, \text{m/s}$</li>
+            <li>$h = 6.63 \times 10^{-34} \, \text{J}\cdot\text{s}$</li>
+            <li>$R_H = 2.18 \times 10^{-18} \, \text{J}$</li>
+        </ul>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.1 The Nature of Light</h2>
+        <p>Electromagnetic radiation carries energy through space and exhibits wave-like behavior. We define waves using three primary properties:</p>
+        <ul>
+            <li><strong>Wavelength ($\lambda$):</strong> The distance between two consecutive peaks or troughs in a wave.</li>
+            <li><strong>Frequency ($\nu$):</strong> The number of wave cycles that pass a specific point in one second (measured in Hertz, Hz or $s^{-1}$).</li>
+            <li><strong>Amplitude:</strong> The vertical distance from the midline of a wave to the peak or trough (related to intensity/brightness).</li>
+        </ul>
+        <div class="equation-box">
+            <strong>Speed of Light Equation:</strong>
+            $$c = \lambda\nu$$
+            Where $c = 3.00 \times 10^8 \, \text{m/s}$ (a constant in a vacuum).
+        </div>
+        <h3>Unit Conversion Cheat Sheet</h3>
+        <p>Light calculations often require converting units before plugging them into equations. Here are the most common conversions you will need:</p>
+        <ul>
+            <li><strong>Nanometers to Meters:</strong> $1 \, \text{nm} = 1 \times 10^{-9} \, \text{m}$</li>
+            <li><strong>Angstroms to Meters:</strong> $1 \, \text{\AA} = 1 \times 10^{-10} \, \text{m}$</li>
+            <li><strong>Megahertz to Hertz:</strong> $1 \, \text{MHz} = 1 \times 10^6 \, \text{Hz}$</li>
+        </ul>
+        <p><strong>Note:</strong> There is an inverse relationship between wavelength and frequency. Higher frequency equals shorter wavelength.</p>
+
+        <div style="margin: 20px 0; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px;">
+            <div style="height: 50px; width: 100%; background: linear-gradient(to right, #4b0082, #0000ff, #00ff00, #ffff00, #ff7f00, #ff0000); border-radius: 8px; border: 1px solid #ddd;"></div>
+            <div style="display: flex; justify-content: space-between; margin-top: 5px; color: #555; font-size: 0.9em; padding: 0 5px;">
+                <span>400nm</span>
+                <span>500nm</span>
+                <span>600nm</span>
+                <span>700nm</span>
+            </div>
+            <div style="text-align: center; margin-top: 10px; color: #555;">Figure 1: The Visible Spectrum ($400$ nm - $700$ nm).</div>
+        </div>
+
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Wavelength Range (nm)</th>
+            </tr>
+            <tr>
+                <td>Violet</td>
+                <td>$380 - 450$</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>$450 - 495$</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>$495 - 570$</td>
+            </tr>
+            <tr>
+                <td>Yellow</td>
+                <td>$570 - 590$</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>$590 - 620$</td>
+            </tr>
+            <tr>
+                <td>Red</td>
+                <td>$620 - 750$</td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Listen for the term 'Electromagnetic Spectrum'. Remember that visible light is only a tiny sliver of this range. When the professor discusses 'constructive and destructive interference', they are proving that light behaves like a wave.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.2 Quantum Theory</h2>
+        <p>Classical physics assumed energy was continuous. Max Planck discovered that energy can only be gained or lost in whole-number multiples of the quantity $h\nu$.</p>
+        <div class="equation-box">
+            <strong>Planck's Equation:</strong>
+            $$E = h\nu$$
+            Where $h = 6.63 \times 10^{-34} \, \text{J}\cdot\text{s}$ (Planck's Constant).
+        </div>
+        <p style="margin-top: 20px;"><strong>Context & Implementation:</strong> Classical physics viewed energy like a ramp (continuous), but Planck proved it behaves like a staircase (quantized). We use $E = h\nu$ to find the energy of a single photon. If a problem asks for the energy of a 'mole' of photons, multiply the result by Avogadro's Number ($6.022 \times 10^{23}$).</p>
+        <h3>The 'In-a-Nutshell' Energy Guide</h3>
+        <ul>
+            <li>$E \uparrow$ as $\nu \uparrow$ (Directly proportional)</li>
+            <li>$E \uparrow$ as $\lambda \downarrow$ (Inversely proportional)</li>
+            <li>$\text{Higher } n \rightarrow \text{Larger Orbital } \rightarrow \text{Higher Energy}$</li>
+        </ul>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Instructors often use the 'Blackbody Radiation' or 'Ultraviolet Catastrophe' as the reason why classical physics failed. The key takeaway is that energy is 'discontinuous' - it moves in specific steps (quanta).</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.3 The Photoelectric Effect</h2>
+        <p>Albert Einstein proposed that electromagnetic radiation can be viewed as a stream of particles called <strong>photons</strong>. This explained why light requires a minimum frequency to eject electrons from a metal surface.</p>
+        <div class="equation-box">
+            <strong>Photon Energy Calculation:</strong>
+            $$E_{\text{photon}} = h\nu = \frac{hc}{\lambda}$$
+        </div>
+        <p style="margin-top: 20px;"><strong>Context & Implementation:</strong> Einstein used Planck's 'packets' to show that light isn't just a wave; it hits metal like a physical pool ball (photon). If the pool ball doesn't have enough speed (threshold frequency), the electron won't budge. Increasing light intensity only adds more photons; it doesn't make the individual photons stronger. Only changing the frequency/color makes them stronger.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.4 Bohr's Theory of the Hydrogen Atom</h2>
+        <p>Niels Bohr proposed that electrons exist in specific orbits around the nucleus, and these orbits correspond to specific <strong>quantized energy levels</strong>.</p>
+        <ul>
+            <li><strong>Ground State ($n=1$):</strong> The lowest energy state of an atom.</li>
+            <li><strong>Excited State ($n > 1$):</strong> Any energy state higher than the ground state.</li>
+        </ul>
+        <div class="equation-box">
+            <strong>Rydberg Equation ($\Delta E$):</strong>
+            $$\Delta E = R_H \left( \frac{1}{n_i^2} - \frac{1}{n_f^2} \right)$$
+            Where $R_H = 2.18 \times 10^{-18} \, \text{J}$ (Rydberg Constant).
+        </div>
+        <p style="margin-top: 20px;"><strong>Context & Implementation:</strong> Bohr's model was the first to show that electrons don't just float - they are locked into 'neighborhoods' (shells). If an electron 'falls' from $n=3$ to $n=1$, energy is released (emission). If it 'jumps' from $n=1$ to $n=3$, energy is absorbed.</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Note that Bohr's model ONLY perfectly predicts the Hydrogen atom. It fails for anything with more than one electron. The 'Line Spectrum' is like an atom's fingerprint; no two elements emit the exact same colors of light.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.5 Wave Properties of Matter</h2>
+        <p>Louis de Broglie hypothesized that if light can behave like a particle, then matter (such as an electron) can behave like a wave.</p>
+        <div class="equation-box">
+            <strong>de Broglie Equation:</strong>
+            $$\lambda = \frac{h}{mv}$$
+            Where $\lambda$ is wavelength, $h$ is Planck's constant, $m$ is mass (kg), and $v$ is <strong>velocity</strong> (m/s).
+        </div>
+        <p style="margin-top: 20px;"><strong>Context & Implementation:</strong> This concept introduces 'Wave-Particle Duality' - everything has wave properties, but large objects (like a baseball) have wavelengths too small to see. Electrons are small enough that their 'waviness' matters significantly.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.6 The Uncertainty Principle</h2>
+        <p>Werner Heisenberg determined that it is impossible to know simultaneously both the momentum ($p$) and the position ($x$) of a particle with absolute certainty.</p>
+        <div class="equation-box">
+            <strong>Heisenberg's Uncertainty Principle:</strong>
+            $$\Delta x \Delta p \geq \frac{h}{4\pi}$$
+        </div>
+        <p style="margin-top: 20px;"><strong>Context & Implementation:</strong> The act of measuring an electron's position actually bumps it, changing its momentum. This fundamental uncertainty is why we use 'Orbitals' (probability maps) instead of 'Orbits' (set paths).</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.7 Quantum Numbers</h2>
+        <p>We describe an electron's "address" within an atom using four quantum numbers:</p>
+        <ul>
+            <li><strong>Principal Quantum Number ($n$):</strong> Describes the energy level and size. Values are integers $1, 2, 3...$</li>
+            <li><strong>Angular Momentum Quantum Number ($\ell$):</strong> Describes the shape of the orbital. Values range from $0$ to $(n-1)$.
+                <ul>
+                    <li>$\ell=0$ (s)</li>
+                    <li>$\ell=1$ (p)</li>
+                    <li>$\ell=2$ (d)</li>
+                    <li>$\ell=3$ (f)</li>
+                </ul>
+            </li>
+            <li><strong>Magnetic Quantum Number ($m_\ell$):</strong> Describes the orientation in space. Values range from $-\ell$ to $+\ell$.</li>
+            <li><strong>Spin Quantum Number ($m_s$):</strong> Describes the direction of electron spin. Values are $+1/2$ or $-1/2$.</li>
+        </ul>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> The 'Principal' (n) tells you the size, 'Angular' (l) tells you the shape, and 'Magnetic' (ml) tells you the orientation. If you hear 'Shell', they mean (n). If you hear 'Subshell', they mean (l).</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.8 Atomic Orbitals</h2>
+        <p>The quantum numbers define the shapes of the orbitals where electrons are found:</p>
+        <ul>
+            <li><strong>s orbitals:</strong> Spherical.</li>
+            <li><strong>p orbitals:</strong> Dumbbell-shaped (3 orientations: $x, y, z$).</li>
+            <li><strong>d orbitals:</strong> Cloverleaf or "donut" shapes (5 orientations).</li>
+        </ul>
+        <h3>Visualizing the Blocks</h3>
+        <p>The Periodic Table is organized into blocks that correspond to the last subshell being filled.</p>
+        <ul>
+            <li><strong>s-block:</strong> Groups 1, 2, and Helium (left side).</li>
+            <li><strong>p-block:</strong> Groups 13-18 (right side).</li>
+            <li><strong>d-block:</strong> Transition Metals (middle).</li>
+            <li><strong>f-block:</strong> Lanthanides and Actinides (bottom).</li>
+        </ul>
+        <p><strong>Mission Note:</strong> The period number ($n$) matches the energy level for s and p blocks, but for the d-block, the energy level is ($n-1$).</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Pay attention to the 'Nodes' - these are areas where the probability of finding an electron is zero. The 'Probability Density' is what gives orbitals their spherical or dumbbell shapes.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>6.9 Electron Configuration Rules</h2>
+        <p>Three core rules govern how electrons fill these orbitals:</p>
+        <div class="equation-box">
+            <strong>1. Pauli Exclusion Principle:</strong>
+            No two electrons in an atom can have the same four quantum numbers. An orbital holds a maximum of 2 electrons with opposite spins.
+        </div>
+        <div class="equation-box">
+            <strong>2. Aufbau Principle:</strong>
+            Electrons fill the lowest energy orbitals first.
+        </div>
+        <div class="equation-box">
+            <strong>3. Hund's Rule:</strong>
+            Electrons occupy orbitals of the same energy singly with parallel spins before doubling up.
+        </div>
+        
+        <h3>Electronic Structure: The Filling Order Guide</h3>
+        <p>To determine the electron configuration of an atom, we follow the <strong>Aufbau Principle</strong>, which states that electrons fill the lowest energy orbitals first. This order is not strictly numerical.</p>
+        <div class="equation-box">
+            <strong>The Diagonal Rule (Filling Order):</strong>
+            <ul>
+                <li>$1s \rightarrow 2s \rightarrow 2p \rightarrow 3s \rightarrow 3p$</li>
+                <li><strong>Look Out:</strong> $\mathbf{4s \rightarrow 3d} \rightarrow 4p$</li>
+                <li>$5s \rightarrow 4d...$</li>
+            </ul>
+        </div>
+        <p><strong>Key Exception (4s before 3d):</strong> Even though the principal quantum number 4 is higher than 3, the $4s$ orbital is slightly lower in energy than the $3d$ orbital. Therefore, electrons fill the $4s$ orbital before they begin filling the $3d$ orbital.</p>
+
+        <h3>Noble Gas Shorthand</h3>
+        <p>Writing full configurations is slow. Use the previous Noble Gas to represent the core electrons.</p>
+        <ul>
+            <li><strong>Phosphorus (Full):</strong> $1s^2 2s^2 2p^6 3s^2 3p^3$</li>
+            <li><strong>Phosphorus (Shorthand):</strong> $[Ne] 3s^2 3p^3$</li>
+        </ul>
+
+        <h3>Advanced Configuration Analysis</h3>
+        <h4>The Magnetism Test</h4>
+        <p>How to tell if an atom will be attracted to a magnetic field.</p>
+        <ul>
+            <li><strong>Rule 1:</strong> Write the orbital diagram.</li>
+            <li><strong>Rule 2:</strong> If there is at least ONE single (unpaired) electron, it is Paramagnetic.</li>
+            <li><strong>Rule 3:</strong> If every single electron has a partner, it is Diamagnetic.</li>
+        </ul>
+
+        <div style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 20px;">
+            <h4>Mission-Critical Exceptions: Chromium and Copper</h4>
+            <p>Chromium ($Cr$) and Copper ($Cu$) do not follow the standard Aufbau order because a half-filled or fully-filled d-subshell is more stable.</p>
+            <ul>
+                <li><strong>Chromium ($Z=24$):</strong> $[Ar] 4s^1 3d^5$ (Not $4s^2 3d^4$)</li>
+                <li><strong>Copper ($Z=29$):</strong> $[Ar] 4s^1 3d^{10}$ (Not $4s^2 3d^9$)</li>
+            </ul>
+        </div>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> The Aufbau principle is the 'building up' process. Hund's rule is about 'maximizing spin' (the bus seat rule). The Pauli Exclusion Principle is why we draw one arrow up and one arrow down in a single box.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>Reference Tables & Data</h2>
+        
+        <h3>Table 6.1: The Electromagnetic Spectrum</h3>
+        <table>
+            <tr>
+                <th>Region</th>
+                <th>Wavelength Range (nm)</th>
+                <th>Frequency Range (Hz)</th>
+            </tr>
+            <tr>
+                <td>Gamma Rays</td>
+                <td>$< 0.01$</td>
+                <td>$> 3 \times 10^{19}$</td>
+            </tr>
+            <tr>
+                <td>X Rays</td>
+                <td>$0.01 - 10$</td>
+                <td>$3 \times 10^{16} - 3 \times 10^{19}$</td>
+            </tr>
+            <tr>
+                <td>Ultra-violet</td>
+                <td>$10 - 400$</td>
+                <td>$7.5 \times 10^{14} - 3 \times 10^{16}$</td>
+            </tr>
+            <tr>
+                <td>Visible</td>
+                <td>$400 - 700$</td>
+                <td>$4 \times 10^{14} - 7.5 \times 10^{14}$</td>
+            </tr>
+            <tr>
+                <td>Infrared</td>
+                <td>$700 - 10^6$ ($1$ mm)</td>
+                <td>$3 \times 10^{11} - 4 \times 10^{14}$</td>
+            </tr>
+            <tr>
+                <td>Microwave</td>
+                <td>$10^6 - 10^9$ ($1$ m)</td>
+                <td>$3 \times 10^8 - 3 \times 10^{11}$</td>
+            </tr>
+            <tr>
+                <td>Radio Waves</td>
+                <td>$> 10^9$</td>
+                <td>$< 3 \times 10^8$</td>
+            </tr>
+        </table>
+
+        <h3>Table 6.2: Quantum Numbers and Their Properties</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Permissible Values</th>
+                <th>Physical Meaning</th>
+            </tr>
+            <tr>
+                <td>Principal</td>
+                <td class="center-text">$n$</td>
+                <td>$1, 2, 3...$</td>
+                <td>Orbital size / Energy level</td>
+            </tr>
+            <tr>
+                <td>Angular Momentum</td>
+                <td class="center-text">$\ell$</td>
+                <td>$0$ to $(n-1)$</td>
+                <td>Orbital shape (s, p, d, f)</td>
+            </tr>
+            <tr>
+                <td>Magnetic</td>
+                <td class="center-text">$m_\ell$</td>
+                <td>$-\ell$ to $+\ell$</td>
+                <td>Orbital orientation</td>
+            </tr>
+            <tr>
+                <td>Spin</td>
+                <td class="center-text">$m_s$</td>
+                <td>$+1/2, -1/2$</td>
+                <td>Direction of electron spin</td>
+            </tr>
+        </table>
+
+        <h3>Table 6.3: Subshells and Orbitals</h3>
+        <table>
+            <tr>
+                <th>Subshell Label</th>
+                <th>Value of $\ell$</th>
+                <th>Number of Orbitals ($2\ell + 1$)</th>
+                <th>Max Electrons ($2 \times$ Orbitals)</th>
+            </tr>
+            <tr>
+                <td class="center-text">s</td>
+                <td class="center-text">$0$</td>
+                <td class="center-text">1</td>
+                <td class="center-text">2</td>
+            </tr>
+            <tr>
+                <td class="center-text">p</td>
+                <td class="center-text">$1$</td>
+                <td class="center-text">3</td>
+                <td class="center-text">6</td>
+            </tr>
+            <tr>
+                <td class="center-text">d</td>
+                <td class="center-text">$2$</td>
+                <td class="center-text">5</td>
+                <td class="center-text">10</td>
+            </tr>
+            <tr>
+                <td class="center-text">f</td>
+                <td class="center-text">$3$</td>
+                <td class="center-text">7</td>
+                <td class="center-text">14</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic-card" style="background-color: #f4f4f4;">
+        <h2>Night-Before Knowledge Check</h2>
+        <ol>
+            <li>Which has more energy: A photon with a wavelength of $400$ nm (Violet) or $700$ nm (Red)?</li>
+            <li>If $n=3$, what are the possible values for the angular momentum quantum number ($\ell$)?</li>
+            <li>Write the noble gas shorthand for Iron ($Fe$, $Z=26$).</li>
+            <li>Why does the $4s$ orbital fill before the $3d$ orbital?</li>
+            <li>Is an atom with the configuration $[Ne] 3s^1$ paramagnetic or diamagnetic?</li>
+        </ol>
+        <details style="margin-top: 15px; cursor: pointer;">
+            <summary style="font-weight: bold; color: #0056b3;">Click for Answer Key</summary>
+            <ul style="margin-top: 10px; color: #444;">
+                <li><strong>1.</strong> Violet ($400$ nm). Shorter wavelength = Higher Energy.</li>
+                <li><strong>2.</strong> $\ell = 0, 1, 2$ (s, p, d).</li>
+                <li><strong>3.</strong> $[Ar] 4s^2 3d^6$.</li>
+                <li><strong>4.</strong> The $4s$ orbital is lower in energy than the $3d$ orbital.</li>
+                <li><strong>5.</strong> Paramagnetic (one unpaired electron).</li>
+            </ul>
+        </details>
+    </div>
+    </div>
+</body>
+</html>

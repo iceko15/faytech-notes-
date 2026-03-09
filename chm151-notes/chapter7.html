@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 7: Electron Configuration & Periodic Table</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .back-link { text-decoration: none; color: #0056b3; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
+        .topic-card { background: white; padding: 30px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #0056b3; margin-top: 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .equation-box { background: #eef7ff; padding: 15px; border-radius: 5px; border-left: 4px solid #0056b3; margin: 15px 0; }
+        ul { margin-top: 10px; }
+        li { margin-bottom: 8px; }
+        .note-btn { 
+            background: #ffffff; 
+            border: 2px solid #0056b3; 
+            color: #0056b3; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .note-btn:hover { 
+            background: #0056b3; 
+            color: white; 
+            transform: translateY(-2px);
+        }
+        .trends-container { display: grid; grid-template-columns: 25px 1fr; grid-template-rows: 25px auto auto; gap: 5px; border: 1px solid #ccc; padding: 10px; background: #fff; border-radius: 8px; margin: 20px auto; width: 100%; max-width: 900px; box-sizing: border-box; }
+        .trend-top { grid-column: 2; grid-row: 1; background-color: #fce4ec; color: #c62828; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 4px; border: 2px solid #e74c3c; font-size: 0.75em; }
+        .trend-left { grid-column: 1; grid-row: 2; background-color: #e3f2fd; color: #0056b3; font-weight: bold; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); border-radius: 4px; border: 2px solid #0056b3; font-size: 0.75em; padding: 5px 0; }
+        .pt-grid { grid-column: 2; grid-row: 2; display: grid; grid-template-columns: repeat(18, 1fr); grid-template-rows: repeat(7, minmax(20px, 30px)); gap: 2px; width: 100%; }
+        .pt-element { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 2px; font-weight: bold; border: 1px solid #ccc; font-size: 0.65em; cursor: default; color: #333; }
+        .pt-element:hover { transform: scale(1.5); z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); border: 1px solid #666; }
+        .trend-bottom { grid-column: 1 / span 2; grid-row: 3; text-align: center; font-size: 0.9em; color: #555; margin-top: 10px; padding: 10px; background: #f9f9f9; border-radius: 4px; }
+        .metal { background-color: #e3f2fd; color: #0056b3; }
+        .metalloid { background-color: #e8f5e9; color: #2e7d32; }
+        .nonmetal { background-color: #fce4ec; color: #c62828; }
+        .exception { border: 2px solid #ffd700 !important; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        @media print { 
+            .print-btn, .back-btn, .back-link { display: none; } 
+            body { padding: 0; background: white; } 
+            .content-card { box-shadow: none; padding: 0; border: none; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+    <h1>Chapter 7: Electron Configuration & Periodic Table</h1>
+
+    <div class="topic-card" style="background-color: #eef7ff; border-left: 5px solid #0056b3;">
+        <h2>Chapter Summary: Key Equations</h2>
+        <div class="equation-box">
+            <strong>Effective Nuclear Charge:</strong>
+            $$Z_{eff} = Z - \sigma$$
+        </div>
+        <ul>
+            <li>$Z$ = Atomic Number (number of protons)</li>
+            <li>$\sigma$ = Shielding Constant (screening by core electrons)</li>
+        </ul>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.3 Effective Nuclear Charge ($Z_{eff}$)</h2>
+        <p>$Z_{eff}$ is the actual positive charge felt by an electron, accounting for the shielding effect of other electrons.</p>
+        <p style="margin-top: 20px;"><strong>Context:</strong> Shielding happens because inner (core) electrons repel the outer (valence) electrons, protecting them from the full pull of the nucleus.</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> As you move right across a period, $Z_{eff}$ increases because you add protons but the number of core shielding electrons stays the same.</p>
+        <h3>Trend Across Period 2</h3>
+        <table>
+            <tr>
+                <th>Element</th>
+                <th>Protons ($Z$)</th>
+                <th>Core Electrons ($S$)</th>
+                <th>$Z_{eff}$ ($Z-S$)</th>
+            </tr>
+            <tr><td>$Li$</td><td>3</td><td>2</td><td>+1</td></tr>
+            <tr><td>$Be$</td><td>4</td><td>2</td><td>+2</td></tr>
+            <tr><td>$B$</td><td>5</td><td>2</td><td>+3</td></tr>
+            <tr><td>$C$</td><td>6</td><td>2</td><td>+4</td></tr>
+            <tr><td>$N$</td><td>7</td><td>2</td><td>+5</td></tr>
+            <tr><td>$O$</td><td>8</td><td>2</td><td>+6</td></tr>
+            <tr><td>$F$</td><td>9</td><td>2</td><td>+7</td></tr>
+            <tr><td>$Ne$</td><td>10</td><td>2</td><td>+8</td></tr>
+        </table>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.4 Atomic Radius</h2>
+        <p><strong>Rule:</strong> Atomic radius decreases from Left-to-Right and increases from Top-to-Bottom.</p>
+        <p><strong>Why:</strong> Increasing $Z_{eff}$ across a period pulls the electrons in tighter, reducing the radius.</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Listen for 'Covalent Radius' (nonmetals) vs 'Metallic Radius' (metals).</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.4 Ionization Energy (IE)</h2>
+        <p><strong>Definition:</strong> The energy required to remove an electron from a gaseous atom or ion.</p>
+        <p><strong>Rule:</strong> Ionization energy increases from Left-to-Right and decreases from Top-to-Bottom.</p>
+        <div class="equation-box">
+            <strong>Look Out:</strong> Core electrons are MUCH harder to remove than valence electrons.
+        </div>
+        <div style="border-left: 5px solid #e74c3c; padding-left: 15px; margin-top: 20px;">
+            <strong>Pitfall:</strong> Group 13 has a lower IE than Group 2 because of the subshell shift (s to p). Removing the single p-electron is easier than breaking the filled s-subshell.
+        </div>
+        <div style="border-left: 5px solid #e74c3c; padding-left: 15px; margin-top: 20px;">
+            <strong>Exception (Group 15 vs 16):</strong> Nitrogen (Group 15) has a higher IE than Oxygen (Group 16).
+            <br><em>Reason:</em> Oxygen has its first paired electron in the p-subshell ($2p^4$). The repulsion between those two electrons makes it slightly easier to remove one, despite Oxygen having more protons.
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.5 Electron Affinity (EA)</h2>
+        <p><strong>Definition:</strong> The energy change that occurs when an electron is added to a gaseous atom.</p>
+        <p><strong>Rule:</strong> Generally increases (becomes more negative) from Left-to-Right.</p>
+        <p style="margin-top: 20px;"><strong>Context:</strong> Nonmetals want electrons more than metals do because they are closer to achieving a full octet.</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Look out for Noble Gases—they have a positive (unfavorable) EA because you'd have to start a brand new energy level to add an electron.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.6 Ionic Radius (Size of Ions)</h2>
+        <ul>
+            <li><strong>Cations (+):</strong> Always SMALLER than their parent atom. (Losing electrons means less repulsion and sometimes losing an entire energy level).</li>
+            <li><strong>Anions (-):</strong> Always LARGER than their parent atom. (Adding electrons increases repulsion, pushing them further apart).</li>
+        </ul>
+        <div class="equation-box">
+            <strong>Visual Rule:</strong>
+            $$Li^+ < Li \quad | \quad F^- > F$$
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.6 The Isoelectronic Series</h2>
+        <p><strong>Definition:</strong> A group of ions/atoms that have the same number of electrons (e.g., $O^{2-}, F^-, Ne, Na^+, Mg^{2+}$ all have 10 electrons).</p>
+        <p><strong>The Logic:</strong> Since the electron count is the same, the size is determined ONLY by the number of protons ($Z$).</p>
+        <div class="equation-box">
+            <strong>Rule:</strong> The more protons in the nucleus, the smaller the ion.
+            $$Mg^{2+} \text{ (Smallest)} < Na^+ < Ne < F^- < O^{2-} \text{ (Largest)}$$
+        </div>
+        <div class="equation-box" style="text-align: center;">
+            <h3>Isoelectronic Series Comparison (10 Electrons)</h3>
+            <div style="display: flex; justify-content: space-around; align-items: flex-end; margin: 20px 0; flex-wrap: wrap; gap: 10px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5em; font-weight: bold;">$O^{2-}$</div>
+                    <div>8 Protons</div>
+                    <div style="color: #e74c3c; font-weight: bold;">Largest</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.4em; font-weight: bold;">$F^-$</div>
+                    <div>9 Protons</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.3em; font-weight: bold;">$Ne$</div>
+                    <div>10 Protons</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.2em; font-weight: bold;">$Na^+$</div>
+                    <div>11 Protons</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.1em; font-weight: bold;">$Mg^{2+}$</div>
+                    <div>12 Protons</div>
+                    <div style="color: #0056b3; font-weight: bold;">Smallest</div>
+                </div>
+            </div>
+            <p style="font-style: italic;">Same electrons (10), but Mg has more 'magnets' (protons) in the center, making it the smallest.</p>
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.4 Metallic Character</h2>
+        <p><strong>Definition:</strong> The level of reactivity of a metal.</p>
+        <p><strong>Rule:</strong> Increases Right-to-Left and Top-to-Bottom (opposite of Ionization Energy).</p>
+        <p style="margin-top: 20px;"><strong>Context:</strong> The easier it is to remove an electron (low IE), the more metallic the element is.</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> This is why Cesium ($Cs$) is one of the most reactive metals - it's at the bottom left.</p>
+    </div>
+
+    <div class="topic-card" style="background-color: #f4f4f4;">
+        <h2>Periodic Trends Visual Summary (The Dashboard)</h2>
+        <div class="trends-container">
+            <div class="trend-top">→ INCREASING IONIZATION ENERGY / DECREASING RADIUS →</div>
+            <div class="trend-left">↓ INCREASING ATOMIC RADIUS / METALLIC CHARACTER ↓</div>
+            
+            <div class="pt-grid">
+                <!-- Period 1 -->
+                <div class="pt-element nonmetal" style="grid-column: 1;">H</div>
+                <div class="pt-element nonmetal" style="grid-column: 18;">He</div>
+
+                <!-- Period 2 -->
+                <div class="pt-element metal" style="grid-column: 1;">Li</div>
+                <div class="pt-element metal" style="grid-column: 2;">Be</div>
+                <div class="pt-element metalloid" style="grid-column: 13;">B</div>
+                <div class="pt-element nonmetal">C</div>
+                <div class="pt-element nonmetal exception">N</div>
+                <div class="pt-element nonmetal exception">O</div>
+                <div class="pt-element nonmetal">F</div>
+                <div class="pt-element nonmetal">Ne</div>
+
+                <!-- Period 3 -->
+                <div class="pt-element metal" style="grid-column: 1;">Na</div>
+                <div class="pt-element metal exception">Mg</div>
+                <div class="pt-element metal exception" style="grid-column: 13;">Al</div>
+                <div class="pt-element metalloid">Si</div>
+                <div class="pt-element nonmetal">P</div>
+                <div class="pt-element nonmetal">S</div>
+                <div class="pt-element nonmetal">Cl</div>
+                <div class="pt-element nonmetal">Ar</div>
+
+                <!-- Period 4 -->
+                <div class="pt-element metal">K</div><div class="pt-element metal">Ca</div><div class="pt-element metal">Sc</div><div class="pt-element metal">Ti</div><div class="pt-element metal">V</div><div class="pt-element metal">Cr</div><div class="pt-element metal">Mn</div><div class="pt-element metal">Fe</div><div class="pt-element metal">Co</div><div class="pt-element metal">Ni</div><div class="pt-element metal">Cu</div><div class="pt-element metal">Zn</div><div class="pt-element metal">Ga</div><div class="pt-element metalloid">Ge</div><div class="pt-element metalloid">As</div><div class="pt-element nonmetal">Se</div><div class="pt-element nonmetal">Br</div><div class="pt-element nonmetal">Kr</div>
+
+                <!-- Period 5 -->
+                <div class="pt-element metal">Rb</div><div class="pt-element metal">Sr</div><div class="pt-element metal">Y</div><div class="pt-element metal">Zr</div><div class="pt-element metal">Nb</div><div class="pt-element metal">Mo</div><div class="pt-element metal">Tc</div><div class="pt-element metal">Ru</div><div class="pt-element metal">Rh</div><div class="pt-element metal">Pd</div><div class="pt-element metal">Ag</div><div class="pt-element metal">Cd</div><div class="pt-element metal">In</div><div class="pt-element metal">Sn</div><div class="pt-element metalloid">Sb</div><div class="pt-element metalloid">Te</div><div class="pt-element nonmetal">I</div><div class="pt-element nonmetal">Xe</div>
+
+                <!-- Period 6 (Main + Transition only) -->
+                <div class="pt-element metal">Cs</div><div class="pt-element metal">Ba</div><div class="pt-element metal">La</div><div class="pt-element metal">Hf</div><div class="pt-element metal">Ta</div><div class="pt-element metal">W</div><div class="pt-element metal">Re</div><div class="pt-element metal">Os</div><div class="pt-element metal">Ir</div><div class="pt-element metal">Pt</div><div class="pt-element metal">Au</div><div class="pt-element metal">Hg</div><div class="pt-element metal">Tl</div><div class="pt-element metal">Pb</div><div class="pt-element metal">Bi</div><div class="pt-element metal">Po</div><div class="pt-element nonmetal">At</div><div class="pt-element nonmetal">Rn</div>
+            </div>
+
+            <div class="trend-bottom">
+                <strong>The "Up and Right" Rule:</strong> Elements in the top-right (Helium) have the highest IE and smallest Radius. Elements in the bottom-left (Francium) have the largest Radius and lowest IE.
+            </div>
+        </div>
+    </div>
+
+    <div class="topic-card" style="border-left: 5px solid #f39c12;">
+        <h2>The Transition Metal Rule: 'First In, First Out'</h2>
+        <p><strong>Context:</strong> When d-block elements form cations, electrons are removed from the $ns$ orbital BEFORE the $(n-1)d$ orbital.</p>
+        <p><strong>Why:</strong> Once the d-orbital starts filling, the s-orbital actually becomes higher in energy, making those electrons easier to remove.</p>
+        <div class="equation-box">
+            <strong>Example:</strong>
+            <ul>
+                <li>Iron ($Fe$): $[Ar] 4s^2 3d^6$</li>
+                <li>Iron (II) ion ($Fe^{2+}$): $[Ar] 3d^6$ (The $4s$ electrons are gone first)</li>
+            </ul>
+        </div>
+        <div style="background: #fff3e0; border-left: 5px solid #ff9800; padding: 10px; margin-top: 15px;">
+            <strong>REMEMBER FOR EXAMS:</strong> When transition metals like Fe form ions, the 4s electrons are lost FIRST. Fe is $[Ar] 4s^2 3d^6$, but $Fe^{2+}$ is $[Ar] 3d^6$.
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.4 Successive Ionization Energies (The "Core" Cliff)</h2>
+        <p>Ionization energy increases for each subsequent electron removed ($IE_1 < IE_2 < IE_3$).</p>
+        <div style="border: 3px solid #e74c3c; border-radius: 8px; padding: 15px; margin: 20px 0;">
+            <h3 style="text-align: center; color: #e74c3c; margin-top: 0;">Magnesium ($Mg$) Data</h3>
+            <table>
+                <tr>
+                    <th>Ionization Step</th>
+                    <th>Energy ($kJ/mol$)</th>
+                    <th>Electron Type</th>
+                </tr>
+                <tr>
+                    <td>$IE_1$</td>
+                    <td>738</td>
+                    <td>Removing 1st valence</td>
+                </tr>
+                <tr>
+                    <td>$IE_2$</td>
+                    <td>1451</td>
+                    <td>Removing 2nd valence</td>
+                </tr>
+                <tr style="background-color: #ffcccc; font-weight: bold;">
+                    <td>$IE_3$</td>
+                    <td>7733</td>
+                    <td>THE CLIFF - Removing a core electron</td>
+                </tr>
+            </table>
+        </div>
+        <p><strong>Context:</strong> The massive jump in energy (the 'cliff') tells you exactly how many valence electrons an atom has. Using Equation 7.1 ($Z_{eff} = Z - \sigma$), we see that core electrons feel a much higher $Z_{eff}$ because there are fewer shielding electrons ($\sigma$) between them and the nucleus.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>7.7 Group Properties (Chemical Trends)</h2>
+        <ul>
+            <li><strong>Group 1 (Alkali Metals):</strong> Most reactive metals; reactivity increases going down.</li>
+            <li><strong>Group 17 (Halogens):</strong> Most reactive nonmetals; reactivity increases going up.</li>
+            <li><strong>Group 18 (Noble Gases):</strong> Extremely stable due to completely filled subshells ($ns^2 np^6$).</li>
+            <li><strong>Oxides Trend:</strong> Metallic oxides are Basic; Nonmetallic oxides are Acidic. (Amphoteric oxides like $Al_2O_3$ can be both).</li>
+        </ul>
+        <h3>Period 3 Oxide Acidity Trend</h3>
+        <table>
+            <tr>
+                <th>Oxide Type</th>
+                <th>Examples</th>
+                <th>Acidity/Basicity</th>
+            </tr>
+            <tr>
+                <td>Metal Oxides</td>
+                <td>$Na_2O$, $MgO$</td>
+                <td>Strongly Basic</td>
+            </tr>
+            <tr>
+                <td>Metalloid Oxide</td>
+                <td>$Al_2O_3$</td>
+                <td>Amphoteric (Both)</td>
+            </tr>
+            <tr>
+                <td>Nonmetal Oxides</td>
+                <td>$SiO_2$, $P_4O_{10}$, $SO_3$, $Cl_2O_7$</td>
+                <td>Increasingly Acidic</td>
+            </tr>
+        </table>
+        <p><strong>Context:</strong> Metal oxides + Water = Base | Nonmetal oxides + Water = Acid.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>Chapter 7 Knowledge Check</h2>
+        <ol>
+            <li>Which is larger: $Cl$ or $Cl^-$?</li>
+            <li>Why does Atomic Radius decrease as you move left-to-right across a period?</li>
+            <li>Rank in order of increasing size: $N^{3-}, F^-, Mg^{2+}$.</li>
+        </ol>
+        <details style="margin-top: 15px; cursor: pointer;">
+            <summary style="font-weight: bold; color: #0056b3;">Click for Answer Key</summary>
+            <ul style="margin-top: 10px; color: #444;">
+                <li><strong>1.</strong> $Cl^-$ (Anions are always larger).</li>
+                <li><strong>2.</strong> Increasing $Z_{eff}$ pulls electrons closer.</li>
+                <li><strong>3.</strong> $Mg^{2+} < F^- < N^{3-}$ (The Isoelectronic Rule: more protons = smaller size).</li>
+            </ul>
+        </details>
+    </div>
+    </div>
+</body>
+</html>

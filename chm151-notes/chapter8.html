@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 8: Chemical Bonding I: Basic Concepts</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .back-link { text-decoration: none; color: #0056b3; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
+        .topic-card { background: white; padding: 30px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #0056b3; margin-top: 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .equation-box { background: #eef7ff; padding: 15px; border-radius: 5px; border-left: 4px solid #0056b3; margin: 15px 0; }
+        ul { margin-top: 10px; }
+        li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #e0e0e0; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; text-align: center; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .note-btn { 
+            background: #ffffff; 
+            border: 2px solid #0056b3; 
+            color: #0056b3; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .note-btn:hover { 
+            background: #0056b3; 
+            color: white; 
+            transform: translateY(-2px);
+        }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        @media print { 
+            .print-btn, .back-btn, .back-link { display: none; } 
+            body { padding: 0; background: white; } 
+            .content-card { box-shadow: none; padding: 0; border: none; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+    <h1>Chapter 8: Chemical Bonding I: Basic Concepts</h1>
+
+    <div class="topic-card" style="background-color: #eef7ff; border-left: 5px solid #0056b3;">
+        <h2>Chapter Summary: Key Equations & Definitions</h2>
+        <ul>
+            <li><strong>Ionic Bond:</strong> Electrostatic attraction between cations (positive) and anions (negative). Usually Metal + Nonmetal.</li>
+            <li><strong>Covalent Bond:</strong> Electrons are shared between two atoms. Usually Nonmetal + Nonmetal.</li>
+        </ul>
+        <div class="equation-box">
+            <strong>Lattice Energy ($E$):</strong>
+            $$E = k \frac{Q_1 Q_2}{r}$$
+        </div>
+        <p><strong>Context:</strong> Lattice energy measures the strength of an ionic bond.
+        <br>Higher charges ($Q$) = Stronger attraction (More negative energy).
+        <br>Smaller distance ($r$) = Stronger attraction.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.1 Lewis Dot Symbols</h2>
+        <p>Lewis dot symbols represent the <strong>valence electrons</strong> of an atom as dots surrounding the element symbol.</p>
+        <p><strong>The Rule:</strong> Place dots on the four sides (top, bottom, left, right) one by one. Do not pair them up until each side has at least one dot.</p>
+        <div class="equation-box">
+            <strong>Example: Nitrogen (Group 15)</strong>
+            <br>Valence Electrons: 5
+            <br>Structure: 3 single dots and 1 pair.
+            <br>$\cdot \dot{N} :$
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.4 Electronegativity (EN)</h2>
+        <p><strong>Definition:</strong> The ability of an atom in a chemical bond to attract shared electrons to itself.</p>
+        <p><strong>Trend:</strong> Increases <strong>Up and to the Right</strong>.</p>
+        <p style="margin-top: 15px; font-style: italic; color: #444;"><strong>Deep Dive:</strong> Fluorine ($F$) is the "King of Electronegativity" (Value = 4.0). Francium ($Fr$) is the lowest.</p>
+        
+        <h3><strong>Table 8.2:</strong> Electronegativity Difference and Bond Type</h3>
+        <p>The difference in electronegativity ($\Delta EN$) determines the bond type:</p>
+        <table>
+            <tr><th>$\Delta EN$ Range</th><th>Bond Type</th><th>Description</th></tr>
+            <tr><td>$0 - 0.5$</td><td>Nonpolar Covalent</td><td>Electrons shared equally.</td></tr>
+            <tr><td>$0.5 - 2.0$</td><td>Polar Covalent</td><td>Electrons shared unequally (pulled toward higher EN).</td></tr>
+            <tr><td>$> 2.0$</td><td>Ionic</td><td>Electron transferred completely.</td></tr>
+        </table>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.5 Drawing Lewis Structures (The 5-Step Process)</h2>
+        <ol>
+            <li><strong>Count Total Valence Electrons:</strong> Sum the valence electrons from all atoms. (Add electrons for anions, subtract for cations).</li>
+            <li><strong>Draw Skeletal Structure:</strong> Place the <strong>least electronegative</strong> atom in the center (Hydrogen is never central).</li>
+            <li><strong>Connect Atoms:</strong> Use single bonds to connect outer atoms to the central atom. (Subtract 2 electrons from your total for each bond).</li>
+            <li><strong>Fill Octets of Outer Atoms:</strong> Place remaining electrons as lone pairs on the outer atoms first to satisfy the Octet Rule (8 electrons).</li>
+            <li><strong>Place Remaining Electrons on Center:</strong> If any electrons are left, place them on the central atom. (If the center still lacks an octet, convert lone pairs from outer atoms into double/triple bonds).</li>
+        </ol>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.7 Resonance Structures</h2>
+        <p><strong>Definition:</strong> Used when a single Lewis structure cannot accurately represent a molecule.</p>
+        <p><strong>Notation:</strong> Use a double-headed arrow ($\leftrightarrow$) between structures.</p>
+        <p><strong>Key Concept:</strong> The actual molecule is an 'average' of all resonance forms, not a back-and-forth flip.</p>
+        <div class="equation-box">
+            <strong>Example:</strong> Ozone ($O_3$) or Carbonate ($CO_3^{2-}$).
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.8 Formal Charge (Choosing the Best Structure)</h2>
+        <p><strong>Definition:</strong> The electrical charge an atom would have if all electrons in bonds were shared equally.</p>
+        <div class="equation-box">
+            <strong>Equation:</strong>
+            $$FC = [Total Valence e^-] - [Nonbonding e^-] - \frac{1}{2} [Bonding e^-]$$
+        </div>
+        <ul>
+            <li><strong>Rule 1:</strong> The sum of formal charges must equal the overall charge of the molecule/ion.</li>
+            <li><strong>Rule 2:</strong> Structures with formal charges closest to zero are preferred.</li>
+            <li><strong>Rule 3:</strong> Negative formal charges should reside on the most electronegative atoms.</li>
+        </ul>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.9 Exceptions to the Octet Rule</h2>
+        <ul>
+            <li><strong>Group 1: Incomplete Octets</strong> (e.g., $Be, B$). Boron is happy with only 6 electrons ($BF_3$).</li>
+            <li><strong>Group 2: Odd Number of Electrons</strong> (e.g., $NO$). These are called 'Free Radicals'.</li>
+            <li><strong>Group 3: Expanded Octets.</strong> Elements in Period 3 and below (like $P, S, Xe$) can have more than 8 electrons because they have empty d-orbitals.</li>
+        </ul>
+        <div style="background: #fff3e0; border-left: 5px solid #ff9800; padding: 10px; margin-top: 15px;">
+            <strong>Pro-Tip:</strong> Always fill outer octets first; the center atom takes the overflow.
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.10 Bond Enthalpy</h2>
+        <p><strong>Definition:</strong> The enthalpy change required to break a particular bond in 1 mole of gaseous molecules.</p>
+        <p><strong>Key Rule:</strong> Bond breaking is <strong>ENDOTHERMIC</strong> (+) (requires energy), and bond forming is <strong>EXOTHERMIC</strong> (-) (releases energy).</p>
+        <div class="equation-box">
+            <strong>Equation for Enthalpy of Reaction:</strong>
+            $$\Delta H^\circ = \sum BE(\text{reactants}) - \sum BE(\text{products})$$
+        </div>
+        <p><strong>Context:</strong> To use this, you <strong>MUST</strong> draw the Lewis structures first to count how many of each bond type (single, double, triple) are being broken or formed.</p>
+    </div>
+
+    <div class="topic-card" style="background-color: #e3f2fd;">
+        <h2><strong>Table 8.5:</strong> Average Bond Lengths of Some Common Bonds</h2>
+        <table>
+            <tr>
+                <th>Bond Type</th>
+                <th>Length</th>
+                <th>Strength / Enthalpy</th>
+            </tr>
+            <tr>
+                <td>Single ($C-C$)</td>
+                <td>Longest</td>
+                <td>Weakest / Lowest Bond Enthalpy</td>
+            </tr>
+            <tr>
+                <td>Double ($C=C$)</td>
+                <td>Intermediate</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Triple ($C\equiv C$)</td>
+                <td>Shortest</td>
+                <td>Strongest / Highest Bond Enthalpy</td>
+            </tr>
+        </table>
+        <div class="equation-box">
+            <strong>Concept Box:</strong> Think of it like rubber bands. Adding more bands (bonds) pulls the atoms closer together (shorter length) and makes them much harder to snap apart (higher strength).
+        </div>
+    </div>
+
+    <div class="topic-card">
+        <h2><strong>Table 8.1:</strong> Comparison of Some General Properties of an Ionic Compound and a Covalent Compound</h2>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Ionic Compounds</th>
+                <th>Covalent Compounds</th>
+            </tr>
+            <tr>
+                <td><strong>State at Room Temp</strong></td>
+                <td>Crystalline Solids</td>
+                <td>Gases, Liquids, or low-melting Solids</td>
+            </tr>
+            <tr>
+                <td><strong>Melting/Boiling Points</strong></td>
+                <td>Very High</td>
+                <td>Relatively Low</td>
+            </tr>
+            <tr>
+                <td><strong>Electrical Conductivity</strong></td>
+                <td>Excellent (in molten/aqueous state)</td>
+                <td>Poor</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic-card">
+        <h2><strong>Table 8.6:</strong> Average Bond Enthalpies of Some Common Bonds</h2>
+        <table>
+            <tr>
+                <th>Bond</th>
+                <th>Enthalpy ($kJ/mol$)</th>
+            </tr>
+            <tr><td>$C-H$</td><td>414</td></tr>
+            <tr><td>$O=O$</td><td>498.7</td></tr>
+            <tr><td>$C=O$</td><td>799</td></tr>
+            <tr style="background-color: #fff3e0; font-weight: bold;">
+                <td>$N\equiv N$</td><td>941.4 (Exceptionally Strong)</td>
+            </tr>
+        </table>
+        <p><strong>Note:</strong> Triple bonds (like in $N_2$) are very hard to break, making $N_2$ extremely stable in the atmosphere.</p>
+    </div>
+
+    <div class="topic-card">
+        <h2>8.2 The Born-Haber Cycle: 5 Steps to Ionic Stability</h2>
+        <p><strong>Context:</strong> We use this cycle to calculate Lattice Energy ($\Delta H_{lattice}$) because it cannot be measured directly. It follows Hess's Law.</p>
+        <h3>The 5 Steps (using $LiF$ as an example):</h3>
+        <ol>
+            <li><strong>Sublimation:</strong> Solid metal becomes gas ($\Delta H_{sub}$).</li>
+            <li><strong>Dissociation:</strong> Diatomic nonmetal gas becomes atoms ($\Delta H_{diss}$).</li>
+            <li><strong>Ionization:</strong> Metal gas becomes a cation ($\Delta H_{IE}$).</li>
+            <li><strong>Electron Affinity:</strong> Nonmetal gas becomes an anion ($\Delta H_{EA}$).</li>
+            <li><strong>Lattice Formation:</strong> Gaseous ions form the solid lattice ($\Delta H_{lattice}$). <strong>(The Goal)</strong></li>
+        </ol>
+    </div>
+
+    <div class="topic-card">
+        <h2><strong>Table 8.1:</strong> Bond Type Summary</h2>
+        <table>
+            <tr>
+                <th>Combination</th>
+                <th>Bond Type</th>
+            </tr>
+            <tr>
+                <td>Metal + Nonmetal</td>
+                <td>Ionic</td>
+            </tr>
+            <tr>
+                <td>Nonmetal + Nonmetal</td>
+                <td>Covalent</td>
+            </tr>
+            <tr>
+                <td>Metal + Metal</td>
+                <td>Metallic</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic-card" style="background-color: #f4f4f4;">
+        <h2>Chapter 8 Knowledge Check</h2>
+        <ol>
+            <li>Which has a higher lattice energy: $NaCl$ or $MgO$?</li>
+            <li>Calculate the formal charge of the central Nitrogen in $N_2O$ ($N=N=O$).</li>
+            <li>Which elements are most likely to form an expanded octet?</li>
+        </ol>
+        <details style="margin-top: 15px; cursor: pointer;">
+            <summary style="font-weight: bold; color: #0056b3;">Click for Answer Key</summary>
+            <ul style="margin-top: 10px; color: #444;">
+                <li><strong>1.</strong> $MgO$ (Higher charges $+2/-2$ vs $+1/-1$).</li>
+                <li><strong>2.</strong> $+1$.</li>
+                <li><strong>3.</strong> Elements in Period 3 or below (due to empty d-orbitals).</li>
+            </ul>
+        </details>
+    </div>
+    </div>
+</body>
+</html>

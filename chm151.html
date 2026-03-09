@@ -49,6 +49,15 @@
             transform: translateY(-2px);
         }
 
+        /* Disabled state for upcoming notes */
+        .disabled-btn {
+            opacity: 0.6;
+            cursor: not-allowed;
+            border-color: #ccc;
+            color: #999;
+            pointer-events: none;
+        }
+
         /* Mobile Responsive Stacking */
         @media (max-width: 850px) {
             .date-grid, .test-grid { grid-template-columns: 1fr; }
@@ -85,24 +94,11 @@
             </div>
 
             <div class="notes-section" style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee;">
-                <h2 style="color: #0056b3; font-size: 1.4em; margin-bottom: 15px;">Practice Tests</h2>
-                <div class="test-grid">
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <h3 style="text-align: center; color: #0056b3; margin-bottom: 10px;">Practice</h3>
-                        <a href="chem151-test/test1-practice.html" class="note-btn">Practice Test 1(Chapter 4/5) </a>
-                        <a href="chem151-test/test2-practice.html" class="note-btn">Practice Test 2(Chapter 4/5) </a>
-                        <a href="chem151-test/test3-practice.html" class="note-btn">Practice Test 3(Chapter 4/5) </a>
-                        <a href="chem151-test/test4-practice.html" class="note-btn">Practice Test 4(Chapter 4/5) </a>
-                        <a href="chem151-test/test5-practice.html" class="note-btn">Practice Test 5(Chapter 4/5) </a>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <h3 style="text-align: center; color: #27ae60; margin-bottom: 10px;">Answer Keys</h3>
-                        <a href="chem151-test/test1-key.html" class="note-btn" style="border-color: #27ae60; color: #27ae60;">Test 1 Key</a>
-                        <a href="chem151-test/test2-key.html" class="note-btn" style="border-color: #27ae60; color: #27ae60;">Test 2 Key</a>
-                        <a href="chem151-test/test3-key.html" class="note-btn" style="border-color: #27ae60; color: #27ae60;">Test 3 Key</a>
-                        <a href="chem151-test/test4-key.html" class="note-btn" style="border-color: #27ae60; color: #27ae60;">Test 4 Key</a>
-                        <a href="chem151-test/test5-key.html" class="note-btn" style="border-color: #27ae60; color: #27ae60;">Test 5 Key</a>
-                    </div>
+                <h2 style="color: #0056b3; font-size: 1.4em; margin-bottom: 15px;">Course Modules</h2>
+                <div class="date-grid">
+                    <a href="chm151-notes/chapter6.html" class="note-btn">Chapter 6: Quantum Theory & Electronic Structure</a>
+                    <a href="chm151-notes/chapter7.html" class="note-btn">Chapter 7: Electron Configuration & Periodic Table</a>
+                    <a href="chm151-notes/chapter8.html" class="note-btn">Chapter 8: Chemical Bonding I: Basic Concepts</a>
                 </div>
             </div>
         </div>
