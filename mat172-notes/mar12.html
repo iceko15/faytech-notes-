@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Laws of Sines/Cosines & Intro to Polar Coordinates</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Laws of Sines/Cosines & Intro to Polar Coordinates</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The Law of Sines and Law of Cosines allow us to solve for missing components in non-right (oblique) triangles. While the Law of Sines is often preferred for its simplicity, the Law of Cosines is the "safest path" when dealing with potentially obtuse angles or Side-Side-Side (SSS) and Side-Angle-Side (SAS) scenarios. Additionally, we transition into the Polar Coordinate System, which offers an alternate way to map points in space using distance ($r$) and direction ($\theta$).</p>
+
+        <div class="prof-tip">
+            <strong>Professor's Warning:</strong> Students often get "trained inadvertently" by software like MyMathLab. If a second triangle isn't prompted, they don't think it exists. Always approach Side-Side-Angle (SSA) problems—the "Donkey Problems"—as if a second triangle might be there.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">SSA (Side-Side-Angle):</span> The ambiguous case where there might be zero, one, or two possible triangles. It is often called the <strong>"Donkey Problem"</strong> (because SSA spells a naughty word) and is the only scenario that can produce two triangles.</li>
+            <li><span class="key-step">Obtuse Angle Strategy:</span> If an obtuse angle exists, it must be opposite the longest side. Using Law of Sines to find an obtuse angle is risky because $\sin^{-1}$ only outputs reference angles (acute).</li>
+            <li><span class="key-step">Heron's (Hero's) Formula:</span> A method to find the area of a triangle given all three sides (SSS).</li>
+            <li><span class="key-step">Polar Coordinates $(r, \theta)$:</span> A coordinate system where $r$ is the directed distance from the origin (pole) and $\theta$ is the angle from the polar axis. It is like an <strong>alternate naming system</strong> for the same spot in space (like 12 inches vs. 1 foot).</li>
+            <li><span class="key-step">Magnitude/Modulus/Absolute Value:</span> Alternate names for the radius ($r$) or hypotenuse in polar, vector, and complex number contexts.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>1. Solving Oblique Triangles</h3>
+        <ul>
+            <li><strong>Check Information Given:</strong> Identify if you have SSS, SAS, ASA, or SSA.</li>
+            <li><strong>Identify Potential Obtuseness:</strong> Look at the longest side. The angle opposite it is the only one that could be obtuse.</li>
+            <li><strong>The Safest Path:</strong> Use the Law of Cosines to find the potentially obtuse angle first. Law of Cosines will correctly identify an obtuse angle (negative cosine value), whereas Law of Sines requires an extra step ($180^\circ - \text{Reference Angle}$).</li>
+            <li><strong>Finish with Subtraction:</strong> Once two angles are found, subtract from $180^\circ$ to find the third.</li>
+        </ul>
+
+        <h3>2. Area Formulas</h3>
+        <ul>
+            <li><strong>Old School:</strong> $\text{Area} = \frac{1}{2}bh$ (Requires perpendicular height).</li>
+            <li><strong>SAS (Sine Version):</strong> $\text{Area} = \frac{1}{2}bc \sin A$.</li>
+            <li><strong>SSS (Heron's):</strong> 
+                <ol>
+                    <li>Find semi-perimeter $s = \frac{a+b+c}{2}$.</li>
+                    <li>$\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$.</li>
+                </ol>
+            </li>
+        </ul>
+
+        <div class="example-box">
+            <strong>Troubleshooting & Accuracy:</strong>
+            <ul>
+                <li><strong>Parentheses Rule:</strong> Always put parentheses around numbers you are "plugging and chugging" into formulas to handle negative powers correctly.</li>
+                <li><strong>Overflow Error:</strong> If your calculator says "Overflow Error," it means your intermediate numbers were too big for its memory. Try keying in the whole radical at once instead of solving in pieces.</li>
+                <li><strong>Mode Check:</strong> Always check if you are in <strong>Degree vs. Radian</strong> mode before hitting Enter.</li>
+            </ul>
+        </div>
+
+        <h3>3. Plotting Polar Points $(r, \theta)$</h3>
+        <ul>
+            <li><strong>Angle First:</strong> Locate the angle $\theta$ on the polar grid.</li>
+            <li><strong>Radius Second:</strong> Move $r$ units out from the center (pole) toward that angle (<strong>towards</strong> is positive $r$, <strong>away</strong> is negative $r$).</li>
+            <li><strong>Negative Radius:</strong> If $r$ is negative, move in the exact opposite direction ($180^\circ$ away) from the angle.</li>
+            <li><strong>Multiple Names:</strong> Note that a single point in space can have more than one polar name (e.g., $(-1, \pi)$ is the same spot as $(1, 0)$).</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>The Four Interpretations:</strong> The notation $(-4, 5)$ can mean four different things without context:
+            <ol>
+                <li>Rectangular point $(x, y)$.</li>
+                <li>Interval notation on a number line.</li>
+                <li>Polar point in Radians (since there is no degree symbol).</li>
+                <li>Polar point in Degrees (if mistakenly identified).</li>
+            </ol>
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <p><strong>Law of Cosines:</strong></p>
+        <p>$$a^2 = b^2 + c^2 - 2bc \cos A$$</p>
+        <p>$$b^2 = a^2 + c^2 - 2ac \cos B$$</p>
+        <p>$$c^2 = a^2 + b^2 - 2ab \cos C$$</p>
+        
+        <p><strong>Rectangular to Polar Conversions:</strong></p>
+        <ul>
+            <li>$r^2 = x^2 + y^2$ (Pythagorean Theorem)</li>
+            <li>$\tan \theta = \frac{y}{x}$</li>
+            <li>$x = r \cos \theta$</li>
+            <li>$y = r \sin \theta$</li>
+        </ul>
+
+        <h2>EXAMPLE 1: The "Safe Path" (SAS Case)</h2>
+        <div class="example-box">
+            <p><strong>Given:</strong> $b=4$, $c=8$, $\angle A = 46^\circ$. Find missing side $a$ and angles $B, C$.</p>
+            <p><strong>Visual Gut Check:</strong> If your math gives you side $a=10$ but the picture shows it must be shorter than side $c$, you likely have an error.</p>
+            <p><span class="key-step">Step 1: Find side $a$ via Law of Cosines.</span></p>
+            <p>$$a = \sqrt{4^2 + 8^2 - 2(4)(8) \cos 46^\circ} \approx 5.96$$</p>
+            <p><span class="key-step">Step 2: Find Angle $C$ (potentially obtuse as it's opposite the longest side 8).</span></p>
+            <p>$$8^2 = 5.96^2 + 4^2 - 2(5.96)(4) \cos C$$</p>
+            <p>$$64 - 5.96^2 - 16 = -47.68 \cos C \implies \cos C \approx \frac{12.48}{-47.68}$$</p>
+            <p>$$C = \cos^{-1}(\dots) \approx 105.14^\circ$$</p>
+            <p><span class="key-step">Step 3: Subtract from 180.</span></p>
+            <p>$$B = 180^\circ - 46^\circ - 105.14^\circ = 28.86^\circ$$</p>
+        </div>
+
+        <h2>EXAMPLE 2: Heron's Formula (SSS Case)</h2>
+        <div class="example-box">
+            <p><strong>Given:</strong> $a=11$, $b=9$, $c=7$ yards. Find Area.</p>
+            <p><span class="key-step">Step 1: Find $s$.</span></p>
+            <p>$$s = \frac{11 + 9 + 7}{2} = 13.5$$</p>
+            <p><span class="key-step">Step 2: Plug into Area formula.</span></p>
+            <p>$$\text{Area} = \sqrt{13.5(13.5 - 11)(13.5 - 9)(13.5 - 7)}$$</p>
+            <p>$$\text{Area} = \sqrt{13.5(2.5)(4.5)(6.5)} \approx 31.42 \text{ sq yards.}$$</p>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Scientific Precision:</strong> Do not round intermediate values like $s$. Use the "ANS" (Last Answer) feature in your calculator. In science and engineering, rounding too early leads to significant errors in the final result.
+        </div>
+
+        <h2>EXAMPLE 3: Fire Lookout Stations (Word Problem)</h2>
+        <div class="example-box">
+            <p><strong>Scenario:</strong> Station B is 13 miles directly East of Station A. Station A sees fire at N 35 E. Station B sees fire at N 49 W. Find distance from B to fire ($a$).</p>
+            <p><span class="key-step">Setup:</span> The internal angles are $90 - 35 = 55^\circ$ (at A) and $90 - 49 = 41^\circ$ (at B).</p>
+            <p><span class="key-step">Find Angle C (Fire):</span> $180 - 55 - 41 = 84^\circ$.</p>
+            <p><span class="key-step">Law of Sines:</span> $$\frac{a}{\sin 55^\circ} = \frac{13}{\sin 84^\circ} \implies a = \frac{13 \sin 55^\circ}{\sin 84^\circ} \approx 10.7 \text{ miles.}$$</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ul>
+            <li>Plot the polar point $(-1, \pi)$. (Start at $\pi$ on the left, move 1 unit away to the right).</li>
+            <li>Find the area of a triangle with sides 12m, 8m and an included angle of $135^\circ$. (Use $\frac{1}{2}(12)(8)\sin 135^\circ$).</li>
+            <li>Determine the distance between two planes after 2 hours if one travels North at 400mph and the other North 75 East at 350mph. (Hint: Sides are 800 and 700 miles).</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Always respect the <strong>potentially obtuse angle</strong>—it is the problem child of oblique triangles. Use the Law of Cosines to handle it safely. When calculating area, Heron's formula is your best friend for SSS cases. As we move into Chapter 6.3, remember that polar coordinates are just an alternate language for the same spots in space; $(r, \theta)$ tells you how far to walk and in what direction.</p>
+    </div>
+</body></html>

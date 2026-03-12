@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Light, Waves, and the Bohr Model</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chapter 6: Electronic Structure of Atoms</h1>
+        
+        <div class="prof-tip">
+            <strong>Logistics & Assignments:</strong> There is a Quantitative Analysis assignment on Canvas due by the end of the day tomorrow. It involves creating a graph and analyzing data to evaluate reasoning skills; it is not graded but is helpful for program evaluation. Also, Unit 3 consists of Chapters 6, 7, and 8. There is very little math in this unit—just a few calculations at the start of Chapter 6.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>The behavior of light (electromagnetic radiation) provides the key to understanding the arrangement and energy levels of electrons within an atom. Electrons exist in <strong>quantized</strong> energy levels, meaning they can only occupy specific "steps" rather than a continuous range of energies.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Electromagnetic Radiation (Light):</strong> A form of energy that moves as waves at a constant speed (the speed of light).</li>
+            <li><strong>Wavelength ($\lambda$ - Lambda):</strong> The distance between consecutive peaks (crests) of a wave. The further the peaks are from each other, the larger the wavelength; the closer together, the smaller the wavelength.</li>
+            <li><strong>Frequency ($\nu$ - Nu):</strong> The number of wave peaks that pass a specific point per unit of time (typically per second, $s^{-1}$, or Hertz, $Hz$). How often a wave passes a certain point per unit of time.</li>
+            <li><strong>Amplitude:</strong> The height of the wave from the center line to the peak. It determines intensity/brightness but does not affect the energy of a single photon in the way frequency does.</li>
+            <li><strong>AM vs. FM Radio:</strong> AM radio varies the <strong>height</strong> (amplitude) of the wave to send information, while FM radio varies the <strong>frequency</strong>.</li>
+            <li><strong>Quantum (Quanta):</strong> The smallest discrete packet of energy.</li>
+            <li><strong>Photon:</strong> A particle-like packet of light energy.</li>
+            <li><strong>Line Spectra:</strong> The specific wavelengths of light emitted by an element, acting as a "fingerprint" for identification.</li>
+        </ul>
+
+        <h2>RULES & IDENTITIES</h2>
+        <h3>The Speed of Light Equation</h3>
+        <p>$$c = \lambda \nu$$</p>
+        <ul>
+            <li>$c$: Speed of light ($\approx 2.998 \times 10^8 \text{ m/s}$). <strong>Note:</strong> Alex uses 9 digits for this constant; for class tests, $3.0 \times 10^8 \text{ m/s}$ is acceptable.</li>
+            <li>Wavelength ($\lambda$) and Frequency ($\nu$) are <strong>inversely proportional</strong>. As wavelength increases, frequency decreases.</li>
+        </ul>
+
+        <div class="example-box">
+            <strong>The Running Race Analogy:</strong>
+            <p>If two groups of people run a race at the <strong>same speed</strong> (Speed of Light), but Group A runs 100 yards apart (Long Wavelength) and Group B runs 50 yards apart (Short Wavelength), Group B will cross the finish line more often (Higher Frequency).</p>
+        </div>
+
+        <h3>Energy of a Photon</h3>
+        <p>$$E = h \nu$$</p>
+        <ul>
+            <li>$h$: Planck’s Constant ($6.626 \times 10^{-34} \text{ J} \cdot \text{s}$).</li>
+            <li>Energy is directly proportional to frequency. High frequency (like Gamma rays) means high energy.</li>
+        </ul>
+
+        <h3>Combined Energy-Wavelength Equation</h3>
+        <p>$$E = \frac{hc}{\lambda}$$</p>
+
+        <h3>The Rydberg Equation (for Hydrogen)</h3>
+        <p>$$\Delta E = -2.18 \times 10^{-18} \text{ J} \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)$$</p>
+        <ul>
+            <li>$n_f$: Final energy level.</li>
+            <li>$n_i$: Initial energy level.</li>
+            <li>Negative $\Delta E$ indicates energy is <strong>released</strong> (electron moving to a lower level).</li>
+        </ul>
+
+        <h2>STEPS/PROCESS: WAVE CALCULATIONS</h2>
+        <div class="example-box">
+            <span class="key-step">Step 1: Unit Conversion.</span> Most wavelengths are given in nanometers (nm). You MUST convert to meters (m) to match the units of the speed of light ($c$). 
+            <p>$1 \text{ nm} = 10^{-9} \text{ m}$</p>
+            <span class="key-step">Step 2: Isolate the Variable.</span> Rearrange $c = \lambda \nu$ to solve for the unknown.
+            <span class="key-step">Step 3: Calculate.</span> Use parentheses in your calculator for scientific notation to avoid order-of-operation errors.
+        </div>
+
+        <h2>EXAMPLE 1: Frequency of a Green Laser</h2>
+        <p><strong>Problem:</strong> A green laser emits light at a wavelength of $532 \text{ nm}$. What is the frequency?</p>
+        <div class="example-box">
+            <p>1. Convert $\lambda$: $532 \text{ nm} = 532 \times 10^{-9} \text{ m}$</p>
+            <p>2. Formula: $\nu = \frac{c}{\lambda}$</p>
+            <p>3. Solve: $$\nu = \frac{2.998 \times 10^8 \text{ m/s}}{532 \times 10^{-9} \text{ m}} = 5.64 \times 10^{14} \text{ s}^{-1} \text{ (or Hz)}$$</p>
+        </div>
+
+        <h2>EXAMPLE 2: Energy of the Photon</h2>
+        <p><strong>Problem:</strong> Using the frequency from Example 1, find the energy of a single photon.</p>
+        <div class="example-box">
+            <p>Formula: $E = h \nu$</p>
+            <p>$$E = (6.626 \times 10^{-34} \text{ J} \cdot \text{s}) \times (5.64 \times 10^{14} \text{ s}^{-1}) = 3.73 \times 10^{-19} \text{ J}$$</p>
+        </div>
+
+        <h2>EXAMPLE 3: Hydrogen Electron Transition</h2>
+        <p><strong>Problem:</strong> Calculate the wavelength emitted when an electron in Hydrogen moves from $n=9$ to $n=4$.</p>
+        <div class="example-box">
+            <p><span class="key-step">1. Find Energy Change ($\Delta E$):</span></p>
+            <p>$$\Delta E = -2.18 \times 10^{-18} \text{ J} \left( \frac{1}{4^2} - \frac{1}{9^2} \right)$$</p>
+            <p>$$\Delta E = -1.09 \times 10^{-19} \text{ J}$$</p>
+            <p><span class="key-step">2. Convert Energy to Wavelength:</span></p>
+            <p>$$\lambda = \frac{hc}{E} = \frac{(6.626 \times 10^{-34})(2.998 \times 10^8)}{1.09 \times 10^{-19}}$$</p>
+            <p>$$\lambda = 1.82 \times 10^{-6} \text{ m}$$</p>
+        </div>
+
+        <h2>THE ELECTROMAGNETIC SPECTRUM</h2>
+        <table>
+            <tr>
+                <th>Region</th>
+                <th>Energy/Freq</th>
+                <th>Wavelength</th>
+                <th>Note</th>
+            </tr>
+            <tr>
+                <td>Radio Waves</td>
+                <td>Lowest</td>
+                <td>Longest (City blocks)</td>
+                <td>Communication (AM/FM)</td>
+            </tr>
+            <tr>
+                <td>Microwaves</td>
+                <td>Low</td>
+                <td>Millimeters</td>
+                <td>Cooking (vibrates water). Note: The metal mesh on the door is a <strong>Faraday Cage</strong>; the holes are smaller than the microwaves, blocking them from escaping.</td>
+            </tr>
+            <tr>
+                <td>Infrared (IR)</td>
+                <td>Moderate</td>
+                <td>Smaller</td>
+                <td>Heat lamps/Night vision</td>
+            </tr>
+            <tr>
+                <td>Visible</td>
+                <td>Mid-range</td>
+                <td>400nm - 700nm</td>
+                <td>The only part humans see</td>
+            </tr>
+            <tr>
+                <td>Ultraviolet (UV)</td>
+                <td>High</td>
+                <td>Small</td>
+                <td>Ionizing; breaks DNA bonds</td>
+            </tr>
+            <tr>
+                <td>X-Rays</td>
+                <td>Very High</td>
+                <td>Very Small</td>
+                <td>Passes through soft tissue (less dense) but is stopped by dense bone, creating a "bone shadow."</td>
+            </tr>
+            <tr>
+                <td>Gamma Rays</td>
+                <td>Highest</td>
+                <td>Smallest</td>
+                <td>Nuclear radiation; small enough to pass directly through the body at the speed of light.</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>The Bohr Model Critique:</strong> Bohr’s model treats electrons as particles moving in circular orbits (rings). While this perfectly predicts the line spectrum for <strong>Hydrogen</strong> (it is <strong>100% correct for Hydrogen</strong>), it fails for every other element—specifically, it fails the moment a <strong>second electron</strong> is added. Electrons actually behave more like <strong>waves</strong> than particles. However, Bohr was correct about two things: 1) Electrons exist in discrete energy levels ($n$), and 2) Energy is changed during transitions between these levels.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Classical physics could not explain why hot objects glowed specific colors (Blackbody Radiation) or why light ejected electrons from metal (Photoelectric Effect). Max Planck and Albert Einstein showed that light behaves as both a wave and a particle (photon) with quantized energy. This quantization explains why atoms emit specific line spectra; electrons only transition between specific energy levels, releasing a photon of a specific frequency/color that corresponds to that energy gap.</p>
+    </div>
+</body></html>
