@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Law of Sines (Ambiguous Case) & Law of Cosines</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Law of Sines: The Ambiguous Case (SSA) & Law of Cosines</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>In oblique triangle trigonometry, the <strong>Side-Side-Angle (SSA)</strong> scenario is the "problem child." Because the sine function is restricted in its inverse range, a single set of SSA data can result in zero, one, or two distinct triangles. Furthermore, when dealing with <strong>obtuse angles</strong>, the Law of Sines can be unreliable, making the <strong>Law of Cosines</strong> the safer strategic choice to avoid "heartburn" and extra calculation steps.</p>
+
+        <div class="prof-tip">
+            Professor Murray's Warning: SSA is the absolute worst of the batch. You must actively look for it. If you aren't careful, you will miss the second triangle entirely because your calculator will only ever give you the acute version of the angle.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>SSA (Side-Side-Angle):</strong> A situation where two sides and a non-included angle are known. Also called the "Ambiguous Case."</li>
+            <li><strong>Height ($h$):</strong> The vertical distance from a vertex to the opposite side, calculated as $h = b \sin(A)$.</li>
+            <li><strong>Obtuse Angle:</strong> An angle greater than $90^\circ$. Law of Sines inverse calculations ($ \sin^{-1} $) will not directly provide these; they provide the reference angle instead.</li>
+            <li><strong>Isosceles Triangle:</strong> A triangle with two equal sides and two equal angles; used as a geometric proof to find the second triangle in SSA.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS: IDENTIFYING SSA SOLUTIONS</h2>
+        <p>To determine how many triangles exist for a given $A$, $a$, and $b$ (where $A$ is the given angle, $a$ is the opposite side, and $b$ is the adjacent side):</p>
+        <ol>
+            <li><span class="key-step">Sketch the Diagram:</span> Draw angle $A$ and side $b$. Visualize side $a$ as a "swinging arm."</li>
+            <li><span class="key-step">Calculate the Height ($h$):</span> Use $h = b \sin(A)$.</li>
+            <li><span class="key-step">Compare Side $a$ to $h$ and $b$:</span>
+                <ul>
+                    <li>If $a < h$: <strong>0 Triangles</strong> (The arm is too short to reach the base). The calculator will give an "ERROR" message.</li>
+                    <li>If $a = h$: <strong>1 Right Triangle</strong>.</li>
+                    <li>If $a \geq b$: <strong>1 Triangle</strong>.</li>
+                    <li>If $h < a < b$: <strong>2 Triangles</strong> (The arm can swing inward or outward).</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>The Two-Triangle Logic</h3>
+        <p>If two triangles exist, the two possible angles for $B$ ($B_1$ and $B_2$) are supplementary:</p>
+        <p>$$B_2 = 180^\circ - B_1$$</p>
+        <p>This is because the swinging arm creates an isosceles triangle within the larger construction. If the acute version is $77^\circ$, the interior angle of the "sliver" triangle is $180^\circ - 77^\circ$.</p>
+
+        <h3>Law of Cosines Strategy</h3>
+        <p>Use Law of Cosines to find an obtuse angle whenever possible. It is "safer" than Law of Sines because $\cos^{-1}$ can return values in the second quadrant ($90^\circ$ to $180^\circ$), whereas $\sin^{-1}$ is restricted to the first quadrant for positive values.</p>
+
+        <h2>EXAMPLE 1: The Two-Triangle Scenario (Solving Fully)</h2>
+        <div class="example-box">
+            <strong>Given:</strong> $A = 60^\circ$, $a = 16$, $b = 18$
+            <br><br>
+            <strong>1. Check for number of triangles:</strong>
+            <br>$h = 18 \sin(60^\circ) \approx 15.58$
+            <br>Since $15.58 < 16 < 18$ ($h < a < b$), there are <strong>two triangles</strong>.
+            <br><br>
+            <strong>2. Solve Triangle 1 (The Blue/Acute Triangle):</strong>
+            <br>$\frac{16}{\sin(60^\circ)} = \frac{18}{\sin(B_1)}$
+            <br>$\sin(B_1) = \frac{18 \sin(60^\circ)}{16}$
+            <br>$B_1 = \sin^{-1}(\dots) \approx 76.9767^\circ$
+            <br>$C_1 = 180^\circ - 60^\circ - 76.9767^\circ = 43.0233^\circ$
+            <br>Side $c_1$: $\frac{16}{\sin(60^\circ)} = \frac{c_1}{\sin(43.0233^\circ)} \rightarrow c_1 \approx 12.59$
+            <br><br>
+            <strong>3. Solve Triangle 2 (The Purple/Obtuse Triangle):</strong>
+            <br>$B_2 = 180^\circ - 76.9767^\circ = 103.0233^\circ$
+            <br>$C_2 = 180^\circ - 60^\circ - 103.0233^\circ = 16.9767^\circ$
+            <br>Side $c_2$: $\frac{16}{\sin(60^\circ)} = \frac{c_2}{\sin(16.9767^\circ)} \rightarrow c_2 \approx 5.39$
+        </div>
+
+        <div class="prof-tip">
+            Calculator Habit: Do NOT round and recycle. Use the "ANS" button or scroll up to grab the full decimal. Rounding early chops off your accuracy and will lead to wrong answers in MyMathLab.
+        </div>
+
+        <h2>EXAMPLE 2: Avoiding the Obtuse Heartburn</h2>
+        <div class="example-box">
+            <strong>The Problem:</strong> You have sides 4, 8, and approximately 6, with an angle of $46^\circ$ opposite the side of length 6. You need to find angle $C$ (opposite the longest side 8).
+            <br><br>
+            <strong>The Safe Path:</strong> Use Law of Cosines to find angle $C$ directly.
+            <br><strong>The Risky Path:</strong> If you use Law of Sines, the calculator might say $C = 74.85^\circ$. However, if the triangle is obtuse, the actual angle is $180^\circ - 74.85^\circ = 105.15^\circ$. 
+            <br><br><strong>Conclusion:</strong> Always find the potentially obtuse angle (the one opposite the longest side) using Law of Cosines to avoid the extra subtraction step.
+        </div>
+
+        <h2>SUMMARY & NEXT STEPS</h2>
+        <ul>
+            <li><strong>SSA Warning:</strong> Always assume there might be two triangles until you prove otherwise.</li>
+            <li><strong>Law of Cosines:</strong> Necessary when you have Side-Angle-Side (SAS) or Side-Side-Side (SSS) because Law of Sines won't have enough info to start.</li>
+            <li><strong>Midterm Break:</strong> No class Tuesday or Wednesday of next week.</li>
+            <li><strong>Homework:</strong> Start 6.1 and 6.2. If you get stuck on the word problems (Area or Fire Station), we will cover those next Thursday.</li>
+        </ul>
+        
+        <div class="prof-tip">
+            Exam Hint: On the final exam, you usually won't have to solve the whole second triangle. You just need to be able to identify if there are 0, 1, or 2 solutions based on the given info.
+        </div>
+    </div>
+</body></html>

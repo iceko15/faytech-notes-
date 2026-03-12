@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Laws of Sines, Cosines, and Ambiguous Triangles</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Solving Oblique Triangles: Law of Sines & Cosines</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Solving a triangle means calculating all missing sides and angles based on a set of given parts. Unlike right-angle trigonometry, oblique triangles require the Law of Sines or the Law of Cosines. The choice of formula depends entirely on the combination of parts provided (SAS, AAS, SSS, etc.). Special attention must be paid to the <strong>Ambiguous Case (SSA)</strong>, where a single set of measurements may result in zero, one, or two distinct triangles.</p>
+
+        <div class="prof-tip">
+            Always sketch a "rough doodle" of the triangle. Visualizing the proportions—like which side is longest—helps predict if an angle should be obtuse. If you find yourself solving for an obtuse angle, be wary of the Law of Sines; the Law of Cosines is safer for obtuse calculations.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Oblique Triangle:</strong> A triangle that does not contain a right angle ($90^\circ$).</li>
+            <li><strong>Law of Sines:</strong> A ratio-based formula used when you have a matching "pair" of an angle and its opposite side.</li>
+            <li><strong>Law of Cosines:</strong> A formula relating three sides and one angle; necessary for SSS or SAS scenarios.</li>
+            <li><strong>Ambiguous Case (SSA):</strong> A scenario where two sides and a non-included angle are given. It is nicknamed the "donkey scenario" (side-side-angle) because it causes the most trouble.</li>
+            <li><strong>Dangly Side:</strong> The side opposite the given angle in an SSA scenario. Its length relative to the "height" ($h$) determines the number of solutions.</li>
+            <li><strong>Isosceles Triangle:</strong> A triangle with two equal sides and two equal angles.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>1. Identification of Triangle Type</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Acronym</th>
+                    <th>Method to Solve</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Two angles and a non-included side</td>
+                    <td>AAS</td>
+                    <td>Law of Sines</td>
+                </tr>
+                <tr>
+                    <td>Two angles and the included side</td>
+                    <td>ASA</td>
+                    <td>Law of Sines</td>
+                </tr>
+                <tr>
+                    <td>Two sides and the included angle</td>
+                    <td>SAS</td>
+                    <td>Law of Cosines</td>
+                </tr>
+                <tr>
+                    <td>Three sides</td>
+                    <td>SSS</td>
+                    <td>Law of Cosines</td>
+                </tr>
+                <tr>
+                    <td>Two sides and a non-included angle</td>
+                    <td>SSA</td>
+                    <td>Ambiguous Case (Check height $h$)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. Solving the Ambiguous Case (SSA)</h3>
+        <p>To determine the number of solutions when given Angle $A$, Side $a$ (dangly side), and Side $b$ (adjacent side):</p>
+        <ol>
+            <li>Calculate the vertical height: $h = b \sin(A)$.</li>
+            <li><strong>Zero Solutions:</strong> If $a < h$, the side is too short to reach the base.</li>
+            <li><strong>One Solution:</strong> If $a \geq b$ or $a = h$.</li>
+            <li><strong>Two Solutions:</strong> If $h < a < b$, the dangly side can swing inward or outward to form two different triangles.</li>
+        </ol>
+
+        <div class="prof-tip">
+            If you hate memorizing the height conditions, just try solving using the Law of Sines. If the calculator gives you an "ERROR" during the inverse sine step, there is no solution.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>Angle Sum:</strong> $A + B + C = 180^\circ$ (Always check this first if two angles are given).</li>
+            <li><strong>Law of Sines:</strong> $$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$ (Use two parts at a time).</li>
+            <li><strong>Law of Cosines:</strong> $$a^2 = b^2 + c^2 - 2bc \cos A$$ (And its variations for $b^2$ and $c^2$).</li>
+            <li><strong>Obtuse Rule:</strong> An obtuse angle, if it exists, will <em>always</em> be across from the longest side.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: AAS (The "Easy" Way)</h2>
+        <div class="example-box">
+            <strong>Given:</strong> $A = 48^\circ$, $B = 37^\circ$, $a = 100$. Find missing parts.<br><br>
+            <span class="key-step">Step 1: Find Angle C.</span><br>
+            $C = 180^\circ - 48^\circ - 37^\circ = 95^\circ$.<br><br>
+            <span class="key-step">Step 2: Use Law of Sines for Side $b$.</span><br>
+            $\frac{100}{\sin 48^\circ} = \frac{b}{\sin 37^\circ} \implies b = \frac{100 \sin 37^\circ}{\sin 48^\circ} \approx 80.978$ units.<br><br>
+            <span class="key-step">Step 3: Use Law of Sines for Side $c$.</span><br>
+            $\frac{100}{\sin 48^\circ} = \frac{c}{\sin 95^\circ} \implies c = \frac{100 \sin 95^\circ}{\sin 48^\circ} \approx 134.013$ units.
+        </div>
+
+        <h2>EXAMPLE 2: SSA - No Solution</h2>
+        <div class="example-box">
+            <strong>Given:</strong> $A = 30^\circ$, $a = 10$, $b = 40$.<br><br>
+            <span class="key-step">Calculation:</span><br>
+            Let's find the height $h$: $h = 40 \sin 30^\circ = 40(0.5) = 20$.<br>
+            Since the opposite side ($a = 10$) is shorter than the height ($h = 20$), the side cannot reach the horizontal base.<br>
+            <strong>Result:</strong> No Triangle/No Solution.
+        </div>
+
+        <h2>EXAMPLE 3: SSA - One Solution</h2>
+        <div class="example-box">
+            <strong>Given:</strong> $A = 40^\circ$, $a = 20$, $b = 15$.<br><br>
+            <span class="key-step">Analysis:</span> Since $a > b$ (20 > 15), the dangly side is longer than the adjacent side. It can only swing "outward" to form one triangle.<br><br>
+            $\frac{20}{\sin 40^\circ} = \frac{15}{\sin B} \implies \sin B = \frac{15 \sin 40^\circ}{20} \implies B = \sin^{-1}(0.482) \approx 28.82^\circ$.<br>
+            $C = 180^\circ - 40^\circ - 28.82^\circ = 111.18^\circ$.<br>
+            Side $c = \frac{20 \sin 111.18^\circ}{\sin 40^\circ} \approx 29.04$.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li><strong>Calculator Mode:</strong> Ensure your calculator is in <strong>DEGREE</strong> mode. Wrong modes often give answers that look "close" but are subtly wrong.</li>
+            <li><strong>Parentheses:</strong> Always close parentheses after the angle in sine/cosine functions: $\sin(40)/20$, not $\sin(40/20)$.</li>
+            <li><strong>Rounding:</strong> Do not round intermediate steps. Keep as many decimals as possible in your calculator until the very final answer for MyMathLab.</li>
+            <li><strong>Notation:</strong> Label angles with capital letters and degree symbols ($^\circ$) and sides with lowercase letters to avoid confusing the two.</li>
+        </ul>
+    </div>
+</body></html>
