@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Polar Coordinates and Equations</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        h3 { color: #0056b3; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Polar Coordinates & Equation Conversions</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Transitioning from the rectangular paradigm (horizontal and vertical components) to the polar paradigm (distance from center and angle of rotation). This involves not just plotting points, but renaming them using co-terminal angles and negated radii, and converting entire equations between $x, y$ and $r, \theta$.</p>
+
+        <div class="prof-tip">
+            "You’re learning a different language. You've used x and y since late elementary or middle school; now you have to change your whole world's worth of thinking about point names. Don't overcomplicate it—common sense and visualization are your best friends."
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">Rectangular Coordinates:</span> $(x, y)$ format based on horizontal and vertical displacement.</li>
+            <li><span class="key-step">Polar Coordinates:</span> $(r, \theta)$ format where $r$ is the distance from the pole (origin) and $\theta$ is the angle of rotation.</li>
+            <li><span class="key-step">Pole:</span> The origin $(0,0)$ in the polar coordinate system.</li>
+            <li><span class="key-step">Polar Axis:</span> The positive x-axis from which angles are measured.</li>
+            <li><span class="key-step">Quadrantal Angle:</span> An angle whose terminal side lies on a coordinate axis (e.g., $0, \pi/2, \pi, 3\pi/2$).</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>1. Converting Polar to Rectangular $(r, \theta) \to (x, y)$</h3>
+        <p>This relies on basic Right Triangle Trigonometry (SOH-CAH-TOA):</p>
+        <ul>
+            <li>$x = r \cos(\theta)$</li>
+            <li>$y = r \sin(\theta)$</li>
+        </ul>
+
+        <h3>2. Converting Rectangular to Polar $(x, y) \to (r, \theta)$</h3>
+        <ul>
+            <li>Find $r$ using the Pythagorean Theorem: $r^2 = x^2 + y^2 \implies r = \sqrt{x^2 + y^2}$.</li>
+            <li>Find $\theta$ using $\tan(\theta) = \frac{y}{x}$. 
+                <div class="prof-tip">Warning: Inverse tangent only gives values in Quadrants I and IV. You must check your $(x, y)$ coordinates to determine the correct quadrant for $\theta$.</div>
+            </li>
+        </ul>
+
+        <h3>3. Calculator Setup for Polar Graphing</h3>
+        <ul>
+            <li>Press <strong>MODE</strong>.</li>
+            <li>Change <strong>FUNCTION</strong> to <strong>POLAR</strong>.</li>
+            <li>Ensure you are in <strong>RADIAN</strong> mode for most graphing.</li>
+            <li>The $X, T, \theta, n$ button will now input $\theta$.</li>
+            <li>Use <strong>ZOOM SQUARE</strong> to avoid the "stretched" look of the standard screen.</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert Coordinate Conversion Reference Map Here ]
+        </div>
+        <table>
+            <tr>
+                <th>Identity Name</th>
+                <th>Formula</th>
+            </tr>
+            <tr>
+                <td>Pythagorean Identity</td>
+                <td>$\sin^2(\theta) + \cos^2(\theta) = 1$</td>
+            </tr>
+            <tr>
+                <td>Conversion formulas</td>
+                <td>$x = r \cos\theta$ , $y = r \sin\theta$</td>
+            </tr>
+            <tr>
+                <td>Radius Squared</td>
+                <td>$r^2 = x^2 + y^2$</td>
+            </tr>
+            <tr>
+                <td>Tangent Relationship</td>
+                <td>$\tan\theta = \frac{y}{x}$</td>
+            </tr>
+            <tr>
+                <td>Reciprocal Identity</td>
+                <td>$\sec\theta = \frac{1}{\cos\theta}$</td>
+            </tr>
+        </table>
+
+        <h3>Quadrant Survival Guide for $\theta$</h3>
+        <p>When using $\tan^{-1}(y/x)$ to find your angle, remember that the inverse tangent function is limited to Quadrants I and IV. You must manually check the signs of your rectangular coordinates to apply the correct adjustment.</p>
+        <table>
+            <tr>
+                <th>Quadrant</th>
+                <th>Signs</th>
+                <th>$\theta$ Formula</th>
+            </tr>
+            <tr>
+                <td><strong>Q1</strong></td>
+                <td>$(+x, +y)$</td>
+                <td>$\theta = \tan^{-1}(y/x)$</td>
+            </tr>
+            <tr>
+                <td><strong>Q2</strong></td>
+                <td>$(-x, +y)$</td>
+                <td>$\theta = \tan^{-1}(y/x) + \pi$</td>
+            </tr>
+            <tr>
+                <td><strong>Q3</strong></td>
+                <td>$(-x, -y)$</td>
+                <td>$\theta = \tan^{-1}(y/x) + \pi$</td>
+            </tr>
+            <tr>
+                <td><strong>Q4</strong></td>
+                <td>$(+x, -y)$</td>
+                <td>$\theta = \tan^{-1}(y/x)$</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>Shortcut for Unit Circle Reference Angles:</strong>
+            <br>1. If $|\text{opposite/adjacent}| = 1$, reference angle is $45^\circ$ or $\pi/4$.
+            <br>2. If cosine is $1/2$, reference angle is $60^\circ$ or $\pi/3$.
+            <br>3. If sine is $1/2$, reference angle is $30^\circ$ or $\pi/6$.
+        </div>
+
+        <h2>EXAMPLES</h2>
+
+        <div class="example-box">
+            <h3>Example 1: Polar to Rectangular</h3>
+            <strong>Given:</strong> $(2, \pi/3)$ in $(r, \theta)$ format.
+            <br><span class="key-step">Step 1:</span> $x = 2 \cos(\pi/3) = 2(1/2) = 1$
+            <br><span class="key-step">Step 2:</span> $y = 2 \sin(\pi/3) = 2(\sqrt{3}/2) = \sqrt{3}$
+            <br><strong>Final Result:</strong> $(1, \sqrt{3})$
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: Rectangular to Polar</h3>
+            <strong>Given:</strong> $(-2, 2)$ in $(x, y)$ format.
+            <br><span class="key-step">Step 1 (Find r):</span> $r^2 = (-2)^2 + (2)^2 = 4 + 4 = 8 \implies r = \sqrt{8} = 2\sqrt{2}$
+            <br><span class="key-step">Step 2 (Find θ):</span> $\tan(\theta) = \frac{2}{-2} = -1$.
+            <br><span class="key-step">Step 3 (Determine Quadrant):</span> $(-2, 2)$ is in Quadrant II. The reference angle for a tangent of 1 is $\pi/4$. In Quadrant II, $\theta = \pi - \pi/4 = 3\pi/4$.
+            <br><strong>Final Result:</strong> $(2\sqrt{2}, 3\pi/4)$
+        </div>
+
+        <div class="example-box">
+            <h3>Example 3: Equation Conversion (Linear)</h3>
+            <strong>Convert:</strong> $3x + y = 7$ to polar.
+            <br><span class="key-step">Step 1:</span> Replace $x$ and $y$: $3(r \cos\theta) + (r \sin\theta) = 7$
+            <br><span class="key-step">Step 2:</span> Factor out $r$: $r(3 \cos\theta + \sin\theta) = 7$
+            <br><span class="key-step">Step 3:</span> Isolate $r$: $r = \frac{7}{3 \cos\theta + \sin\theta}$
+        </div>
+
+        <div class="example-box">
+            <h3>Example 4: Equation Conversion (Circular)</h3>
+            <strong>Convert:</strong> $r = 10 \sin\theta$ to rectangular.
+            <br><span class="key-step">Prof Tip:</span> Don't square both sides initially (it makes it messy). Instead, multiply both sides by $r$.
+            <br><span class="key-step">Step 1:</span> $r \cdot r = r \cdot 10 \sin\theta \implies r^2 = 10r \sin\theta$
+            <br><span class="key-step">Step 2:</span> Substitute: $x^2 + y^2 = 10y$
+            <br><span class="key-step">Step 3:</span> $x^2 + y^2 - 10y = 0$. By completing the square for $y$ (adding 25 to both sides): $x^2 + (y-5)^2 = 25$.
+            <br><strong>Observation:</strong> This is a circle centered at $(0, 5)$ with a radius of $5$.
+        </div>
+
+        <h2>SYMMETRY TESTING</h2>
+        <p>While looking at the graph is the easiest way to identify symmetry, formal tests include:</p>
+        <ul>
+            <li><strong>Polar Axis (x-axis):</strong> Replace $\theta$ with $-\theta$. If equation is unchanged, it's symmetric.</li>
+            <li><strong>Line $\theta = \pi/2$ (y-axis):</strong> Replace $\theta$ with $(\pi - \theta)$ or use double negatives.</li>
+            <li><strong>Pole (Origin):</strong> Replace $r$ with $-r$.</li>
+        </ul>
+        <div class="prof-tip">"The problem with symmetry tests is they don't always work. If it passes, the symmetry is confirmed. If it fails algebraically, the symmetry might still exist! It’s often a complete waste of time unless MyMathLab explicitly asks for it."</div>
+
+        <div class="prof-tip">
+            <strong>Logic Check: The Rules of Verification:</strong> Identity verification is NOT solving an equation. You must pick ONE side (usually the more complex one) and manipulate it until it matches the other side. <strong>Treat the equal sign as a wall. Do not move terms across it!</strong>
+        </div>
+
+        <div class="example-box">
+            <h3>Strategy: The Common Denominator "Squish"</h3>
+            <p>When calculating numerical identity answers, separated fractions should be squished into one using an LCD. This is almost always the required format for exam answers.</p>
+            $$\frac{1}{2} + \frac{\sqrt{3}}{2} \to \frac{1 + \sqrt{3}}{2}$$
+        </div>
+
+        <h2>FINAL EXAM STRATEGY</h2>
+
+        <div class="example-box" style="border-left: 5px solid #ffa117;">
+            <h3>The Grumpy List: How to Keep Your Points</h3>
+            <ol>
+                <li><strong>ALWAYS draw your triangle:</strong> Pythagorean Theorem is child's play, don't skip it.</li>
+                <li><strong>For half-angles:</strong> Double the given angle to find your $\alpha$.</li>
+                <li><strong>For "All Solutions":</strong> You MUST add $+ 2\pi n$.</li>
+            </ol>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Grumpy List Checklist Image Here ]
+            </div>
+        </div>
+
+        <h3>Verification Strategy: The Hierarchy of Moves</h3>
+        <p>If you are stuck on an identity verification problem, try running through these four main moves in order of complexity:</p>
+        <ol>
+            <li><strong>Term Replacement:</strong> Convert everything to $\sin$ and $\cos$.</li>
+            <li><strong>Factoring:</strong> Look for a Greatest Common Factor (GCF) or a Difference of Squares.</li>
+            <li><strong>LCD Consolidation:</strong> Add separated fractions together using a common denominator.</li>
+            <li><strong>Conjugate Multiplication:</strong> Multiply by the conjugate to force a Pythagorean Identity.</li>
+        </ol>
+        <div class="example-box">
+            <p><strong>Conjugate Example:</strong></p>
+            $$\frac{1}{1+\sin\theta} \cdot \frac{1-\sin\theta}{1-\sin\theta} = \frac{1-\sin\theta}{\cos^2\theta}$$
+        </div>
+
+        <h3>Visual Shortcut: The Pieces of Pie Method</h3>
+        <div class="example-box">
+            <p>When finding renamed polar points, counting slices (e.g., quarters = $\pi/4$) around the unit circle is often safer than relying entirely on arithmetic.</p>
+            <p><strong>Example:</strong> To find the negative coterminal angle for $3\pi/4$, count 5 "quarter" slices clockwise around the circle to land at $-5\pi/4$.</p>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Pieces of Pie Diagram Here ]
+            </div>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Always start by visualizing the location of a point or the general shape of an equation. Use the calculator to verify your conversions, but remember that the exam requires exact values (roots and fractions) rather than decimal approximations. For circle conversions, multiplying by $r$ is often more efficient than squaring both sides.</p>
+    </div>
+</body>
+</html>

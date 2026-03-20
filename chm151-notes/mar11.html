@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Flame Test and Beer's Law Lab Report</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f9f9f9; 
+            margin: 0; 
+            padding: 40px; 
+            color: #333; 
+            line-height: 1.6; 
+        }
+        .content-card { 
+            background: white; 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        }
+        h1 { 
+            color: #0056b3; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 15px; 
+            margin-bottom: 30px; 
+        }
+        h2 { 
+            background: #f4f4f4; 
+            padding: 12px; 
+            border-left: 5px solid #0056b3; 
+            margin-top: 40px; 
+            font-size: 1.4em; 
+        }
+        h3 { 
+            color: #444; 
+            margin-top: 25px; 
+            border-bottom: 1px solid #ddd; 
+            padding-bottom: 5px; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+            font-size: 0.95em; 
+        }
+        th, td { 
+            border: 1px solid #e0e0e0; 
+            padding: 12px; 
+            text-align: center; 
+        }
+        th { 
+            background-color: #0056b3; 
+            color: white; 
+        }
+        tr:nth-child(even) { background-color: #fcfcfc; }
+        .calc-box { 
+            background: #eef7ff; 
+            padding: 20px; 
+            border-radius: 6px; 
+            border: 1px solid #cce5ff; 
+            margin-bottom: 25px; 
+        }
+        .step-label { 
+            font-weight: bold; 
+            color: #0056b3; 
+            display: block; 
+            margin-bottom: 5px; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            text-decoration: none; 
+            color: #0056b3; 
+            font-weight: bold; 
+        }
+        ul li { margin-bottom: 8px; }
+        @media print {
+            .back-btn, .print-btn { display: none !important; }
+            body { padding: 0; background: white; }
+            .content-card { box-shadow: none; padding: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+    <button onclick="window.print()" class="print-btn" style="margin-bottom: 20px; padding: 10px; background: #0056b3; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Save as PDF / Print Report</button>
+    
+    <div class="content-card">
+        <h1>CHM-151: Flame Test and Beer's Law Lab Report</h1>
+
+        <h2>Section 0: Lab Theory & Background</h2>
+        <div class="calc-box">
+            <span class="step-label">Beer-Lambert Law:</span>
+            <p>The <strong>Beer-Lambert Law</strong> ($A = \varepsilon bc$) describes the direct, linear relationship between the absorbance of light and the concentration of a sample. Here, $A$ is absorbance, $\varepsilon$ is the molar absorptivity constant, $b$ is the path length of the cuvette, and $c$ is the concentration.</p>
+            
+            <span class="step-label" style="margin-top: 15px;">Wavelength Selection ($\lambda_{max}$):</span>
+            <p>In this lab, we used a wavelength of <strong>$635\text{ nm}$</strong>. Because the $CuSO_4$ solution appears blue, it transmits blue light and strongly absorbs its complementary color (orange/red). The $635\text{ nm}$ wavelength falls in this red/orange region, representing the maximum absorbance ($\lambda_{max}$) for our solution.</p>
+            
+            <span class="step-label" style="margin-top: 15px;">Visualizing Absorption:</span>
+            <p>Following color wheel logic, a solution appears a certain color because it absorbs light of its complementary color. By strongly absorbing orange light at $635\text{ nm}$, the solution transmits the remaining light, making it appear blue to our eyes.</p>
+            
+            <!-- Placeholder for future diagrams or formulas -->
+        </div>
+
+        <h2>Part A: Flame Test Results</h2>
+        
+        <h3>Table 1: Known Solutions and Observations</h3>
+        <table>
+            <tr>
+                <th>Solution</th>
+                <th>Flame Color Observed</th>
+                <th>Metal Cation</th>
+            </tr>
+            <tr><td>KCl</td><td>Purple</td><td>$K^+$</td></tr>
+            <tr><td>NaCl</td><td>Orange</td><td>$Na^+$</td></tr>
+            <tr><td>BaCl$_2$</td><td>Yellow</td><td>$Ba^{2+}$</td></tr>
+            <tr><td>SrCl$_2$</td><td>Red</td><td>$Sr^{2+}$</td></tr>
+            <tr><td>CuCl$_2$</td><td>Blue/Green</td><td>$Cu^{2+}$</td></tr>
+            <tr><td>CaCl$_2$</td><td>Red/Orange</td><td>$Ca^{2+}$</td></tr>
+        </table>
+
+        <h3>Table 2: Identification of Unknowns</h3>
+        <table>
+            <tr>
+                <th>Unknown #</th>
+                <th>Flame Color Observed</th>
+                <th>Element Present</th>
+            </tr>
+            <tr><td>1</td><td>Purple</td><td><strong>Potassium (K)</strong></td></tr>
+            <tr><td>3</td><td>Red</td><td><strong>Strontium (Sr)</strong></td></tr>
+        </table>
+
+        <h2>Part B: Beer's Law (Copper Sulfate)</h2>
+
+        <h3>Table 3: Preparation of Standard Curve</h3>
+        <p>Stock Solution Concentration: $0.0200\text{ M}$ | Volumetric Flask Volume: $25.00\text{ mL}$</p>
+        <table>
+            <tr>
+                <th>Measured Vol. Stock ($V_1$)</th>
+                <th>Recalculated Concentration ($M_2$)</th>
+                <th>Absorbance</th>
+            </tr>
+            <tr><td>$0.00\text{ mL}$ (blank)</td><td>$0.0000\text{ M}$</td><td>$0.012$</td></tr>
+            <tr><td>$2.48\text{ mL}$</td><td>$0.00198\text{ M}$</td><td>$0.413$</td></tr>
+            <tr><td>$4.97\text{ mL}$</td><td>$0.00398\text{ M}$</td><td>$0.013$</td></tr>
+            <tr><td>$7.48\text{ mL}$</td><td>$0.00598\text{ M}$</td><td>$0.002$</td></tr>
+            <tr><td>$9.98\text{ mL}$</td><td>$0.00798\text{ M}$</td><td>$0.012$</td></tr>
+            <tr><td>$12.5\text{ mL}$</td><td>$0.01000\text{ M}$</td><td>---</td></tr>
+        </table>
+
+        <h3>Standard Solution Calculations</h3>
+        <div class="calc-box">
+            <span class="step-label">Example Calculation for Recalculated Concentration (Row 2):</span>
+            <p>Using $M_1V_1 = M_2V_2$ where $M_1 = 0.0200\text{ M}$ and $V_2 = 25.00\text{ mL}$:</p>
+            $$M_2 = \frac{0.0200\text{ M} \times 2.48\text{ mL}}{25.00\text{ mL}} = \mathbf{0.00198\text{ M}}$$
+        </div>
+
+        <h3>Report Form Calculations (Part B)</h3>
+        <p>To determine the volume of stock solution ($V_1$) needed for each target concentration, we rearrange the dilution equation $M_1V_1 = M_2V_2$ to solve for $V_1 = \frac{M_2V_2}{M_1}$.</p>
+
+        <div class="calc-box">
+            <span class="step-label">Standard Solution 1 ($0.002\text{ M}$):</span>
+            $$V_1 = \frac{0.002\text{ M} \times 25.00\text{ mL}}{0.0200\text{ M}} = \mathbf{2.5\text{ mL}}$$
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">Standard Solution 2 ($0.004\text{ M}$):</span>
+            $$V_1 = \frac{0.004\text{ M} \times 25.00\text{ mL}}{0.0200\text{ M}} = \mathbf{5.0\text{ mL}}$$
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">Standard Solution 3 ($0.006\text{ M}$):</span>
+            $$V_1 = \frac{0.006\text{ M} \times 25.00\text{ mL}}{0.0200\text{ M}} = \mathbf{7.5\text{ mL}}$$
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">Standard Solution 4 ($0.008\text{ M}$):</span>
+            $$V_1 = \frac{0.008\text{ M} \times 25.00\text{ mL}}{0.0200\text{ M}} = \mathbf{10.0\text{ mL}}$$
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">Standard Solution 5 ($0.010\text{ M}$):</span>
+            $$V_1 = \frac{0.010\text{ M} \times 25.00\text{ mL}}{0.0200\text{ M}} = \mathbf{12.5\text{ mL}}$$
+        </div>
+
+        <h3>Graphing and Analysis</h3>
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 40px; text-align: center; margin-bottom: 25px; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert Beer's Law Calibration Curve Graph Here ]
+        </div>
+        
+        <div class="calc-box">
+            <span class="step-label">Calibration Curve Analysis:</span>
+            <p><strong>The Equation of the Line ($y = mx + b$):</strong> In our plot, the y-axis represents the measured <strong>Absorbance</strong>, and the x-axis represents the <strong>Concentration (M)</strong>. This line equation allows us to determine the concentration of any unknown sample by plugging in its measured absorbance as $y$ and solving for $x$.</p>
+            <p><strong>The $R^2$ Value (Coefficient of Determination):</strong> The $R^2$ value measures how closely our data points follow the linear trendline. A value close to $1.000$ indicates a strong, highly linear relationship, which reflects excellent precision in our lab technique during the dilution series (careful pipetting and mixing). A lower $R^2$ value would indicate greater variance and experimental error.</p>
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">Data Analysis Guide: Using Excel</span>
+            <ol>
+                <li><strong>Highlight data:</strong> Select your Concentration ($x$) and Absorbance ($y$) columns.</li>
+                <li><strong>Insert Scatter Plot:</strong> Go to the Insert tab and choose a Scatter plot (markers only).</li>
+                <li><strong>Add Trendline:</strong> Right-click on any data point on the graph and select "Add Trendline".</li>
+                <li><strong>Display Equation:</strong> Check the box for "Display Equation on chart".</li>
+            </ol>
+            <p>Once you have your line equation ($y = mx + b$), you can determine the unknown concentration ($x$) by plugging in the measured absorbance ($A_{unknown}$) as $y$:</p>
+            $$x = \frac{A_{unknown} - b}{m}$$
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">Sample Calculation for Unknown:</span>
+            <p>If an unknown has an absorbance of $0.350$ and your calibration line is $y = 45.2x + 0.012$, you can substitute the absorbance for $y$ and solve for the concentration ($x$):</p>
+            $$x = \frac{0.350 - 0.012}{45.2} = 0.00748\text{ M}$$
+        </div>
+
+        <h2>Instrument Technique: The Spectronic 20</h2>
+        <div class="calc-box">
+            <span class="step-label">Best Practices:</span>
+            <ul>
+                <li>Always 'Zero' the instrument with a DI Water blank.</li>
+                <li>Wipe cuvettes with Kimwipes to remove fingerprints (oil absorbs light!).</li>
+                <li>Ensure the clear side of the cuvette faces the light path.</li>
+                <li>Allow the lamp to warm up for 15 minutes before taking readings.</li>
+            </ul>
+        </div>
+
+        <h2>Post-Lab Questions</h2>
+
+        <div class="calc-box">
+            <span class="step-label">1. Why does each element result in a different color when placed into the flame?</span>
+            <p>The heat of the flame excites electrons to higher energy levels. When these electrons relax back to their ground state, they release energy in the form of photons. Because each element has a unique electron configuration, the energy gaps between shells are different, resulting in specific wavelengths (colors) of light unique to that element.</p>
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">2. What is the wavelength of light emitted when an electron relaxes from $n=4$ to $n=2$ in a hydrogen atom? What color would you see?</span>
+            <p>Using the Rydberg formula:</p>
+            $$\frac{1}{\lambda} = 1.097 \times 10^7\text{ m}^{-1} \left( \frac{1}{2^2} - \frac{1}{4^2} \right)$$
+            $$\frac{1}{\lambda} = 1.097 \times 10^7 \left( 0.25 - 0.0625 \right) = 2,056,875\text{ m}^{-1}$$
+            $$\lambda = 4.86 \times 10^{-7}\text{ m} = \mathbf{486\text{ nm}}$$
+            <p><strong>Observed Color:</strong> Blue-Green</p>
+        </div>
+
+        <div class="calc-box">
+            <span class="step-label">4. Discussion of Experimental Errors</span>
+            <ul>
+                <li><strong>(a) Filling solution below the etched line:</strong> If the volumetric flask is underfilled, the total volume ($V_2$) is smaller than $25.00\text{ mL}$. This makes the actual concentration of the standard higher than calculated. This would result in a standard curve that overestimates the concentration of the unknowns.</li>
+                <li><strong>(b) Not rinsing the cuvette between solutions:</strong> If traces of a higher concentration solution remain in the cuvette, the absorbance reading for the next solution will be artificially high. This shifts the data points and decreases the accuracy ($R^2$) of the standard curve.</li>
+                <li><strong>(c) Not rinsing the stock solution out of the graduated cylinder:</strong> If residual stock solution is left behind, the actual amount of moles transferred to the volumetric flask is lower than intended. This makes the actual concentration lower than the calculated concentration.</li>
+            </ul>
+        </div>
+
+        <h2>Safety and Waste Management</h2>
+        <div class="calc-box">
+            <p><strong>Hazard Warning:</strong> Barium and Copper are heavy metals. They pose toxicity risks to humans and environmental aquatic systems.</p>
+            <p><strong>Note:</strong> All metal-ion solutions must be disposed of in the Heavy Metal Waste container. Do not pour down the sink.</p>
+        </div>
+
+    </div>
+</body>
+</html>

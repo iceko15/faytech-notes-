@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Electron Configuration and Periodic Trends</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Electron Configuration & Periodic Trends</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The periodic table is organized specifically to reflect the electron configurations of atoms. By understanding <strong>Effective Nuclear Charge ($Z_{eff}$)</strong>, we can predict and explain nearly all periodic trends, including atomic size, ionization energy, and electron affinity. The arrangement allows for a "shortcut" method using noble gas notation to focus on the valence electrons that drive chemical reactivity.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>S, P, D, F Blocks:</strong> Regions of the periodic table corresponding to the subshell being filled.</li>
+            <li><strong>Core Electrons:</strong> Electrons in the inner shells that shield the valence electrons from the nucleus.</li>
+            <li><strong>Valence Electrons:</strong> Electrons in the highest energy level (outer shell). These are the electrons involved in bonding.</li>
+            <li><strong>Effective Nuclear Charge ($Z_{eff}$):</strong> The net positive charge experienced by an electron in a multi-electron atom ($Z_{eff} = Z - S$).</li>
+            <li><strong>Shielding (S):</strong> The process where core electrons repel outer electrons, reducing the "pull" they feel from the positive nucleus.</li>
+            <li><strong>Periodicity:</strong> The repeating pattern of chemical and physical properties as you move across the periodic table.</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>Professor's Tip:</strong> When writing configurations, remember that the <strong>4s orbital fills before the 3d orbital</strong>. This is a common point of confusion. Similarly, 5s fills before 4d. The D-block is always "shifted down" by one row relative to the period number.
+        </div>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>The Periodic Table Shortcut</h3>
+        <ol>
+            <li><strong>Identify the Block:</strong> Groups 1-2 (and Helium) are the S-block. Groups 13-18 are the P-block. Transition metals are the D-block. The bottom section is the F-block.</li>
+            <li><strong>Count Across:</strong> The number of elements across a block matches the electrons the subshell can hold (S=2, P=6, D=10, F=14).</li>
+            <li><strong>Trace the Path:</strong> Start at the top left ($1s$) and move left-to-right, top-to-bottom until you reach the target element.</li>
+        </ol>
+
+        <h3>Visualizing the Blocks</h3>
+        <p>The periodic table is divided into four main blocks corresponding to the subshell being filled:</p>
+        <ul>
+            <li><strong>S-Block:</strong> Holds up to 2 electrons.</li>
+            <li><strong>P-Block:</strong> Holds up to 6 electrons.</li>
+            <li><strong>D-Block:</strong> Holds up to 10 electrons.</li>
+            <li><strong>F-Block:</strong> Holds up to 14 electrons.</li>
+        </ul>
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert Visualizing the Blocks Diagram Here ]
+        </div>
+        <p><strong>Explicitly note:</strong> The D-block is always (Row # minus 1) and the F-block is (Row # minus 2).</p>
+
+        <h3>Condensed (Noble Gas) Notation</h3>
+        <ol>
+            <li>Find the element on the periodic table.</li>
+            <li>Look at the <strong>Noble Gas</strong> (Group 18) in the row <em>above</em> the element.</li>
+            <li>Write that Noble Gas symbol in brackets (e.g., $[Ar]$).</li>
+            <li>Pick up the configuration starting from the S-block of the element's current row.</li>
+        </ol>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Coulomb's Law</h3>
+        <p>The force between charged particles is determined by:
+        $$F = k \frac{Q_1 Q_2}{d^2}$$
+        Where $Q$ is the size of the charge and $d$ is the distance. 
+        <span class="key-step">Key Rule:</span> Distance ($d$) has a much larger impact on the force than the size of the charge ($Q$) because distance is squared.</p>
+
+        <h3>Effective Nuclear Charge Trends</h3>
+        <ul>
+            <li><strong>Left to Right:</strong> $Z_{eff}$ <strong>increases</strong>. Protons are added (increasing magnet strength) but core shielding stays the same.</li>
+            <li><strong>Top to Bottom:</strong> $Z_{eff}$ <strong>decreases</strong>. Even though protons are added, the distance ($d$) increases significantly as electrons move to higher energy levels, which weakens the pull.</li>
+        </ul>
+
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert Effective Nuclear Charge Diagram Here ]
+        </div>
+
+        <div class="example-box">
+            <h3>Magnet & Shield: Explaining Z-eff</h3>
+            <p>Think of the nucleus as a <strong>Magnet</strong> and the core electrons as a <strong>Shield</strong>.</p>
+            <ul>
+                <li><strong>Going Left-to-Right:</strong> The magnet gets stronger (more protons) but the shield does NOT get thicker (same number of core electrons). As a result, the valence electrons are pulled in tighter, making the atom smaller.</li>
+                <li><strong>Going Top-to-Bottom:</strong> The shield gets much thicker (new energy levels/shells are added). Even though the magnet gets stronger, the thicker shield and increased distance mean the net pull is weaker, making the atom larger.</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <h3>Conceptual Deep Dive: Attraction vs. Repulsion</h3>
+            <p>An electron's "experience" in an atom is a constant tug-of-war: it is pulled toward the nucleus by protons (<strong>attraction</strong>) and pushed away by other electrons (<strong>repulsion</strong>).</p>
+            <p><strong>Applying this to Anions:</strong> When an atom gains an electron to become an anion, the number of protons stays the same but electron-electron repulsion increases. Repulsion "wins" the tug-of-war, pushing the electron cloud outward and making the anion larger than its parent atom.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Z-eff Calculation Guide</h3>
+            <p>We can calculate the effective nuclear charge using the formula:</p>
+            $$Z_{eff} = Z - S$$
+            <p><strong>Lithium (Li):</strong> Atomic number $Z = 3$. Core electrons $S = 2$ ($1s^2$).<br>
+            $$Z_{eff} = 3 - 2 = \mathbf{+1}$$</p>
+            <p><strong>Oxygen (O):</strong> Atomic number $Z = 8$. Core electrons $S = 2$ ($1s^2$).<br>
+            $$Z_{eff} = 8 - 2 = \mathbf{+6}$$</p>
+        </div>
+
+        <h2>EXAMPLE 1: Full Configuration</h2>
+        <div class="example-box">
+            <strong>Aluminum (Element 13):</strong>
+            <p>1s² 2s² 2p⁶ 3s² 3p¹</p>
+            <strong>Nickel (Element 28):</strong>
+            <p>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁸</p>
+        </div>
+
+        <h2>EXAMPLE 2: Condensed Notation</h2>
+        <div class="example-box">
+            <strong>Iron (Fe):</strong>
+            <p>Noble gas before it: Argon ($Ar$).</p>
+            <p>Notation: $[Ar] 4s^2 3d^6$</p>
+            <hr>
+            <strong>Carbon (C):</strong>
+            <p>Noble gas before it: Helium ($He$).</p>
+            <p>Notation: $[He] 2s^2 2p^2$</p>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Final Warning: The Stability Exceptions:</strong> Chromium (Cr) and Copper (Cu) do not follow the standard Aufbau order because half-filled and fully-filled d-subshells are exceptionally stable.
+            <br><br>
+            <strong>Copper ($Z=29$):</strong><br>
+            <ul>
+                <li>Expected: $[Ar] 4s^2 3d^9$</li>
+                <li><strong>Actual: $[Ar] 4s^1 3d^{10}$</strong> (More stable with a full d-subshell).</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 3: Atomic Size Trends</h2>
+        <div class="example-box">
+            <strong>Trend:</strong> Atomic size decreases left-to-right and increases top-to-bottom.
+            <ul>
+                <li><strong>Why smaller left-to-right?</strong> $Z_{eff}$ increases. The "magnet" (nucleus) gets stronger and pulls the electrons in tighter.</li>
+                <li><strong>Why larger top-to-bottom?</strong> New energy levels are added further from the nucleus. Distance increases, so the pull is weaker.</li>
+            </ul>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Exam Strategy:</strong> When ranking atoms by size, always check the row ($n$ level) first, then the $Z_{eff}$ (left-to-right) second!
+        </div>
+
+        <h2>SECTION: THE SIZE OF IONS</h2>
+        <div class="example-box">
+            <p>Ion size depends on the gain or loss of electrons:</p>
+            <ul>
+                <li><strong>Cations (+):</strong> Are always <strong>smaller</strong> than their parent atoms. Losing valence electrons often means losing an entire outer energy level, and it reduces electron-electron repulsion, allowing the nucleus to pull the remaining electrons in tighter.</li>
+                <li><strong>Anions (-):</strong> Are always <strong>larger</strong> than their parent atoms. Gaining electrons increases electron-electron repulsion, which pushes the electrons further apart and swells the electron cloud.</li>
+            </ul>
+            
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Ionic Radius Diagram Here ]
+            </div>
+        </div>
+
+        <h2>SECTION: THE ISOELECTRONIC SERIES</h2>
+        <div class="example-box">
+            <p><strong>Definition:</strong> A group of atoms or ions that have the exact same number of electrons. For example, $O^{2-}$, $F^-$, $Ne$, $Na^+$, and $Mg^{2+}$ all have 10 electrons ($10e^-$).</p>
+            <p><strong>The Size Rule:</strong> In an isoelectronic series, the ion with the <strong>HIGHEST atomic number</strong> (the most protons) is the <strong>SMALLEST</strong> because it has the strongest nuclear pull on that identical set of electrons.</p>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Professor's Warning:</strong> If you use a PDF or a video to check answers, they might list $3d$ before $4s$ (e.g., $[Ar] 3d^8 4s^2$). Conventional teaching in this class uses the filling order: $4s$ then $3d$.
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <table>
+            <tr>
+                <th>Element</th>
+                <th>Noble Gas Notation</th>
+            </tr>
+            <tr>
+                <td>Aluminum (Al)</td>
+                <td>$[Ne] 3s^2 3p^1$</td>
+            </tr>
+            <tr>
+                <td>Bromine (Br)</td>
+                <td>$[Ar] 4s^2 3d^{10} 4p^5$</td>
+            </tr>
+            <tr>
+                <td>Molybdenum (Mo)</td>
+                <td>$[Kr] 5s^2 4d^4$</td>
+            </tr>
+        </table>
+
+        <h2>PERIODIC TREND SUMMARY TABLE</h2>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Left-to-Right Trend</th>
+                <th>Top-to-Bottom Trend</th>
+                <th>Reasoning</th>
+            </tr>
+            <tr>
+                <td>Effective Nuclear Charge ($Z_{eff}$)</td>
+                <td>Increases</td>
+                <td>Decreases</td>
+                <td>Magnet strength vs Shielding</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>Decreases</td>
+                <td>Increases</td>
+                <td>$Z_{eff}$ pull vs New Energy Levels</td>
+            </tr>
+        </table>
+
+        <h2>SUMMARY</h2>
+        <p>Chemistry is conceptual. We do not just memorize that atoms get smaller across a period; we know they get smaller because the <strong>Effective Nuclear Charge</strong> increases, creating a stronger pull on valence electrons without increasing the shield. Mendeleev's periodic table was originally based on mass, but modern tables use atomic number ($Z$) to perfectly align these repeating electronic patterns.</p>
+        
+        <div class="example-box">
+            <h3>Historical Context: Mendeleev's Genius</h3>
+            <p>Dmitri Mendeleev is credited with the first widely accepted periodic table. His genius wasn't just in organizing the elements, but in leaving <strong>'blanks'</strong> for elements that had not yet been discovered. By looking at the patterns (periodicity), he successfully predicted the existence and properties of elements like Gallium (Ga) before they were ever found!</p>
+            <p><em>Note: He originally based his table on atomic mass, but we now use atomic number ($Z$), which was discovered later by Henry Moseley, to perfectly align these repeating electronic patterns.</em></p>
+        </div>
+    </div>
+</body></html>

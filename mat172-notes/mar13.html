@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Polar Coordinates and Identity Exam Review</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Polar Coordinates and Exam Review</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Polar coordinates provide a way to describe points in a plane using a distance from the pole ($r$) and an angle from the polar axis ($\theta$). Unlike Cartesian coordinates, a single point in space can have multiple "names" or representations in polar form by manipulating the sign of $r$ or using coterminal angles.</p>
+
+        <div class="prof-tip">
+            "One of the things that irritates me about this book sometimes is that they don't make you doodle enough pictures. This is a very visual subject. Showing what the question is asking visually helps just as much as knowing how to do the arithmetic and memorizing a random calculation."
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">Co-terminal Name:</span> Different coordinate pairs that represent the exact same physical space or point.</li>
+            <li><span class="key-step">R-Value ($r$):</span> The directed distance from the origin. If $r$ is negative, you move in the opposite direction of the specified angle.</li>
+            <li><span class="key-step">Concentric Rings:</span> The circles on a polar grid that represent increasing distance from the center. In today's examples, rings are counted by increments of 2.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Renaming a Point with a Negative $r$ Value</h3>
+        <ol>
+            <li>Identify the target point on the polar grid.</li>
+            <li>Look "directly across" from that point (180 degrees or $\pi$ radians away).</li>
+            <li>Identify the angle in that opposite quadrant.</li>
+            <li>Use the negative version of the $r$ value with this new angle. Because the $r$ is negative, you will travel "away" from the new angle and land back on your original point.</li>
+        </ol>
+
+        <h3>Renaming a Point with a Negative Angle Requirement</h3>
+        <ol>
+            <li>Locate the original angle (e.g., $3\pi/4$).</li>
+            <li>To find the negative name within one rotation, subtract $2\pi$ from the original angle.</li>
+            <li>Alternatively, count "quarters" or "sixths" around the circle in the clockwise direction to find the visual name.</li>
+        </ol>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>The "Directly Across" Rule:</strong> To negate $r$ and stay at the same point, you must change the angle by exactly $\pi$ (or 180°). Formula: $(r, \theta) = (-r, \theta + \pi)$.</li>
+            <li><strong>Coterminal Angle Calculation:</strong> $\theta_{new} = \theta_{original} \pm 2\pi n$.</li>
+            <li><strong>Sign of $r$:</strong> 
+                <ul>
+                    <li>Positive $r$: Move toward the angle.</li>
+                    <li>Negative $r$: Move away from the angle (through the pole).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>The Visual Method: Counting Pieces of Pie</h2>
+        <div class="example-box">
+            <p>To find coterminal angles without solely relying on formulas, you can visually count "quarters" ($\pi/4$) or "sixths" ($\pi/6$) around the unit circle.</p>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Pie Chart Diagram Here ]
+            </div>
+            <p>For example, if you start at $3\pi/4$ and need to add a full rotation ($2\pi$), you can count 8 additional "quarter" slices around the circle to land at $11\pi/4$.</p>
+            <p style="font-style: italic; color: #0056b3; font-weight: bold;">"Arithmetic is great, but doodles prevent dumb mistakes."</p>
+        </div>
+
+        <h2>The Negative r Challenge: The 'Straight-Edge' Rule</h2>
+        <div class="example-box">
+            <p>When $r$ is negative, you must look directly across the pole ($180^\circ$ or $\pi$ radians away) to find the correct angle to aim toward before walking "backwards."</p>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Straight-Edge Diagram Here ]
+            </div>
+            <p><strong>Step-by-Step Example: Renaming $(10, 3\pi/4)$ with a negative $r$:</strong></p>
+            <ol>
+                <li><strong>Locate Original Angle:</strong> Find $3\pi/4$ on the unit circle (Quadrant II).</li>
+                <li><strong>Apply Straight-Edge Rule:</strong> Look directly across the pole to Quadrant IV. Add $\pi$ (or $4\pi/4$) to get $7\pi/4$.</li>
+                <li><strong>Negate $r$:</strong> Use the new angle but make the radius negative. Traveling $-10$ units from $7\pi/4$ lands you back at the original spot.</li>
+                <li><strong>Result:</strong> $(-10, 7\pi/4)$</li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 3: Renaming with Negative Angle</h2>
+        <div class="example-box">
+            <p><strong>Original Point:</strong> $(10, 3\pi/4)$</p>
+            <p><strong>Goal:</strong> Keep $r = 10$ (positive), but use a negative angle $\theta < 0$.</p>
+            <ul>
+                <li>Start at the polar axis and move clockwise to reach the point at $3\pi/4$.</li>
+                <li>Counting by quarters: $1, 2, 3, 4, 5$ quarters in the negative direction.</li>
+                <li><strong>Visual Result:</strong> $-5\pi/4$.</li>
+                <li><strong>Arithmetic Result:</strong> $\frac{3\pi}{4} - 2\pi = \frac{3\pi}{4} - \frac{8\pi}{4} = -\frac{5\pi}{4}$.</li>
+            </ul>
+        </div>
+
+        <h2>The Conversion Bridge: From Polar to Cartesian</h2>
+        <div class="example-box">
+            <p>To convert coordinates or equations between the two systems, we rely on four core formulas derived from right-triangle trigonometry:</p>
+            <ul>
+                <li>$x = r \cos(\theta)$</li>
+                <li>$y = r \sin(\theta)$</li>
+                <li>$r^2 = x^2 + y^2$</li>
+                <li>$\tan(\theta) = \frac{y}{x}$</li>
+            </ul>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Conversion Bridge Diagram Here ]
+            </div>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Quadrant Caution: The $\theta$ Correction:</strong> When using $\tan^{-1}(y/x)$ to find $\theta$, you MUST check your quadrant. Because the inverse tangent function only returns values in Quadrants I and IV, if your Cartesian point $(x, y)$ is in <strong>Quadrant II or III</strong>, you must add $\pi$ (or $180^\circ$) to your calculated $\theta$.
+        </div>
+
+        <div class="prof-tip">
+            <strong>Pro-Tip: Equation Conversion Hacks:</strong> When converting polar equations to Cartesian form, the "Multiply by $r$" trick is often much easier than attempting to substitute complex fractions or square both sides right away.
+            <br><br>
+            <strong>Example:</strong> Convert $r = 4\sin\theta$ to Cartesian form.
+            <ul>
+                <li><span class="key-step">Step 1 (Multiply by $r$):</span> $r^2 = 4r \sin\theta$</li>
+                <li><span class="key-step">Step 2 (Substitute):</span> $x^2 + y^2 = 4y$</li>
+            </ul>
+        </div>
+
+        <h2>Symmetry Cheat Sheet</h2>
+        <p>When graphing polar equations, use these substitution tests to determine symmetry. If the equation remains unchanged after substitution, the symmetry is confirmed.</p>
+        <table>
+            <tr>
+                <th>Symmetry Type</th>
+                <th>Substitution Test</th>
+            </tr>
+            <tr>
+                <td><strong>Polar Axis (x-axis)</strong></td>
+                <td>Replace $\theta$ with $-\theta$</td>
+            </tr>
+            <tr>
+                <td><strong>The Pole (Origin)</strong></td>
+                <td>Replace $r$ with $-r$</td>
+            </tr>
+            <tr>
+                <td><strong>Line $\theta = \pi/2$ (y-axis)</strong></td>
+                <td>Replace $\theta$ with $\pi - \theta$</td>
+            </tr>
+        </table>
+
+        <h2>Recognizing Polar Shapes: The Equation Gallery</h2>
+        <div class="example-box">
+            <p>Being able to recognize the shape of a polar graph from its equation saves a massive amount of calculation time during an exam.</p>
+            <ul>
+                <li><strong>Circles:</strong> $r = a \cos\theta$ or $r = a \sin\theta$</li>
+                <li><strong>Rose Curves:</strong> $r = a \sin(n\theta)$ or $r = a \cos(n\theta)$</li>
+                <li><strong>Limacons:</strong> $r = a \pm b \sin\theta$ or $r = a \pm b \cos\theta$</li>
+            </ul>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Polar Equation Gallery Here ]
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Calculator Shortcut: TI-Nspire Menu Path</h3>
+            <p>If you are using a TI-Nspire and need to verify your coordinate conversions quickly, you can use the built-in complex number tools (since complex numbers share the same polar arithmetic logic):</p>
+            <p><strong>Menu $\rightarrow$ 2: Number $\rightarrow$ 9: Complex Number Tools $\rightarrow$ 4: Polar to Rectangular</strong> (or vice versa).</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS (EXAM REVIEW NOTES)</h2>
+        <div class="prof-tip">
+            "I'm going to put the keys up here... most of the time it came down to: you either knew it or you didn't. On the 'verify' identities, there are so many ways to do it. As long as you said something legal, I kept reading."
+        </div>
+        <table>
+            <tr>
+                <th>Topic</th>
+                <th>Professor's Feedback & Advice</th>
+            </tr>
+            <tr>
+                <td>Verifying Identities</td>
+                <td>Don't feel like you have to do it the professor's way. Often involves reciprocal identities. Candidate questions for working either side are usually #2 and #4.</td>
+            </tr>
+            <tr>
+                <td>Sum/Difference Formulas</td>
+                <td>Watch for patterns like $\sin(A+B)$ or $\cos(A-B)$. Do not confuse these with Product-to-Sum or Sum-to-Product formulas.</td>
+            </tr>
+            <tr>
+                <td>Triangle Drawing</td>
+                <td>"I'm very grumpy that some of us didn't draw any triangles for #8 and #9." Visual aids prevent arithmetic errors.</td>
+            </tr>
+            <tr>
+                <td>Half-Angle Formulas</td>
+                <td>A "hot mess" for many. Remember you must find the angle $\alpha$ such that the angle you are given is $\alpha/2$. You are often doubling the given number to find the $\alpha$ to plug into the formula.</td>
+            </tr>
+            <tr>
+                <td>Multiple Solutions</td>
+                <td>
+                    If the problem asks for "all solutions," you <strong>must</strong> add $+ 2\pi n$ to your unit circle values.
+                </td>
+            </tr>
+        </table>
+
+        <h2>MASTERY LEVEL STRATEGIES</h2>
+
+        <div class="example-box">
+            <h3>CAS Weapon: TI-Nspire Reality Check</h3>
+            <p>If you are stuck on a Verification step, this command can show you what your current expression "wants" to be, helping you bridge the gap to the goal side.</p>
+            <p><strong>Menu $\rightarrow$ Algebra $\rightarrow$ Trigonometry $\rightarrow$ Expand (tExpand)</strong></p>
+        </div>
+
+        <h3>Advanced Move: Quadratic Form Factoring</h3>
+        <div class="example-box">
+            <p>Some identities are "trinomials in disguise." If you see a trig function squared and a linear term, try to factor it like a polynomial!</p>
+            $$2\sin^2\theta + \sin\theta - 1 = (2\sin\theta - 1)(\sin\theta + 1)$$
+        </div>
+
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert Clean and Familiar Map Here ]
+        </div>
+
+        <div class="prof-tip">
+            <strong>Note on Definition of Done:</strong> For numerical answers, separated fractions MUST be squished into one using an LCD. If you can't reduce further, you are finished.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Mastering polar coordinates requires comfort with fractions and the ability to visualize the unit circle. A point is simply a location; $r$ and $\theta$ are directions to get there. If you change the sign of $r$, you must compensate by shifting the angle by 180 degrees. In exam performance, focus on recognizing formula patterns and always grounding your work in sketches of triangles or circles.</p>
+        
+        <div class="prof-tip" style="text-align: center; font-size: 1.1em; border-left: none; border-top: 5px solid #ffa117; border-bottom: 5px solid #ffa117;">
+            <strong>Classroom Motto:</strong><br>
+            "A straight-edge and a sketch are better than a formula and a prayer."
+        </div>
+    </div>
+</body></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT 172: Complex Numbers & De Moivre’s Theorem</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Complex Numbers in Polar Form & De Moivre’s Theorem</h1>
+        
+        <div class="example-box" style="border-left: 5px solid #ffa117;">
+            <h3>Chapter 5 Corrections: The Fine Print</h3>
+            <ol>
+                <li><strong>HW Grade &ge; 75:</strong> You must have achieved at least a 75 on the Chapter 5 homework to submit.</li>
+                <li><strong>Redo only incorrects:</strong> Only fix the questions you got wrong.</li>
+                <li><strong>Show ALL work:</strong> Do not take shortcuts; show your work as if starting fresh.</li>
+                <li><strong>Self-reflection:</strong> Include a brief explanation of what went wrong for every mistake.</li>
+            </ol>
+            <p style="font-weight: bold; margin-bottom: 0;">Due Date: April 4th.</p>
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Complex numbers, typically expressed in rectangular form ($a + bi$), can be represented in polar form ($r(\cos \theta + i \sin \theta)$). This representation significantly simplifies operations like multiplication, division, and especially raising numbers to high powers (De Moivre’s Theorem).</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Modulus ($r$):</strong> The absolute value of the complex number, representing the distance from the origin. Calculated as $r = \sqrt{a^2 + b^2}$.</li>
+            <li><strong>Argument ($\theta$):</strong> The angle in standard position. For polar form, $\theta$ must be between $0 \le \theta < 360^\circ$ (or $2\pi$).</li>
+            <li><strong>Rectangular Form:</strong> $z = a + bi$ (where $a$ is horizontal/real and $b$ is vertical/imaginary).</li>
+            <li><strong>Polar Form:</strong> $z = r(\cos \theta + i \sin \theta)$, often abbreviated as $r \text{ cis } \theta$.</li>
+            <li><strong>Co-terminal Angles:</strong> If a calculation results in an angle outside the $0-360^\circ$ range, you must add or subtract $360^\circ$ to find the standard revolution equivalent.</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>Calculator Warning:</strong> Watch your mode (Degrees vs. Radians)! Also, when checking work, do not use brackets $[\,]$ in the calculator; use parentheses $(\,)$ to avoid triggering matrix or list errors.
+        </div>
+
+        <h2>Section: The 'Unified DNA' Table</h2>
+        <div class="example-box">
+            <table>
+                <tr>
+                    <th>Polar $(r, \theta)$</th>
+                    <th>Complex $(a + bi)$</th>
+                    <th>Vectors (Magnitude, Direction)</th>
+                </tr>
+                <tr>
+                    <td><strong>Radius ($r$):</strong><br>$\sqrt{a^2 + b^2}$</td>
+                    <td><strong>Modulus ($|z|$):</strong><br>$\sqrt{a^2 + b^2}$</td>
+                    <td><strong>Magnitude ($||\vec{v}||$):</strong><br>$\sqrt{a^2 + b^2}$</td>
+                </tr>
+                <tr>
+                    <td><strong>$x$-coordinate:</strong><br>$x = r \cos(\theta)$</td>
+                    <td><strong>Real part ($a$):</strong><br>$a = r \cos(\theta)$</td>
+                    <td><strong>Horizontal Component:</strong><br>$x = r \cos(\theta)$</td>
+                </tr>
+            </table>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Unified DNA Table Diagram Here ]
+            </div>
+        </div>
+
+        <h2>RULES & IDENTITIES</h2>
+        <h3>Operations in Polar Form</h3>
+        <p>Given $z_1 = r_1(\cos \theta_1 + i \sin \theta_1)$ and $z_2 = r_2(\cos \theta_2 + i \sin \theta_2)$:</p>
+        <ul>
+            <li><strong>Product:</strong> $z_1 z_2 = r_1 r_2 [\cos(\theta_1 + \theta_2) + i \sin(\theta_1 + \theta_2)]$</li>
+            <li><strong>Quotient:</strong> $\frac{z_1}{z_2} = \frac{r_1}{r_2} [\cos(\theta_1 - \theta_2) + i \sin(\theta_1 - \theta_2)]$</li>
+            <li><strong>De Moivre’s Theorem (Powers):</strong> $z^n = r^n [\cos(n\theta) + i \sin(n\theta)]$</li>
+            <li><strong>Roots of Complex Numbers:</strong> $w_k = \sqrt[n]{r} \left[ \cos\left(\frac{\theta + 360^\circ k}{n}\right) + i \sin\left(\frac{\theta + 360^\circ k}{n}\right) \right]$ for $k = 0, 1, 2, \dots, n-1$.</li>
+        </ul>
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert De Moivre's Power Diagram Here ]
+        </div>
+        
+        <div class="prof-tip">
+            <strong>Pro-Tip: Fixing Negative Arguments:</strong> If a quotient calculation yields a negative angle, you must add $360^\circ$ (or $2\pi$) to find the standard name.
+            <br><br><strong>Example:</strong> $-60^\circ + 360^\circ = 300^\circ$
+        </div>
+
+        <h2>EXAMPLE 1: Product of Complex Numbers</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Find the product of $z_1 = 4(\cos \frac{\pi}{5} + i \sin \frac{\pi}{5})$ and $z_2 = 3(\cos \frac{\pi}{10} + i \sin \frac{\pi}{10})$. Leave in polar form.<br><br>
+            <span class="key-step">Step 1: Multiply the $r$ values.</span><br>
+            $4 \times 3 = 12$<br><br>
+            <span class="key-step">Step 2: Add the angles ($\theta$).</span><br>
+            $\frac{\pi}{5} + \frac{\pi}{10} = \frac{2\pi}{10} + \frac{\pi}{10} = \frac{3\pi}{10}$<br><br>
+            <span class="key-step">Final Polar Answer:</span><br>
+            $12(\cos \frac{3\pi}{10} + i \sin \frac{3\pi}{10})$
+        </div>
+
+        <h2>EXAMPLE 2: De Moivre’s Theorem (Powers)</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Calculate $[4(\cos 15^\circ + i \sin 15^\circ)]^3$. Convert to rectangular form.<br><br>
+            <span class="key-step">Step 1: Apply the power to $r$.</span><br>
+            $r^3 = 4^3 = 64$<br><br>
+            <span class="key-step">Step 2: Multiply the angle by $n$.</span><br>
+            $3 \times 15^\circ = 45^\circ$<br><br>
+            <span class="key-step">Step 3: Convert to Rectangular Form using unit circle values.</span><br>
+            $64(\cos 45^\circ + i \sin 45^\circ) = 64(\frac{\sqrt{2}}{2} + i \frac{\sqrt{2}}{2})$<br>
+            $= 32\sqrt{2} + 32\sqrt{2}i$
+        </div>
+
+        <h2>EXAMPLE 3: Rectangular to Polar to Power</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Find $(1 + i)^5$ using De Moivre’s Theorem.<br><br>
+            <span class="key-step">Step 1: Convert $1 + i$ to Polar.</span><br>
+            $r = \sqrt{1^2 + 1^2} = \sqrt{2}$<br>
+            $\theta = \tan^{-1}(\frac{1}{1}) = 45^\circ$ (Quadrant I)<br><br>
+            <span class="key-step">Step 2: Apply the Theorem for $n=5$.</span><br>
+            $(\sqrt{2})^5 [\cos(5 \times 45^\circ) + i \sin(5 \times 45^\circ)]$<br>
+            
+            <div style="background: #ffffff; padding: 10px; border-left: 3px solid #0056b3; margin: 10px 0;">
+                <strong>Radical Simplification Guide:</strong><br>
+                $(\sqrt{2})^5 = \sqrt{2} \cdot \sqrt{2} \cdot \sqrt{2} \cdot \sqrt{2} \cdot \sqrt{2}$<br>
+                $= (\sqrt{2} \cdot \sqrt{2}) \cdot (\sqrt{2} \cdot \sqrt{2}) \cdot \sqrt{2}$<br>
+                $= 2 \cdot 2 \cdot \sqrt{2} = \mathbf{4\sqrt{2}}$<br>
+                <em style="color: #d9534f;">Note: Exact form is required for exams. No decimals!</em>
+            </div>
+            
+            $r^5 = 4\sqrt{2}$<br>
+            $\theta = 225^\circ$<br><br>
+            <span class="key-step">Step 3: Solve for Exact Rectangular Form.</span><br>
+            $225^\circ$ is in Quadrant III ($\cos, \sin$ are negative).<br>
+            $4\sqrt{2} [-\frac{\sqrt{2}}{2} - i \frac{\sqrt{2}}{2}] = -4 - 4i$
+        </div>
+
+        <div class="prof-tip">
+            <strong>Verification Strategy: The Decimal Match:</strong> Exact radicals are required for credit, but use your TI-Nspire to compare the decimal value of your final answer to the trig expression. If the decimals don't match, your radical simplification is wrong!
+        </div>
+
+        <h2>COMPLEX ROOTS (PREVIEW)</h2>
+        <p>To find the $n$-th roots of a complex number, you must find $n$ distinct answers. For example, the 4th roots of $-16i$ will yield 4 separate complex numbers.</p>
+        <ul>
+            <li><strong>Degree Rule:</strong> The number of roots equals the degree of the root (e.g., cube root = 3 answers).</li>
+            <li><strong>Iteration:</strong> Use $k = 0, 1, 2...$ in the formula until you reach $n-1$.</li>
+        </ul>
+
+        <h2>Section: Visualizing N-th Roots</h2>
+        <div class="example-box">
+            <p><strong>The 'Circle of Roots' Concept:</strong> N-th roots of a complex number are spaced perfectly evenly around a circle in the complex plane, separated by an angle of $360^\circ/n$.</p>
+            <ul>
+                <li><strong>Example:</strong> 3rd roots form a triangle ($120^\circ$ apart).</li>
+                <li><strong>Example:</strong> 4th roots form a square ($90^\circ$ apart).</li>
+            </ul>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Circle of Roots Diagram Here ]
+            </div>
+            
+            <h3>Efficiency Hack: Spacing the Roots</h3>
+            <p>You only need to calculate the first angle (where $k=0$). To find the others, simply add the 'gap' (spacing) to the previous angle.</p>
+            $$\text{Spacing} = \frac{360^\circ}{n}$$
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Root Spacing Diagram Here ]
+            </div>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Calculator Mastery: The Root Iteration Hack:</strong> Instead of re-typing the entire massive root formula for every answer, use the 'Copy and Paste' method on the TI-Nspire (by scrolling up and hitting enter on your previous calculation) to change the $k$ values ($0, 1, 2, 3$) quickly.<br><br>
+            <strong>Note:</strong> Find the first root ($k=0$), then simply edit the $k$ value for the rest.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li><strong>Polar Form:</strong> $z = r(\cos \theta + i \sin \theta)$.</li>
+            <li><strong>Multiplication:</strong> Multiply $r$'s, Add $\theta$'s.</li>
+            <li><strong>Division:</strong> Divide $r$'s, Subtract $\theta$'s.</li>
+            <li><strong>Powers:</strong> $r$ to the power, $n$ times the $\theta$.</li>
+            <li><strong>Check:</strong> Use the calculator to compare decimal approximations of your exact radical answers.</li>
+        </ul>
+        
+        <div class="prof-tip">
+            <strong>Exam Strategy:</strong> When finding roots, check your spacing! If your 4th roots aren't exactly $90^\circ$ apart, your arithmetic has gone "off the rails".
+        </div>
+        
+        <div class="prof-tip" style="border-left: 5px solid #d9534f; background: #fdf2f2;">
+            <strong style="color: #d9534f;">Administrative Deadline:</strong> Don't forget: Chapter 5 Corrections are due APRIL 4th. Business must be straight by April 30th for the final withdrawal date!
+        </div>
+    </div>
+</body></html>

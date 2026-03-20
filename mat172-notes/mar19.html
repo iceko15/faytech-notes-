@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Polar Graphing & Complex Numbers</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        h3 { color: #0056b3; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Polar Graphing & Complex Numbers</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Transitioning from pure polar coordinate graphing (Section 6.4) into the representation of Complex Numbers in Polar Form (Section 6.5). The core connection is that the $a$ and $b$ components of a complex number $a + bi$ act exactly like $x$ and $y$ rectangular coordinates, allowing us to use the Pythagorean theorem and trigonometry to find the magnitude (modulus) and direction (argument) of the number.</p>
+
+        <div class="prof-tip">
+            "The thing that burns my hide the most is when y'all just draw some random swirly twirl without a plan. At least map out the landmarks you know for sure—the pole, the intercepts, and the maximum distance. Do me a solid and try to map out what you know!"
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">Rectangular Form:</span> The standard $a + bi$ format for complex numbers.</li>
+            <li><span class="key-step">Polar Form (Trigonometric Form):</span> Represented as $r(\cos \theta + i \sin \theta)$, often abbreviated as $r \text{ cis } \theta$.</li>
+            <li><span class="key-step">Modulus:</span> The absolute value of a complex number, $|z|$, representing the distance from the origin (hypotenuse).</li>
+            <li><span class="key-step">Argument:</span> The angle $\theta$ associated with the complex number, usually restricted to $0 \le \theta < 2\pi$.</li>
+            <li><span class="key-step">Real Axis:</span> The horizontal axis (replaces the x-axis).</li>
+            <li><span class="key-step">Imaginary Axis:</span> The vertical axis (replaces the y-axis).</li>
+        </ul>
+
+        <h2>Section: Complex Numbers in the Polar World</h2>
+        <div class="example-box">
+            <p>The point $(a, b)$ is plotted as $a + bi$.</p>
+            <ul>
+                <li><strong>Modulus ($|z|$):</strong> Defined as the hypotenuse: $|z| = \sqrt{a^2 + b^2}$.</li>
+                <li><strong>Argument:</strong> Defined as the angle $\theta$.</li>
+            </ul>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Complex Plane Diagram Here ]
+            </div>
+        </div>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>Calculator Setup for Polar Graphing</h3>
+        <ol>
+            <li><span class="key-step">Mode:</span> Switch to <b>POLAR</b> and <b>RADIAN</b>.</li>
+            <li><span class="key-step">Zooming:</span> Start with <b>Zoom Standard (Option 6)</b> to orient yourself ($[-10, 10]$ window). Use <b>Zoom Square (Option 5)</b> to fix the rectangular distortion so circles don't look like ovals.</li>
+            <li><span class="key-step">Tracing:</span> When zooming in or out, you must hit <b>Enter</b> an extra time to center the zoom on the blinking cursor.</li>
+            <li><span class="key-step">The Theta Gap:</span> If a graph (like a lemniscate $r^2 = a \cos 2\theta$) looks incomplete, go to <b>Window</b> and increase <b>$\theta\text{max}$</b> from $2\pi$ to $4\pi$. Avoid jumping to a "million $\pi$" or you will burn your battery out waiting for the calculator to finish calculating.</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Calculator Orientation: The Reset Strategy:</strong> If you lose track of where you are in space, always hit <strong>ZOOM STANDARD</strong> first to orient yourself. Use <strong>ZOOM SQUARE</strong> to ensure your circles don't look like ovals.
+        </div>
+
+        <div class="prof-tip">
+            <strong>Pro-Tip: Avoiding the Loading Screen of Death:</strong> Do not set your $\theta_{max}$ too high (like $1000\pi$) when trying to view a full polar graph. It is much better to increase $\theta_{max}$ in small increments of $2\pi$ to save battery and processing time.
+        </div>
+
+        <div class="prof-tip" style="border-left: 5px solid #d9534f; background: #fdf2f2;">
+            <strong style="color: #d9534f;">Technical Alert: TI-Nspire 'Grammar' for Powers:</strong> For $\sin^2(\theta)$, you MUST type $(\sin(\theta))^2$ in the calculator. If you don't use parentheses correctly, the calculator squares the angle, not the result!
+        </div>
+
+        <h3>Converting $a + bi$ to Polar Form</h3>
+        <ol>
+            <li>Plot the point $(a, b)$ to determine the quadrant.</li>
+            <li>Calculate $r$ (the modulus) using $r = \sqrt{a^2 + b^2}$.</li>
+            <li>Calculate $\theta$ (the argument) using $\tan \theta = \frac{b}{a}$. Adjust for the quadrant.</li>
+            <li>Plug into the template: $r(\cos \theta + i \sin \theta)$.</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Technical Tip: Centering Your View:</strong> When using ZOOM IN or ZOOM OUT, you must hit ENTER a second time to center the screen on your blinking cursor.<br><br>
+            <strong>The 'Delta Tbl' trick:</strong> Set it to $\pi/12$ for professional-grade plotting.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Complex Number Relations</h3>
+        <ul>
+            <li>$i = \sqrt{-1}$ and $i^2 = -1$.</li>
+            <li>$a = r \cos \theta$</li>
+            <li>$b = r \sin \theta$</li>
+            <li>Modulus: $|z| = r = \sqrt{a^2 + b^2}$</li>
+            <li>Argument: $\tan \theta = \frac{b}{a}$</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Graphing a Lemniscate</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Graph $r^2 = 9 \cos(2\theta)$.<br>
+            <strong>Steps:</strong>
+            <ol>
+                <li>Isolate $r$ by rooting both sides: $r = \pm \sqrt{9 \cos(2\theta)}$.</li>
+                <li>In the calculator ($Y=$ screen), enter:
+                    <ul>
+                        <li>$r1 = \sqrt{9 \cos(2\theta)}$</li>
+                        <li>$r2 = -\sqrt{9 \cos(2\theta)}$</li>
+                    </ul>
+                </li>
+                <li>Note: Zoom Standard might only show half the "propeller." Extend $\theta\text{max}$ to $4\pi$ to see the full figure-8 shape.</li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 2: Finding the Modulus (Absolute Value)</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Determine the absolute value of $z = -3 + 4i$.<br>
+            <strong>Process:</strong>
+            <ol>
+                <li>Recognize this as a 3-4-5 right triangle.</li>
+                <li>$|z| = \sqrt{(-3)^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25}$.</li>
+                <li>$|z| = 5$.</li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 3: Rectangular to Polar Conversion</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Convert $2 + 2i$ to polar form.<br>
+            <strong>Process:</strong>
+            <ol>
+                <li>$r = \sqrt{2^2 + 2^2} = \sqrt{8} = 2\sqrt{2}$.</li>
+                <li>$\tan \theta = \frac{2}{2} = 1$. Since we are in Quadrant I, $\theta = \frac{\pi}{4}$.</li>
+                <li><strong>Result:</strong> $2\sqrt{2}(\cos \frac{\pi}{4} + i \sin \frac{\pi}{4})$.</li>
+            </ol>
+            <div class="prof-tip">"Students often think this doesn't feel like an answer. If you simplify the $\cos$ and $\sin$, you just end up back at $2 + 2i$. The trig expression IS the answer."</div>
+        </div>
+
+        <h2>The Unified DNA: One Triangle, Three Languages</h2>
+        <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+            [ Placeholder: Insert Unified Triangle Diagram Here ]
+        </div>
+        <table>
+            <tr>
+                <th>Polar $(r, \theta)$</th>
+                <th>Complex $(a + bi)$</th>
+                <th>Vectors (Magnitude, Direction)</th>
+            </tr>
+            <tr>
+                <td><strong>Radius ($r$):</strong><br>$\sqrt{x^2 + y^2}$</td>
+                <td><strong>Modulus ($|z|$):</strong><br>$\sqrt{a^2 + b^2}$</td>
+                <td><strong>Magnitude ($||\vec{v}||$):</strong><br>$\sqrt{x^2 + y^2}$</td>
+            </tr>
+            <tr>
+                <td><strong>$x$-coordinate:</strong><br>$x = r \cos(\theta)$</td>
+                <td><strong>Real part ($a$):</strong><br>$a = r \cos(\theta)$</td>
+                <td><strong>Horizontal Component:</strong><br>$x = r \cos(\theta)$</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip" style="border-left: 5px solid #d9534f; background: #fdf2f2;">
+            <strong style="color: #d9534f;">Critical Exam Alert: The Multi-Angle Trap:</strong> When solving for multiple angles (like $3\theta$), you MUST add the $+2\pi n$ period BEFORE dividing by 3. Dividing first is the #1 way to lose half your points!
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Convert $4(\cos 240^\circ + i \sin 240^\circ)$ to rectangular form.<br>
+            <strong>Solution:</strong>
+            <ol>
+                <li>Identify Quadrant: $240^\circ$ is in Quadrant III (both $a$ and $b$ must be negative).</li>
+                <li>Reference Angle: $240^\circ - 180^\circ = 60^\circ$.</li>
+                <li>Values: $\cos 60^\circ = 1/2$, $\sin 60^\circ = \sqrt{3}/2$.</li>
+                <li>Substitute: $4(-1/2 + i(-\sqrt{3}/2))$.</li>
+                <li>Distribute: $-2 - 2\sqrt{3}i$.</li>
+            </ol>
+        </div>
+
+        <h2>Section: The Polar Advantage (Product & Quotient Rules)</h2>
+        <div class="example-box">
+            <p>Multiplication and division are significantly easier in polar form.</p>
+            <ul>
+                <li><strong>Product:</strong> $r_1 r_2 [\cos(\theta_1 + \theta_2) + i \sin(\theta_1 + \theta_2)]$</li>
+                <li><strong>Quotient:</strong> $\frac{r_1}{r_2} [\cos(\theta_1 - \theta_2) + i \sin(\theta_1 - \theta_2)]$</li>
+            </ul>
+            <p style="font-style: italic; color: #0056b3;"><strong>Note:</strong> No FOILing or conjugates required!</p>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Complex Operation Diagram Here ]
+            </div>
+        </div>
+
+        <h2>Section: DeMoivre’s Theorem (Complex Powers)</h2>
+        <div class="example-box">
+            <p>Raising complex numbers to powers is the main reason we use polar form. The arithmetic is significantly more efficient than expanding binomials multiple times.</p>
+            $$z^n = r^n[\cos(n\theta) + i\sin(n\theta)]$$
+            <p><strong>Step-by-Step Example: To find $(1 + i)^8$</strong></p>
+            <ul>
+                <li><strong>Convert to polar:</strong> $r = \sqrt{2}$, $\theta = \pi/4$.</li>
+                <li><strong>Apply Theorem:</strong> $(\sqrt{2})^8 [\cos(8 \cdot \pi/4) + i \sin(8 \cdot \pi/4)] = 16 [\cos(2\pi) + i \sin(2\pi)] = 16$.</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <h3>Visual Concept: Symmetrical Roots</h3>
+            <p><strong>Note:</strong> Nth roots of a complex number are always spaced perfectly evenly around a circle in the complex plane.</p>
+            <div style="border: 2px dashed #b3d7ff; background: #f4f9ff; padding: 20px; text-align: center; margin: 15px 0; border-radius: 6px; color: #0056b3; font-weight: bold;">
+                [ Placeholder: Insert Symmetrical Roots Diagram Here ]
+            </div>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Whether dealing with Real Polar points ($r, \theta$), Complex Numbers ($a + bi$), or Vectors (coming soon), we are essentially solving the same right triangles. The math is identical; only the labels change. For complex numbers, use the horizontal "Real" axis and the vertical "Imaginary" axis. Use your calculator's complex mode (found in <b>MODE</b>) to check results, but remember it will give you decimals, not exact radicals or $\pi$ values. The power of the polar system isn't just in the plotting, but in the efficiency of the arithmetic for powers and roots.</p>
+        
+        <div class="example-box" style="border-left: 5px solid #ffa117;">
+            <h3>Classroom Business: Spring Break Survival</h3>
+            <ul>
+                <li>Finish Chapter 6 before Break to avoid a 'Hot Disaster.'</li>
+                <li>Homework 7 is due March 30th.</li>
+                <li>May 1st is the 90% Withdraw date—have business straight by April 30th.</li>
+                <li><strong>Safety Net: The 'Incomplete' Grade:</strong> An 'I' grade is a temporary limit for students who are passing but encounter a legitimate disaster in the final 2 weeks.</li>
+            </ul>
+        </div>
+    </div>
+</body></html>
