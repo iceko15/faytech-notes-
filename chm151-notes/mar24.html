@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Periodic Trends and Ionization</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>CHM-151: Periodic Trends & Ionization</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The core concept of Chapter 7 is <strong>Effective Nuclear Charge ($Z_{eff}$)</strong>. This is the net positive charge (pull) felt by valence electrons from the nucleus. This pull is determined by the number of protons versus the shielding effect of core electrons. $Z_{eff}$ dictates nearly every physical trend: atomic size, ion size, and the energy required to remove or add electrons.</p>
+
+        <div class="prof-tip">
+            <strong>Professor's Sidebar:</strong> Registration for next semester is open! Get your classes early, especially if you need specific sections for summer or fall. If you're looking for a Summer Calculus 1 night course, let me know—I might be able to help get that section opened if we get 7 to 10 signatures.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Effective Nuclear Charge ($Z_{eff}$):</strong> The amount of "pull" outer electrons feel from the nucleus after core shielding is accounted for.</li>
+            <li><strong>Isoelectronic Series:</strong> A group of atoms/ions that all have the same number of electrons (e.g., $O^{2-}$, $F^-$, $Ne$, $Na^+$, $Mg^{2+}$, $Al^{3+}$ all have 10 electrons).</li>
+            <li><strong>Ionization Energy (IE):</strong> The energy required to remove an electron from a gaseous atom or ion.</li>
+            <li><strong>Electron Affinity (EA):</strong> The energy change (usually energy released) when an electron is added to a neutral atom.</li>
+            <li><strong>Octet Rule:</strong> The tendency of atoms to prefer a configuration of 8 valence electrons.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <p class="key-step">Explaining Trends using Coulomb’s Law ($F = k \frac{q_1 q_2}{r^2}$):</p>
+        <ol>
+            <li><strong>Left to Right:</strong> Shielding remains constant while protons increase. This increases $Q$ (charge), making the pull stronger. Result: Smaller atoms, higher Ionization Energy.</li>
+            <li><strong>Top to Bottom:</strong> We are adding energy levels, which increases $r$ (distance). Distance has a massive impact on force. Result: Larger atoms, lower Ionization Energy.</li>
+            <li><strong>Transition Metals:</strong> When forming ions, transition metals lose their $s$ electrons before their $d$ electrons because the $s$ shell is physically further from the nucleus.</li>
+        </ol>
+
+        <h2>RULES/IDENTITIES</h2>
+        <table>
+            <tr>
+                <th>Trend</th>
+                <th>Moving Left to Right</th>
+                <th>Moving Top to Bottom</th>
+            </tr>
+            <tr>
+                <td>Effective Nuclear Charge ($Z_{eff}$)</td>
+                <td>Increases</td>
+                <td>Decreases</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>Decreases (gets smaller)</td>
+                <td>Increases (gets larger)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy</td>
+                <td>Increases</td>
+                <td>Decreases</td>
+            </tr>
+            <tr>
+                <td>Cation Size</td>
+                <td>Smaller than neutral parent</td>
+                <td>Increases</td>
+            </tr>
+            <tr>
+                <td>Anion Size</td>
+                <td>Larger than neutral parent</td>
+                <td>Increases</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>Exam Hint:</strong> Why do anions get bigger? It’s not just the extra electron; it’s the <strong>electron repulsion</strong>. More negative charges in the same space force them to spread out further.
+        </div>
+
+        <h2>EXAMPLE 1: Ranking Neutral Size</h2>
+        <div class="example-box">
+            <strong>Task: Rank from smallest to largest size: $Si$, $Al$, $Ga$.</strong><br>
+            1. $Si$ is furthest up and right. It is the smallest.<br>
+            2. $Al$ is to the left of $Si$ in the same period. It is larger than $Si$.<br>
+            3. $Ga$ is below $Al$. Because distance increases with the next energy level, $Ga$ is the largest.<br>
+            <strong>Order: $Si < Al < Ga$</strong>
+        </div>
+
+        <h2>EXAMPLE 2: Isoelectronic Series Size</h2>
+        <div class="example-box">
+            <strong>Task: Rank $O^{2-}$, $F^-$, $Ne$, $Na^+$, $Mg^{2+}$, $Al^{3+}$.</strong><br>
+            All have 10 electrons. We must look at the number of protons (the "magnet" in the center).<br>
+            * $Al^{3+}$ has 13 protons pulling on 10 electrons. (Strongest pull = Smallest)<br>
+            * $O^{2-}$ has only 8 protons pulling on 10 electrons. (Weakest pull = Largest)<br>
+            <strong>Order (Smallest to Largest): $Al^{3+} < Mg^{2+} < Na^+ < Ne < F^- < O^{2-}$</strong>
+        </div>
+
+        <h2>EXAMPLE 3: Successive Ionization Energies</h2>
+        <div class="example-box">
+            <strong>Task: Why is the $IE_2$ of Lithium ($7298 kJ/mol$) so much higher than $IE_1$ ($520 kJ/mol$)?</strong><br>
+            * $IE_1$ removes a valence electron ($2s^1$).<br>
+            * $IE_2$ attempts to remove a core electron ($1s^2$).<br>
+            Core electrons are closer to the nucleus and feel the full force of the protons without valence shielding. This "jump" in energy indicates you have hit the core.
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <p><strong>1. Which has higher IE: $Ca$ or $As$?</strong><br>
+        $As$ is further right. Higher $Z_{eff}$ means it holds electrons tighter. Result: $As$.</p>
+        
+        <p><strong>2. Which is smaller: $Fe^{2+}$ or $Fe^{3+}$?</strong><br>
+        $Fe^{3+}$ has a higher positive charge, meaning the same number of protons are pulling on fewer electrons. Result: $Fe^{3+}$.</p>
+        
+        <p><strong>3. Configuration for $Fe^{2+}$:</strong><br>
+        Neutral $Fe$: $[Ar] 4s^2 3d^6$. Remove $4s$ first. Result: $[Ar] 3d^6$.</p>
+
+        <h2>SUMMARY</h2>
+        <p>Everything comes back to how tight the nucleus holds the electrons. Smaller atoms hold electrons tighter, making them harder to remove (High IE). Larger atoms hold them loosely (Low IE). Non-metals love to gain electrons (High Electron Affinity) to reach an <strong>octet</strong>, while metals prefer to lose electrons to reach a stable previous-shell configuration.</p>
+    </div>
+</body></html>

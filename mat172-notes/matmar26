@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Vectors, Dot Product & Work</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Vectors: Resultants, Dot Products, and Physics Applications</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The transition from basic vector addition to the <b>Dot Product</b> allows us to calculate the angle between vectors, determine orthogonality (perpendicularity), and project one vector onto another. These tools are fundamental for decomposing forces in physics and calculating work done by a constant force.</p>
+
+        <div class="prof-tip">
+            Exam Hint: This specific resultant vector problem (like #28 in homework) is almost 95% guaranteed to be on the final exam. Do not ignore the range restrictions of inverse trig functions when calculating your final angles!
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><b>Resultant Vector:</b> The vector sum of two or more vectors ($F_1 + F_2$).</li>
+            <li><b>Dot Product:</b> An algebraic operation that takes two equal-length sequences of numbers and returns a single <b>scalar</b>.</li>
+            <li><b>Scalar:</b> A regular number (magnitude), as opposed to a vector which has magnitude and direction.</li>
+            <li><b>Orthogonal:</b> A fancy term for <b>perpendicular</b> ($90^\circ$ angle).</li>
+            <li><b>Vector Projection:</b> The "shadow" cast by one vector onto another.</li>
+            <li><b>Work:</b> The product of force applied in the direction of displacement ($W = F \cdot d$).</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        
+        <h3>1. Calculating the Resultant Vector from Magnitude and Direction</h3>
+        <ol>
+            <li>Convert each vector into $ai + bj$ form: $V = |V|\cos(\theta)i + |V|\sin(\theta)j$.</li>
+            <li>Add the $i$ components together and the $j$ components together.</li>
+            <li>Find the magnitude of the resultant: $\sqrt{a^2 + b^2}$.</li>
+            <li>Find the direction using $\tan^{-1}(b/a)$, $\cos^{-1}(a/|V|)$, or $\sin^{-1}(b/|V|)$.</li>
+        </ol>
+
+        <div class="prof-tip">
+            Warning: MyMathLab often prefers the positive revolution angle (0 to 360). If the calculator gives you $-5.3^\circ$, you might need to enter $354.7^\circ$.
+        </div>
+
+        <h3>2. The Dot Product Calculation</h3>
+        <p>For vectors $U = a_1i + b_1j$ and $V = a_2i + b_2j$:</p>
+        <p class="key-step">$$U \cdot V = (a_1 \cdot a_2) + (b_1 \cdot b_2)$$</p>
+
+        <h3>3. Angle Between Two Vectors</h3>
+        <p>To find the angle $\theta$ between vectors $U$ and $V$:</p>
+        <p class="key-step">$$\cos(\theta) = \frac{U \cdot V}{|U||V|}$$</p>
+
+        <h2>RULES/IDENTITIES</h2>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Formula</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Commutative</td>
+                <td>$V \cdot W = W \cdot V$</td>
+                <td>Order does not matter.</td>
+            </tr>
+            <tr>
+                <td>Distributive</td>
+                <td>$U \cdot (V + W) = U \cdot V + U \cdot W$</td>
+                <td>Works like standard algebra.</td>
+            </tr>
+            <tr>
+                <td>Magnitude Squared</td>
+                <td>$V \cdot V = |V|^2$</td>
+                <td>Dot product of a vector with itself is its magnitude squared.</td>
+            </tr>
+            <tr>
+                <td>Orthogonality Test</td>
+                <td>If $V \cdot W = 0$</td>
+                <td>The vectors are perpendicular ($90^\circ$).</td>
+            </tr>
+        </table>
+
+        <h2>EXAMPLE 1: Resultant of Forces</h2>
+        <div class="example-box">
+            <b>Scenario:</b> $F_1 = 120$ lbs at $-17^\circ$, $F_2 = 50$ lbs at $24^\circ$.<br>
+            <b>1. $ai + bj$ Forms:</b><br>
+            $F_1 = 120\cos(-17^\circ)i + 120\sin(-17^\circ)j \approx 114.75i - 35.08j$<br>
+            $F_2 = 50\cos(24^\circ)i + 50\sin(24^\circ)j \approx 45.68i + 20.34j$<br>
+            <b>2. Resultant Vector ($R$):</b><br>
+            $R = (114.75 + 45.68)i + (-35.08 + 20.34)j = 160.43i - 14.74j$<br>
+            <b>3. Magnitude:</b> $\sqrt{160.43^2 + (-14.74)^2} \approx 161.1$ lbs.
+        </div>
+
+        <h2>EXAMPLE 2: Angle Between Vectors</h2>
+        <div class="example-box">
+            <b>Vectors:</b> $V = -3i + 2j$, $W = 4i - j$<br>
+            <b>1. Dot Product:</b> $(-3 \cdot 4) + (2 \cdot -1) = -12 - 2 = -14$<br>
+            <b>2. Magnitudes:</b> $|V| = \sqrt{9+4} = \sqrt{13}$; $|W| = \sqrt{16+1} = \sqrt{17}$<br>
+            <b>3. Calculation:</b><br>
+            $$\cos(\theta) = \frac{-14}{\sqrt{13}\sqrt{17}} = \frac{-14}{\sqrt{221}}$$
+            $\theta = \cos^{-1}(-14/\sqrt{221}) \approx 160.35^\circ$
+        </div>
+
+        <h2>PRACTICE PROBLEMS: Vector Projection</h2>
+        <div class="example-box">
+            <b>Formula for Projection of $V$ onto $W$:</b><br>
+            $$V_1 = \text{proj}_W V = \left( \frac{V \cdot W}{|W|^2} \right) W$$
+            <b>Decomposition:</b><br>
+            $V_1$ is the parallel component.<br>
+            $V_2 = V - V_1$ is the orthogonal component.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>In this session, we wrapped up Chapter 6.6 and 6.7. We learned that while vector addition results in a new vector, the <b>Dot Product</b> results in a <b>scalar</b>. This scalar is key to finding angles and work. Remember that in physics applications like work ($W = |F||d|\cos \theta$), the units are often expressed in <b>foot-pounds</b>.</p>
+        
+        <div class="prof-tip">
+            Final Reminder: Don't let the "clutter of numbers" in MyMathLab overwhelm you. Stick to the primary formulas, use parentheses in your calculator, and don't round until the very last step!
+        </div>
+    </div>
+</body></html>

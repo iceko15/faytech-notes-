@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Chemical Bonding & Lattice Energy</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chemical Bonding & Lattice Energy</h1>
+        
+        <div class="prof-tip">
+            <strong>ADMINISTRATIVE UPDATE:</strong> The next test is moved to Thursday, April 16th (the second lecture back from Spring Break). Tuesday will be a lecture day starting Chapter 9. Chapter 9 is an extension of Chapter 8 but will not be on this specific test.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Chemical bonding is driven by the movement or sharing of electrons to achieve a stable octet. This lecture transitions from Chapter 7 trends into the mechanics of Ionic and Covalent bonding, focusing on the energy released during lattice formation and the spectrum of electron sharing (polarity).</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Ionic Bonding:</strong> Electrostatic attraction between ions formed by the transfer of electrons from a metal (low ionization energy) to a non-metal (high electron affinity).</li>
+            <li><strong>Lattice Energy:</strong> The energy released when gas-phase ions come together to form one mole of an ionic solid. It is also the energy required to pull the lattice apart.</li>
+            <li><strong>Covalent Bonding:</strong> A chemical bond involving the sharing of electron pairs between atoms, where the attractive force between nuclei and electrons outweighs the repulsive forces.</li>
+            <li><strong>Electronegativity:</strong> The ability of an atom in a molecule to attract shared electrons to itself.</li>
+            <li><strong>Dipole:</strong> A molecule or bond with two poles—one partial positive and one partial negative—due to unequal electron sharing.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Predicting Ionic Charges</h3>
+        <ol>
+            <li>Identify the element's group to find the number of valence electrons.</li>
+            <li>Apply the <strong>Octet Rule</strong>: Metals lose electrons to reach the previous shell's octet; non-metals gain electrons to fill the current shell.</li>
+            <li>Write the ion: Metals become cations ($+$), non-metals become anions ($-$).</li>
+        </ol>
+
+        <h3>Determining Bond Type via Electronegativity ($\Delta EN$)</h3>
+        <ul>
+            <li>$0.0$ to $0.4$: <strong>Non-polar Covalent</strong> (Equal sharing).</li>
+            <li>$0.4$ to $1.8$: <strong>Polar Covalent</strong> (Unequal sharing).</li>
+            <li>$> 1.8$: <strong>Ionic</strong> (Electron transfer).</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Coulomb’s Law in Lattices</h3>
+        <p>The force ($F$) and energy of the bond are governed by:</p>
+        $$F = k \frac{Q_1 Q_2}{d^2}$$
+        <p>Where $Q$ represents the charges and $d$ is the distance between nuclei. 
+        <ul>
+            <li>Higher charges ($+2/-2$ vs $+1/-1$) lead to much higher lattice energy.</li>
+            <li>Smaller ions (shorter distance $d$) lead to higher lattice energy.</li>
+        </ul>
+        </p>
+
+        <h3>The Born-Haber Cycle</h3>
+        <p>A state-function approach to calculating lattice energy by breaking the process into steps: 
+            sublimation of metal $\rightarrow$ dissociation of non-metal $\rightarrow$ ionization of metal $\rightarrow$ electron affinity of non-metal $\rightarrow$ formation of lattice.
+        </p>
+
+        <h2>EXAMPLE 1: Ionic Formation (Mg + S)</h2>
+        <div class="example-box">
+            <p>Magnesium (Group 2, 2 valence electrons) and Sulfur (Group 16, 6 valence electrons):</p>
+            <ul>
+                <li>Mg loses 2 electrons $\rightarrow Mg^{2+}$</li>
+                <li>S gains 2 electrons $\rightarrow [S]^{2-}$ (with 8 dots in brackets)</li>
+                <li>Equation: $Mg: + \cdot \ddot{S} \cdot \rightarrow Mg^{2+} + [:\ddot{S}:]^{2-}$</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Lattice Energy Ranking</h2>
+        <div class="example-box">
+            <p>Rank by increasing lattice energy: $CsI, NaCl, MgO, AlN$.</p>
+            <ol>
+                <li><strong>CsI:</strong> $+1/-1$ charges, very large ions (long distance). <strong>Lowest energy.</strong></li>
+                <li><strong>NaCl:</strong> $+1/-1$ charges, smaller ions than CsI.</li>
+                <li><strong>MgO:</strong> $+2/-2$ charges, similar size to NaCl but higher $Q$.</li>
+                <li><strong>AlN:</strong> $+3/-3$ charges. <strong>Highest energy.</strong></li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 3: Bond Polarity Symbols</h2>
+        <div class="example-box">
+            <p>For Hydrogen Fluoride ($HF$):</p>
+            <ul>
+                <li>$H$ (EN 2.1), $F$ (EN 4.0). $\Delta EN = 1.9$ (Polar/Ionic border).</li>
+                <li>Notation 1 (Arrow): $H \rightarrow F$ with a cross on the H side ($\mapsto$).</li>
+                <li>Notation 2 (Delta): $\delta^+ H - F \delta^-$</li>
+            </ul>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <div class="example-box">
+            <p>Determine bond type and draw dipoles for:</p>
+            <ol>
+                <li>$C - O$</li>
+                <li>$N - H$</li>
+                <li>$Li - F$</li>
+            </ol>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Lattice energy is the "glue" of ionic compounds, maximized by high charges and small radii. Covalent bonds exist on a spectrum defined by electronegativity; Fluorine is the king of pulling electrons. We use $\delta$ and dipole arrows to visualize this "tug-of-war" in polar molecules.</p>
+        
+        <div class="prof-tip">
+            <strong>Professor's Sidebar:</strong> Fritz Haber, the man behind the Born-Haber cycle, is a controversial figure. He developed artificial fertilizers that feed 50% of the world today, but also pioneered chemical warfare (chlorine gas) in WWI and Zyklon B. Chemistry has massive real-world consequences, both good and bad.
+        </div>
+    </div>
+</body></html>

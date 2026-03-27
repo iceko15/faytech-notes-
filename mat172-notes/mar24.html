@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: De Moivre's Theorem & Vector Basics</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Complex Roots & Vector Fundamentals</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The transition from complex numbers to vectors involves using De Moivre's Theorem to find multiple roots of a complex number and understanding that vectors represent magnitude and direction, regardless of their starting position in space.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><span class="key-step">Principal Root:</span> The primary real-valued solution (e.g., $x=2$ for $\sqrt[3]{8}$).</li>
+            <li><span class="key-step">Magnitude:</span> The size, length, or "strength" of a vector, denoted by double bars $||V||$.</li>
+            <li><span class="key-step">Standard Position:</span> A vector reoriented to begin at the origin $(0,0)$.</li>
+            <li><span class="key-step">Resultant:</span> The sum of two or more vectors.</li>
+            <li><span class="key-step">Scalar:</span> A plain number used to multiply a vector, affecting its size or direction.</li>
+            <li><span class="key-step">Unit Vector:</span> A vector with a magnitude of exactly 1, maintaining the same direction as the original.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Finding Complex Roots</h3>
+        <ol>
+            <li>Convert the number to polar form ($r$ and $\theta$).</li>
+            <li>Identify $n$ (the root being sought) and the $k$ values ($k = 0, 1, 2, ... n-1$).</li>
+            <li>Plug into the root formula: $z_k = \sqrt[n]{r} [\cos(\frac{\theta + 360k}{n}) + i\sin(\frac{\theta + 360k}{n})]$.</li>
+            <li>Calculate each root by iterating $k$.</li>
+        </ol>
+
+        <div class="prof-tip">
+            Professor's Shortcut: Use the "Second + Entry" (Last Entry) function on your calculator to quickly swap $k=0$ for $k=1, 2, 3$ without retyping the entire string.
+        </div>
+
+        <h3>Converting Vectors between Points</h3>
+        <p>If given initial point $(x_1, y_1)$ and terminal point $(x_2, y_2)$:</p>
+        <ul>
+            <li>$a = x_2 - x_1$</li>
+            <li>$b = y_2 - y_1$</li>
+            <li>Vector $v = ai + bj$</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>De Moivre's Theorem for Roots</h3>
+        <p>$$W_k = \sqrt[n]{r} \left( \cos \frac{\theta + 2\pi k}{n} + i \sin \frac{\theta + 2\pi k}{n} \right)$$</p>
+        
+        <h3>Vector Magnitude</h3>
+        <p>$$||v|| = \sqrt{a^2 + b^2}$$</p>
+
+        <h3>Unit Vector Formula</h3>
+        <p>$$u = \frac{v}{||v||}$$</p>
+
+        <h2>EXAMPLE 1: Complex Cube Roots</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Find the complex cube roots of $z = 8(\cos 210^\circ + i\sin 210^\circ)$.
+            <br><strong>Parameters:</strong> $n=3$, $r=8$, $\theta=210^\circ$. $k=0, 1, 2$.
+            <ul>
+                <li><strong>For k=0:</strong> $\sqrt[3]{8} = 2$. Angle: $\frac{210 + 360(0)}{3} = 70^\circ$. <br> $z_0 = 2(\cos 70^\circ + i\sin 70^\circ)$</li>
+                <li><strong>For k=1:</strong> Angle: $\frac{210 + 360(1)}{3} = \frac{570}{3} = 190^\circ$. <br> $z_1 = 2(\cos 190^\circ + i\sin 190^\circ)$</li>
+                <li><strong>For k=2:</strong> Angle: $\frac{210 + 360(2)}{3} = \frac{930}{3} = 310^\circ$. <br> $z_2 = 2(\cos 310^\circ + i\sin 310^\circ)$</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Vector from Two Points</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Initial point $P = (-4, -4)$, Terminal point $Q = (6, 2)$. Find vector $v$.
+            <br><strong>Calculation:</strong>
+            <p>$a = 6 - (-4) = 10$</p>
+            <p>$b = 2 - (-4) = 6$</p>
+            <p><strong>Result:</strong> $v = 10i + 6j$</p>
+            <p><strong>Magnitude:</strong> $||v|| = \sqrt{10^2 + 6^2} = \sqrt{136} \approx 11.66$</p>
+        </div>
+
+        <h2>EXAMPLE 3: Resultant Force</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Force 1: 30 lbs at $N 10^\circ E$. Force 2: 60 lbs at $N 60^\circ E$.
+            <br><strong>Step 1: Convert to Standard Angles</strong>
+            <ul>
+                <li>$\theta_1 = 90 - 10 = 80^\circ$</li>
+                <li>$\theta_2 = 90 - 60 = 30^\circ$</li>
+            </ul>
+            <strong>Step 2: Component Addition</strong>
+            <p>$A_{total} = 30\cos(80^\circ) + 60\cos(30^\circ) \approx 5.21 + 51.96 = 57.17$</p>
+            <p>$B_{total} = 30\sin(80^\circ) + 60\sin(30^\circ) \approx 29.54 + 30.00 = 59.54$</p>
+            <strong>Step 3: Magnitude</strong>
+            <p>$||R|| = \sqrt{57.17^2 + 59.54^2} \approx 82.54 \text{ lbs}$</p>
+        </div>
+
+        <div class="prof-tip">
+            Exam Hint: On the test, you must present the number of answers corresponding to the root (e.g., 4th root requires 4 answers). MyMathLab prompts you for the number of slots, but the paper test will not.
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <ol>
+            <li>Find the square roots of $16i$. (Hint: $r=16, \theta=90^\circ$).</li>
+            <li>Calculate the unit vector for $v = 4i - 3j$.</li>
+            <li>A plane flies at 200 mph at $S 30^\circ W$. Write its velocity vector in $i, j$ form.</li>
+        </ol>
+
+        <h2>SUMMARY</h2>
+        <p>Complex roots are found by distributing a full circle ($360^\circ$) across $n$ solutions. Vectors represent the "push" or "pull" of a force; adding them (resultant) requires breaking them into horizontal ($i$) and vertical ($j$) components, summing those components, and then using the Pythagorean theorem to find the final magnitude.</p>
+    </div>
+</body></html>
