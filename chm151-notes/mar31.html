@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Electronegativity and Lewis Structures</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Electronegativity, Bond Polarity, and Lewis Structures</h1>
+        
+        <div class="prof-tip">
+            <strong>Logistics Update:</strong> We are finishing Chapter 8 today/next lecture. Spring break is next week (no classes). The actual test will be the 3rd day after we return from spring break. Chapter 9 starts with a review of Chapter 8. Tomorrow in lab: Titration quiz (last two labs), vinegar titration lab report due. We will meet in the computer lab to discuss formal lab report formatting. Take pictures of your data/procedure before turning in your lab book tomorrow because you won't get it back before the first draft is due.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Understanding how electrons are distributed within molecules. We use <strong>electronegativity</strong> to determine if bonds are polar or ionic, and <strong>Lewis Structures</strong> to visualize the connectivity and valence electron distribution in covalent compounds.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Electronegativity:</strong> How strongly an atom pulls electrons toward itself within a bond.</li>
+            <li><strong>Bonding Pair:</strong> Two electrons shared between atoms (represented by a line).</li>
+            <li><strong>Lone Pair:</strong> A pair of valence electrons not involved in bonding (represented by dots).</li>
+            <li><strong>Terminal Atom:</strong> An atom located on the outside of a structure (not the center).</li>
+            <li><strong>Formal Charge:</strong> A bookkeeping method to track electrons; it helps identify the most "dominant" or stable Lewis structure.</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        
+        <h3>Bond Polarity Based on $\Delta EN$</h3>
+        <table>
+            <tr>
+                <th>Electronegativity Difference ($\Delta EN$)</th>
+                <th>Bond Type</th>
+            </tr>
+            <tr>
+                <td>$0$ to $0.4$</td>
+                <td>Non-polar Covalent</td>
+            </tr>
+            <tr>
+                <td>$0.4$ to $1.8$</td>
+                <td>Polar Covalent</td>
+            </tr>
+            <tr>
+                <td>Greater than $1.8$</td>
+                <td>Ionic</td>
+            </tr>
+        </table>
+
+        <h3>Steps to Building Lewis Structures</h3>
+        <ol>
+            <li><span class="key-step">Calculate Total Valence Electrons:</span> Sum valence electrons for all atoms. For <strong>anions</strong>, add electrons (e.g., -1 charge = +1e). For <strong>cations</strong>, subtract electrons.</li>
+            <li><span class="key-step">Identify Central Atom:</span> Usually the least electronegative atom. <strong>Exception:</strong> Hydrogen can NEVER be the central atom.</li>
+            <li><span class="key-step">Connect Atoms:</span> Draw single bonds (lines) from the central atom to terminal atoms.</li>
+            <li><span class="key-step">Fill Octets (Outside In):</span> Add lone pairs to terminal atoms first to reach 8 electrons (except Hydrogen, which only needs 2).</li>
+            <li><span class="key-step">Place Remaining Electrons:</span> Put any leftover electrons on the central atom.</li>
+            <li><span class="key-step">Check Octets/Form Multiple Bonds:</span> If the central atom lacks an octet, move lone pairs from terminal atoms to form double or triple bonds.</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Dr. A's Tip:</strong> Use the "tends to make" pattern. Atoms usually form a number of bonds equal to the electrons they need to reach an octet. Carbon (4 valence) tends to make 4 bonds. Nitrogen (5 valence) tends to make 3. Oxygen (6 valence) tends to make 2.
+        </div>
+
+        <h2>EXAMPLE 1: $PCl_3$</h2>
+        <div class="example-box">
+            <ol>
+                <li>Valence: $P (5) + Cl (7 \times 3) = 26$ total electrons.</li>
+                <li>Center: $P$ (less electronegative than $Cl$).</li>
+                <li>Single bonds to each $Cl$ uses 6 electrons ($26 - 6 = 20$ left).</li>
+                <li>Fill $Cl$ octets: 6 dots on each $Cl$ uses 18 electrons ($20 - 18 = 2$ left).</li>
+                <li>Remaining 2 electrons go on $P$ as a lone pair.</li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 2: Formal Charge Determination ($CO_2$)</h2>
+        <p>Formula for Formal Charge: $$FC = (\text{Valence } e^-) - (\text{Lone pair } e^-) - \frac{1}{2}(\text{Bonding } e^-)$$</p>
+        <p><strong>Structure Choice for $CO_2$ (16 electrons total):</strong></p>
+        <ul>
+            <li><strong>Option A:</strong> $O=C=O$ (Double bonds on both sides)
+                <ul>
+                    <li>Oxygen: $6 - 4 - 2 = 0$</li>
+                    <li>Carbon: $4 - 0 - 4 = 0$</li>
+                    <li><em>Dominant structure (all charges 0).</em></li>
+                </ul>
+            </li>
+            <li><strong>Option B:</strong> $O \equiv C - O$ (Triple bond and single bond)
+                <ul>
+                    <li>Triple-bonded Oxygen: $6 - 2 - 3 = +1$</li>
+                    <li>Single-bonded Oxygen: $6 - 6 - 1 = -1$</li>
+                    <li>Carbon: $4 - 0 - 4 = 0$</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>EXAMPLE 3: $NCS^-$ (Thiocyanate Ion)</h2>
+        <div class="example-box">
+            Total Valence: $N(5) + C(4) + S(6) + 1(\text{charge}) = 16$.
+            Comparing structures via Formal Charge:
+            <ol>
+                <li>$[N \equiv C - S]^-$: $N(0), C(0), S(-1)$</li>
+                <li>$[N = C = S]^-$: $N(-1), C(0), S(0)$</li>
+                <li>$[N - C \equiv S]^-$: $N(-2), C(0), S(+1)$</li>
+            </ol>
+            <strong>Dominant Structure:</strong> Structure 2 ($[N=C=S]^-$). 
+            <strong>Why?</strong> Charges are closer to zero than Structure 3, and the negative formal charge resides on <strong>Nitrogen</strong>, which is more electronegative than Sulfur.
+        </div>
+
+        <div class="prof-tip">
+            <strong>Shortcut for Formal Charge:</strong> Count "things" around the atom (dots + lines). Subtract that from the valence number. If the atom has <em>more</em> things than its valence number, it's negative. If <em>fewer</em>, it's positive.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li>$\Delta EN$ determines if electrons are shared equally, unequally, or transferred entirely.</li>
+            <li>Dipoles point toward the more electronegative atom (only in polar covalent bonds).</li>
+            <li>Lewis structures must show all valence electrons and prioritize octets.</li>
+            <li>Charged molecules MUST be shown in <strong>brackets</strong> with the charge indicated in the top right.</li>
+            <li>The most stable structure has formal charges closest to zero and negative charges on the most electronegative elements.</li>
+        </ul>
+    </div>
+</body>
+</html>

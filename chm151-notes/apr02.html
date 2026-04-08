@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM 151: Formal Charge, Resonance, and Octet Exceptions</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Formal Charge, Resonance, and Octet Exceptions</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam Notice:</strong> The test review is currently on Canvas. Practice tests are being printed and will be available in the mailbox shortly. The upcoming exam covers Chapters 6, 7, and 8. It is scheduled for the Thursday after Spring Break, providing time for questions upon return.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Formal charge serves as a bookkeeping tool to determine the most plausible Lewis structure among multiple possibilities. While the octet rule is a primary guideline, nature often exists as a <strong>resonance hybrid</strong> of multiple structures. Furthermore, elements in Period 3 and below possess $d$-orbitals, allowing for <strong>expanded octets</strong> beyond eight electrons.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Formal Charge:</strong> The charge assigned to an atom in a molecule, assuming electrons in all chemical bonds are shared equally between atoms.</li>
+            <li><strong>Resonance Structures:</strong> Multiple valid Lewis structures for a single molecule that differ only in the placement of electrons (double bonds and lone pairs).</li>
+            <li><strong>Resonance Hybrid:</strong> The actual structure of a molecule, which is an average or "weighted average" of all its resonance structures.</li>
+            <li><strong>Localized Electrons:</strong> Electrons that stay between two specific atoms (represented by solid lines/single bonds).</li>
+            <li><strong>Delocalized Electrons:</strong> Electrons shared by multiple atoms (represented by dotted lines or moving double bonds in resonance).</li>
+            <li><strong>Expanded Octet:</strong> A situation where a central atom has more than eight valence electrons, possible only for elements in Period 3 through 6.</li>
+            <li><strong>Radicals:</strong> Compounds with an odd number of electrons, featuring a highly reactive single (unpaired) electron.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Calculating Formal Charge</h3>
+        <p>Formal Charge = (Expected Valence Electrons) - (Electrons "assigned" in the structure).</p>
+        <p><span class="key-step">The Shortcut:</span> Count how many "things" are around the atom. Each lone pair electron counts as one, and each bond (line) counts as one.</p>
+
+        <h3>Identifying the Dominant Structure</h3>
+        <ol>
+            <li>Structures with <strong>fewer formal charges</strong> (more atoms at zero) are favored.</li>
+            <li>Formal charges should be as close to zero as possible.</li>
+            <li>The sum of all formal charges <strong>must</strong> equal the overall charge of the molecule (zero for neutral molecules).</li>
+            <li>Negative formal charges should reside on the most electronegative atoms.</li>
+        </ol>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Pattern Recognition for Formal Charge = 0</h3>
+        <table>
+            <tr>
+                <th>Atom</th>
+                <th>Expected Valence $e^-$</th>
+                <th>Standard Bonding Pattern for FC = 0</th>
+            </tr>
+            <tr>
+                <td>Hydrogen</td>
+                <td>1</td>
+                <td>1 Bond</td>
+            </tr>
+            <tr>
+                <td>Oxygen</td>
+                <td>6</td>
+                <td>2 Bonds, 2 Lone Pairs</td>
+            </tr>
+            <tr>
+                <td>Nitrogen</td>
+                <td>5</td>
+                <td>3 Bonds, 1 Lone Pair</td>
+            </tr>
+            <tr>
+                <td>Carbon</td>
+                <td>4</td>
+                <td>4 Bonds</td>
+            </tr>
+        </table>
+
+        <h3>Violations of the Octet Rule</h3>
+        <ul>
+            <li><strong>Odd Number of Electrons:</strong> Rare in class, called radicals (e.g., Free Radicals). Highly unstable.</li>
+            <li><strong>Less than an Octet:</strong> 
+                <ul>
+                    <li><strong>Hydrogen:</strong> Stable with 2 electrons.</li>
+                    <li><strong>Boron:</strong> Often stable with only 6 valence electrons (e.g., $BF_3$). It avoids double bonding because it would create unstable formal charges on a highly electronegative atom.</li>
+                </ul>
+            </li>
+            <li><strong>Expanded Octet:</strong> Atoms in Period 3, 4, 5, or 6 can hold more than 8 electrons (up to 10 or 12 typically) because they have access to $d$-orbitals.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Formal Charge Patterns</h2>
+        <div class="example-box">
+            <p><strong>Scenario:</strong> Oxygen with 1 bond and 3 lone pairs.</p>
+            <ul>
+                <li>Expected: 6 valence electrons.</li>
+                <li>Assigned: 1 (bond) + 6 (lone electrons) = 7.</li>
+                <li>Formal Charge: $6 - 7 = -1$.</li>
+            </ul>
+            <p><strong>Scenario:</strong> Nitrogen with 4 bonds and 0 lone pairs.</p>
+            <ul>
+                <li>Expected: 5 valence electrons.</li>
+                <li>Assigned: 4 (bonds) + 0 (lone electrons) = 4.</li>
+                <li>Formal Charge: $5 - 4 = +1$.</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Resonance in Ozone ($O_3$)</h2>
+        <div class="example-box">
+            <p>Total valence electrons: $6 \times 3 = 18$.</p>
+            <p>We can place a double bond on the left oxygen OR the right oxygen. These structures are equivalent. In nature, the bond length is not a single and a double; it is a <strong>hybrid</strong> where both bonds are the same length (somewhere between a single and double bond).</p>
+            <p><strong>Representation:</strong> Drawn with a double-headed arrow between structures or a dotted line to show delocalized electrons.</p>
+        </div>
+
+        <h2>EXAMPLE 3: Expanded Octets</h2>
+        <div class="example-box">
+            <p><strong>Xenon Difluoride ($XeF_2$):</strong></p>
+            <ul>
+                <li>Valence: $Xe (8) + F (7 \times 2) = 22$ electrons.</li>
+                <li>Structure: $F-Xe-F$.</li>
+                <li>Outside atoms (F) get full octets (12 electrons used in lone pairs + 4 in bonds = 16).</li>
+                <li>Remaining electrons: $22 - 16 = 6$ electrons.</li>
+                <li>These 6 electrons (3 lone pairs) must go on the central Xenon.</li>
+                <li><strong>Result:</strong> Xenon has 10 electrons around it (2 bonds + 3 lone pairs). This is allowed because Xenon is in Period 5.</li>
+            </ul>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Drawing Tip:</strong> When drawing resonance structures, you are only moving <em>electrons</em>, never the atoms. If you move the atoms, it is a different molecule, not a resonance structure.
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <div class="example-box">
+            <p><strong>1. Phosphorus Pentachloride ($PCl_5$):</strong> Calculate valence electrons and draw the structure. (Answer: $5 + 35 = 40$ electrons. Phosphorus will have 5 single bonds, totaling 10 electrons).</p>
+            <p><strong>2. Iodine Trichloride ($ICl_3$):</strong> $7 + (7 \times 3) = 28$ electrons. After completing the octets for Chlorine, the extra 4 electrons (2 lone pairs) go on the central Iodine.</p>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Bonding is about stability. Formal charge helps us find the "best" drawing, but resonance reminds us that molecules are often a blend of possibilities. Expanded octets are a tool used by larger atoms (Period 3+) to accommodate extra electrons in their $d$-orbitals, typically capping out at 6 bonds due to spatial constraints (steric hindrance).</p>
+    </div>
+</body></html>

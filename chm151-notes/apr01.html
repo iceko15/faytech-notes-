@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Chemistry Formal Lab Report Architecture</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chemistry Formal Lab Report Architecture</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The objective is to produce a formal lab report modeled after professional scientific communication, specifically targeting the standard of a peer-reviewed chemistry journal. The report must be technically precise, written in a specific scientific voice, and formatted according to American Chemical Society (ACS) guidelines.</p>
+
+        <div class="prof-tip">
+            <strong>Professor's Warning on AI:</strong> Do NOT cite journals suggested by AI (like ChatGPT) if you do not have actual access to them. Citing a source you cannot read will result in a zero on the entire paper. Only cite references you have personally accessed and verified.
+        </div>
+
+        <h2>REQUIRED REPORT SECTIONS (In Appearance Order)</h2>
+        
+        <ol>
+            <li><strong>Cover Page:</strong> Includes your name, lab partner's name, and the experiment title.</li>
+            <li><strong>Abstract:</strong> A summary of the entire paper (Purpose, Experiment conducted, General Results, and Conclusions). 
+                <br><span class="key-step">Writing Tip:</span> This is written LAST because it summarizes the other sections.</li>
+            <li><strong>Introduction:</strong> Background information, purpose of the experiment, and definitions (e.g., titration, endpoint, equivalence point). Includes real-world applications and the balanced chemical reaction.</li>
+            <li><strong>Procedure:</strong> A paragraph-style narrative of what was done. It is <strong>not</strong> a list of instructions.</li>
+            <li><strong>Results:</strong> Raw data presentation (tables) and example calculations.</li>
+            <li><strong>Discussion:</strong> Interpretation of results, comparison to known values (e.g., 5.00% acetic acid in vinegar), and error analysis.</li>
+            <li><strong>Conclusion:</strong> A brief (2-3 sentence) summary of the results.</li>
+            <li><strong>References:</strong> A separate page listing sources in ACS format.</li>
+        </ol>
+
+        <h2>TECHNICAL WRITING RULES</h2>
+        <div class="example-box">
+            <ul>
+                <li><strong>Voice:</strong> Third Person Passive (Avoid "I," "We," "Me," or "My"). Use "A buret was filled..." instead of "I filled the buret."</li>
+                <li><strong>Tense:</strong> Past Tense (You are describing an experiment that has already been completed).</li>
+                <li><strong>Tone:</strong> Bland and straightforward. Scientific communication lacks "creative writing" or unnecessary descriptors.</li>
+                <li><strong>Equation Formatting:</strong> Use a legitimate Equation Editor. Calculations must look like fractions/math, not text strings (e.g., no "7.0 moles / 6.7").</li>
+            </ul>
+        </div>
+
+        <h2>RESULTS & CALCULATIONS GUIDELINES</h2>
+        <p>The results section must be comprehensive, including:</p>
+        <ul>
+            <li><strong>Raw Data:</strong> Show the numbers collected in-lab (starting volumes, final volumes, total volume used).</li>
+            <li><strong>Example Calculations:</strong> Show exactly one example for every calculation type (Total Volume, Molarity of Acetic Acid, Percent Acetic Acid, Percent Error).
+                <ul>
+                    <li>You only need to show the full calculation for Trial 1.</li>
+                    <li>For subsequent trials, state: "The same procedure was followed for Trials 2 and 3."</li>
+                    <li>Present the final calculated values for all trials in a summary table.</li>
+                </ul>
+            </li>
+            <li><strong>Textual Explanation:</strong> Every table and calculation needs a written explanation in paragraph form explaining what the reader is looking at.</li>
+        </ul>
+
+        <h2>ACS CITATION PROTOCOL</h2>
+        <p>The American Chemical Society (ACS) format differs significantly from MLA/APA:</p>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>ACS Requirement</th>
+            </tr>
+            <tr>
+                <td><strong>In-Text Citations</strong></td>
+                <td>Use superscripted numbers ($^1$, $^2$, $^3$).</td>
+            </tr>
+            <tr>
+                <td><strong>Reference Order</strong></td>
+                <td>Listed in the order they appear in the paper, NOT alphabetical.</td>
+            </tr>
+            <tr>
+                <td><strong>Number Persistence</strong></td>
+                <td>Once a source is assigned a number, it keeps that number throughout the paper.</td>
+            </tr>
+            <tr>
+                <td><strong>Textbook Citations</strong></td>
+                <td>Must include specific page numbers (e.g., pp. 10-14).</td>
+            </tr>
+        </table>
+
+        <h2>ERROR ANALYSIS (DISCUSSION SECTION)</h2>
+        <p>You must compare your experimental percentage of acetic acid to the known value ($5.00\%$).</p>
+        <ul>
+            <li>Calculate <strong>Percent Error</strong>: $$ \text{Percent Error} = \frac{|\text{Experimental} - \text{Theoretical}|}{\text{Theoretical}} \times 100 $$</li>
+            <li>Explain <strong>Directionality</strong>: If your result is high (e.g., 6%), what specific laboratory error caused the increase? If low (e.g., 4%), what caused the decrease?</li>
+            <li>Suggest improvements to technique or procedure to mitigate these errors in the future.</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>The "Dr. A" Workflow (Optimal Writing Order):</strong><br>
+            1. Procedure (Easiest to write)<br>
+            2. Results & Calculations<br>
+            3. Discussion & Conclusion<br>
+            4. Introduction & References (Do these together)<br>
+            5. Abstract (Do last)
+        </div>
+
+        <h2>GRADING & TIMELINE</h2>
+        <ul>
+            <li><strong>Draft Day:</strong> Bring a printed copy to lab. Complete a peer exchange and provide feedback. (Completion grade).</li>
+            <li><strong>Peer Review Copy:</strong> Graded as a regular lab report. You will receive feedback from the professor.</li>
+            <li><strong>Final Report:</strong> Worth 5% of the overall course grade.</li>
+            <li><strong>Formatting Specs:</strong> Strictly follow the rubric for font, font size, and spacing. Journals are highly picky.</li>
+        </ul>
+    </div>
+</body></html>
