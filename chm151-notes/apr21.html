@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Valence Bond Theory & Hybridization</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Valence Bond Theory & Hybridization</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Traditional Valence Bond Theory assumes bonds form when standard atomic orbitals ($s$, $p$, $d$) overlap. However, this model fails to predict the actual bond angles and geometries observed in many molecules (like the $104.5^\circ$ angle in water or $92^\circ$ in $H_2S$). <strong>Hybridization</strong> explains that central atoms mix their native orbitals to create new <strong>hybrid orbitals</strong> that match observed molecular geometries.</p>
+
+        <div class="prof-tip">
+            "When we get new data that says our theory predicts 90 degrees but we see something else, we need to adjust our theory to match the data. That’s how we developed hybridization."
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Valence Bond Theory:</strong> The concept that valence electrons reside in specific orbitals and bonds form when orbitals from two different atoms overlap.</li>
+            <li><strong>Orbital Overlap:</strong> The region where two orbitals share a space, allowing electrons to be shared between atoms. This happens with "singularly occupied" orbitals (one electron each).</li>
+            <li><strong>Hybridization:</strong> The mixing of atomic orbitals (like $s$ and $p$) on a central atom to create a new set of degenerate orbitals.</li>
+            <li><strong>Degenerate Orbitals:</strong> Orbitals that have the same energy level.</li>
+            <li><strong>Sigma ($\sigma$) Bond:</strong> Head-on overlap of orbitals; the first bond formed between any two atoms.</li>
+            <li><strong>Pi ($\pi$) Bond:</strong> Sideways overlap of unhybridized $p$ orbitals; these form the second and third bonds in double and triple bonds.</li>
+        </ul>
+
+        <h2>THE HYBRIDIZATION RULES</h2>
+        <p>The number of hybrid orbitals produced MUST equal the number of atomic orbitals you started with. These are determined by the <strong>Electron Domains</strong> (bonded atoms + lone pairs) on the central atom:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Electron Domains</th>
+                    <th>Hybridization</th>
+                    <th>Geometry</th>
+                    <th>Orbitals Used</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>$sp$</td>
+                    <td>Linear ($180^\circ$)</td>
+                    <td>One $s$, One $p$</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$sp^2$</td>
+                    <td>Trigonal Planar ($120^\circ$)</td>
+                    <td>One $s$, Two $p$s</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>$sp^3$</td>
+                    <td>Tetrahedral ($109.5^\circ$)</td>
+                    <td>One $s$, Three $p$s</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>$sp^3d$</td>
+                    <td>Trigonal Bipyramidal</td>
+                    <td>One $s$, Three $p$s, One $d$</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>$sp^3d^2$</td>
+                    <td>Octahedral</td>
+                    <td>One $s$, Three $p$s, Two $d$s</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>SIGMA AND PI BOND COMPOSITION</h2>
+        <ul>
+            <li><strong>Single Bond:</strong> 1 $\sigma$ bond.</li>
+            <li><strong>Double Bond:</strong> 1 $\sigma$ bond + 1 $\pi$ bond.</li>
+            <li><strong>Triple Bond:</strong> 1 $\sigma$ bond + 2 $\pi$ bonds.</li>
+        </ul>
+        <div class="prof-tip">
+            "A $\pi$ bond looks like two lobes (above and below), but it only represents ONE bond. It requires unhybridized $p$ orbitals on BOTH atoms."
+        </div>
+
+        <h2>EXAMPLE 1: $HBr$ (Simple Overlap)</h2>
+        <div class="example-box">
+            <p><strong>Question:</strong> What orbitals overlap to form the bond in $HBr$?</p>
+            <p class="key-step">Step 1: Configuration of Hydrogen</p>
+            <p>$1s^1$. The electron is in the $1s$ orbital.</p>
+            <p class="key-step">Step 2: Configuration of Bromine</p>
+            <p>$[Ar] 4s^2 3d^{10} 4p^5$. The "missing" electron to complete the octet is in the $4p$ orbital.</p>
+            <p class="key-step">Answer:</p>
+            <p>The bond is formed by the overlap of the <strong>$1s$</strong> orbital from Hydrogen and the <strong>$4p$</strong> orbital from Bromine.</p>
+        </div>
+
+        <h2>EXAMPLE 2: Beryllium Chloride ($BeCl_2$)</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> Beryllium has an orbital diagram of $2s^2$. It has no single electrons. How does it bond?</p>
+            <ol>
+                <li><strong>Promotion:</strong> One electron from the $2s$ orbital is "promoted" to an empty $2p$ orbital.</li>
+                <li><strong>Mixing:</strong> The $s$ and $p$ orbitals mix to form two **$sp$** hybrid orbitals.</li>
+                <li><strong>Result:</strong> Two single electrons are now available for bonding. The shape is linear ($180^\circ$).</li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 3: Ethene ($C_2H_4$)</h2>
+        <div class="example-box">
+            <p><strong>Analysis of the Double Bond:</strong></p>
+            <ul>
+                <li>Each Carbon has 3 electron domains (bonded to 2 Hydrogens and 1 Carbon).</li>
+                <li>Hybridization: **$sp^2$**.</li>
+                <li>This uses one $s$ and two $p$ orbitals, leaving <strong>one unhybridized $p$ orbital</strong> on each Carbon.</li>
+                <li>The <strong>$\sigma$ bond</strong> is the head-on overlap of the $sp^2$ hybrids.</li>
+                <li>The <strong>$\pi$ bond</strong> is the sideways overlap of the leftover $p$ orbitals.</li>
+            </ul>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <div class="example-box">
+            <p><strong>1. Determine the hybridization for $BH_3$:</strong></p>
+            <p>Domains: 3 atoms + 0 lone pairs = 3 domains. <br><strong>Hybridization: $sp^2$</strong></p>
+            
+            <p><strong>2. Determine the hybridization for $CH_2O$:</strong></p>
+            <p>Central Carbon is bonded to 2 Hydrogens and 1 Oxygen = 3 domains. <br><strong>Hybridization: $sp^2$</strong></p>
+
+            <p><strong>3. Determine the hybridization for $H_2S$:</strong></p>
+            <p>Sulfur is bonded to 2 Hydrogens and has 2 lone pairs = 4 domains. <br><strong>Hybridization: $sp^3$</strong></p>
+        </div>
+
+        <div class="prof-tip">
+            "Don't get tricked by the math. If you have 3 domains, you need 3 orbitals. Start with S (1), then add P's until you hit 3. That's $S + P + P = sp^2$."
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Hybridization is the atom's way of "rearranging" its valence electrons to prepare for bonding. We determine the specific hybrid type simply by counting the total electron domains around the central atom. While $\sigma$ bonds provide the basic framework of a molecule, $\pi$ bonds provide the additional "glue" for double and triple bonds using leftover, unhybridized $p$ orbitals.</p>
+    </div>
+</body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Chapter 9 Conics & Final Exam Prep</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Chapter 9: Conics Review & Final Exam Logistics</h1>
+        
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> The Chapter 9 test is Tuesday, April 28th. Focus your immediate attention here. The Final Exam Review (Yellow Packet) is now available in MyMathLab and physical copy; the answer key is attached to the back.
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>Mastering the identification, conversion, and graphing of Conic Sections (Parabolas, Ellipses, Hyperbolas) in both rectangular and polar forms, while preparing for a comprehensive final exam that integrates trigonometry, vectors, and complex numbers.</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Standard Form:</strong> The specific arrangement of a conic equation that allows for the immediate identification of vertices, foci, and orientation.</li>
+            <li><strong>General Form:</strong> An expanded quadratic equation $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$. Converting this to standard form requires <em>completing the square</em>.</li>
+            <li><strong>Eccentricity ($e$):</strong> A measure of how "un-circular" a conic is. 
+                <ul>
+                    <li>$e = 1$: Parabola</li>
+                    <li>$0 < e < 1$: Ellipse</li>
+                    <li>$e > 1$: Hyperbola</li>
+                </ul>
+            </li>
+            <li><strong>The Pole:</strong> In polar conics, one focus is <em>always</em> located at the pole (the origin $(0,0)$).</li>
+            <li><strong>Directrix:</strong> A fixed line used to define the conic section; its distance from the focus is denoted as $p$ or $k$.</li>
+        </ul>
+
+        <h2>CHAPTER 9 TEST STRUCTURE (Paper & Pencil)</h2>
+        <table>
+            <tr>
+                <th>Question Numbers</th>
+                <th>Task Description</th>
+            </tr>
+            <tr>
+                <td>1 - 3</td>
+                <td>Given a standard form conic, identify all information, present the standard form if needed, and sketch the graph. No duplicate shapes (process of elimination works).</td>
+            </tr>
+            <tr>
+                <td>4 - 6</td>
+                <td>Construct equations from provided details (foci, vertices, etc.). These are verbatim MyMathLab style but scrambled.</td>
+            </tr>
+            <tr>
+                <td>7 - 9</td>
+                <td>General form equations requiring <strong>Completing the Square</strong> to reach Standard Form. Includes an Ellipse word problem.</td>
+            </tr>
+            <tr>
+                <td>10 - 12</td>
+                <td>Matching shapes to General Form equations without completing the square (Identification by coefficients).</td>
+            </tr>
+            <tr>
+                <td>13 - 14</td>
+                <td>Parametric Equations: Graphing and eliminating the parameter. State domain restrictions if they exist.</td>
+            </tr>
+            <tr>
+                <td>15 - 16</td>
+                <td>Polar Conics ($r = \dots$): Identify details (eccentricity, orientation, vertices). No graph required on these.</td>
+            </tr>
+        </table>
+
+        <h2>POLAR CONICS & CALCULATOR STRATEGY</h2>
+        <p>The standard template for polar conics is:</p>
+        $$r = \frac{ep}{1 \pm e \cos \theta} \quad \text{or} \quad r = \frac{ep}{1 \pm e \sin \theta}$$
+        
+        <div class="example-box">
+            <p class="key-step">Analysis of $r = \frac{8}{2 - 4 \cos \theta}$:</p>
+            <ol>
+                <li><strong>Normalize:</strong> Divide everything by 2 to get a leading 1 in the denominator. 
+                    $$r = \frac{4}{1 - 2 \cos \theta}$$</li>
+                <li><strong>Identify $e$:</strong> Here $e = 2$. Since $e > 1$, it is a <strong>Hyperbola</strong>.</li>
+                <li><strong>Orientation:</strong> A negative cosine indicates the hyperbola opens horizontally, with the right-hand wing opening toward the right.</li>
+                <li><strong>Calculator Table Set:</strong> Set <code>$\Delta Tbl$</code> to $\pi/12$ or $\pi/2$. $\pi/2$ is usually sufficient to find the 4 quadrantal "landmark" points (vertices and intercepts).</li>
+            </ol>
+        </div>
+
+        <h2>FINAL EXAM: CONTENT TO REFRESH</h2>
+        <div class="prof-tip">
+            You must know the <strong>Unit Circle</strong>. While not heavily used in Chapter 9, it is prevalent in Chapters 4, 5, 6, and 7. Be able to convert between Radians and Degrees fluently.
+        </div>
+        
+        <h3>Required Formula Knowledge (Not on Sheet)</h3>
+        <ul>
+            <li><strong>Pythagorean Identities:</strong> $\sin^2 \theta + \cos^2 \theta = 1$ and its rearranged versions.</li>
+            <li><strong>SOH-CAH-TOA:</strong> Basic right triangle trig and reciprocals (Cosecant, Secant, Cotangent).</li>
+            <li><strong>Chapter 4:</strong> Arc length, linear speed, and angular speed variables.</li>
+            <li><strong>Chapter 6 Comparisons:</strong> Distinguish between:
+                <ul>
+                    <li>Polar coordinates $(r, \theta)$</li>
+                    <li>Rectangular coordinates $(x, y)$</li>
+                    <li>Complex numbers in Rectangular ($a + bi$) vs. Polar ($r(\cos \theta + i \sin \theta)$)</li>
+                    <li>Vectors ($\langle a, b \rangle$ or $ai + bj$)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>PROCEDURAL NOTES: SOLVING TRIANGLES</h2>
+        <p>When solving triangles (Law of Sines/Cosines):</p>
+        <ul>
+            <li><strong>SSA (Side-Side-Angle):</strong> The "Ambiguous Case." Always check for a second triangle.</li>
+            <li><strong>Common Error:</strong> Forgetting to square root the result of the Law of Cosines when solving for a side. If $c^2 = 400$, then $c = 20$. Skipping this throws off all subsequent angle calculations.</li>
+            <li><strong>Vector Notation:</strong> Don't lose the $i$'s and $j$'s during calculation; confusing vectors with imaginary numbers or real numbers will lead to notation errors.</li>
+        </ul>
+
+        <h2>SUMMARY & LOGISTICS</h2>
+        <ul>
+            <li><strong>Chapter 6 Feedback:</strong> Scores were significantly better than Chapter 5. Main issues were ignoring the formula sheet for complex number division and finding angles between vectors.</li>
+            <li><strong>Final Exam Dates:</strong>
+                <ul>
+                    <li>Tuesday, May 12th (Normal Class Time).</li>
+                    <li>Early option: Monday, May 11th (8:00 AM or 9:00 AM session).</li>
+                    <li>Backup/Emergency: Wednesday, May 13th (Room next door, 4:00 PM - 6:00 PM).</li>
+                </ul>
+            </li>
+            <li><strong>Calculator Defaults:</strong> $\theta$-step is typically $\pi/24$. For manual graphing on polar paper, $\pi/12$ is preferred as 12 is the LCD for most common angles.</li>
+        </ul>
+    </div>
+</body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Parametric Equations and Eliminating Parameters</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Parametric Equations and Projectile Motion</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Transitioning from rectangular coordinates $(x, y)$ to parametric form allows us to express a position as a function of a third variable, usually time ($t$) or an angle ($\theta$). This enables us to define the direction of a path and model real-world movement, such as the flight of a ball, where horizontal and vertical positions are independent yet linked by time.</p>
+
+        <div class="prof-tip">
+            <strong>Exam Note:</strong> On the test, there is no table required for the graph. You just need to show the graph itself. However, understanding how to "plug and chug" values of $t$ is essential for accuracy.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Parameter:</strong> The independent variable (usually $t$) that defines both $x$ and $y$.</li>
+            <li><strong>Eliminating the Parameter:</strong> The algebraic process of converting parametric equations back into rectangular form (one equation with $x$ and $y$ only).</li>
+            <li><strong>Orientation:</strong> The direction in which the curve is traced as the parameter $t$ increases (indicated by arrows on the graph).</li>
+            <li><strong>T-Step:</strong> The increment by which the calculator moves between points. Small steps make smooth curves; large steps make "blocky" graphs.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>1. Calculator Configuration</h3>
+        <ul>
+            <li><strong>Mode:</strong> Set to <strong>PAR</strong> (Parametric).</li>
+            <li><strong>Angle:</strong> Use Radian unless the problem explicitly uses degrees (common in projectile motion).</li>
+            <li><strong>Window Settings:</strong> 
+                <ul>
+                    <li>$T_{min}$ and $T_{max}$: Define the interval provided in the problem.</li>
+                    <li>$T_{step}$: If $t$ is an angle, use $\pi/24$, $\pi/12$, or $\pi/2$. If $t$ is a real number, try $0.1$ or $1$.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2. Eliminating the Parameter</h3>
+        <ul>
+            <li><span class="key-step">Solve for $t$:</span> Isolate $t$ in one equation (usually the simpler linear one).</li>
+            <li><span class="key-step">Substitute:</span> Plug the expression for $t$ into the other equation.</li>
+            <li><span class="key-step">Simplify:</span> Get the equation into a recognizable rectangular form (parabola, circle, etc.).</li>
+            <li><span class="key-step">Restrict Domain:</span> Because parametric graphs are often only portions of a shape, you must state the range of $x$ values that correspond to the $t$ interval.</li>
+        </ul>
+
+        <div class="prof-tip">
+            <strong>Pro-Tip:</strong> If you see sines and cosines, don't use substitution. Use the Pythagorean identity $\sin^2(t) + \cos^2(t) = 1$ to force the equation into the standard form of a circle or ellipse.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>Pythagorean Identity:</strong> $\sin^2(t) + \cos^2(t) = 1$</li>
+            <li><strong>Circle Template:</strong> $(x - h)^2 + (y - k)^2 = r^2$</li>
+            <li><strong>Ellipse Template:</strong> $x = h + a\cos(t)$, $y = k + b\sin(t)$</li>
+            <li><strong>Projectile Motion Template:</strong>
+                <ul>
+                    <li>$x = (v_0 \cos \theta)t$</li>
+                    <li>$y = h + (v_0 \sin \theta)t - 16t^2$</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>EXAMPLE 1: Parabolic Path</h2>
+        <div class="example-box">
+            <strong>Given:</strong> $x = t + 2$, $y = t^2$ on the interval $-2 \le t \le 2$.<br><br>
+            <strong>Graphing:</strong>
+            <ul>
+                <li>At $t = -2$: $x=0, y=4 \rightarrow (0, 4)$</li>
+                <li>At $t = 0$: $x=2, y=0 \rightarrow (2, 0)$</li>
+                <li>At $t = 2$: $x=4, y=4 \rightarrow (4, 4)$</li>
+            </ul>
+            <strong>Eliminating Parameter:</strong>
+            <ol>
+                <li>Solve $x = t + 2$ for $t$: $t = x - 2$.</li>
+                <li>Substitute into $y$: $y = (x - 2)^2$.</li>
+                <li>Identify shape: Parabola with vertex at $(2, 0)$.</li>
+                <li><strong>Domain Restriction:</strong> Since $t$ was $[-2, 2]$, $x$ only goes from $0$ to $4$. Domain: $[0, 4]$.</li>
+            </ol>
+        </div>
+
+        <h2>EXAMPLE 2: Trig-Based Circle</h2>
+        <div class="example-box">
+            <strong>Given:</strong> $x = 2\sin(t)$, $y = 2\cos(t)$ for $0 \le t \le 2\pi$.<br><br>
+            <strong>Method: Pythagorean Identity</strong>
+            <ol>
+                <li>$\frac{x}{2} = \sin(t)$ and $\frac{y}{2} = \cos(t)$.</li>
+                <li>$(\frac{x}{2})^2 + (\frac{y}{2})^2 = \sin^2(t) + \cos^2(t)$.</li>
+                <li>$\frac{x^2}{4} + \frac{y^2}{4} = 1$.</li>
+                <li>$x^2 + y^2 = 4$.</li>
+            </ol>
+            <strong>Result:</strong> A circle centered at $(0, 0)$ with radius $2$.
+        </div>
+
+        <div class="prof-tip">
+            <strong>Distortion Warning:</strong> The calculator screen is wider than it is tall. A perfect circle often looks like an oval (ellipse). Use <strong>Zoom Square</strong> to see the true shape.
+        </div>
+
+        <h2>EXAMPLE 3: Projectile Motion (Real-World)</h2>
+        <div class="example-box">
+            <strong>Scenario:</strong> Ball launched at $v_0 = 160$ ft/s, angle $\theta = 35^\circ$, from height $h = 3$ ft.
+            <ol>
+                <li><strong>Equations:</strong> 
+                    $x = (160 \cos 35^\circ)t$ <br>
+                    $y = 3 + (160 \sin 35^\circ)t - 16t^2$
+                </li>
+                <li><strong>Flight Time:</strong> Set $y = 0$ and use the Quadratic Formula to solve for $t$. 
+                    $$t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+                    (Ignore the negative $t$ value).
+                </li>
+                <li><strong>Horizontal Distance:</strong> Plug the positive flight time $t$ back into the $x$ equation.</li>
+            </ol>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Parametric equations allow us to separate horizontal motion from vertical motion. When graphing, always pay attention to the interval of $t$ to avoid graphing the entire shape when only a piece is needed. When eliminating the parameter, use substitution for polynomials and trigonometric identities for periodic functions.</p>
+    </div>
+</body>
+</html>

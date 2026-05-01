@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Partial Pressure, Kinetic Molecular Theory, and IMFs</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Partial Pressure, Kinetic Molecular Theory, and IMFs</h1>
+        
+        <div class="prof-tip">
+            <strong>ADMINISTRATIVE UPDATE:</strong> Test 4 is in one week. The final exam has been moved to Wednesday during lab time (1:00 PM) to allow Tuesday to be a review day. The final exam is cumulative (Chapters 1-11). Key returning concepts include dimensional analysis (Ch 1), stoichiometry (Ch 3), and thermochemistry (Ch 5).
+        </div>
+
+        <h2>BIG IDEA</h2>
+        <p>The behavior of gases can be explained through the Kinetic Molecular Theory (KMT), which relates molecular motion to macroscopic properties like pressure and temperature. However, "real" gases deviate from ideal behavior under high pressure and low temperature due to molecular volume and intermolecular forces (IMFs).</p>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Partial Pressure ($P_i$):</strong> The pressure exerted by an individual gas in a mixture.</li>
+            <li><strong>Mole Fraction ($\chi$):</strong> The ratio of the moles of a specific component to the total moles in a mixture. It has no units.</li>
+            <li><strong>Kinetic Molecular Theory (KMT):</strong> A model explaining gas behavior based on random motion, negligible molecular volume, and lack of attractive forces.</li>
+            <li><strong>Effusion:</strong> Gas escaping through a tiny hole into a vacuum.</li>
+            <li><strong>Diffusion:</strong> The spread of one substance through the space of another.</li>
+            <li><strong>Intermolecular Forces (IMF):</strong> Attractive forces <em>between</em> molecules (as opposed to <em>intra</em>molecular bonds within a molecule).</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Calculating Partial Pressure via Mole Fraction</h3>
+        <p class="key-step">1. Find Moles of each component:</p>
+        <p>Convert grams to moles using molar mass if necessary.</p>
+        <p class="key-step">2. Calculate Total Moles ($n_{total}$):</p>
+        <p>$$n_{total} = n_1 + n_2 + ... + n_n$$</p>
+        <p class="key-step">3. Find Mole Fraction ($\chi_i$):</p>
+        <p>$$\chi_i = \frac{n_i}{n_{total}}$$</p>
+        <p class="key-step">4. Apply to Total Pressure ($P_{total}$):</p>
+        <p>$$P_i = \chi_i \times P_{total}$$</p>
+
+        <h2>RULES & IDENTITIES</h2>
+        <h3>Dalton's Law & Mole Fractions</h3>
+        <ul>
+            <li>$P_{total} = P_1 + P_2 + P_3...$</li>
+            <li>The sum of all mole fractions in a mixture must equal 1 (analogous to 100%).</li>
+            <li>Partial pressure is directly proportional to mole fraction: If a gas makes up 30% of the moles, it exerts 30% of the total pressure.</li>
+        </ul>
+
+        <h3>Kinetic Molecular Theory (KMT) Tenets</h3>
+        <ol>
+            <li>Gases consist of molecules in continuous random motion.</li>
+            <li>The volume of gas molecules is negligible compared to the container (mostly empty space).</li>
+            <li>Attractive/repulsive forces between gas molecules are negligible.</li>
+            <li>Average kinetic energy ($KE$) is proportional to absolute temperature (Kelvin).</li>
+        </ol>
+
+        <div class="prof-tip">
+            <strong>Laws vs. Theories:</strong> A Law (like Boyle's Law) tells you <em>what</em> happens (e.g., $P \uparrow, V \downarrow$). A Theory (KMT) explains <em>why</em> it happens (e.g., particles hitting walls more frequently).
+        </div>
+
+        <h3>Van der Waals Equation (Real Gases)</h3>
+        <p>To correct for real gas behavior (particle volume and attractions), we use:</p>
+        <p>$$\left( P + \frac{an^2}{V^2} \right)(V - nb) = nRT$$</p>
+        <ul>
+            <li><strong>Term $a$:</strong> Accounts for attractive forces (reduces pressure).</li>
+            <li><strong>Term $b$:</strong> Accounts for the volume occupied by gas particles (reduces available volume).</li>
+            <li>Gases behave <strong>most ideally</strong> at <strong>High Temperature</strong> and <strong>Low Pressure</strong>.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Partial Pressure of Argon</h2>
+        <div class="example-box">
+            <p><strong>Problem:</strong> Calculate the partial pressure of Argon in a container with 2.3 moles of Ar and 40.0g of Neon. Total pressure is 841 torr.</p>
+            <p><strong>1. Find Moles of Neon:</strong><br>
+            $40.0g \text{ Ne} \times \frac{1 \text{ mole}}{20.18g} = 1.982 \text{ moles Ne}$</p>
+            <p><strong>2. Total Moles:</strong><br>
+            $2.3 \text{ (Ar)} + 1.982 \text{ (Ne)} = 4.282 \text{ moles total}$</p>
+            <p><strong>3. Mole Fraction of Ar ($\chi_{Ar}$):</strong><br>
+            $\chi_{Ar} = \frac{2.3}{4.282} = 0.537$ (Argon is 53.7% of the mixture)</p>
+            <p><strong>4. Partial Pressure of Ar ($P_{Ar}$):</strong><br>
+            $P_{Ar} = 0.537 \times 841 \text{ torr} = 452 \text{ torr}$</p>
+        </div>
+
+        <h2>EXAMPLE 2: Velocity and Mass</h2>
+        <div class="example-box">
+            <p><strong>Root Mean Square Velocity Equation:</strong> $$u_{rms} = \sqrt{\frac{3RT}{M}}$$</p>
+            <p><strong>Logic:</strong> If mass ($M$) increases, velocity decreases. If Temperature ($T$) increases, velocity increases.</p>
+            <p><strong>Question:</strong> Which has the greatest average speed? (A) $He$ at 500K, (B) $He$ at 300K, (C) $N_2$ at 500K.</p>
+            <p><strong>Answer:</strong> (A). Helium is the lightest ($4g/mol$ vs $28g/mol$) and it is at the highest temperature.</p>
+        </div>
+
+        <h2>INTERMOLECULAR FORCES (IMFs)</h2>
+        <table>
+            <tr>
+                <th>Force Type</th>
+                <th>Description</th>
+                <th>Strength</th>
+            </tr>
+            <tr>
+                <td><strong>London Dispersion (LDF)</strong></td>
+                <td>Instantaneous/induced dipoles. Occurs in <strong>all</strong> molecules. The only force for non-polar molecules. Increases with size/surface area.</td>
+                <td>Weakest</td>
+            </tr>
+            <tr>
+                <td><strong>Dipole-Dipole</strong></td>
+                <td>Permanent dipoles in polar molecules. Opposite partial charges attract.</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td><strong>Hydrogen Bonding</strong></td>
+                <td>Special strong dipole-dipole. Requires H bonded to <strong>N, O, or F</strong> interacting with N, O, or F on another molecule.</td>
+                <td>Strongest</td>
+            </tr>
+            <tr>
+                <td><strong>Ion-Dipole</strong></td>
+                <td>Interaction between an ion (like $Na^+$) and a polar molecule (like $H_2O$). Explains how salt dissolves.</td>
+                <td>Very Strong</td>
+            </tr>
+        </table>
+
+        <div class="prof-tip">
+            <strong>IMFs and Phase:</strong> At room temperature, weak IMFs lead to gases. Moderate IMFs lead to liquids. Strong IMFs lead to solids. Higher IMFs always result in higher Boiling Points and Melting Points because more energy is required to pull the molecules apart.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>We concluded by examining why water is an anomaly. Due to intensive Hydrogen Bonding, solid water (ice) forms a hexagonal crystal structure that is <em>less dense</em> than the liquid phase, causing it to float. This is rare in chemistry, as most solids sink in their own liquids. We will continue by predicting relative IMF strengths in different molecular pairs on Tuesday.</p>
+    </div>
+</body></html>

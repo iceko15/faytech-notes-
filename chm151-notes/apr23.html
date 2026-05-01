@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Gas Laws and Kinetic Molecular Theory</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Gas Laws and Kinetic Molecular Theory</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The behavior of gases is defined by the relationships between four variables: <b>Pressure (P)</b>, <b>Volume (V)</b>, <b>Temperature (T)</b>, and <b>Amount in Moles (n)</b>. Gases lack a definite volume and expand to fill their containers completely. Their behavior is explained by the movement and collision of particles against container walls.</p>
+
+        <div class="prof-tip">
+            Professor's Note: When visualizing gas problems, remember that pressure is literally the amount of force exerted by gas particles colliding with the walls of the container. If they hit the walls more often or harder, the pressure goes up.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><b>Atmosphere (atm):</b> A unit of pressure. Standard pressure at sea level is 1.00 atm.</li>
+            <li><b>Kelvin (K):</b> The absolute temperature scale required for all gas law calculations ($K = ^\circ C + 273$).</li>
+            <li><b>STP (Standard Temperature and Pressure):</b> Defined as 273 K and 1.00 atm.</li>
+            <li><b>Molar Volume:</b> At STP, 1 mole of any ideal gas occupies 22.4 Liters.</li>
+            <li><b>Ideal Gas Constant (R):</b> A constant used to relate P, V, n, and T. The most common value used is $0.08206 \frac{L \cdot atm}{mol \cdot K}$.</li>
+            <li><b>Barometer:</b> An instrument used to measure atmospheric pressure, often using a column of mercury.</li>
+        </ul>
+
+        <h2>RULES & IDENTITIES</h2>
+        <h3>1. Boyle's Law (Pressure-Volume Relationship)</h3>
+        <p>At constant temperature and moles, pressure and volume are <b>indirectly proportional</b>.</p>
+        <p>$$P_1V_1 = P_2V_2$$</p>
+        <p>If you make the container smaller, particles collide with the walls more often, increasing pressure.</p>
+
+        <h3>2. Charles's Law (Volume-Temperature Relationship)</h3>
+        <p>At constant pressure and moles, volume and temperature are <b>directly proportional</b>.</p>
+        <p>$$\frac{V_1}{T_1} = \frac{V_2}{T_2}$$</p>
+        <p>As temperature increases, particles move faster. To keep pressure (collision rate) constant, the container must expand.</p>
+
+        <h3>3. Gay-Lussac's Law (Pressure-Temperature Relationship)</h3>
+        <p>At constant volume and moles, pressure and temperature are <b>directly proportional</b>.</p>
+        <p>$$\frac{P_1}{T_1} = \frac{P_2}{T_2}$$</p>
+        <p>Heating gas in a rigid container (like a steel box) makes particles move faster and hit walls harder, increasing pressure.</p>
+
+        <h3>4. Avogadro's Law (Volume-Mole Relationship)</h3>
+        <p>At constant pressure and temperature, volume and moles are <b>directly proportional</b>.</p>
+        <p>$$\frac{V_1}{n_1} = \frac{V_2}{n_2}$$</p>
+        <p>The identity of the gas does not matter; 1 mole of $H_2$ takes up the same space as 1 mole of $N_2$ at the same T and P.</p>
+
+        <h3>5. Combined Gas Law</h3>
+        <p>Used when P, V, and T are all changing simultaneously.</p>
+        <p>$$\frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2}$$</p>
+
+        <h3>6. Ideal Gas Law</h3>
+        <p>Relates all variables for a gas in a single state (no "initial" or "final").</p>
+        <p>$$PV = nRT$$</p>
+
+        <div class="prof-tip">
+            Warning: Temperature <b>MUST</b> be in Kelvin. If you use Celsius, the math will fail because Celsius allows for zero and negative values, which doesn't work for ratios of energy.
+        </div>
+
+        <h2>PRESSURE UNIT CONVERSIONS</h2>
+        <table>
+            <tr>
+                <th>Unit 1</th>
+                <th>Equivalent to</th>
+                <th>Unit 2</th>
+            </tr>
+            <tr>
+                <td>1.00 atm</td>
+                <td>=</td>
+                <td>760 torr</td>
+            </tr>
+            <tr>
+                <td>1.00 atm</td>
+                <td>=</td>
+                <td>760 mmHg</td>
+            </tr>
+            <tr>
+                <td>1 torr</td>
+                <td>=</td>
+                <td>1 mmHg</td>
+            </tr>
+            <tr>
+                <td>1.00 atm</td>
+                <td>=</td>
+                <td>101.325 kPa</td>
+            </tr>
+        </table>
+
+        <h2>STEPS/PROCESS: Solving Gas Problems</h2>
+        <ol>
+            <li>Identify the given variables (P, V, T, n).</li>
+            <li>Check for "Initial" ($1$) and "Final" ($2$) states. If there is no change, use the Ideal Gas Law.</li>
+            <li><b>Convert units immediately:</b> 
+                <ul>
+                    <li>Temperature to Kelvin ($+273$).</li>
+                    <li>Volume to Liters (if using $R = 0.08206$).</li>
+                    <li>Pressure to atmospheres (if using $R = 0.08206$).</li>
+                </ul>
+            </li>
+            <li>Rearrange the algebraic formula to solve for the unknown variable <i>before</i> plugging in numbers.</li>
+            <li>Plug in values, cancel units, and solve.</li>
+        </ol>
+
+        <h2>EXAMPLE 1: Boyle's Law</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> A gas sample occupies 5.00 L at 0.974 atm. Calculate the volume at 1.00 atm if temperature is constant.</p>
+            <p><b>Variables:</b> $V_1 = 5.00 L$, $P_1 = 0.974 atm$, $P_2 = 1.00 atm$, $V_2 = ?$</p>
+            <p class="key-step">Rearrange: $V_2 = \frac{P_1V_1}{P_2}$</p>
+            <p>$$V_2 = \frac{(0.974 \text{ atm})(5.00 \text{ L})}{1.00 \text{ atm}} = 4.87 L$$</p>
+            <p><i>Check: Pressure increased, so volume should decrease. 4.87 is less than 5.00, so the answer makes sense.</i></p>
+        </div>
+
+        <h2>EXAMPLE 2: Charles's Law</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> An 11.2 L sample of CO is at an unknown temperature ($T_1$). It occupies 13.3 L at 55.0°C. Pressure is constant.</p>
+            <p><b>Variables:</b> $V_1 = 11.2 L$, $V_2 = 13.3 L$, $T_2 = 55 + 273 = 328 K$</p>
+            <p class="key-step">Rearrange: $T_1 = \frac{V_1T_2}{V_2}$</p>
+            <p>$$T_1 = \frac{(11.2 \text{ L})(328 \text{ K})}{13.3 \text{ L}} = 276 K$$</p>
+            <p><b>Convert back to Celsius:</b> $276 - 273 = 3^\circ C$.</p>
+        </div>
+
+        <h2>EXAMPLE 3: Ideal Gas Law</h2>
+        <div class="example-box">
+            <p><b>Problem:</b> Find the moles of Argon in a 250 mL container at 832 torr and 25°C.</p>
+            <p><b>Convert Units:</b></p>
+            <ul>
+                <li>$V = 250 \text{ mL} = 0.250 L$</li>
+                <li>$P = 832 \text{ torr} / 760 = 1.094 atm$</li>
+                <li>$T = 25 + 273 = 298 K$</li>
+            </ul>
+            <p class="key-step">Formula: $n = \frac{PV}{RT}$</p>
+            <p>$$n = \frac{(1.094 \text{ atm})(0.250 \text{ L})}{(0.08206 \frac{L \cdot atm}{mol \cdot K})(298 \text{ K})} = 0.0112 \text{ moles}$$</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <p>The following problems were assigned from the set:</p>
+        <ul>
+            <li><b>#13:</b> Combined Gas Law application.</li>
+            <li><b>#14:</b> Pressure/Temperature relationship (Gay-Lussac).</li>
+            <li><b>#17:</b> Ideal Gas Law ($PV=nRT$) with a pressure given in kPa. Note: $100 \text{ kPa}$ is approximately $1 \text{ atm}$.</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <p>Gases are unique because their volume is determined entirely by their container. By understanding that pressure is caused by particle collisions, we can predict that increasing temperature or decreasing volume will increase pressure. All calculations must use the Kelvin scale, and when using the Ideal Gas Law constant $R$, all units must be consistent (Liters, atmospheres, moles, Kelvin).</p>
+    </div>
+</body></html>

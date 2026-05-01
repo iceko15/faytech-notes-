@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CHM-151: Gas Laws and Stoichiometry</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../chm151.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Gas Laws, Molar Mass, and Stoichiometry</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>The Ideal Gas Law ($PV = nRT$) acts as a bridge between measurable physical properties (Pressure, Volume, Temperature) and chemical quantities (moles). By manipulating this equation, we can determine the molar mass of an unknown gas or integrate gas data into stoichiometry problems to predict reaction yields.</p>
+
+        <div class="prof-tip">
+            <strong>Professor's Note:</strong> You do not need to memorize the conversion factors or the value of $R$. They are on the back of your equation sheet. However, you MUST know when to use them. If you are using $PV = nRT$, your units must match $R$ (liters, atmospheres, moles, Kelvin).
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Ideal Gas Constant ($R$):</strong> $0.08206 \frac{L \cdot atm}{mol \cdot K}$. This value dictates the units required for the Ideal Gas Law.</li>
+            <li><strong>Partial Pressure:</strong> The pressure exerted by an individual gas within a mixture.</li>
+            <li><strong>Mole Fraction ($\chi$):</strong> The ratio of moles of a specific component to the total moles in a mixture.</li>
+            <li><strong>Dalton's Law of Partial Pressures:</strong> The total pressure of a gas mixture is the sum of the pressures of each individual gas.</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>1. The Ideal Gas Law</h3>
+        <p>$$PV = nRT$$</p>
+        
+        <h3>2. Unit Conversions</h3>
+        <ul>
+            <li><strong>Pressure:</strong> $760 \text{ Torr} = 1 \text{ atm}$. To convert Torr to atm, divide by 760.</li>
+            <li><strong>Temperature:</strong> Always use Kelvin ($K$). $K = ^\circ C + 273$.</li>
+            <li><strong>Volume:</strong> $1000 \text{ mL} = 1 \text{ L}$.</li>
+        </ul>
+
+        <h3>3. Partial Pressure Equations</h3>
+        <ul>
+            <li>$P_{total} = P_1 + P_2 + P_3 + ...$</li>
+            <li>$P_A = \chi_A \times P_{total}$</li>
+            <li>$\chi_A = \frac{n_A}{n_{total}}$</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Gas Canister Explosion Risk</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> A 2.0 L canister holds 3.5 moles of gas. It is heated to $13,500 ^\circ C$. The canister can tolerate a maximum internal pressure of 210 atmospheres. Will it explode?
+            <br><br>
+            <span class="key-step">Step 1: Identify Variables</span>
+            <ul>
+                <li>$V = 2.0 \text{ L}$</li>
+                <li>$n = 3.5 \text{ moles}$</li>
+                <li>$T = 13,500 + 273 = 13,773 \text{ K}$</li>
+                <li>$R = 0.08206$</li>
+            </ul>
+            <span class="key-step">Step 2: Solve for Pressure ($P$)</span>
+            <p>$$P = \frac{nRT}{V} = \frac{(3.5)(0.08206)(13,773)}{2.0}$$</p>
+            <p>$$P \approx 2.0 \times 10^3 \text{ atm} = 2,000 \text{ atm}$$</p>
+            <span class="key-step">Conclusion:</span> Since 2,000 atm is much higher than the 210 atm limit, the canister will definitely explode.
+        </div>
+
+        <h2>EXAMPLE 2: Calculating Molar Mass from Gas Data</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> A 1.02 g sample of gas takes up 220 mL at $95 ^\circ C$ and 750 Torr. Find the molar mass.
+            <br><br>
+            <span class="key-step">Step 1: Convert Units</span>
+            <ul>
+                <li>$V = 0.220 \text{ L}$</li>
+                <li>$T = 95 + 273 = 368 \text{ K}$</li>
+                <li>$P = \frac{750}{760} = 0.9868 \text{ atm}$</li>
+            </ul>
+            <span class="key-step">Step 2: Find Moles ($n$)</span>
+            <p>$$n = \frac{PV}{RT} = \frac{(0.9868)(0.220)}{(0.08206)(368)} = 0.007189 \text{ moles}$$</p>
+            <span class="key-step">Step 3: Calculate Molar Mass ($\frac{g}{mol}$)</span>
+            <p>$$\text{Molar Mass} = \frac{1.02 \text{ g}}{0.007189 \text{ mol}} = 142 \text{ g/mol}$$</p>
+        </div>
+
+        <h2>EXAMPLE 3: Gas Stoichiometry</h2>
+        <div class="example-box">
+            <strong>Problem:</strong> Calculate the volume (mL) of $H_2$ gas at 1.33 atm and $33 ^\circ C$ produced by the reaction of 0.0223 g of Lithium metal with excess water.
+            <br><br>
+            <span class="key-step">Step 1: Balanced Equation</span>
+            <p>$$2Li(s) + 2H_2O(l) \rightarrow 2LiOH(aq) + H_2(g)$$</p>
+            <span class="key-step">Step 2: Find Moles of $H_2$ from Grams of $Li$</span>
+            <p>$$0.0223 \text{ g Li} \times \left(\frac{1 \text{ mol Li}}{6.941 \text{ g Li}}\right) \times \left(\frac{1 \text{ mol H}_2}{2 \text{ mol Li}}\right) = \text{ moles of } H_2$$</p>
+            <span class="key-step">Step 3: Solve for Volume ($V$)</span>
+            <p>$$V = \frac{nRT}{P}$$</p>
+            <p>Using the calculated moles, $R = 0.08206$, $T = 306 \text{ K}$, and $P = 1.33 \text{ atm}$.</p>
+            <p>The result is $0.0317 \text{ L}$, which converts to **31.7 mL**.</p>
+        </div>
+
+        <h2>PRACTICE PROBLEMS</h2>
+        <div class="example-box">
+            <p><strong>1. Partial Pressure Calculation:</strong> A mixture of $O_2$ and $N_2$ has a total pressure of 4.5 atm. If the partial pressure of $O_2$ is 3.5 atm, what is the partial pressure of $N_2$?</p>
+            <p><em>Answer: 1.0 atm (Subtract 3.5 from 4.5).</em></p>
+            <hr>
+            <p><strong>2. Molar Mass:</strong> A 26.8 g sample of gas has a pressure of 3.00 atm in a 5.00 L container at $27 ^\circ C$. Find the molar mass.</p>
+            <p><em>Step 1: $n = \frac{(3.00)(5.00)}{(0.08206)(300)} = 0.6093$ moles.</em></p>
+            <p><em>Step 2: $\text{Molar Mass} = \frac{26.8}{0.6093} = 44 \text{ g/mol}$.</em></p>
+        </div>
+
+        <div class="prof-tip">
+            <strong>Exam Warning:</strong> The quiz tomorrow is basically a preview of the whole test. Expect a stoichiometry problem involving gas laws (like Example 3) on the final exam.
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li>If units aren't specified for pressure, any unit is fine <strong>unless</strong> you are using $R$ in $PV = nRT$; then it must be atmospheres.</li>
+            <li>In stoichiometry, if temperature and pressure are constant for all gases, the mole ratio is equal to the liter ratio.</li>
+            <li>Mole fraction ($\chi$) multiplied by total pressure gives the partial pressure of a specific gas.</li>
+        </ul>
+    </div>
+</body></html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Conic Sections (Graphing & Equation Construction)</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Conic Sections: Graphing & Equation Construction</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Conic sections (ellipses, hyperbolas, and parabolas) share similar structural components in their equations but possess distinct geometric properties. The transition from <strong>General Form</strong> to <strong>Standard Form</strong> via completing the square is essential for identifying landmarks like centers, vertices, foci, and directrices. Constructing equations from given properties requires a visual approach to determine orientation (vertical vs. horizontal).</p>
+
+        <div class="prof-tip">
+            <strong>Exam Hint:</strong> Identifying shapes from General Form is a common final exam question. You don't need to put the equation in standard form just to name the shape; look at the coefficients of the $x^2$ and $y^2$ terms. 
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Standard Form:</strong> The equation format that explicitly reveals the center $(h, k)$ and distances $a$ and $b$.</li>
+            <li><strong>Foci (Focal Points):</strong> Landmark points used to establish the graph. In physics/science, these are where light or energy might concentrate (e.g., reflecting off a parabola).</li>
+            <li><strong>Major Axis (Ellipse):</strong> The longer axis; its orientation is determined by the larger denominator.</li>
+            <li><strong>Transverse Axis (Hyperbola):</strong> The axis connecting the vertices; its orientation is determined by which variable is positive.</li>
+            <li><strong>Latus Rectum (Parabola):</strong> The segment through the focus, perpendicular to the axis of symmetry, with length $|4p|$.</li>
+            <li><strong>Directrix (Parabola):</strong> A fixed line outside the curve; the distance from the vertex to the directrix is equal to the distance from the vertex to the focus ($|p|$).</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>1. Identifying the Shape from General Form</h3>
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Resulting Shape</th>
+            </tr>
+            <tr>
+                <td>Missing a square ($x^2$ or $y^2$ is gone)</td>
+                <td><strong>Parabola</strong></td>
+            </tr>
+            <tr>
+                <td>Both squared, same coefficients, same sign</td>
+                <td><strong>Circle</strong></td>
+            </tr>
+            <tr>
+                <td>Both squared, different coefficients, same sign</td>
+                <td><strong>Ellipse</strong></td>
+            </tr>
+            <tr>
+                <td>Both squared, different signs (one is minus)</td>
+                <td><strong>Hyperbola</strong></td>
+            </tr>
+        </table>
+
+        <h3>2. Completing the Square for Parabolas</h3>
+        <p class="key-step">Step 1:</p> Move all terms with the squared variable to one side; move everything else to the other.
+        <p class="key-step">Step 2:</p> Use the formula $(\frac{b}{2})^2$ to find the constant needed to complete the square.
+        <p class="key-step">Step 3:</p> Add that constant to <strong>both</strong> sides to maintain balance.
+        <p class="key-step">Step 4:</p> Factor the squared side and factor out the coefficient of the non-squared variable on the other side to reveal $4p$.
+
+        <div class="prof-tip">
+            <strong>MyMathLab Warning:</strong> When graphing parabolas in the software, you must plot the <strong>vertex</strong> first and then specifically a <strong>Latus Rectum endpoint</strong>. It often will not accept an x or y intercept as the second point.
+        </div>
+
+        <h2>RULES/IDENTITIES</h2>
+        <h3>Focal Distance Formulas</h3>
+        <ul>
+            <li><strong>Ellipse:</strong> $c^2 = a^2 - b^2$ (The middle sign is the opposite of the standard form's plus).</li>
+            <li><strong>Hyperbola:</strong> $c^2 = a^2 + b^2$ (The middle sign is the opposite of the standard form's minus).</li>
+            <li><strong>Parabola:</strong> Focal distance is $p$, found by solving $4p = [\text{coefficient}]$.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Hyperbola Center at $(h, k)$</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $\frac{(y+2)^2}{4} - \frac{(x-1)^2}{16} = 1$
+            <ul>
+                <li><strong>Center:</strong> $(1, -2)$. <span class="prof-tip">Notice the $y$ is first in the equation, but $h$ stays with $x$ and $k$ stays with $y$! Don't reverse them out of habit.</span></li>
+                <li><strong>Orientation:</strong> Opens Up/Down because $y^2$ is the positive term.</li>
+                <li><strong>Distances:</strong> $a^2=4 \rightarrow a=2$ (vertical); $b^2=16 \rightarrow b=4$ (horizontal).</li>
+                <li><strong>Vertices:</strong> $(1, 0)$ and $(1, -4)$ (Move 2 units up/down from center).</li>
+                <li><strong>Asymptotes:</strong> Formed by the box that is 4 units wide and 2 units tall from the center.</li>
+                <li><strong>Foci Calculation:</strong> $c^2 = 4 + 16 = 20 \rightarrow c = \sqrt{20} = 2\sqrt{5} \approx 4.5$.</li>
+                <li><strong>Foci Points:</strong> $(1, -2 + 2\sqrt{5})$ and $(1, -2 - 2\sqrt{5})$.</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Parabola via Completing the Square</h2>
+        <div class="example-box">
+            <strong>Original:</strong> $y^2 - 2y + 12x - 35 = 0$
+            <p class="key-step">1. Isolate $y$ terms:</p> $y^2 - 2y = -12x + 35$
+            <p class="key-step">2. Complete the square:</p> $(\frac{-2}{2})^2 = 1$. Add 1 to both sides:
+            <br>$(y^2 - 2y + 1) = -12x + 35 + 1$
+            <p class="key-step">3. Factor:</p> $(y - 1)^2 = -12x + 36$
+            <p class="key-step">4. Factor out coefficient:</p> $(y - 1)^2 = -12(x - 3)$
+            <hr>
+            <ul>
+                <li><strong>Vertex:</strong> $(3, 1)$.</li>
+                <li><strong>Orientation:</strong> $y$ is squared (Left/Right) and $4p$ is negative (Left).</li>
+                <li><strong>P-value:</strong> $4p = -12 \rightarrow p = -3$.</li>
+                <li><strong>Focus:</strong> $(0, 1)$ (3 units left of vertex).</li>
+                <li><strong>Directrix:</strong> $x = 6$ (3 units right of vertex).</li>
+                <li><strong>Latus Rectum:</strong> $|4p| = 12$. (Count 6 units up and 6 units down from the focus to find endpoints).</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 3: Writing Ellipse Equation from Points</h2>
+        <div class="example-box">
+            <strong>Given:</strong> Foci at $(0, \pm4)$; Vertices at $(0, \pm7)$.
+            <ul>
+                <li><strong>Center:</strong> Midpoint is $(0, 0)$.</li>
+                <li><strong>Orientation:</strong> Vertical (Major axis is on the y-axis).</li>
+                <li><strong>Identify $a$ and $c$:</strong> $a = 7$ (distance to vertex); $c = 4$ (distance to focus).</li>
+                <li><strong>Find $b$:</strong> $c^2 = a^2 - b^2 \rightarrow 16 = 49 - b^2 \rightarrow b^2 = 33$.</li>
+                <li><strong>Equation:</strong> $\frac{x^2}{33} + \frac{y^2}{49} = 1$.</li>
+            </ul>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <ul>
+            <li><strong>Visual Aids:</strong> Always doodle the points. It prevents orientation errors and sign mistakes in $h$ and $k$.</li>
+            <li><strong>Hyperbola vs. Ellipse:</strong> In hyperbolas, $a^2$ is always under the first (positive) term. In ellipses, $a^2$ is always the larger number.</li>
+            <li><strong>Landmarks:</strong> Foci and vertices always lie on the same axis (Major or Transverse). Directrices are lines, while centers, vertices, and foci are points.</li>
+        </ul>
+    </div>
+</body></html>

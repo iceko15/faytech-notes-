@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Polar Conic Sections & Eccentricity</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Polar Conic Sections & Eccentricity</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>In rectangular coordinates, conics are defined by vertices, axes, and focal distance. In <strong>Polar Form</strong>, we fixate our attention on the <strong>Focus</strong> and the <strong>Directrix</strong>. All polar conic sections are situated so that one of their foci is located at the <strong>Pole</strong> (the intersection of the horizontal and vertical axes, formerly $(0,0)$ in rectangular space).</p>
+
+        <div class="prof-tip">
+            <strong>Warning on "e":</strong> In this context, $e$ stands for <strong>Eccentricity</strong>, which is a ratio of distances. This is <strong>NOT</strong> Euler's number ($e \approx 2.718$). Do not mash the $e$ button on your calculator for these problems!
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>The Pole:</strong> The origin of the polar coordinate system. One focus of the conic must sit here.</li>
+            <li><strong>Eccentricity ($e$):</strong> The ratio of the distance from the focus to a point on the graph, over the distance from that point to the directrix. 
+                <ul>
+                    <li>$e = 1$: Parabola (Distances are equal).</li>
+                    <li>$e < 1$: Ellipse (Numerator is shorter than denominator).</li>
+                    <li>$e > 1$: Hyperbola (Numerator is longer than denominator).</li>
+                </ul>
+            </li>
+            <li><strong>Directrix ($k$ or $p$):</strong> A fixed line. The distance from the focus (at the pole) to the directrix is denoted as $k$. 
+                <ul>
+                    <li>$x = k$ (Vertical line to the right).</li>
+                    <li>$x = -k$ (Vertical line to the left).</li>
+                    <li>$y = k$ (Horizontal line above).</li>
+                    <li>$y = -k$ (Horizontal line below).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <p class="key-step">Step 1: Convert to Standard Form</p>
+        <p>Your equation must look like one of the four standard polar templates. The first term in the denominator <strong>must</strong> be a 1. If it is a 5 or a 2, you must divide every term in the numerator and denominator by that number to "force" the 1 into place.</p>
+        
+        <p class="key-step">Step 2: Identify $e$ and $k$</p>
+        <p>Once in standard form, $e$ is the coefficient in front of the sine or cosine. The numerator is equal to $k \cdot e$. Use this to solve for $k$.</p>
+
+        <p class="key-step">Step 3: Determine Orientation</p>
+        <table>
+            <tr>
+                <th>Denominator Format</th>
+                <th>Orientation / Directrix</th>
+            </tr>
+            <tr>
+                <td>$1 + e \cos \theta$</td>
+                <td>Opens left; Directrix is vertical at $x = k$.</td>
+            </tr>
+            <tr>
+                <td>$1 - e \cos \theta$</td>
+                <td>Opens right; Directrix is vertical at $x = -k$.</td>
+            </tr>
+            <tr>
+                <td>$1 + e \sin \theta$</td>
+                <td>Opens down; Directrix is horizontal at $y = k$.</td>
+            </tr>
+            <tr>
+                <td>$1 - e \sin \theta$</td>
+                <td>Opens up; Directrix is horizontal at $y = -k$.</td>
+            </tr>
+        </table>
+
+        <h2>RULES/IDENTITIES</h2>
+        <ul>
+            <li><strong>Standard Form:</strong> $r = \frac{ke}{1 \pm e \cos \theta}$ or $r = \frac{ke}{1 \pm e \sin \theta}$</li>
+            <li><strong>Rectangular Form:</strong> $x = \text{vertical line}$, $y = \text{horizontal line}$. MyMathLab usually wants directrix equations in rectangular form.</li>
+            <li><strong>Calculator Setup:</strong> Use <strong>Polar Mode</strong> and <strong>Radian Mode</strong>. When keying in, encapsulate the entire denominator in parentheses: <code>6 / (2 - 2 sin(theta))</code>.</li>
+        </ul>
+
+        <h2>EXAMPLE 1: Parabola</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $r = \frac{6}{2 - 2 \sin \theta}$
+            <p>1. Divide by 2 to get the leading 1 in the denominator:</p>
+            $$r = \frac{3}{1 - 1 \sin \theta}$$
+            <p>2. Identify $e$ and $k$:</p>
+            <ul>
+                <li>$e = 1$ (This is a <strong>Parabola</strong>).</li>
+                <li>Numerator: $ke = 3 \Rightarrow k(1) = 3 \Rightarrow k = 3$.</li>
+            </ul>
+            <p>3. Orientation: The "minus sine" indicates the graph opens <strong>up</strong>. The directrix is below the pole at $y = -3$.</p>
+            <p>4. Vertex: Use the table feature at $\theta = \frac{3\pi}{2}$. $r = 1.5$. Vertex: $(1.5, \frac{3\pi}{2})$.</p>
+        </div>
+
+        <h2>EXAMPLE 2: Ellipse</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $r = \frac{12}{5 + 3 \cos \theta}$
+            <p>1. Divide by 5 for Standard Form:</p>
+            $$r = \frac{12/5}{1 + \frac{3}{5} \cos \theta}$$
+            <p>2. Identify $e$ and $k$:</p>
+            <ul>
+                <li>$e = \frac{3}{5}$ ($e < 1$, so this is an <strong>Ellipse</strong>).</li>
+                <li>Numerator: $ke = \frac{12}{5} \Rightarrow k(\frac{3}{5}) = \frac{12}{5} \Rightarrow k = 4$.</li>
+            </ul>
+            <p>3. Orientation: "Plus cosine" means it opens left. Directrix is at $x = 4$.</p>
+            <p>4. Vertices: Check quadrantal angles ($\theta = 0, \pi$).
+                <ul>
+                    <li>At $\theta = 0, r = 1.5$. Vertex: $(1.5, 0)$.</li>
+                    <li>At $\theta = \pi, r = 6$. Vertex: $(6, \pi)$.</li>
+                </ul>
+            </p>
+        </div>
+
+        <h2>EXAMPLE 3: Hyperbola</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $r = \frac{8}{2 - 4 \cos \theta}$
+            <p>1. Divide by 2:</p>
+            $$r = \frac{4}{1 - 2 \cos \theta}$$
+            <p>2. Identify $e$ and $k$:</p>
+            <ul>
+                <li>$e = 2$ ($e > 1$, so this is a <strong>Hyperbola</strong>).</li>
+                <li>Numerator: $ke = 4 \Rightarrow k(2) = 4 \Rightarrow k = 2$.</li>
+            </ul>
+            <p>3. Orientation: "Minus cosine" opens right. Directrix is at $x = -2$.</p>
+            <p>4. Calculator Note: Hyperbolas often show "happy glitches" (lines connecting the branches). These are essentially the asymptotes.</p>
+        </div>
+
+        <h2>SUMMARY / EXAM TIPS</h2>
+        <div class="prof-tip">
+            <ul>
+                <li><strong>MyMathLab Fractions:</strong> The system hates decimals. If you see $1.4545...$ in your table, plug the angle back into the original equation to find the exact fraction (e.g., $16/11$).</li>
+                <li><strong>Naming Points:</strong> Do not use coterminal or negative $r$ names if you can avoid it. MyMathLab prefers the primary positive rotation found in your table.</li>
+                <li><strong>Final Exam Prep:</strong> You must know the unit circle, linear/angular speed, and SOH-CAH-TOA. Polar conics will be on there, but you won't have the orientation pictures—just the verbal descriptions.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

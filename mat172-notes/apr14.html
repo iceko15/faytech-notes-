@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>MAT-172: Conic Sections (Ellipses, Hyperbolas, and Parabolas)</title>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #0056b3; margin-top: 30px; }
+        .btn-container { margin-bottom: 20px; display: flex; gap: 10px; }
+        .print-btn, .back-btn { background: #0056b3; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; font-weight: bold; }
+        .print-btn:hover, .back-btn:hover { background: #004494; transform: translateY(-2px); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .example-box { background: #eef7ff; padding: 15px; border-radius: 5px; border: 1px solid #cce5ff; margin-bottom: 20px; }
+        .prof-tip { background: #fff4e5; border-left: 5px solid #ffa117; padding: 15px; margin: 20px 0; font-style: italic; }
+        .key-step { font-weight: bold; color: #0056b3; }
+        @media print { .print-btn, .back-btn { display: none; } body { padding: 0; background: white; } .content-card { box-shadow: none; padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <a href="../mat172.html" class="back-btn">← Return to Hub</a>
+        <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+    <div class="content-card">
+        <h1>Conic Sections: Ellipses, Hyperbolas, and Parabolas</h1>
+        
+        <h2>BIG IDEA</h2>
+        <p>Understanding the standard form equations, focal calculations, and graphing procedures for conic sections. The focus is on moving from algebraic equations to accurate visual representations, including identifying key landmarks like vertices, foci, and asymptotes.</p>
+
+        <div class="prof-tip">
+            <strong>MyMathLab Warning:</strong> MyMathLab is very picky about formatting. For vertices or foci, always list them as separate points (e.g., $(-4, 0), (4, 0)$) with a comma in between. Even though we use $\pm$ in class, the software often requires them to be separated.
+        </div>
+
+        <h2>KEY TERMS</h2>
+        <ul>
+            <li><strong>Major Axis:</strong> The longer axis of an ellipse; the textbook only calls the endpoints of this axis "vertices."</li>
+            <li><strong>Minor Axis:</strong> The shorter axis of an ellipse.</li>
+            <li><strong>Transverse Axis:</strong> The main axis of a hyperbola where the vertices and foci are located.</li>
+            <li><strong>Foci (Focal Points):</strong> Points located on the major (or transverse) axis, used to define the curve.</li>
+            <li><strong>Latus Rectum:</strong> A line segment through the focus of a parabola, perpendicular to its axis, used to determine the width (fatness) of the curve.</li>
+            <li><strong>Directrix:</strong> A fixed line used in the definition of a parabola.</li>
+            <li><strong>Asymptotes:</strong> The "slanty lines" that act as boundaries for the branches of a hyperbola.</li>
+        </ul>
+
+        <h2>RULES/IDENTITIES</h2>
+        
+        <h3>1. Ellipse Calculations</h3>
+        <ul>
+            <li><strong>Focus Formula:</strong> $c^2 = a^2 - b^2$</li>
+            <li><strong>Orientation:</strong> $a$ is always the <strong>larger</strong> denominator. If the larger number is under $x$, it is horizontal. If under $y$, it is vertical.</li>
+            <li><strong>Standard Form (Centered at $h, k$):</strong> $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$</li>
+        </ul>
+
+        <div class="prof-tip">
+            If you subtract $a^2$ and $b^2$ backwards for an ellipse, you get an imaginary number for your focus, which is not okay!
+        </div>
+
+        <h3>2. Hyperbola Calculations</h3>
+        <ul>
+            <li><strong>Focus Formula:</strong> $c^2 = a^2 + b^2$</li>
+            <li><strong>Orientation:</strong> Determined by which variable is positive (comes first). If $x^2$ is first, it opens left/right. If $y^2$ is first, it opens up/down.</li>
+            <li><strong>Asymptote Equation:</strong> $y - k = \pm \frac{\text{rise}}{\text{run}}(x - h)$. Think of it as slope-intercept form where $m = \text{rise/run}$.</li>
+        </ul>
+
+        <h3>3. Parabola Calculations</h3>
+        <ul>
+            <li><strong>Standard Forms:</strong>
+                <ul>
+                    <li>$(x-h)^2 = 4p(y-k)$ (Opens Up/Down)</li>
+                    <li>$(y-k)^2 = 4p(x-h)$ (Opens Left/Right)</li>
+                </ul>
+            </li>
+            <li><strong>Focal Distance ($p$):</strong> The distance from the vertex to the focus, and from vertex to directrix.</li>
+            <li><strong>Latus Rectum Length:</strong> $|4p|$. This tells you how wide the parabola is through the focus.</li>
+        </ul>
+
+        <h2>STEPS/PROCESS</h2>
+        <h3>Graphing a Hyperbola</h3>
+        <ol>
+            <li>Identify the <strong>Center</strong> $(h, k)$.</li>
+            <li>Find $a$ and $b$ from the denominators.</li>
+            <li>Plot the center and move left/right by the $x$-denominator's square root, and up/down by the $y$-denominator's square root.</li>
+            <li><strong>Construct the Box:</strong> Draw a dotted box using these four points.</li>
+            <li><strong>Draw Asymptotes:</strong> Draw dotted diagonal lines through the corners of the box.</li>
+            <li><strong>Identify Orientation:</strong> If $x^2$ is lead, the vertices are on the left/right sides of the box. If $y^2$ is lead, they are on the top/bottom.</li>
+            <li><strong>Sketch the Curves:</strong> Swoop the graph from the vertex, "hugging" the asymptotes without crossing them.</li>
+        </ol>
+
+        <h2>EXAMPLE 1: Ellipse Not Centered at Origin</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $\frac{(x-4)^2}{9} + \frac{(y+2)^2}{25} = 1$
+            <ul>
+                <li><strong>Center:</strong> $(4, -2)$ (Note the sign changes).</li>
+                <li><strong>$a^2 = 25$ (Larger):</strong> So $a = 5$. This is under $y$, so the ellipse is tall.</li>
+                <li><strong>$b^2 = 9$:</strong> So $b = 3$. This is under $x$.</li>
+                <li><strong>Vertices:</strong> From $(4, -2)$, go up and down 5 units $\rightarrow (4, 3)$ and $(4, -7)$.</li>
+                <li><strong>Focus Calculation:</strong> $c^2 = 25 - 9 = 16 \rightarrow c = 4$.</li>
+                <li><strong>Foci:</strong> Move 4 units along the major axis (vertical) from center $\rightarrow (4, 2)$ and $(4, -6)$.</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 2: Hyperbola centered at (0,0)</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $\frac{x^2}{25} - \frac{y^2}{16} = 1$
+            <ul>
+                <li><strong>Orientation:</strong> $x^2$ is first, so it opens side-to-side.</li>
+                <li><strong>$a = 5$ (under $x$), $b = 4$ (under $y$).</strong></li>
+                <li><strong>Vertices:</strong> $(\pm 5, 0)$.</li>
+                <li><strong>Box/Asymptotes:</strong> Box extends 5 left/right, 4 up/down. Asymptote slope $m = \pm \frac{4}{5}$ (rise over run).</li>
+                <li><strong>Focus:</strong> $c^2 = 25 + 16 = 41 \rightarrow c = \sqrt{41} \approx 6.4$.</li>
+                <li><strong>Foci Points:</strong> $(\pm \sqrt{41}, 0)$.</li>
+            </ul>
+        </div>
+
+        <h2>EXAMPLE 3: Parabola</h2>
+        <div class="example-box">
+            <strong>Equation:</strong> $y^2 = 16x$
+            <ul>
+                <li><strong>Type:</strong> $y$ is squared, no $x^2$. Opens left or right.</li>
+                <li><strong>Vertex:</strong> $(0, 0)$.</li>
+                <li><strong>$4p = 16 \rightarrow p = 4$.</strong> Since $p$ is positive, it opens to the <strong>right</strong>.</li>
+                <li><strong>Focus:</strong> Move 4 units right from vertex $\rightarrow (4, 0)$.</li>
+                <li><strong>Directrix:</strong> Move 4 units left from vertex $\rightarrow x = -4$.</li>
+                <li><strong>Latus Rectum:</strong> $|4p| = 16$. From the focus, go up 8 and down 8 to plot the width.</li>
+            </ul>
+        </div>
+
+        <h2>SUMMARY</h2>
+        <p>Whether dealing with ellipses or hyperbolas, the relationship between $a$, $b$, and $c$ is paramount, but the sign in the focus formula flips ($a^2 - b^2$ for ellipses; $a^2 + b^2$ for hyperbolas). For parabolas, the $p$ value dictates everything from the focal point to the directrix and the overall width via the latus rectum. Always use the "rise over run" logic for asymptotes to avoid flipping your slopes.</p>
+    </div>
+</body></html>
