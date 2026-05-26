@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nomenclature Prep - T-11 Parachute System</title>
+   <style>
+       :root {
+           --tactical-green: #2d4a22;
+           --tactical-dark: #1b2e15;
+           --tactical-gold: #c5a059;
+           --charcoal: #222222;
+           --bg-gray: #f8f9fa;
+           --text-dark: #333;
+           --white: #ffffff;
+           --accent-green: #e8f5e9;
+           --off-white: #fafafa;
+       }
+
+       body {
+           font-family: 'Segoe UI', Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: var(--bg-gray);
+           color: var(--text-dark);
+       }
+
+       nav {
+           background-color: var(--white);
+           border-bottom: 3px solid var(--tactical-green);
+           padding: 15px 0;
+           display: flex;
+           justify-content: center;
+           gap: 25px;
+       }
+
+       nav a {
+           text-decoration: none;
+           color: #444;
+           font-weight: bold;
+           font-size: 14px;
+           text-transform: uppercase;
+           transition: color 0.3s;
+       }
+
+       nav a:hover { color: var(--tactical-green); }
+
+       .active-tab {
+           color: var(--tactical-green);
+           border-bottom: 2px solid var(--tactical-green);
+       }
+
+       .container {
+           max-width: 1000px;
+           margin: 40px auto;
+           padding: 40px;
+           background: var(--white);
+           border-radius: 12px;
+           box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+       }
+
+       .back-link {
+           display: inline-block;
+           margin-bottom: 25px;
+           text-decoration: none;
+           color: #666;
+           font-weight: bold;
+           transition: color 0.2s;
+       }
+       .back-link:hover { color: var(--tactical-green); }
+
+       h1 {
+           font-size: 1.8em;
+           margin-bottom: 30px;
+           color: var(--tactical-dark);
+           border-bottom: 2px solid #eee;
+           padding-bottom: 10px;
+       }
+
+       /* Flashcard Section */
+       .flashcard-section {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 20px;
+           margin-top: 20px;
+       }
+
+       .flashcard-container {
+           width: 100%;
+           max-width: 900px;
+           height: 720px;
+           perspective: 1000px;
+           cursor: pointer;
+       }
+
+       .flashcard {
+           position: relative;
+           width: 100%;
+           height: 100%;
+           text-align: center;
+           transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+           transform-style: preserve-3d;
+       }
+
+       .flashcard.is-flipped {
+           transform: rotateY(180deg);
+       }
+
+       .card-face {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           -webkit-backface-visibility: hidden;
+           backface-visibility: hidden;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           padding: 30px;
+           box-sizing: border-box;
+           border-radius: 15px;
+           border: 1px solid #e0e0e0;
+           box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+       }
+
+       .card-front {
+           background-color: var(--white);
+           color: var(--tactical-dark);
+           font-weight: bold;
+           font-size: 1.1em;
+       }
+
+       .card-back {
+           background-color: var(--off-white);
+           color: var(--text-dark);
+           transform: rotateY(180deg);
+           font-size: 1.1em;
+       }
+
+       .card-image {
+           max-height: 500px;
+           width: 100%;
+           object-fit: contain;
+           margin-bottom: 20px;
+           border-radius: 4px;
+           background-color: var(--charcoal);
+           padding: 10px;
+           box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+       }
+
+       .quiz-controls {
+           margin-top: 15px;
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+           width: 80%;
+       }
+
+       .identification-input {
+           padding: 12px;
+           border: 2px solid #ddd;
+           border-radius: 6px;
+           font-size: 1em;
+           text-align: center;
+       }
+
+       .reveal-btn {
+           background: var(--tactical-gold);
+           color: var(--tactical-dark);
+           border: none;
+           padding: 10px;
+           font-weight: bold;
+           text-transform: uppercase;
+           border-radius: 4px;
+           cursor: pointer;
+       }
+
+       /* Control Bar */
+       .control-bar {
+           display: flex;
+           align-items: center;
+           gap: 30px;
+           margin-top: 10px;
+       }
+
+       .nav-btn {
+           background: var(--tactical-green);
+           color: white;
+           border: none;
+           padding: 10px 25px;
+           border-radius: 6px;
+           font-weight: bold;
+           cursor: pointer;
+           transition: background 0.2s;
+           font-size: 14px;
+       }
+
+       .nav-btn:hover {
+           background: var(--tactical-dark);
+       }
+
+       .spec-box {
+           font-size: 0.9em;
+           color: #666;
+           margin-top: 15px;
+           border-top: 1px solid #ddd;
+           padding-top: 10px;
+       }
+
+       .counter {
+           font-weight: 600;
+           color: #666;
+           font-size: 1.1em;
+           min-width: 60px;
+           text-align: center;
+       }
+
+       footer {
+           text-align: center;
+           margin: 60px 0;
+           color: #666;
+           font-style: italic;
+           font-size: 0.9em;
+       }
+
+       @media (max-width: 768px) {
+           .flashcard-container { height: 350px; }
+       }
+   </style>
+</head>
+<body>
+
+   <nav>
+       <a href="index.html">Dashboard</a>
+       <a href="ranger-prep.html">Ranger Prep</a>
+       <a href="jumpmaster-prep.html" class="active-tab">Jumpmaster Prep</a>
+       <a href="board-prep.html">Board Prep</a>
+   </nav>
+
+   <div class="container">
+       <a href="jumpmaster-prep.html" class="back-link">← Back to Jumpmaster Portal</a>
+       
+       <h1>T-11 Parachute System Nomenclature</h1>
+
+       <div class="flashcard-section">
+           <div class="flashcard-container" id="cardContainer">
+               <div class="flashcard" id="flashcard">
+                   <!-- Front -->
+                   <div class="card-face card-front">
+                       <img src="" alt="" class="card-image" id="frontImage" style="display: none;">
+                       <div id="quizPromptContainer">
+                           <p id="frontText" style="font-size: 1.2em; color: var(--tactical-dark);">Question loading...</p>
+                           <div class="quiz-controls" id="quizControls">
+                               <input type="text" class="identification-input" placeholder="Type identification here..." id="answerInput">
+                               <button class="reveal-btn" onclick="revealAnswer(event)">Check Answer</button>
+                           </div>
+                       </div>
+                   </div>
+                   <!-- Back -->
+                   <div class="card-face card-back">
+                       <img src="" alt="" class="card-image" id="backImage" style="display: none;">
+                       <h3 id="backText" style="color: var(--tactical-green); margin: 0;">Answer loading...</h3>
+                       <div id="specContainer" class="spec-box"></div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="control-bar">
+               <button class="nav-btn" onclick="prevCard()">Previous</button>
+               <button class="nav-btn" onclick="shuffleDeck()">Shuffle Deck</button>
+               <button class="nav-btn" onclick="nextCard()">Next</button>
+               <div class="counter" id="counter">1 / 143</div>
+           </div>
+       </div>
+
+   </div>
+
+   <footer>
+       "I will always remember that I am a Jumpmaster."
+   </footer>
+
+   <script>
+       const cardDeck = [
+           // ==========================================
+           // I. T-11 MAIN PARACHUTE ASSEMBLY (1-15)
+           // ==========================================
+           {
+               id: "t11_main_parachute",
+               name: "T-11 Main Parachute System",
+               frontImg: "images/main_canopy.jpg",
+               identifications: [
+                   { number: "1", question: "Identify item #1 on the diagram (Canopy Shape/Area):", answer: "Modified cruciform (square) design, 1,479 sq ft surface area." },
+                   { number: "2", question: "Identify item #2 (Number of lines):", answer: "48 Suspension Lines." }
+               ],
+               backText: "General Specs: Designed to support up to 400 lbs total weight.",
+               backImg: ""
+           },
+           {
+               id: "t11_deployment_assembly",
+               name: "T-11 Deployment Components",
+               frontImg: "images/slider.jpg",
+               identifications: [
+                   { number: "1", question: "What is this octagonal-shaped fabric banner?", answer: "Slider Assembly" },
+                   { number: "2", question: "What is its purpose?", answer: "Regulates uniform inflation and restricts explosive opening shock." }
+               ],
+               backText: "The slider moves down suspension lines during inflation.",
+               backImg: ""
+           },
+           {
+               frontText: "3. Identify this component that fully encloses the main canopy during packing routines:",
+               frontImg: "images/deployment_sleeve.jpg",
+               backText: "Deployment Sleeve (Controls orderly deployment and lines-first deployment sequence).",
+               backImg: ""
+           },
+           {
+               frontText: "4. Identify this outer fabric containment unit featuring the main log book pocket:",
+               frontImg: "images/pack_tray.jpg",
+               backText: "Pack Tray Assembly (Houses the deployment sleeve, canopy, and risers prior to activation).",
+               backImg: ""
+           },
+           {
+               frontText: "5. What is the exact length and tensile strength of the standard main deployment Static Line?",
+               frontImg: "images/static_line.jpg",
+               backText: "Length: 15 feet. Tensile Strength: 4,000 lbs.",
+               backImg: ""
+           },
+           {
+               frontText: "6. Identify this elastic/fabric sleeve loop structure handling slack line groups on the main tray:",
+               frontImg: "images/elastics.jpg",
+               backText: "Bridle Assembly and Static Line Stow Bands.",
+               backImg: ""
+           },
+           {
+               frontText: "7. Identify this high-strength metal hardware clasp connected to the terminal end of the static line:",
+               frontImg: "images/snap_hook.jpg",
+               backText: "Static Line Snap Hook (Secures the deployment assembly to the aircraft anchor line cable).",
+               backImg: ""
+           },
+           {
+               frontText: "8. Identify these four open pocket structures situated on the lower corner profiles of the main canopy:",
+               frontImg: "images/corner_vents.jpg",
+               backText: "Canopy Corner Vents (Assist stability, lessen oscillation, and foster uniform air distribution).",
+               backImg: ""
+           },
+           {
+               frontText: "9. Identify this record keeper asset attached inside the main pack tray base padding layer:",
+               frontImg: "images/main_logbook.jpg",
+               backText: "Parachute Log Record Pocket (Protects DA Form 3912 maintenance and inspection history records).",
+               backImg: ""
+           },
+           {
+               frontText: "10. What material are the T-11 Main suspension lines constructed from, and what is their tensile strength?",
+               frontImg: "",
+               backText: "Type internal nylon cord with a tensile strength of 400 lbs.",
+               backImg: ""
+           },
+           {
+               frontText: "11. Identify the ventilation mesh grid stitched along the top crown perimeter of the main canopy:",
+               frontImg: "images/apex_vent.jpg",
+               backText: "Apex Vent Mesh (Allows constant air escape to maximize drop stability).",
+               backImg: ""
+           },
+           {
+               frontText: "12. Identify the reinforced fabric loops where suspension lines anchor to the lower canopy skirt:",
+               frontImg: "images/line_attachments.jpg",
+               backText: "Lower Skirt Attachment Loops (Reinforced points distributing high load during deployment opening).",
+               backImg: ""
+           },
+           {
+               frontText: "13. Identify the long fabric panels extending vertically between the corners of the main canopy assembly:",
+               frontImg: "images/canopy_panels.jpg",
+               backText: "Main Canopy Side Panels (Cruciform geometry elements engineered for controlled vertical descend speeds).",
+               backImg: ""
+           },
+           {
+               frontText: "14. Identify the heavy nylon reinforcement tape running along the perimeter edges of the main pack tray:",
+               frontImg: "images/tray_reinforcement.jpg",
+               backText: "Pack Tray Lateral Reinforcement Webbing strips.",
+               backImg: ""
+           },
+           {
+               frontText: "15. Identify the breakable cotton cord element used to tie the main pilot/bridle components during packing sequences:",
+               frontImg: "images/break_cord.jpg",
+               backText: "Ticket/Breakable Cotton Webbing Cord (Engineered to snap effortlessly under tension to release deployment phases).",
+               backImg: ""
+           },
+
+           // ==========================================
+           // II. T-11 HARNESS ASSEMBLY (16-32)
+           // ==========================================
+           {
+               frontText: "16. Identify these four major webbing tracks terminating in male canopy release inserts:",
+               frontImg: "images/main_risers.jpg",
+               backText: "Riser Assemblies (Constructed of Type VII nylon webbing with an individual tensile strength of 5,500 lbs).",
+               backImg: ""
+           },
+           {
+               frontText: "17. Identify these protective fabric shoulder flaps secured by hook-and-loop closures on the upper chassis:",
+               frontImg: "images/riser_covers.jpg",
+               backText: "Riser Covers (Shield the main riser loops and prevent premature separation or wind tear hazards).",
+               backImg: ""
+           },
+           {
+               frontText: "18. Identify this dual-action metal hardware framework positioned on the upper chest structure:",
+               frontImg: "images/canopy_release.jpg",
+               backText: "3-Prong Male/Female Canopy Release Assemblies (Enables emergency cut-away/detachment of main canopy upon landing).",
+               backImg: ""
+           },
+           {
+               frontText: "19. Identify this hardware strap adjusting across the upper chest profile frame:",
+               frontImg: "images/chest_strap.jpg",
+               backText: "Chest Strap (Features a friction adapter to lock and form the upper secure frame configuration).",
+               backImg: ""
+           },
+           {
+               frontText: "20. Identify these lower high-load adjustable leg constraints featuring quick-acting spring buckles:",
+               frontImg: "images/leg_straps.jpg",
+               backText: "Leg Strap Assemblies (Equipped with high-load ejector snaps for fast egress post-landing).",
+               backImg: ""
+           },
+           {
+               frontText: "21. Identify this lower rear heavy webbing saddle configuration crossing beneath the jumper's seat zone:",
+               frontImg: "images/saddle_strap.jpg",
+               backText: "Harness Saddle and Main Lift Webbing (Serves as the central weight-bearing seat frame for the paratrooper).",
+               backImg: ""
+           },
+           {
+               frontText: "22. Identify these triangular hardware loops positioned on the front hip profiles for modular attachments:",
+               frontImg: "images/d_rings.jpg",
+               backText: "Harness Equipment D-Rings (Two main points used to rig weapon cases, tactical rucks, and equipment lowered lines).",
+               backImg: ""
+           },
+           {
+               frontText: "23. Identify these adjusting layout channels stitched inside the back protector pad framing:",
+               frontImg: "images/sizing_channels.jpg",
+               backText: "Harness Sizing Channels & Index Adjustment Strips (Enables sizing configs labeled Small, Medium, Large, Extra Large).",
+               backImg: ""
+           },
+           {
+               frontText: "24. Identify these vertical strap loops situated high on the shoulder harness architecture panels:",
+               frontImg: "images/equipment_loops.jpg",
+               backText: "Harness Shoulder Accessory Attaching Loops (Secures routing lines or accessory nodes cleanly).",
+               backImg: ""
+           },
+           {
+               frontText: "25. Identify the primary high-tensile fabric spine forming the vertical lines of the harness layout:",
+               frontImg: "images/main_lift_web.jpg",
+               backText: "Main Lift Web (Continuous heavy webbing that runs vertically from the shoulder down to the seat saddle).",
+               backImg: ""
+           },
+           {
+               frontText: "26. Identify the adjustable lateral straps linking the backpad to the front chassis framework:",
+               frontImg: "images/waist_adjusters.jpg",
+               backText: "Harness Main Backframe Waist Adjustment Straps.",
+               backImg: ""
+           },
+           {
+               frontText: "27. Identify the horizontal fabric strip running along the rear shoulder blade area behind the backpad:",
+               frontImg: "images/horizontal_backstrap.jpg",
+               backText: "Horizontal Backstrap (Stabilizes the main lift webs to prevent shifting under asymmetric deployment load).",
+               backImg: ""
+           },
+           {
+               frontText: "28. What is the material specification and tensile strength limit of the chest strap webbing layout?",
+               frontImg: "",
+               backText: "Type VIII Nylon Webbing, with a minimum break profile threshold of 3,600 lbs.",
+               backImg: ""
+           },
+           {
+               frontText: "29. Identify the metal retention loops situated adjacent to the D-rings for keeping equipment lowering lines secure:",
+               frontImg: "images/retention_loops.jpg",
+               backText: "Equipment Attaching Loops / Lowering Line Retention Hardware Slots.",
+               backImg: ""
+           },
+           {
+               frontText: "30. Identify the friction adapters mounted directly onto the diagonal back straps for frame tightening:",
+               frontImg: "images/friction_adapters.jpg",
+               backText: "Diagonal Back Strap Friction Adapters (Slide mechanism locking hardware components).",
+               backImg: ""
+           },
+           {
+               frontText: "31. Identify the fabric keeper loops that secure excess loose webbing tails after harness adjustment:",
+               frontImg: "images/webbing_keepers.jpg",
+               backText: "Elastic Webbing Keepers (Prevents loose tails from snagging or drifting during jumps).",
+               backImg: ""
+           },
+           {
+               frontText: "32. Identify the protective plastic shields surrounding the ejector snaps on the leg straps:",
+               frontImg: "images/snap_covers.jpg",
+               backText: "Ejector Snap Protective Shield covers (Guards mechanisms against accidental debris trigger hits).",
+               backImg: ""
+           },
+
+           // ==========================================
+           // III. T-11 RESERVE PARACHUTE ASSEMBLY (33-50)
+           // ==========================================
+           {
+               frontText: "33. Identify this complete emergency aero-conical container assembly mounted on the chest chassis:",
+               frontImg: "images/reserve_parachute.jpg",
+               backText: "T-11 Reserve Parachute Assembly (Nominal diameter of 20 feet, featuring a 20-line canopy layout).",
+               backImg: ""
+           },
+           {
+               frontText: "34. Identify this red steel manual handle mounted on the left side profile of the reserve pack tray:",
+               frontImg: "images/reserve_handle.jpg",
+               backText: "Reserve Parachute Ripcord Grip / Handle (The emergency manual mechanical pull deployment lever).",
+               backImg: ""
+           },
+           {
+               frontText: "35. Identify this internal spring-loaded canvas launch container acting inside the reserve pocket base:",
+               frontImg: "images/extraction_parachute.jpg",
+               backText: "Reserve Extraction Parachute Assembly (Spring ejects into the passing air slipstream to extract the auxiliary lines).",
+               backImg: ""
+           },
+           {
+               frontText: "36. Identify these fabric loops routing the reserve lines up into the main harness equipment D-rings:",
+               frontImg: "images/reserve_extenders.jpg",
+               backText: "Reserve Riser Extenders (Type XIII nylon webbing links securing the emergency canopy to the primary harness framework).",
+               backImg: ""
+           },
+           {
+               frontText: "37. Identify these overlapping side, top, and bottom fabric panels enclosing the reserve contents securely:",
+               frontImg: "images/reserve_flaps.jpg",
+               backText: "Reserve Pack Flaps (Enclose the emergency system and are held closed via ripcord locking pins).",
+               backImg: ""
+           },
+           {
+               frontText: "38. Identify these sleek layout alignment pockets ensuring clean wind aerodynamic flow profiles over the reserve pack:",
+               frontImg: "images/tuck_tabs.jpg",
+               backText: "Reserve Protection Tuck Tabs (Secure flap seals completely down to mitigate wind-blast scoop dangers).",
+               backImg: ""
+           },
+           {
+               frontText: "39. Identify these critical metal alignment rods maintaining closed tension layout across the ripcord cables:",
+               frontImg: "images/locking_pins.jpg",
+               backText: "Reserve Locking Pins (Inserted into the locking loops to keep pack contents shut until pull actuation occurs).",
+               backImg: ""
+           },
+           {
+               frontText: "40. Identify these heavy elastic cords tensioning across the exterior perimeter faces of the reserve pack tray:",
+               frontImg: "images/pack_bands.jpg",
+               backText: "Reserve Pack Opening Elastics (Instantly pull flaps wide open the millisecond locking pins are retracted).",
+               backImg: ""
+           },
+           {
+               frontText: "41. Identify the transparent inspection ports tracking mechanical lock parameters inside the reserve pack:",
+               frontImg: "images/inspection_windows.jpg",
+               backText: "Reserve Inspection Windows (Allows fast visual checks on locking loops and safety tie threads).",
+               backImg: ""
+           },
+           {
+               frontText: "42. Identify the protective fabric sleeve shielding the metal ripcord cable layout paths:",
+               frontImg: "images/ripcord_housing.jpg",
+               backText: "Flexible Ripcord Housing Guide Tube (Prevents the internal pull cable from getting crimped, dented, or caught).",
+               backImg: ""
+           },
+           {
+               frontText: "43. Identify the tiny breakable safety thread locking the reserve pins into place prior to deployment pull:",
+               frontImg: "images/seal_thread.jpg",
+               backText: "Reserve Pin Safety Seal Thread (Tension indicator wire thread designed to verify un-tampered_pack state).",
+               backImg: ""
+           },
+           {
+               frontText: "44. What is the exact length and specification profile of the C-17 Static Line Extension strap tool?",
+               frontImg: "",
+               backText: "Length: 5 feet. Tensile Strength: 3,600 lbs.",
+               backImg: ""
+           },
+           {
+               frontText: "45. Identify the fabric carry handle stitched onto the base perimeter of the reserve container housing:",
+               frontImg: "images/reserve_carry.jpg",
+               backText: "Reserve Carry Handle (Used exclusively for transport handling and logistics storage tasks).",
+               backImg: ""
+           },
+           {
+               frontText: "46. Identify the pocket structure on the reserve tray engineered to protect maintenance cards:",
+               frontImg: "images/reserve_logbook.jpg",
+               backText: "Reserve Parachute Log Record Pocket (Protects inspection cards independent of the main pack tray).",
+               backImg: ""
+           },
+           {
+               frontText: "47. Identify the hardware hooks anchoring the reserve pack tray securely across the front center configuration chest slots:",
+               frontImg: "images/snap_fasteners.jpg",
+               backText: "Reserve Attachment Snap Fasteners (Dual spring snaps clipping directly onto harness chest framework loops).",
+               backImg: ""
+           },
+           {
+               frontText: "48. Identify the inner pocket sleeve fabric component holding the extraction spring device down during assembly:",
+               frontImg: "images/spring_sleeve.jpg",
+               backText: "Internal Launch Spring Fabric Tube Pocket Sleeve.",
+               backImg: ""
+           },
+           {
+               frontText: "49. What is the maximum jumpable ground wind velocity allowed for a standard static line training jump personnel execution?",
+               frontImg: "",
+               backText: "13 Knots max threshold safety parameter.",
+               backImg: ""
+           },
+           {
+               frontText: "50. What is the exact deadline requirement for the Drop Zone Safety Officer (DZSO) to be operational on site before the first green light drop pass?",
+               frontImg: "",
+               backText: "1 hour (60 minutes) prior to the first planned drop time execution.",
+               backImg: ""
+           },
+
+           // ==========================================
+           // IV. EXPANDED TECHNICAL DETAILS (51-75)
+           // ==========================================
+           {
+               frontText: "51. What is the weight of the T-11 Main Parachute Assembly when completely packed?",
+               frontImg: "",
+               backText: "Approximately 38 lbs.",
+               backImg: ""
+           },
+           {
+               frontText: "52. What is the deployment height requirement range for a standard T-11 Main Airborne execution?",
+               frontImg: "",
+               backText: "Minimum planning threshold is 500 feet AGL (Above Ground Level), but normally dropped at 800 feet AGL during training.",
+               backImg: ""
+           },
+           {
+               frontText: "53. What is the total number of line stow bands required on the T-11 deployment sleeve?",
+               frontImg: "images/sleeve_stows.jpg",
+               backText: "24 total line stow bands (12 on each side of the deployment sleeve pocket matrix).",
+               backImg: ""
+           },
+           {
+               frontText: "54. Identify the specific type of thread material used to stitch high-stress load seams on the main risers:",
+               frontImg: "",
+               backText: "Type E Nylon Thread (Designed to handle extreme shear forces during rapid deployment).",
+               backImg: ""
+           },
+           {
+               frontText: "55. Identify the fabric handling loop located at the very apex center of the T-11 Main canopy:",
+               frontImg: "images/apex_loop.jpg",
+               backText: "Apex Packing Loop (Used by rigger teams to anchor the canopy during layout and packing phases).",
+               backImg: ""
+           },
+           {
+               frontText: "56. Identify this specific fabric component that connects the static line to the deployment sleeve deployment bag structures:",
+               frontImg: "images/main_bridle.jpg",
+               backText: "The Main Bridle Assembly (Constructed of high-strength tubular nylon webbing).",
+               backImg: ""
+           },
+           {
+               frontText: "57. Identify the small internal reinforcement tape running horizontally across individual canopy panels:",
+               frontImg: "",
+               backText: "Cross-Grid Reinforcement Tape (Limits fabric rip extensions if a tear occurs aloft).",
+               backImg: ""
+           },
+           {
+               frontText: "58. What is the minimum tensile break rating of the main deployment bag apex attachment loop webbing?",
+               frontImg: "",
+               backText: "3,000 lbs break capacity parameter.",
+               backImg: ""
+           },
+           {
+               frontText: "59. Identify the double-stitched corner reinforcement patches located where suspension lines join the canopy:",
+               frontImg: "images/v_tabs.jpg",
+               backText: "Reinforcement V-Tabs (Distribute radial lines loads evenly into the structural fabric panels).",
+               backImg: ""
+           },
+           {
+               frontText: "60. Identify this hardware feature on the main lift web that allows length adjustments for shorter or taller paratroopers:",
+               frontImg: "images/lift_web_adjuster.jpg",
+               backText: "Main Lift Web Friction Buckle Adjuster.",
+               backImg: ""
+           },
+           {
+               frontText: "61. Identify this lower chest strap hardware link component that clicks directly into the friction adapter framework:",
+               frontImg: "images/chest_buckle.jpg",
+               backText: "Chest Strap Quick-Connect Adapter/Latch hardware piece.",
+               backImg: ""
+           },
+           {
+               frontText: "62. Identify the protective canvas sleeve surrounding the high-wear sections of the leg strap webbing loops:",
+               frontImg: "images/leg_scuff.jpg",
+               backText: "Leg Strap Anti-Scuff Buffer Sleeves (Mitigates raw hardware abrasion on harness structural tracks).",
+               backImg: ""
+           },
+           {
+               frontText: "63. Identify the cross-stitched thread configuration used to permanently fasten harness straps together:",
+               frontImg: "images/box_stitch.jpg",
+               backText: "4-Point Box-X Stitching pattern (Standard military aviation specification stitch paradigm).",
+               backImg: ""
+           },
+           {
+               frontText: "64. What is the maximum pack-in-use shelf life duration for a T-11 parachute before it must be unpacked, inspected, and repacked?",
+               frontImg: "",
+               backText: "180 days max timeline threshold.",
+               backImg: ""
+           },
+           {
+               frontText: "65. Identify the reinforced metal eyelets on the pack tray flaps where the locking loops pass through:",
+               frontImg: "images/grommets.jpg",
+               backText: "Pack Tray Grommets (Provides smooth, friction-free paths for release pins or loops).",
+               backImg: ""
+           },
+           {
+               frontText: "66. Identify the flexible internal stiffener panels sewn inside the outer edges of the main pack tray flaps:",
+               frontImg: "",
+               backText: "Pack Tray Stiffeners (Constructed of high-density plastic or fiberboard to maintain a rigid, aerodynamic pack shape).",
+               backImg: ""
+           },
+           {
+               frontText: "67. Identify the specific fabric pocket layout designated for stowing the excess loose length of the static line hook tail:",
+               frontImg: "images/hook_pocket.jpg",
+               backText: "Static Line Snap Hook Storage Pocket (Keeps the heavy metal latch secure during aircraft transit).",
+               backImg: ""
+           },
+           {
+               frontText: "68. Identify the specific layout location where the jumper's ID and inspection tag card is visibly displayed on the harness:",
+               frontImg: "images/id_window.jpg",
+               backText: "Harness Inspection Data Window (Clear vinyl protective sleeve).",
+               backImg: ""
+           },
+           {
+               frontText: "69. Identify the lower lateral back strap structural components routing below the back pad frame layout:",
+               frontImg: "images/back_straps.jpg",
+               backText: "Harness Diagonal Back Straps.",
+               backImg: ""
+           },
+           {
+               frontText: "70. What is the nominal weight of the T-11 Reserve Parachute Assembly on its own?",
+               frontImg: "",
+               backText: "Approximately 14.5 lbs.",
+               backImg: ""
+           },
+           {
+               frontText: "71. What shape profile and how many suspension lines define the T-11 Reserve canopy architecture?",
+               frontImg: "images/reserve_shape.jpg",
+               backText: "Aero-conical (apex-vented dome) design, featuring 20 suspension lines total.",
+               backImg: ""
+           },
+           {
+               frontText: "72. Identify the internal deployment fabric container bag housing the reserve canopy lines:",
+               frontImg: "images/reserve_bag.jpg",
+               backText: "Reserve Inner Deployment Bag (Stays attached to reserve apex to ensure controlled line stretch).",
+               backImg: ""
+           },
+           {
+               frontText: "73. Identify the tiny flexible wire cable passing directly through the reserve locking loop grommets:",
+               frontImg: "images/ripcord_cable.jpg",
+               backText: "The Ripcord Pin Cable Assembly (The mechanical linkage connected to the red handle).",
+               backImg: ""
+           },
+           {
+               frontText: "74. Identify the structural loop material that passes through the reserve pack grommets to receive the locking pins:",
+               frontImg: "images/locking_loops.jpg",
+               backText: "Reserve Pack Locking Loops (High-strength nylon cord loops holding flap tension under spring compression).",
+               backImg: ""
+           },
+           {
+               frontText: "75. Identify the internal fabric partition separating the launch spring from the canopy fabric columns inside the reserve pack:",
+               frontImg: "",
+               backText: "Spring Separator Flap (Prevents the raw metal coils from snagging canopy mesh or suspension lines).",
+               backImg: ""
+           },
+
+           // ==========================================
+           // V. ADVANCED CRITICAL PHASES (76-100)
+           // ==========================================
+           {
+               frontText: "76. What material is the main canopy fabric constructed from, and what is its specific density trait?",
+               frontImg: "",
+               backText: "1.1 oz low-porosity Ripstop Nylon fabric fabric.",
+               backImg: ""
+           },
+           {
+               frontText: "77. Identify the protective fabric wrapper encasing the static line snaps hook assembly hinge mechanism:",
+               frontImg: "images/snap_cover.jpg",
+               backText: "Snap Hook Boot/Sleeve protector cover.",
+               backImg: ""
+           },
+           {
+               frontText: "78. Identify the structural cross-stitching securing the harness equipment D-rings directly onto the main lift webs:",
+               frontImg: "images/dring_stitch.jpg",
+               backText: "Heavy-duty 3-Cord Nylon Patterned Box Retaining Seams.",
+               backImg: ""
+           },
+           {
+               frontText: "79. Identify the lower lateral webbing track that anchors the bottom base of the back pad assembly to the hips:",
+               frontImg: "images/waist_band.jpg",
+               backText: "Harness Waist Band Webbing strip tracker.",
+               backImg: ""
+           },
+           {
+               frontText: "80. Identify the heavy-duty metal springs inside the reserve pack that drive immediate deployment acceleration upon handle pull:",
+               frontImg: "images/launch_spring.jpg",
+               backText: "Reserve Pilot Ejector Spring Framework.",
+               backImg: ""
+           },
+           {
+               frontText: "81. Identify the internal loop tracking rows stitched inside the reserve bag to regulate nested line management packs:",
+               frontImg: "",
+               backText: "Reserve Pocket Line Tier Elastomer bands rows.",
+               backImg: ""
+           },
+           {
+               frontText: "82. Identify the clear plastic shield tube covering the emergency breakaway ripcord handle loop grip:",
+               frontImg: "images/handle_grip.jpg",
+               backText: "Ripcord Grip Plastic Handle Guard.",
+               backImg: ""
+           },
+           {
+               frontText: "83. Identify the vertical internal mesh dividers separating individual cells inside the reserve canopy frame layout:",
+               frontImg: "",
+               backText: "Reserve Canopy Radial Cell Ribs panels.",
+               backImg: ""
+           },
+           {
+               frontText: "84. What color tracking code defines the main riser assemblies to assist easy sorting during packing processes?",
+               frontImg: "",
+               backText: "Standard natural OD green or tan nylon highlighting identifiers lines.",
+               backImg: ""
+           },
+           {
+               frontText: "85. Identify the reinforced metal snaps attaching the back pad assembly comfortably to the paratrooper outer shoulder frame area:",
+               frontImg: "images/backpad_snaps.jpg",
+               backText: "Harness Back-Pad Retention Scovill Snap Fasteners.",
+               backImg: ""
+           },
+           {
+               frontText: "86. Identify the loop locator line running through the center axis of the T-11 deployment sleeve canopy profile:",
+               frontImg: "",
+               backText: "Deployment Sleeve Axial Retainer Cord loop line.",
+               backImg: ""
+           },
+           {
+               frontText: "87. Identify the metal spring-loaded security tab that locks the static line snap hook gate completely shut over the anchor cable:",
+               frontImg: "images/gate_lock.jpg",
+               backText: "Snap Hook Safety Wire Cotter Gate Pin assembly.",
+               backImg: ""
+           },
+           {
+               frontText: "88. Identify the specific type of lightweight binding tape wrapping the raw fabric margins inside the canopy cell apex lines:",
+               frontImg: "",
+               backText: "3/4 inch Type III Nylon Edge Binding Tape asset.",
+               backImg: ""
+           },
+           {
+               frontText: "89. Identify the heavy-duty lower ring loops where the leg straps route into the harness frame configuration:",
+               frontImg: "images/leg_rings.jpg",
+               backText: "Harness Lower Adjustable Leg Strap D-Rings slots.",
+               backImg: ""
+           },
+           {
+               frontText: "90. What is the maximum rated total payload capacity weight (jumper plus all combat gear) for the T-11 Parachute System configuration?",
+               frontImg: "",
+               backText: "400 lbs maximum total load profile limit.",
+               backImg: ""
+           },
+           {
+               frontText: "91. Identify the fabric tab handling loops located at the base corners of the reserve container structure:",
+               frontImg: "images/reserve_tabs.jpg",
+               backText: "Reserve Side Adjustment Stability Side-Tabs tabs.",
+               backImg: ""
+           },
+           {
+               frontText: "92. Identify the small internal reinforcement sleeve protecting the locking pin loop cord from fraying against metal grommets:",
+               frontImg: "",
+               backText: "Locking Loop Anti-Friction Plastic Buffer Sleeve piece.",
+               backImg: ""
+           },
+           {
+               frontText: "93. Identify the heavy canvas strip running along the rear lower baseline of the main pack tray frame profile:",
+               frontImg: "images/tray_skirt.jpg",
+               backText: "Main Pack Tray Base Rim Skirt Webbing strip.",
+               backImg: ""
+           },
+           {
+               frontText: "94. Identify the interior mesh pocket sleeve used to hold moisture absorber crystals during storage configurations inside logistics facilities:",
+               frontImg: "",
+               backText: "Pack Storage Desiccant Pocket pouch sleeve.",
+               backImg: ""
+           },
+           {
+               frontText: "95. Identify the clear plastic tube guard enclosing the riser guide separation channels on the harness chassis shoulders:",
+               frontImg: "images/riser_guides.jpg",
+               backText: "Shoulder Riser Channel Guide Rails frames.",
+               backImg: ""
+           },
+           {
+               frontText: "96. Identify the small double-stitched loop used to safety-tie the reserve ripcord handle housing directly onto the pack framework chassis:",
+               frontImg: "",
+               backText: "Ripcord Housing Retaining Tie Loop.",
+               backImg: ""
+           },
+           {
+               frontText: "97. What is the target rate of descent for a standard 400 lbs loaded jumper utilizing the T-11 Main parachute canopy asset?",
+               frontImg: "",
+               backText: "Approximately 14.5 to 18.5 feet per second.",
+               backImg: ""
+           },
+           {
+               frontText: "98. Identify the color identifier marking code designating an official active Army-issued T-11 reserve ripcord assembly configuration:",
+               frontImg: "",
+               backText: "Solid painted bright tactical red visual finish on the handle frame architecture.",
+               backImg: ""
+           },
+           {
+               frontText: "99. Identify the double friction buckle assembly layout routing the chest webbing adapter bands across the left main frame channels:",
+               frontImg: "images/chest_friction.jpg",
+               backText: "Harness Chest Adjuster Friction Buckle Block slide hardware.",
+               backImg: ""
+           },
+           {
+               frontText: "100. What is the total length profile measurement defining the active line extraction bridle component attached behind the reserve spring?",
+               frontImg: "",
+               backText: "Exactly 4 feet 6 inches from terminal tip connections.",
+               backImg: ""
+           },
+
+           // ==========================================
+           // VI. RESERVE & STATIC LINE EXTENSION (101-118)
+           // ==========================================
+           {
+               frontText: "101. Identify the structural fabric channel that protects the twin ripcord cables along the upper reserve pack frame:",
+               frontImg: "images/cable_channels.jpg",
+               backText: "Reserve Ripcord Cable Guide Channels.",
+               backImg: ""
+           },
+           {
+               frontText: "102. Identify the small fabric loop used to safely index the reserve activation handle securely during jumping standbys:",
+               frontImg: "",
+               backText: "Reserve Handle Retention Loop Velcro patch.",
+               backImg: ""
+           },
+           {
+               frontText: "103. Identify the tiny metal wire loops swaged onto the ripcord cable that physically hold the pack closing loops:",
+               frontImg: "images/locking_balls.jpg",
+               backText: "Ripcord Cable Terminal Locking Balls/Sleeves.",
+               backImg: ""
+           },
+           {
+               frontText: "104. Identify the reinforced lower lateral corners of the reserve pack tray designed to deflect airflow:",
+               frontImg: "",
+               backText: "Reserve Container Aerodynamic Corner Shrouds.",
+               backImg: ""
+           },
+           {
+               frontText: "105. Identify the interior fabric shelf keeping the suspension lines separate from the packed canopy cells inside the reserve bag:",
+               frontImg: "",
+               backText: "Reserve Inner Suspension Line Separation Diaphragm panel.",
+               backImg: ""
+           },
+           {
+               frontText: "106. What is the standard tensile break profile defining the small pack opening elastics attached to the reserve exterior?",
+               frontImg: "",
+               backText: "Engineered high-stretch rubber core jacketed in braided cotton, designed for immediate high-velocity contraction.",
+               backImg: ""
+           },
+           {
+               frontText: "107. Identify this complete 5-foot secondary connecting strap assembly used during C-17 operations:",
+               frontImg: "images/extension_strap.jpg",
+               backText: "5-Foot Universal Static Line Extension Assembly (Tensile strength: 3,600 lbs).",
+               backImg: ""
+           },
+           {
+               frontText: "108. Identify the heavy-duty metal latch on the terminal tip of the 5-foot extension strap:",
+               frontImg: "images/extension_hook.jpg",
+               backText: "Extension Static Line Snap Hook (Identical to the main hook with a 4,000 lbs tensile rating).",
+               backImg: ""
+           },
+           {
+               frontText: "109. Identify the fabric loop at the base of the 5-foot extension where the main parachute snap hook connects:",
+               frontImg: "images/extension_loop.jpg",
+               backText: "Extension Anchor Webbing Loop (Reinforced buffer connection point).",
+               backImg: ""
+           },
+           {
+               frontText: "110. Identify the clear plastic sleeve sliding over the extension's metal hook mechanism to prevent manual gate trip faults:",
+               frontImg: "",
+               backText: "Extension Snap Hook Protective Plastic Boot.",
+               backImg: ""
+           },
+           {
+               frontText: "111. Identify the double-layered nylon buffer strip stitched onto the high-friction slide pathways of the extension:",
+               frontImg: "",
+               backText: "Static Line Extension Anti-Abrasive Buffer Strip.",
+               backImg: ""
+           },
+           {
+               frontText: "112. Identify the specialized storage bag used to organize the extension strap when it is not rigged for flight:",
+               frontImg: "images/extension_bag.jpg",
+               backText: "Universal Static Line Extension Storage Pouch.",
+               backImg: ""
+           },
+           {
+               frontText: "113. Identify the high-contrast yellow or white safety orientation lines printed along the extension webbing chassis:",
+               frontImg: "",
+               backText: "Extension Webbing Directional Alignment Markers.",
+               backImg: ""
+           },
+           {
+               frontText: "114. Identify the specific type of heavy stitching attaching the hook loop frame onto the extension body webbing:",
+               frontImg: "",
+               backText: "High-density multi-row Class 7 structural stitch matrix.",
+               backImg: ""
+           },
+           {
+               frontText: "115. What is the material composition defining the core webbing structural body of the 5-foot static line extension?",
+               frontImg: "",
+               backText: "1-23/32 inch wide Type VIII tubular nylon webbing.",
+               backImg: ""
+           },
+           {
+               frontText: "116. Identify the clear window pocket tracking the inspection log history for the static line extension tool:",
+               frontImg: "",
+               backText: "Extension Log Card Inspection Envelope (DA Form 3912 layout pocket).",
+               backImg: ""
+           },
+           {
+               frontText: "117. Identify the small hook-and-loop stowage tabs keeping the extension folded inside its carrier frame:",
+               frontImg: "",
+               backText: "Extension Webbing Elastic Retention Retainers.",
+               backImg: ""
+           },
+           {
+               frontText: "118. Identify the spring-loaded safety locking leaf pin running through the gate frame of the extension snap hook assembly:",
+               frontImg: "",
+               backText: "Extension Hook Gate Safety Spring Retaining Pin.",
+               backImg: ""
+           },
+
+           // ==========================================
+           // VII. INDIVIDUAL COMBAT EQUIPMENT (119-143)
+           // ==========================================
+           {
+               frontText: "119. Identify this primary protective ballistic headgear assembly worn by the paratrooper:",
+               frontImg: "images/ach_helmet.jpg",
+               backText: "Advanced Combat Helmet (ACH) / Enhanced Combat Helmet (ECH).",
+               backImg: ""
+           },
+           {
+               frontText: "120. Identify the modular interior padding blocks used to cushion and fit the ACH ballistic shell chassis:",
+               frontImg: "images/helmet_pads.jpg",
+               backText: "ACH Modular Foam Padding System (Standard 7-pad configuration).",
+               backImg: ""
+           },
+           {
+               frontText: "121. Identify the 4-point strap assembly that secures the ACH firmly onto the paratrooper's head:",
+               frontImg: "images/chinstrap.jpg",
+               backText: "ACH Chinstrap Retention Retention Harness Assembly (Features a chin cup and adjustable nape strap buckles).",
+               backImg: ""
+           },
+           {
+               frontText: "122. Identify the rear hook-and-loop attachment tabs on the ACH cloth cover used to anchor dust goggles strap tracking paths:",
+               frontImg: "",
+               backText: "Helmet Goggle Retention Flaps/Straps.",
+               backImg: ""
+           },
+           {
+               frontText: "123. Identify this large, specialized jump-certified rucksack frame and bag matrix system:",
+               frontImg: "images/molle_4k.jpg",
+               backText: "MOLLE 4K Large Rucksack Assembly (Approximately 4,000 cubic inches capacity framework).",
+               backImg: ""
+           },
+           {
+               frontText: "124. Identify the heavy-duty external polymer skeleton frame backing the MOLLE 4K pack chassis structure:",
+               frontImg: "images/ruck_frame.jpg",
+               backText: "MOLLE 4K Molded Polymer Rucksack Frame.",
+               backImg: ""
+           },
+           {
+               frontText: "125. Identify the built-in 15-foot nylon webbing tape hidden inside the side pocket of the rucksack for lowering gear before landing:",
+               frontImg: "images/lowering_line.jpg",
+               backText: "Equipment Lowering Line (15-foot high-strength tubular nylon webbing tape packed into its own deployment pocket).",
+               backImg: ""
+           },
+           {
+               frontText: "126. Identify the high-load metal quick-release mechanisms linking the rucksack shoulder straps to the quick-drop attachment parameters:",
+               frontImg: "",
+               backText: "Rucksack Shoulder Strap Quick-Release Buckles (Allows instant pack shedding post-landing).",
+               backImg: ""
+           },
+           {
+               frontText: "127. Identify the long, adjustable web straps used to lash and compress the top flap down over the rucksack throat profile opening:",
+               frontImg: "",
+               backText: "MOLLE 4K Main Compression Straps.",
+               backImg: ""
+           },
+           {
+               frontText: "128. Identify the heavy webbing carry loop handle stitched at the top center of the rucksack frame backing channel:",
+               frontImg: "",
+               backText: "Rucksack Top Haul Loop / Drag Handle.",
+               backImg: ""
+           },
+           {
+               frontText: "129. Identify the lower external side pockets designed to seat long items like mortar tubes or radio antennas along the rucksack flank lines:",
+               frontImg: "",
+               backText: "Rucksack Lateral Utility Side Pockets.",
+               backImg: ""
+           },
+           {
+               frontText: "130. Identify this specialized, heavily padded canvas container profile used to fully wrap an M4 rifle or similar weapon individual asset for air drops:",
+               frontImg: "images/mawc_case.jpg",
+               backText: "Modular Airborne Weapons Case (MAWC).",
+               backImg: ""
+           },
+           {
+               frontText: "131. Identify the reinforced lower point cone section of the MAWC engineered to buffer ground impact shock forces:",
+               frontImg: "images/mawc_nose.jpg",
+               backText: "MAWC Nose Cone Impact Buffer Assembly.",
+               backImg: ""
+           },
+           {
+               frontText: "132. Identify the long adjustable strap running the length of the MAWC to adjust the case length to fit varying rifle sizes:",
+               frontImg: "",
+               backText: "MAWC Main Slide-Adjuster Length Regulation Strap.",
+               backImg: ""
+           },
+           {
+               frontText: "133. Identify the upper metal snap hook on the MAWC chassis used to attach the weapon case onto the jumper's harness D-rings:",
+               frontImg: "images/mawc_hook.jpg",
+               backText: "MAWC Upper Equipment Attaching Snap Latch Hardware hook.",
+               backImg: ""
+           },
+           {
+               frontText: "134. Identify the heavy-duty slide fastener running down the long seam of the MAWC to open or seal the weapon compartment:",
+               frontImg: "",
+               backText: "MAWC Slide Fastener Zipper with Integrated Safety Pull Tabs.",
+               backImg: ""
+           },
+           {
+               frontText: "135. Identify the protective padded internal divider panel inside the MAWC that isolates optics from accessory boxes:",
+               frontImg: "",
+               backText: "MAWC Interior Optics Shield Padding Separator Flap.",
+               backImg: ""
+           },
+           {
+               frontText: "136. Identify the adjustable nylon straps wrapped horizontally around the MAWC body to cinch down excess bulk:",
+               frontImg: "",
+               backText: "MAWC Lateral Girth Compression Straps.",
+               backImg: ""
+           },
+           {
+               frontText: "137. Identify the large cloth identification pocket sewn onto the top exterior flap of the MAWC case housing the jumper tag details:",
+               frontImg: "",
+               backText: "MAWC Jumper Inventory / Name Data Placard Sleeve.",
+               backImg: ""
+           },
+           {
+               frontText: "138. Identify the metal friction adapter slide hardware locking the main closure strap of the weapons case flap tight:",
+               frontImg: "",
+               backText: "MAWC Top Flap Closure Buckle Friction Adapter.",
+               backImg: ""
+           },
+           {
+               frontText: "139. Identify the lower connecting web strap anchored at the bottom flank of the rucksack used to wrap secure tracking around the jumper's leg line parameters:",
+               frontImg: "",
+               backText: "Rucksack Lower Leg Attaching Strap (Keeps rucksack snug to leg during exits).",
+               backImg: ""
+           },
+           {
+               frontText: "140. Identify the large quick-release buckle clamping the heavy padded waist belt of the rucksack across the paratrooper hips:",
+               frontImg: "",
+               backText: "MOLLE 4K Waist Belt Quick-Disconnect Buckle assembly.",
+               backImg: ""
+           },
+           {
+               frontText: "141. Identify the modular rows of heavy webbing loops running horizontally across the exterior faces of the rucksack shell for pouch attachments:",
+               frontImg: "",
+               backText: "PALS / MOLLE Attachment Webbing Matrix Rows.",
+               backImg: ""
+           },
+           {
+               frontText: "142. Identify the internal waterproof lining sleeve running inside the throat profile of the main rucksack compartment:",
+               frontImg: "",
+               backText: "Rucksack Main Compartment Weatherproof Extension Collar / Spindrift Sleeve.",
+               backImg: ""
+           },
+           {
+               frontText: "143. Identify the heavy plastic quick-release buckles anchoring the lower utility load lines onto the baseline of the external pack frame setup:",
+               frontImg: "",
+               backText: "Rucksack Frame External Load Compression Quick-Release Buckles.",
+               backImg: ""
+           }
+       ];
+
+       let currentIndex = 0;
+       let subIndex = 0;
+       const cardEl = document.getElementById('flashcard');
+       const containerEl = document.getElementById('cardContainer');
+       const frontTextEl = document.getElementById('frontText');
+       const backTextEl = document.getElementById('backText');
+       const frontImgEl = document.getElementById('frontImage');
+       const backImgEl = document.getElementById('backImage');
+       const counterEl = document.getElementById('counter');
+
+       function shuffleDeck() {
+           // Fisher-Yates Shuffle Algorithm to randomize the array
+           for (let i = cardDeck.length - 1; i > 0; i--) {
+               const j = Math.floor(Math.random() * (i + 1));
+               [cardDeck[i], cardDeck[j]] = [cardDeck[j], cardDeck[i]];
+           }
+           currentIndex = 0; // Reset to the first card of the new shuffled deck
+           updateCard();
+       }
+
+       function updateCard() {
+           const card = cardDeck[currentIndex];
+           
+           // Handle text
+           frontTextEl.innerText = card.frontText;
+           backTextEl.innerText = card.backText;
+
+           // Handle front image
+           if (card.frontImg) {
+               frontImgEl.src = card.frontImg;
+               frontImgEl.style.display = 'block';
+           } else {
+               frontImgEl.style.display = 'none';
+           }
+
+           // Handle back image
+           if (card.backImg) {
+               backImgEl.src = card.backImg;
+               backImgEl.style.display = 'block';
+           } else {
+               backImgEl.style.display = 'none';
+           }
+
+           const subLabel = hasIdent ? ` [Item ${subIndex + 1}/${card.identifications.length}]` : '';
+           counterEl.innerText = `${currentIndex + 1} / ${cardDeck.length}${subLabel}`;
+           
+           cardEl.classList.remove('is-flipped');
+       }
+
+       function nextCard() {
+           const card = cardDeck[currentIndex];
+           if (card.identifications && subIndex < card.identifications.length - 1) {
+               subIndex++;
+           } else {
+               currentIndex = (currentIndex + 1) % cardDeck.length;
+               subIndex = 0;
+           }
+           updateCard();
+       }
+
+       function prevCard() {
+           const card = cardDeck[currentIndex];
+           if (card.identifications && subIndex > 0) {
+               subIndex--;
+           } else {
+               currentIndex = (currentIndex - 1 + cardDeck.length) % cardDeck.length;
+               const newCard = cardDeck[currentIndex];
+               subIndex = (newCard.identifications) ? newCard.identifications.length - 1 : 0;
+           }
+           updateCard();
+       }
+
+       // Toggle flip on click
+       cardEl.addEventListener('click', () => {
+           cardEl.classList.toggle('is-flipped');
+       });
+
+       // Initial render
+       updateCard();
+   </script>
+
+</body>
+</html>

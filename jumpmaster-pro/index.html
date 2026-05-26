@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpmaster Study Pro</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-olive: #4b5320;
+            --secondary-charcoal: #1a1a1a;
+            --accent-gold: #c5a059;
+            --bg-dark: #0f0f0f;
+            --card-bg: #1e1e1e;
+            --text-light: #e0e0e0;
+            --text-muted: #888888;
+            --danger-red: #cf6679;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow: hidden;
+        }
+
+        .app-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: var(--secondary-charcoal);
+            padding: 2.5rem 1.5rem;
+            border-right: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-title {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 2px solid var(--primary-olive);
+            padding-bottom: 1rem;
+        }
+
+        .nav-item {
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(197, 160, 89, 0.05);
+            color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .nav-item.active {
+            background-color: var(--primary-olive);
+            color: white;
+            box-shadow: 0 4px 15px rgba(75, 83, 32, 0.3);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 3rem 4rem;
+            overflow-y: auto;
+            background: radial-gradient(circle at top right, #1a1a1a, #0f0f0f);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 2rem;
+            border: 1px solid #333;
+        }
+
+        .title-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .title-section p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Flashcards */
+        .flashcard-container {
+            perspective: 1000px;
+            width: 100%;
+            max-width: 700px;
+            height: 280px;
+            margin: 3rem auto;
+            cursor: pointer;
+        }
+
+        .flashcard {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            box-sizing: border-box;
+            overflow: hidden;
+            flex-direction: column;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .flashcard-front {
+            background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+        }
+
+        .flashcard-back {
+            background: linear-gradient(135deg, #4b5320 0%, #353b15 100%);
+            transform: rotateY(180deg);
+            border-color: white;
+        }
+
+        .diagram-panel {
+            width: 100%;
+            height: 550px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #333;
+            border-radius: 24px;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .diagram-panel img {
+            max-width: 100%;
+            max-height: 530px;
+            object-fit: contain;
+            padding: 1rem;
+        }
+
+        .quiz-panel {
+            width: 100%;
+            flex: 1;
+            padding: 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .target-badge {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: black;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .quiz-input-wrapper {
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        .quiz-input {
+            width: 100%;
+            background: #2a2a2a;
+            border: 2px solid #444;
+            padding: 1rem;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .spec-list {
+            text-align: left;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 0.75rem 0;
+            font-size: 1.1rem;
+        }
+
+        .spec-label {
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+
+        /* Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .deficiency-card {
+            transition: transform 0.3s ease;
+        }
+
+        .deficiency-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* CARP */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 1rem;
+            background-color: #252525;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--accent-gold);
+        }
+
+        .result-box {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: rgba(197, 160, 89, 0.05);
+            border-radius: 16px;
+            border: 1px solid var(--accent-gold);
+            text-align: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: black;
+        }
+
+        .btn-primary:hover {
+            background-color: #d4ae71;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        .btn-secondary:hover {
+            background-color: #333;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useMemo, useEffect } = React;
+
+        const JUMPMASTER_DATA = {
+            nomenclature: [
+                { 
+                    id: "t11_tray_1",
+                    name: "Static Line Slack Retainer Loop",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "1",
+                    page: 21
+                },
+                {
+                    id: "t11_tray_2",
+                    name: "Static Line Slack Retainer Band",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "2",
+                    page: 21
+                },
+                {
+                    id: "t11_tray_3",
+                    name: "Inner Static Line Stow Bar",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "3",
+                    page: 21
+                },
+                {
+                    id: "t11_tray_4",
+                    name: "Outer Static Line Stow Bar",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "4",
+                    page: 21
+                },
+                {
+                    id: "t11_tray_5",
+                    name: "Tuck Flap",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "5",
+                    page: 21
+                },
+                {
+                    id: "t11_tray_6",
+                    name: "Main Curved Pin Protector Flap",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "6",
+                    page: 21
+                },
+                {
+                    id: "t11_tray_7",
+                    name: "Pack Closing Flap",
+                    category: "T-11 ATPS",
+                    image: "images/page46.jpg",
+                    diagramNumber: "7",
+                    page: 21
+                },
+                {
+                    id: "t11_ext_1",
+                    name: "5 Foot Universal Static Line Extension",
+                    category: "T-11 ATPS",
+                    image: "images/page28.jpg",
+                    diagramNumber: "1",
+                    page: 21
+                },
+                {
+                    id: "t11_ext_2",
+                    name: "Cotton Buffer",
+                    category: "T-11 ATPS",
+                    image: "images/page28.jpg",
+                    diagramNumber: "2",
+                    page: 21
+                },
+                {
+                    id: "t11_usl_1",
+                    name: "Universal Static Line Modified",
+                    category: "T-11 ATPS",
+                    image: "images/page26.jpg",
+                    diagramNumber: "1",
+                    page: 21
+                },
+                {
+                    id: "t11_usl_2",
+                    name: "Universal Static Line Modified Loop",
+                    category: "T-11 ATPS",
+                    image: "images/page26.jpg",
+                    diagramNumber: "2",
+                    page: 21
+                }
+            ],
+            deficiencies: [
+                { id: "def_1", name: "FRONT RIGHT/LEFT BOLT END EXPOSED", category: "ACH", points: 35, major: true },
+                { id: "def_2", name: "CHINSTRAP TWISTED", category: "ACH", points: 11, major: false },
+                { id: "def_3", name: "FOREIGN MATTER IN CANOPY RELEASE", category: "HARNESS", points: 35, major: true },
+                { id: "def_4", name: "NO QUICK RELEASE IN CHEST STRAP", category: "HARNESS", points: 35, major: true },
+                { id: "def_5", name: "TABBED PORTION CHEST STRAP REVERSED", category: "HARNESS", points: 35, major: true },
+                { id: "def_6", name: "WAISTBAND MISROUTED BEHIND BACKSTRAP", category: "HARNESS", points: 11, major: false },
+                { id: "def_7", name: "NO QUICK RELEASE IN WAISTBAND", category: "HARNESS", points: 35, major: true },
+                { id: "def_8", name: "USL MODIFIED CUT", category: "STATIC LINE", points: 35, major: true },
+                { id: "def_9", name: "GIRTH HITCH REVERSED", category: "STATIC LINE", points: 35, major: true },
+                { id: "def_10", name: "ARMY LOG RECORD MISSING", category: "RESERVE", points: 35, major: true },
+                { id: "def_11", name: "CURVED PIN LANYARD TWISTED", category: "RESERVE", points: 35, major: true },
+                { id: "def_12", name: "MAIN CLOSING LOOP CUT", category: "PACK TRAY", points: 35, major: true },
+                { id: "def_13", name: "STATIC LINE SLACK RETAINER BAND MISSING", category: "PACK TRAY", points: 35, major: true }
+            ],
+            carp_rules: {
+                planning_altitudes: { personnel: 1000, heavy: 1100 },
+                min_size: { personnel: 600, heavy: 600 },
+                additions: { night: 100, altitude_step: 30, jumper_step: 75 }
+            }
+        };
+
+        const Dashboard = ({ mastery, setView }) => {
+            const totalItems = JUMPMASTER_DATA.nomenclature.length + JUMPMASTER_DATA.deficiencies.length;
+            const masteredCount = Object.keys(mastery).length;
+            const progress = (masteredCount / totalItems) * 100;
+
+            return (
+                <div className="title-section">
+                    <span style={{ color: 'var(--accent-gold)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px' }}>Student Study Portal v2.0</span>
+                    <h1>Jumpmaster Pro</h1>
+                    <p style={{ color: 'var(--text-muted)' }}>Precision in Training. Excellence in Performance.</p>
+                    
+                    <div className="card" style={{ marginTop: '2rem', borderLeft: '4px solid var(--accent-gold)', background: 'rgba(197, 160, 89, 0.05)' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                <h4 style={{ margin: 0, color: 'var(--accent-gold)' }}>OVERALL MASTERY</h4>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: '0.5rem 0' }}>{masteredCount} of {totalItems} items mastered.</p>
+                            </div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-gold)' }}>{Math.round(progress)}%</div>
+                        </div>
+                        <div style={{ width: '100%', height: '8px', backgroundColor: '#333', borderRadius: '4px', marginTop: '1rem', overflow: 'hidden' }}>
+                            <div style={{ width: `${progress}%`, height: '100%', backgroundColor: 'var(--accent-gold)', transition: 'width 1s ease-out' }}></div>
+                        </div>
+                    </div>
+
+                    <div className="grid-3" style={{ marginTop: '3rem' }}>
+                        <div className="card deficiency-card" onClick={() => setView('exam')} style={{ cursor: 'pointer', border: '1px solid var(--accent-gold)' }}>
+                            <h3 style={{ color: 'var(--accent-gold)' }}>Exam Simulator</h3>
+                            <p>Timed 50-question mock exam. Ready for the real thing?</p>
+                            <button className="btn btn-primary" style={{ marginTop: '1rem', width: '100%' }}>START EXAM</button>
+                        </div>
+                        <div className="card deficiency-card">
+                            <h3 style={{ color: 'var(--accent-gold)' }}>Nomenclature</h3>
+                            <p>{JUMPMASTER_DATA.nomenclature.length} precision items with technical specs.</p>
+                        </div>
+                        <div className="card deficiency-card">
+                            <h3 style={{ color: 'var(--accent-gold)' }}>Deficiencies</h3>
+                            <p>{JUMPMASTER_DATA.deficiencies.length} major/minor violations tracked.</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const Flashcards = ({ mastery, toggleMastery }) => {
+            const [index, setIndex] = useState(0);
+            const [flipped, setFlipped] = useState(false);
+
+            const item = JUMPMASTER_DATA.nomenclature[index];
+            const isMastered = !!mastery[item.id];
+
+            const next = () => { setFlipped(false); setTimeout(() => setIndex((index + 1) % JUMPMASTER_DATA.nomenclature.length), 100); };
+            const prev = () => { setFlipped(false); setTimeout(() => setIndex((index - 1 + JUMPMASTER_DATA.nomenclature.length) % JUMPMASTER_DATA.nomenclature.length), 100); };
+
+            return (
+                <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <h2>Nomenclature Study</h2>
+                        <span style={{ color: 'var(--text-muted)' }}>Card {index + 1} / {JUMPMASTER_DATA.nomenclature.length}</span>
+                    </div>
+
+                    <div className="diagram-panel">
+                        <img src={item.image} alt="Diagram" />
+                    </div>
+
+                    <div className="flashcard-container" onClick={() => setFlipped(!flipped)}>
+                        <div className={`flashcard ${flipped ? 'flipped' : ''}`}>
+                            {/* FRONT OF CARD */}
+                            <div className="flashcard-front">
+                                <div className="quiz-panel">
+                                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                        <div className="target-badge">TARGET: ITEM #{item.diagramNumber}</div>
+                                    </div>
+                                    <h2 style={{ fontSize: '1.8rem', margin: '1.5rem 0' }}>Identify Item #{item.diagramNumber} on this diagram:</h2>
+                                    <button className="btn btn-primary">TAP TO REVEAL</button>
+                                </div>
+                            </div>
+
+                            {/* BACK OF CARD */}
+                            <div className="flashcard-back">
+                                <div className="quiz-panel" style={{ justifyContent: 'center' }}>
+                                    <h2 style={{ fontSize: '2.8rem', margin: 0, color: 'white', fontWeight: 800 }}>{item.name}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+                        <button className="btn btn-secondary" onClick={prev} style={{ marginRight: '1rem' }}>PREV</button>
+                        <button className={`btn ${isMastered ? 'btn-secondary' : 'btn-primary'}`} onClick={(e) => { e.stopPropagation(); toggleMastery(item.id); }} style={{ marginRight: '1rem' }}>
+                            {isMastered ? 'UNMARK MASTERED' : 'MARK AS MASTERED'}
+                        </button>
+                        <button className="btn btn-primary" onClick={next}>NEXT</button>
+                    </div>
+                </div>
+            );
+        };
+
+        const ExamSimulator = ({ onComplete }) => {
+            const [questions, setQuestions] = useState([]);
+            const [currentIndex, setCurrentIndex] = useState(0);
+            const [answers, setAnswers] = useState({});
+            const [startTime, setStartTime] = useState(Date.now());
+            const [timeLeft, setTimeLeft] = useState(60);
+            const [isFinished, setIsFinished] = useState(false);
+
+            useEffect(() => {
+                const pool = [...JUMPMASTER_DATA.nomenclature].sort(() => 0.5 - Math.random()).slice(0, 15);
+                setQuestions(pool);
+            }, []);
+
+            useEffect(() => {
+                if (isFinished || timeLeft <= 0) return;
+                const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
+                return () => clearInterval(timer);
+            }, [timeLeft, isFinished]);
+
+            const handleAnswer = (val) => {
+                setAnswers({...answers, [currentIndex]: val});
+                if (currentIndex < questions.length - 1) {
+                    setCurrentIndex(currentIndex + 1);
+                    setTimeLeft(60);
+                } else {
+                    setIsFinished(true);
+                }
+            };
+
+            if (questions.length === 0) return <div>Loading Exam...</div>;
+
+            if (isFinished) {
+                const score = questions.filter((q, i) => {
+                    const ans = answers[i] || "";
+                    return q.name.toLowerCase() === ans.toLowerCase();
+                }).length;
+                const pct = Math.round((score / questions.length) * 100);
+
+                return (
+                    <div className="card" style={{ textAlign: 'center', maxWidth: '600px', margin: '3rem auto' }}>
+                        <h2 style={{ color: 'var(--accent-gold)' }}>Exam Results</h2>
+                        <div style={{ fontSize: '4rem', fontWeight: 800, margin: '2rem 0' }}>{pct}%</div>
+                        <p>{score} correct out of {questions.length} questions.</p>
+                        <div style={{ marginTop: '2rem' }}>
+                            <button className="btn btn-primary" onClick={() => window.location.reload()}>RETAKE EXAM</button>
+                        </div>
+                    </div>
+                );
+            }
+
+            const current = questions[currentIndex];
+            // Simple multiple choice generator
+            const options = useMemo(() => {
+                const others = JUMPMASTER_DATA.nomenclature.filter(n => n.id !== current.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+                return [current, ...others].sort(() => 0.5 - Math.random());
+            }, [currentIndex]);
+
+            return (
+                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem' }}>
+                        <h3>Question {currentIndex + 1} of {questions.length}</h3>
+                        <div style={{ color: timeLeft < 10 ? 'var(--danger-red)' : 'var(--accent-gold)', fontWeight: 800, fontSize: '1.2rem' }}>
+                            TIME: {timeLeft}s
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div style={{ width: '100%', height: '300px', backgroundColor: 'white', borderRadius: '16px', marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                            <img src={current.image} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                        </div>
+                        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Identify this component:</h2>
+                        <div className="grid-3" style={{ gridTemplateColumns: '1fr 1fr' }}>
+                            {options.map((opt, i) => (
+                                <button key={i} className="btn btn-secondary" onClick={() => handleAnswer(opt.name)} style={{ padding: '1.5rem', textAlign: 'left', fontSize: '0.9rem' }}>
+                                    {opt.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const Deficiencies = () => (
+            <div>
+                <h2>JMPI Deficiency Drill</h2>
+                <div className="grid-3">
+                    {JUMPMASTER_DATA.deficiencies.map((def, i) => (
+                        <div key={i} className="card deficiency-card" style={{ borderLeft: `6px solid ${def.major ? 'var(--danger-red)' : 'var(--accent-gold)'}` }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                                <small style={{ color: 'var(--text-muted)', fontWeight: 700 }}>{def.category}</small>
+                                <span style={{ color: def.major ? 'var(--danger-red)' : 'var(--accent-gold)', fontWeight: 800 }}>-{def.points}</span>
+                            </div>
+                            <h4 style={{ margin: 0, fontSize: '1.1rem' }}>{def.name}</h4>
+                            <div style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center' }}>
+                                <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: def.major ? 'var(--danger-red)' : 'var(--accent-gold)', marginRight: '8px' }}></div>
+                                <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{def.major ? 'MAJOR' : 'MINOR'}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+
+        const CarpLab = () => {
+            const [night, setNight] = useState(false);
+            const [alt, setAlt] = useState(1000);
+            const [jumpers, setJumpers] = useState(1);
+
+            const calc = useMemo(() => {
+                let w = 600, l = 600;
+                if (night) { w += 100; l += 100; }
+                if (alt > 1000) { const add = Math.floor((alt - 1000) / 100) * 30; w += add; l += add; }
+                if (jumpers > 1) { l += (jumpers - 1) * 75; }
+                return { w, l };
+            }, [night, alt, jumpers]);
+
+            return (
+                <div style={{ maxWidth: '800px' }}>
+                    <h2>CARP Dimension Lab</h2>
+                    <div className="card">
+                        <div className="input-group">
+                            <label>Drop Environment</label>
+                            <select onChange={e => setNight(e.target.value === 'night')}>
+                                <option value="day">Daylight (Standard)</option>
+                                <option value="night">Night (+100 L/W)</option>
+                            </select>
+                        </div>
+                        <div className="input-group">
+                            <label>Drop Altitude (Feet AGL)</label>
+                            <input type="number" value={alt} onChange={e => setAlt(parseInt(e.target.value) || 0)} />
+                            <small style={{ color: 'var(--text-muted)' }}>+30 yards L/W per 100ft above 1000ft</small>
+                        </div>
+                        <div className="input-group">
+                            <label>Number of Jumpers</label>
+                            <input type="number" value={jumpers} onChange={e => setJumpers(parseInt(e.target.value) || 1)} />
+                            <small style={{ color: 'var(--text-muted)' }}>+75 yards Length per additional jumper</small>
+                        </div>
+                        <div className="result-box">
+                            <h4 style={{ margin: 0, color: 'var(--text-muted)', textTransform: 'uppercase', fontSize: '0.8rem' }}>Calculated Minimum DZ Size</h4>
+                            <div style={{ fontSize: '3rem', fontWeight: 800, margin: '1rem 0', color: 'var(--accent-gold)' }}>
+                                {calc.w}y <span style={{ fontSize: '1.5rem', color: 'white', verticalAlign: 'middle' }}>×</span> {calc.l}y
+                            </div>
+                            <p style={{ margin: 0, fontWeight: 600 }}>Width (W) × Length (L)</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const ReferenceSheet = () => {
+            const [search, setSearch] = useState("");
+            const filtered = JUMPMASTER_DATA.nomenclature.filter(n => n.name.toLowerCase().includes(search.toLowerCase()) || n.category.toLowerCase().includes(search.toLowerCase()));
+
+            return (
+                <div>
+                    <h2>Nomenclature Reference</h2>
+                    <input type="text" placeholder="Search items or categories..." value={search} onChange={e => setSearch(e.target.value)} style={{ marginBottom: '2rem', padding: '1rem', width: '100%', maxWidth: '400px' }} />
+                    <div className="grid-3">
+                        {filtered.map((item, i) => (
+                            <div key={i} className="card">
+                                <div style={{ height: '100px', backgroundColor: 'white', borderRadius: '8px', marginBottom: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                                    <img src={item.image} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                                </div>
+                                <h4 style={{ margin: '0 0 0.5rem 0' }}>{item.name}</h4>
+                                <small style={{ color: 'var(--accent-gold)', fontWeight: 800 }}>{item.category}</small>
+                                <div style={{ marginTop: '1rem', fontSize: '0.8rem' }}>
+                                    {item.specs && item.specs.slice(0, 2).map((s, j) => (
+                                        <div key={j} style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)' }}>
+                                            <span>{s.label}:</span>
+                                            <span>{s.value}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        const App = () => {
+            const [view, setView] = useState('dashboard');
+            const [mastery, setMastery] = useState(() => {
+                const saved = localStorage.getItem('jm_mastery');
+                return saved ? JSON.parse(saved) : {};
+            });
+
+            useEffect(() => {
+                localStorage.setItem('jm_mastery', JSON.stringify(mastery));
+            }, [mastery]);
+
+            const toggleMastery = (id) => {
+                setMastery(prev => {
+                    const next = {...prev};
+                    if (next[id]) delete next[id];
+                    else next[id] = true;
+                    return next;
+                });
+            };
+
+            return (
+                <div className="app-container">
+                    <div className="sidebar">
+                        <div className="sidebar-title">JM STUDY PRO</div>
+                        <div className={`nav-item ${view === 'dashboard' ? 'active' : ''}`} onClick={() => setView('dashboard')}>DASHBOARD</div>
+                        <div className={`nav-item ${view === 'exam' ? 'active' : ''}`} onClick={() => setView('exam')}>EXAM SIMULATOR</div>
+                        <div className={`nav-item ${view === 'flashcards' ? 'active' : ''}`} onClick={() => setView('flashcards')}>NOMENCLATURE</div>
+                        <div className={`nav-item ${view === 'deficiencies' ? 'active' : ''}`} onClick={() => setView('deficiencies')}>DEFICIENCY DRILL</div>
+                        <div className={`nav-item ${view === 'reference' ? 'active' : ''}`} onClick={() => setView('reference')}>REFERENCE SHEET</div>
+                        <div className={`nav-item ${view === 'carp' ? 'active' : ''}`} onClick={() => setView('carp')}>CARP LAB</div>
+                    </div>
+                    <div className="main-content">
+                        {view === 'dashboard' && <Dashboard mastery={mastery} setView={setView} />}
+                        {view === 'exam' && <ExamSimulator />}
+                        {view === 'flashcards' && <Flashcards mastery={mastery} toggleMastery={toggleMastery} />}
+                        {view === 'deficiencies' && <Deficiencies />}
+                        {view === 'reference' && <ReferenceSheet />}
+                        {view === 'carp' && <CarpLab />}
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

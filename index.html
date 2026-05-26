@@ -3,19 +3,18 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Chris Martinez - Spring 2026 Course Portal</title>
+   <title>Chris Martinez - Portal</title>
    <style>
        :root {
+           --tactical-green: #2d4a22;
+           --tactical-dark: #1b2e15;
            --primary-blue: #0056b3;
            --dark-blue: #003366;
            --bg-gray: #f8f9fa;
            --text-dark: #333;
            --white: #ffffff;
-           --accent-blue: #e3f2fd;
-           --tip-gold: #fff9e6;
-           --tip-border: #f39c12;
+           --accent-green: #e8f5e9;
        }
-
 
        body {
            font-family: 'Segoe UI', Arial, sans-serif;
@@ -25,16 +24,14 @@
            color: var(--text-dark);
        }
 
-
        nav {
            background-color: var(--white);
-           border-bottom: 3px solid var(--primary-blue);
+           border-bottom: 3px solid var(--tactical-green);
            padding: 15px 0;
            display: flex;
            justify-content: center;
            gap: 25px;
        }
-
 
        nav a {
            text-decoration: none;
@@ -45,18 +42,15 @@
            transition: color 0.3s;
        }
 
-
-       nav a:hover { color: var(--primary-blue); }
-
+       nav a:hover { color: var(--tactical-green); }
 
        .active-tab {
-           color: var(--primary-blue);
-           border-bottom: 2px solid var(--primary-blue);
+           color: var(--tactical-green);
+           border-bottom: 2px solid var(--tactical-green);
        }
 
-
        .container {
-           max-width: 850px;
+           max-width: 700px;
            margin: 40px auto;
            padding: 40px;
            background: var(--white);
@@ -64,170 +58,118 @@
            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
        }
 
-
        .welcome-section {
-           display: flex;
-           gap: 20px;
+           background: linear-gradient(135deg, var(--accent-green) 0%, #ffffff 100%);
+           padding: 25px;
+           border-radius: 8px;
+           border-left: 5px solid var(--tactical-green);
            margin-bottom: 40px;
-           align-items: stretch;
        }
 
-
-       .intro-box {
-           flex: 2;
-           background: var(--accent-blue);
-           padding: 25px;
-           border-radius: 8px;
-           border-left: 5px solid var(--primary-blue);
-       }
-
-
-       .recommendation-box {
-           flex: 1.2;
-           background: var(--tip-gold);
-           padding: 25px;
-           border-radius: 8px;
-           border: 1px dashed var(--tip-border);
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-       }
-
-
-       .welcome-section h2, .welcome-section h3 { margin-top: 0; color: var(--dark-blue); }
-
-
-       .welcome-section p {
-           margin: 0;
-           line-height: 1.6;
-           font-size: 0.95em;
-           color: #444;
-       }
-
-
-       .nb-link { color: var(--tip-border); font-weight: bold; text-decoration: underline; }
-
+       .welcome-section h2 { margin-top: 0; color: var(--tactical-dark); }
+       .welcome-section p { margin: 0; line-height: 1.6; color: #444; }
 
        h1 {
-           font-size: 1.8em;
-           margin-bottom: 20px;
-           color: var(--dark-blue);
-           border-top: 1px solid #eee;
-           padding-top: 30px;
+           font-size: 1.3em;
+           margin-bottom: 15px;
+           color: var(--tactical-dark);
+           border-bottom: 2px solid #eee;
+           padding-bottom: 8px;
+           text-transform: uppercase;
+           letter-spacing: 0.5px;
        }
 
+       .section-divider {
+           margin-top: 35px;
+       }
 
-       .course-list { display: flex; flex-direction: column; gap: 12px; }
+       .card-list { display: flex; flex-direction: column; gap: 12px; }
 
-
-       .course-card {
+       .portal-card {
            display: flex;
            justify-content: space-between;
            align-items: center;
-           padding: 20px 30px;
+           padding: 20px 25px;
            background: #fff;
            border: 1px solid #e0e0e0;
            border-radius: 8px;
            text-decoration: none;
-           color: var(--primary-blue);
            font-weight: 600;
            transition: all 0.2s ease-in-out;
        }
 
+       .portal-card span { 
+           color: #666; 
+           font-weight: 400; 
+           font-size: 0.85em; 
+           display: inline-block;
+           margin-top: 4px;
+       }
 
-       .course-card span { color: #555; font-weight: 400; }
-       .course-card:hover {
+       /* Tactical Tracks Styling */
+       .tactical-card { color: var(--tactical-green); }
+       .tactical-card:hover {
+           background-color: #f1f8f0;
+           border-color: var(--tactical-green);
+           transform: translateX(5px);
+       }
+
+       /* Condensed Academic Button Styling */
+       .academic-card { 
+           color: var(--primary-blue); 
+           border: 2px dashed #b0d4ff;
+           background: #fbfdff;
+       }
+       .academic-card:hover {
            background-color: #f0f7ff;
            border-color: var(--primary-blue);
            transform: translateX(5px);
        }
 
-
-       /* Updated Footer Styling for your request */
        footer {
            text-align: center;
-           margin: 50px 0;
-           padding-top: 20px;
+           margin: 60px 0;
            color: #666;
            font-style: italic;
+           font-size: 0.9em;
        }
-
-
-       .semester-badge {
-           display: inline-block;
-           background: #eee;
-           color: #555;
-           padding: 4px 12px;
-           border-radius: 20px;
-           font-size: 0.8em;
-           font-weight: bold;
-           margin-bottom: 10px;
-           font-style: normal;
-       }
-
-
-       @media (max-width: 768px) { .welcome-section { flex-direction: column; } }
    </style>
 </head>
 <body>
 
-
    <nav>
-       <a href="index.html" class="active-tab">DASHBOARD</a>
-       <a href="mat172.html">MAT-172</a>
-       <a href="chm151.html">CHM-151</a>
-       <a href="com231.html">COM-231</a>
-       <a href="eng112.html">ENG-112</a>
+       <a href="index.html" class="active-tab">Dashboard</a>
+       <a href="jumpmaster-pro/index.html">Jumpmaster Prep</a>
    </nav>
-
 
    <div class="container">
       
        <div class="welcome-section">
-           <div class="intro-box">
-               <h2>Lecture Notes & Exam Prep</h2>
-               <p>I’ve compiled these guides directly from our class sessions to ensure we’re focusing on exactly what will be on the tests. My goal is to turn dense lecture transcripts into clean, readable study tools for the Spring 2026 semester.</p>
-           </div>
-
-
-           <div class="recommendation-box">
-               <h3 style="font-size: 1.1em; color: #a04000;">🚀 Pro-Tip:</h3>
-               <p>These files are formatted perfectly for
-                  <a href="https://notebooklm.google.com/" target="_blank" class="nb-link">NotebookLM</a>.
-                  Just download the PDF, upload it there, and let the AI help you drill down into the more complex topics!</p>
-           </div>
+           <h2>Command & Knowledge Portal</h2>
+           <p>Centralized environment for tracking professional milestones, operations readiness, and course archives.</p>
        </div>
 
-
-       <h1>Spring 2026 Courses:</h1>
-
-
-       <div class="course-list">
-           <a href="mat172.html" class="course-card">
-               <div>1. MAT-172: <span>Precalculus Trig</span></div>
-               <div class="arrow">→</div>
-           </a>
-           <a href="chm151.html" class="course-card">
-               <div>2. CHM-151: <span>General Chemistry I</span></div>
-               <div class="arrow">→</div>
-           </a>
-           <a href="com231.html" class="course-card">
-               <div>3. COM-231: <span>Public Speaking</span></div>
-               <div class="arrow">→</div>
-           </a>
-           <a href="eng112.html" class="course-card">
-               <div>4. ENG-112: <span>Writing/Research</span></div>
+       <h1>⚡ Professional Development</h1>
+       <div class="card-list">
+           <a href="jumpmaster-pro/index.html" class="portal-card tactical-card">
+               <div>Jumpmaster Prep<br><span>Nomenclature, Rigging & Commands</span></div>
                <div class="arrow">→</div>
            </a>
        </div>
+
+       <h1 class="section-divider">📚 Course History</h1>
+       <div class="card-list">
+           <a href="spring.html" class="portal-card academic-card">
+               <div>Spring 2026 Academic Archive<br><span></span></div>
+               <div class="arrow">→</div>
+           </a>
+       </div>
+
    </div>
 
-
    <footer>
-       <div class="semester-badge">SPRING 2026</div><br>
-       This workspace is dedicated to the 4 classes I am taking this semester. I created this to bridge the gap between lecture notes and exam success for my classmates and myself.
+       Maintain proficiency across all domains.
    </footer>
-
 
 </body>
 </html>
